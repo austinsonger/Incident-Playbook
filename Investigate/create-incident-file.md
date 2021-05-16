@@ -1,6 +1,6 @@
 ## Create Incident File
 
-1. Create a new incident file at {{INCIDENT_FILE_LOCATION}} using the [incident name](#name-the-incident).  Use this file for secure storage of documentation, evidence, artifacts, _etc._
+1. Create a new incident file at <Incident File Location> using the [incident name](#name-the-incident).  Use this file for secure storage of documentation, evidence, artifacts, _etc._
     * Provision secure digital storage.
     * Provision secure file exchange.
     * Obtain physical storage.
