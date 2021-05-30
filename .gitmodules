@@ -1,3 +1,24 @@
 [submodule "Incident-Response-Tools/Aurora-Incident-Response"]
 	path = Incident-Response-Tools/Aurora-Incident-Response
 	url = https://github.com/cyb3rfox/Aurora-Incident-Response.git
+[submodule "Incident-Response-Tools/grr"]
+	path = Incident-Response-Tools/grr
+	url = https://github.com/google/grr.git
+[submodule "Incident-Response-Tools/Loki"]
+	path = Incident-Response-Tools/Loki
+	url = https://github.com/Neo23x0/Loki.git
+[submodule "Incident-Response-Tools/cyphon"]
+	path = Incident-Response-Tools/cyphon
+	url = https://github.com/cyphonmdr/cyphon.git
+[submodule "Incident-Response-Tools/dfirtrack"]
+	path = Incident-Response-Tools/dfirtrack
+	url = https://github.com/stuhli/dfirtrack.git
+[submodule "Incident-Response-Tools/TheHive"]
+	path = Incident-Response-Tools/TheHive
+	url = https://github.com/TheHive-Project/TheHive.git
+[submodule "Incident-Response-Tools/beagle"]
+	path = Incident-Response-Tools/beagle
+	url = https://github.com/yampelo/beagle.git
+[submodule "Incident-Response-Tools/Meerkat"]
+	path = Incident-Response-Tools/Meerkat
+	url = https://github.com/TonyPhipps/Meerkat.git
