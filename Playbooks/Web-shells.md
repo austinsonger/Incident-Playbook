@@ -1,0 +1,107 @@
+## Playbook: Web Shells
+
+**Investigate, remediate (contain, eradicate), and communicate in parallel!**
+
+Assign steps to individuals or teams to work concurrently, when possible; this playbook is not purely sequential. Use your best judgment.
+
+--------------
+
+### Investigate
+
+`TODO: Expand investigation steps, including key questions and strategies, for Web Shells.`
+
+
+1. Monitor for:
+
+    a. Unusual error messages in logs
+    
+    b. Unusual web traffic patterns
+    
+    c. Unexpected changes in websites’ document roots
+    
+    d. IPS/IDS alerts
+    
+    e. Antivirus alerts
+    
+2. Investigate and clear ALL alerts associated with the impacted assets
+
+--------------
+
+### Remediate
+
+* **Plan remediation events** where these steps are launched together (or in coordinated fashion), with appropriate teams ready to respond to any disruption.
+* **Consider the timing and tradeoffs** of remediation actions: your response has consequences.
+
+#### Contain
+
+`TODO: Customize containment steps, tactical and strategic, for Web Shells.`
+
+`TODO: Specify tools and procedures for each step, below.`
+
+* TODO
+
+1. Inventory (enumerate & assess)
+2. Detect | Deny | Disrupt | Degrade | Deceive | Destroy
+3. Observe -> Orient -> Decide -> Act
+4. Review web logs to identify instances of the web shell being accessed
+5. Issue perimeter enforcement for known threat actor locations
+
+`TODO: Consider automating containment measures using orchestration tools.`
+
+#### Eradicate
+
+`TODO: Customize eradication steps, tactical and strategic, for Web Shells.`
+
+`TODO: Specify tools and procedures for each step, below.`
+
+1. Close the attack vector
+2. Patch asset vulnerabilities
+3. Scan web servers for other instances of web shells
+4. Determine how the web shell was placed on the system
+5. Reset any potentially compromised passwords
+6. Review logs of any system the attacker may have accessed
+7. Scan affected systems with antivirus/endpoint software
+
+
+#### Reference: Remediation Resources
+
+`TODO: Specify financial, personnel, and logistical resources to accomplish remediation.`
+
+--------------
+
+### Communicate
+
+`TODO: Customize communication steps for Web Shells`
+
+`TODO: Specify tools and procedures (including who must be involved) for each step, below, or refer to overall plan.`
+
+In addition to the general steps and guidance in the incident response plan:
+
+1. Perform routine cyber hygiene due diligence
+2. Engage external cybersecurity-as-a-service providers and response professionals
+
+--------------
+
+### Recover
+
+`TODO: Customize recovery steps for Web Shells.`
+
+`TODO: Specify tools and procedures for each step, below.`
+
+1. Restore to the RPO within the RTO
+2. Address collateral damage
+3. Determine the root cause of the breach
+4. Resolve any related security incidents
+
+In addition to the general steps and guidance in the incident response plan:
+
+1. TODO
+
+--------------
+
+### Resources
+
+#### Additional Information
+
+1. <a name="identity-and-access-playbook-ref-1"></a>["Title"](#TODO-url), Author Last Name (Date)
+
