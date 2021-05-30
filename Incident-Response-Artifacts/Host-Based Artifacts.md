@@ -1,0 +1,17 @@
+
+- Running Processes
+- Running Services
+- Parent-Child Process Trees
+- Integrity Hash of Background Executables
+- Installed Applications
+- Local and Domain Users
+- Unusual Authentications
+- Non-Standard Formatted Usernames
+- Listening Ports and Associated Services
+- Domain Name System (DNS) Resolution Settings and Static Routes
+- Established and Recent Network Connections
+- Run Key and other AutoRun Persistence
+- Scheduled Tasks
+- Artifacts of Execution (Prefetch and Shimcache)
+- Event logs
+- Anti-virus detections

@@ -1,0 +1,13 @@
+- Identify any process that is not signed and is connecting to the internet looking for beaconing or significant data transfers.
+- Collect all PowerShell command line requests looking for Base64-encoded commands to help identify malicious fileless attacks.
+- Look for excessive `.RAR`, `7zip`, or `WinZip` processes, especially with suspicious file names, to help discover exfiltration staging (suspicious file names include naming conventions such as, `1.zip`, `2.zip`, etc.).
+- Collect all user logins and look for outlier behavior, such as a time of login that is out of the ordinary for the user or a login from an Internet Protocol (IP) address not normally used by the user.
+- On Linux/Unix operating systems (OSs) and services, collect all `cron` and `systemd /etc/passwd` files looking for unusual accounts and log files, such as accounts that appear to be `system / proc` users but have an interactive shell such as `/bin/bash` rather than `/bin/false/nologin`
+- On Microsoft OSs, collect Scheduled Tasks, Group Policy Objects (GPO), and Windows Management Instrumentation (WMI) database storage on hosts of interest looking for malicious persistence.
+- Use the Microsoft Windows Sysinternals Autoruns tool, which allows IT security practitioners to view—and, if needed, easily disable—most programs that automatically load onto the system.
+- Check the Windows registry and Volume Shadow Copy Service for evidence of intrusion.
+- Consider blocking script files like `.js`, `.vbs`, `.zip`, `.7z`, `.sfx` and even Microsoft Office documents or PDFs.
+- Collect any scripts or binary ELF files from `/dev/shm/tmp` and `/var/tmp`.
+- Kernel modules listed (lsmod) for signs of a rootkit; dmesg command output can show signs of rootkit loading and device attachment amongst other things.
+- Archive contents of `/var/log` for all hosts.
+- Archive output from journald. These logs are pretty much the same as /var/log; however, they provide some integrity checking and are not as easy to modify. This will eventually replace the /var/log contents for some aspects of the system. Check for additional Secure Shell (SSH) keys added to user’s `authorized_keys`.
