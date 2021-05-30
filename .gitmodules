@@ -1,0 +1,3 @@
+[submodule "Incident-Response-Tools/Aurora-Incident-Response"]
+	path = Incident-Response-Tools/Aurora-Incident-Response
+	url = https://github.com/cyb3rfox/Aurora-Incident-Response.git
