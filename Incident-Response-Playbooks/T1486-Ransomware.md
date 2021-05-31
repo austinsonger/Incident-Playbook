@@ -1,6 +1,37 @@
 ## Playbook: Ransomware
 
-**Investigate, remediate (contain, eradicate), and communicate in parallel! Containment is critical in ransomware incidents, prioritize accordingly.**
+> Containment is critical in ransomware incidents, prioritize accordingly.
+
+### MITRE
+
+| Tactic | Technique ID | Technique Name | Sub-Technique Name | Platforms | Permissions Required |
+| ------ | ------------ | -------------- | ------------------ |---------- |--------------------- |
+|Impact|T1486|Data Encrypted for Impact|                    |IaaS, Linux, Windows, macOS|Administrator, SYSTEM, User, root|
+
+
+```
+(P) Preparation
+  
+1.    Patch asset vulnerabilities
+2.    Perform routine inspections of controls/weapons
+3.    Examine file shares for loose/open privileges
+4.    Maintain Antivirus/EDR application updates
+5.    Create network segmentation
+6.    Log traffic between network segments
+7.    Incorporate threat intelligence
+8.    Incorporate deception technology
+9.    Perform routine inspections of asset backups
+10.   Validate proper functionality
+11.   Confirm backups are free of malware
+12.   Establish ability to pay ransoms w/cryptocurrency
+13.   Obtain decryption keys for ransomware variants
+14.   Confirm cybersecurity insurance coverages
+15.   Conduct ransomware simulations
+16.   Conduct phishing simulations
+17.   Conduct user awareness training
+18.   Conduct response training (this PBC)
+```
+
 
 Assign steps to individuals or teams to work concurrently, when possible; this playbook is not purely sequential. Use your best judgment.
 
@@ -72,6 +103,9 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 
 Quarantines (logical, physical, or both) prevent spread _from_ infected systems and prevent spread _to_ critical systems and data. Quarantines should be comprehensive: include cloud/SaaS access, single-sign-on, system access such as to ERP or other business tools, _etc._
 
+* Inventory (enumerate & assess)
+* Detect | Deny | Disrupt | Degrade | Deceive | Destroy
+* bserve -> Orient -> Decide -> Act
 * Quarantine infected systems
 * Quarantine affected users and groups.
 * Quarantine file shares (not just known-infected shares; protect uninfected shares too)
