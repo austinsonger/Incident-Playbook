@@ -1,6 +1,6 @@
 # Conduct an After Action Review (AAR)
 
-1. Schedule an After Action Review (AAR) meeting within {{AAR_SLA}} and invite the attendees listed at {{AAR_ATTENDEES}}.  Always include the following:
+1. Schedule an After Action Review (AAR) meeting within SLA and invite the attendees.  Always include the following:
     * The incident commander.
     * Service owners involved in the incident.
     * Key engineer(s)/responders involved in the incident.
