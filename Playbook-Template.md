@@ -1,7 +1,18 @@
 ## Playbook: <Type of Incident>
 
-**Investigate, remediate (contain, eradicate), and communicate in parallel!**
+### MITRE
 
+| Tactic | Technique ID | Technique Name | Sub-Technique Name | Platforms | Permissions Required |
+| ------ | ------------ | -------------- | ------------------ |---------- |--------------------- |
+|        |              |                |                    |           |                      |
+
+
+```
+(P) Preparation
+  
+ 
+```
+  
 Assign steps to individuals or teams to work concurrently, when possible; this playbook is not purely sequential. Use your best judgment.
 
 --------------
