@@ -35,8 +35,6 @@
 
 ### Investigate
 
-`TODO: Expand investigation steps, including key questions and strategies, for ransomware.`
-
 1. **Determine the type** of ransomware (_i.e.,_ what is the family, variant, or flavor?)[<sup>[1]</sup>](#ransomware-playbook-ref-1)
     1. Find any related messages.  Check:
         * graphical user interfaces (GUIs) for the malware itself
@@ -136,9 +134,6 @@ Quarantines (logical, physical, or both) prevent spread _from_ infected systems 
 
 ### Communicate
 
-`TODO: Customize communication steps for ransomware`
-
-`TODO: Specify tools and procedures (including who must be involved) for each step, below, or refer to overall plan.`
 
 1. Escalate incident and communicate with leadership per procedure
 1. Document incident per procedure
@@ -164,9 +159,6 @@ Quarantines (logical, physical, or both) prevent spread _from_ infected systems 
 
 ### Recover
 
-`TODO: Customize recovery steps for ransomware.`
-
-`TODO: Specify tools and procedures for each step, below.`
 
 > **We do not recommend paying the ransom:** it does not guarantee a solution to the problem. It can go wrong (_e.g._, bugs could make data unrecoverable even with the key).  Also, paying proves ransomware works and could increase attacks against you or other groups.[<sup>[2, paraphrased]</sup>](#ransomware-playbook-ref-2)
 
@@ -181,7 +173,6 @@ Quarantines (logical, physical, or both) prevent spread _from_ infected systems 
     * Understand legal, regulatory, and insurance implications
     * Understand mechanisms (_e.g._, technologies, platforms, intermediate vendors/go-betweens)
 
-
 ### Lessons Learned
 
 1.    Perform routine cyber hygiene due diligence
@@ -192,8 +183,6 @@ Quarantines (logical, physical, or both) prevent spread _from_ infected systems 
 ### Resources
 
 #### Reference: User Actions for Suspected Ransomware
-
-`TODO: Customize steps for users dealing with suspected ransomware`
 
 1. Stay calm, take a deep breath.
 1. Disconnect your system from the network `TODO: include detailed steps with screenshots, a pre-installed tool or script to make this easy ("break in case of emergency"), consider hardware network cut-off switches`
@@ -212,8 +201,6 @@ Quarantines (logical, physical, or both) prevent spread _from_ infected systems 
 1. Be patient: the response may be disruptive, but you are protecting your team and the organization!  **Thank you.**
 
 #### Reference: Help Desk Actions for Suspected Ransomware
-
-`TODO: Customize steps for help desk personnel dealing with suspected ransomware`
 
 1. Stay calm, take a deep breath.
 1. Open a ticket to document the incident, per procedure `TODO: Customize template with key questions (see below) and follow-on workflow`
