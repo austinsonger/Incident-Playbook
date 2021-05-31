@@ -1,3 +1,5 @@
+> For every pull request submitted a issue must also be created.
+
 # Cyber Incident Response Playbooks
 
 - ### [Creating a New Playbook](https://github.com/austinsonger/Cyber-Incident-Response-Playbooks/wiki/Creating-a-New-Playbook)
