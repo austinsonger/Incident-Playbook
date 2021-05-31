@@ -25,6 +25,7 @@ This project will use a modified Incident Response Process of mixing SANS Incide
 > **NOTE:** The common "preparation" phase will not be part of this Incident Response Process, but on each playbook will include a `(P) Preparation` at the beginning of each playbook.
 
 
+
 01. Investigate
 02. Remediate (contain, eradicate)
 03. Communicate
