@@ -8,6 +8,7 @@
 - Develop a catalog of Incident Response Automations created by the SOC/Incident Response Community
 
 
+---------------------
 - ### [Creating a New Playbook](https://github.com/austinsonger/Cyber-Incident-Response-Playbooks/wiki/Creating-a-New-Playbook)
   - > For every pull request submitted a issue must also be created. 
 - ### [MITRE Techniques](https://github.com/austinsonger/Cyber-Incident-Response-Playbooks/wiki/MITRE-Techniques)
