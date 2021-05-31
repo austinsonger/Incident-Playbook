@@ -1,11 +1,15 @@
 ![](https://i.imgur.com/DLj8Enw.png)
 
 ### PURPOSE OF PROJECT
+That this project will be created by the SOC/Incident Response Community
+
 - Create Incident Response Playbook for every MITRE Technique, that its possible to make one for.
 - Create Incident Response Playbook for uncommon incidents.
 - Create Exercise Scenarios that can be used for training purposes.
-- Develop a catalog of tools used for Incident Response (Plus Reviews for the different tools by SOC/Incident Response Community)
-- Develop a catalog of Incident Response Automations created by the SOC/Incident Response Community
+- Develop a Catalog of tools used for Incident Response [Plus Reviews for the different tools]
+- Develop a Catalog of Incident Response Automations 
+- Develop a Catalog of Checklists (For Before, During, After Incidents) 
+- Develop a Catalog of Roles that a organization can use, to build their own program.
 
 
 ---------------------
