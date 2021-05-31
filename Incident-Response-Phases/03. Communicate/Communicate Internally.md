@@ -14,6 +14,6 @@
 
 ### Create Incident Report
 
-* Upon incident closure, capture information in the [incident file](#create-incident-file) for distribution using the format at {{INCIDENT_REPORT_TEMPLATE}}.  **If the vector, impact, summary, timeline, and activity reports are complete, this can be fully automated.**
-* Distribute the incident report to the following: {{INCIDENT_REPORT_RECIPIENTS}}.
+* Upon incident closure, capture information in the [incident file](#create-incident-file) for distribution.  **If the vector, impact, summary, timeline, and activity reports are complete, this can be fully automated.**
+* Distribute the incident report to the following: INCIDENT REPORT RECIPIENTS.
 * `TODO: Customize incident report creation and distribution, if necessary`
