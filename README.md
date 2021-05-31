@@ -3,7 +3,7 @@
 
 ### Creating a New Playbook
 
-#### 1. Select a proposed playbook from the [Issues](https://github.com/austinsonger/Cyber-Incident-Response-Playbooks/issues) list or Create a [Issue](https://github.com/austinsonger/Cyber-Incident-Response-Playbooks/issues/new/choose) for the playbook you want to create.
+#### 1. Select a proposed playbook from the [Issues](https://github.com/austinsonger/Cyber-Incident-Response-Playbooks/issues) list or Create a [Issue](https://github.com/austinsonger/Cyber-Incident-Response-Playbooks/issues/new?assignees=&labels=&template=new-playbook.md&title=%5BNew-Playbook%5D) for the playbook you want to create.
 
 #### 2. Fork Repo
 
