@@ -4,7 +4,7 @@
 
 | Tactic | Technique ID | Technique Name | Sub-Technique Name | Platforms | Permissions Required |
 | ------ | ------------ | -------------- | ------------------ |---------- |--------------------- |
-|Collection|T1114|Email Collection|[T1114.001](https://attack.mitre.org/techniques/T1114/001), [T1114.002](https://attack.mitre.org/techniques/T1114/002), [T1114.003](https://attack.mitre.org/techniques/T1114/003)|Google Workspace, Office 365, Windows|User|
+|Collection|T1114|Email Collection|  |Google Workspace, Office 365, Windows|User|
 
 
 ```
