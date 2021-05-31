@@ -33,8 +33,6 @@
 ```
 
 
-Assign steps to individuals or teams to work concurrently, when possible; this playbook is not purely sequential. Use your best judgment.
-
 ### Investigate
 
 `TODO: Expand investigation steps, including key questions and strategies, for ransomware.`
