@@ -1,0 +1,114 @@
+## Playbook: Group Policy Modification
+
+### MITRE
+
+| Tactic | Technique ID | Technique Name |Sub-technique ID| Sub-Technique Name | Platforms | Permissions Required |
+| ------ | ------------ | -------------- |-------| ------------------ |---------- |--------------------- |
+|Privilege Escalation|T1484|Domain Policy Modification|T1484.001|Group Policy Modification|Windows|Administrator, User|
+
+
+```
+(P) Preparation
+
+1.    Patch asset vulnerabilities
+2.    Perform routine inspections of controls/weapons
+3.    Ensure that servers and workstations are logging to a central location
+4.    Audit Group Policy Object (GPO) permissions periodically
+5.    Use WMI and Security group filtering to limit which systems and users GPOs will apply to 
+```
+  
+Assign steps to individuals or teams to work concurrently, when possible; this playbook is not purely sequential. Use your best judgment.
+
+--------------
+
+### Investigate
+
+`TODO: Expand investigation steps, including key questions and strategies, for Group Policy Modification.`
+
+1. Monitor for:
+    * Unusual DNS activity
+    * Antivirus/Endpoint alerts
+    * IDS/IPS alerts
+    * GPO creation, deletion, or modification
+    * Creation of scheduled tasks and services
+2. Investigate and clear ALL alerts associated with the impacted assets
+
+
+--------------
+
+### Remediate
+
+* **Plan remediation events** where these steps are launched together (or in coordinated fashion), with appropriate teams ready to respond to any disruption.
+* **Consider the timing and tradeoffs** of remediation actions: your response has consequences.
+
+#### Contain
+
+`TODO: Customize containment steps, tactical and strategic, for Group Policy Modification.`
+
+`TODO: Specify tools and procedures for each step, below.`
+
+1.    Inventory (enumerate & assess)
+2.    Detect | Deny | Disrupt | Degrade | Deceive | Destroy
+3.    Observe -> Orient -> Decide -> Act
+4.    Lock compromised user accounts
+5.    Systems believed to have malware on them should be removed from the network
+6.    Review system logs to determine what changes the attacker made
+
+`TODO: Consider automating containment measures using orchestration tools.`
+
+#### Eradicate
+
+`TODO: Customize eradication steps, tactical and strategic, for Group Policy Modification.`
+
+`TODO: Specify tools and procedures for each step, below.`
+
+1.    Close the attack vector
+2.    Patch asset vulnerabilities
+3.    Create forensic backups of affected systems
+4.    Perform Endpoint/AV scans on affected systems
+5.    Audit Group Policy Objects and permissions
+
+#### Reference: Remediation Resources
+
+`TODO: Specify financial, personnel, and logistical resources to accomplish remediation.`
+
+--------------
+
+### Communicate
+
+`TODO: Customize communication steps for Group Policy Modification`
+
+`TODO: Specify tools and procedures (including who must be involved) for each step, below, or refer to overall plan.`
+
+In addition to the general steps and guidance in the incident response plan:
+
+
+  
+  
+
+--------------
+
+### Recover
+
+`TODO: Customize recovery steps for Group Policy Modification.`
+
+`TODO: Specify tools and procedures for each step, below.`
+
+In addition to the general steps and guidance in the incident response plan:
+
+
+1.    Restore to the RPO within the RTO
+2.    Assess and address collateral damage
+3.    Determine the root cause of the incident
+4.    Resolve any related security incidents
+5.    Restore affected systems to their last clean backup
+6.    Perform routine cyber hygiene due diligence
+7.    Engage external cybersecurity-as-a-service providers and response professionals
+
+--------------
+
+### Resources
+
+#### Additional Information
+
+1. <a name="identity-and-access-playbook-ref-1"></a>["Title"](#TODO-url), Author Last Name (Date)
