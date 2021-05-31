@@ -183,6 +183,14 @@ Quarantines (logical, physical, or both) prevent spread _from_ infected systems 
     * Understand legal, regulatory, and insurance implications
     * Understand mechanisms (_e.g._, technologies, platforms, intermediate vendors/go-betweens)
 
+
+### Lessons Learned
+
+1.    Perform routine cyber hygiene due diligence
+2.    Engage external cybersecurity-as-a-service providers and response professionals
+3.    Avoid opening email and attachments from unfamiliar senders
+4.    Avoid opening email attachments from senders that do not normally include attachments
+
 ### Resources
 
 #### Reference: User Actions for Suspected Ransomware
