@@ -78,8 +78,15 @@ In addition to the general steps and guidance in the incident response plan:
 In addition to the general steps and guidance in the incident response plan:
 
 
+--------------
   
+### Lessons Learned
+
+`TODO: Add items that will occur post recover.`
   
+1.    Perform routine cyber hygiene due diligence
+2.    Engage external cybersecurity-as-a-service providers and response professionals
+ 
 
 --------------
 
