@@ -1,6 +1,17 @@
-## Playbook: <Type of Incident>
+## Playbook: Drive By Compromise
 
-**Investigate, remediate (contain, eradicate), and communicate in parallel!**
+```
+(P) Preparation
+  
+1.    Patch browsers and other software regularly
+2.    Perform routine inspections of controls/weapons
+3.    Ensure Antivirus/Endpoint Protection software is installed on workstations
+4.    Ensure that workstations are logging to a central location
+5.    Log network traffic
+6.    Set up a proxy for web traffic
+7.    Use Group Policy to manage security related browser settings
+8.    Make use of Windows Defender Exploit Guard or other exploit mitigation tools"
+```
 
 Assign steps to individuals or teams to work concurrently, when possible; this playbook is not purely sequential. Use your best judgment.
 
@@ -8,10 +19,15 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 
 ### Investigate
 
-`TODO: Expand investigation steps, including key questions and strategies, for <Type of Incident>.`
+`TODO: Expand investigation steps, including key questions and strategies, for Drive By Compromise.`
 
-1. TODO
-
+  
+1. Monitor for:
+    - Unusual DNS activity
+    - Antivirus/Endpoint alerts
+    - IDS/IPS alerts
+    - User reports of unexpected behavior
+2.    Investigate and clear ALL alerts associated with the impacted assets
 
 --------------
 
@@ -22,21 +38,28 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 
 #### Contain
 
-`TODO: Customize containment steps, tactical and strategic, for <Type of Incident>.`
-
+`TODO: Customize containment steps, tactical and strategic, for Drive By Compromise.`
+  
 `TODO: Specify tools and procedures for each step, below.`
-
-* TODO
-
+  
 `TODO: Consider automating containment measures using orchestration tools.`
 
+1.    Inventory (enumerate & assess)
+2.    Detect | Deny | Disrupt | Degrade | Deceive | Destroy
+3.    Observe -> Orient -> Decide -> Act
+4.    Issue perimeter enforcement for known threat actor locations
+5.    Systems believed to have been compromised should be removed from the network
+  
+  
 #### Eradicate
-
-`TODO: Customize eradication steps, tactical and strategic, for <Type of Incident>.`
-
+`TODO: Customize eradication steps, tactical and strategic, for Drive By Compromise.`
+  
 `TODO: Specify tools and procedures for each step, below.`
 
-* TODO
+1.    Close the attack vector
+2.    Patch asset vulnerabilities
+3.    Perform an antivirus scan on the affected system
+4.    Review logs and network traffic to identify any related malicious activity
 
 #### Reference: Remediation Resources
 
@@ -46,7 +69,7 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 
 ### Communicate
 
-`TODO: Customize communication steps for <Type of Incident>`
+`TODO: Customize communication steps for Drive By Compromise`
 
 `TODO: Specify tools and procedures (including who must be involved) for each step, below, or refer to overall plan.`
 
@@ -58,14 +81,20 @@ In addition to the general steps and guidance in the incident response plan:
 
 ### Recover
 
-`TODO: Customize recovery steps for <Type of Incident>.`
+`TODO: Customize recovery steps for Drive By Compromise.`
 
 `TODO: Specify tools and procedures for each step, below.`
 
 In addition to the general steps and guidance in the incident response plan:
 
-1. TODO
+1.    Restore to the RPO within the RTO
+2.    Address collateral damage
+3.    Reset the passwords of any accounts in use on the compromised system
+4.    Resolve any related security incidents
+5.    Perform routine cyber hygiene due diligence
+6.    Engage external cybersecurity-as-a-service providers and response professionals
 
+  
 --------------
 
 ### Resources
