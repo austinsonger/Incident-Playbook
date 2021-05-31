@@ -21,7 +21,7 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 
 `TODO: Expand investigation steps, including key questions and strategies, for <Type of Incident>.`
 
-1. TODO
+
 
 
 --------------
@@ -37,7 +37,7 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 
 `TODO: Specify tools and procedures for each step, below.`
 
-* TODO
+
 
 `TODO: Consider automating containment measures using orchestration tools.`
 
@@ -47,7 +47,7 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 
 `TODO: Specify tools and procedures for each step, below.`
 
-* TODO
+
 
 #### Reference: Remediation Resources
 
@@ -63,7 +63,9 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 
 In addition to the general steps and guidance in the incident response plan:
 
-1. TODO
+
+  
+  
 
 --------------
 
@@ -75,7 +77,9 @@ In addition to the general steps and guidance in the incident response plan:
 
 In addition to the general steps and guidance in the incident response plan:
 
-1. TODO
+
+  
+  
 
 --------------
 
