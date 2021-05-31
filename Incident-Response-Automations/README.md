@@ -6,7 +6,7 @@ Create a new file for the automation that you created and explain how it works a
 
 ### File Name Convention
 
-`001-Automation-<Name-of-Automation.md`
+`001-Automation-<Name-of-Automation>.md`
 
 
 ### Automation File Template
