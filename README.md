@@ -21,3 +21,16 @@
 ```
 Resolves #1000
 ```
+
+
+### TODO
+
+- [ ] Companies Incident Response Process (Example of how different companies Incident Response Process)
+- [ ] Examples of Incident Response Automations
+- [ ] SIEM Case Examples
+  - [ ] Elastic SIEM
+  - [ ] Splunk
+
+
+
+
