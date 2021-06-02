@@ -10,12 +10,12 @@
 
 Resource                  | Location
 ------------------------- | ------------------------------------
-Critical information list | {{CRITICAL_INFO_LIST_LOCATION}}
-Critical asset list       | {{CRITICAL_ASSET_LIST_LOCATION}}
-Asset management database | {{ASSET_MGMT_DB_LOCATION}}
-Network map               | {{NETWORK_MAP_LOCATION}}
-SIEM console              | {{SIEM_CONSOLE_LOCATION}}
-Log aggregator            | {{LOG_AGGREGATOR_CONSOLE}}
+Critical information list | 
+Critical asset list       | 
+Asset management database | 
+Network map               | 
+SIEM console              | 
+Log aggregator            | 
 
 `TODO: Complete critical information and asset lists ("crown jewels"). This is incredibly important to effective response.`
 
