@@ -20,5 +20,5 @@ Create a new file for the automation that you created and explain how it works a
 ## How it Works
 ```
 
-
+Place Automation Example in `/Automation-Examples`
 
