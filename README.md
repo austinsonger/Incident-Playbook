@@ -39,7 +39,7 @@ This project will use a modified Incident Response Process of mixing SANS Incide
 ### TODO
 
 - [ ] Companies Incident Response Process (Example of how different companies Incident Response Process)
-- [ ] Add EVTX Examples for each Playbook
+- [ ] Add EVTX Examples for each Playbook (If Possible)
 - [ ] Examples of Incident Response Automations
 - [ ] SIEM Case Examples
   - [ ] Elastic SIEM
