@@ -41,16 +41,15 @@ This project will use a modified Incident Response Process of mixing SANS Incide
 - [ ] Companies Incident Response Process (Example of how different companies Incident Response Process)
 - [ ] Add EVTX Examples for each Playbook (If Possible)
 - [ ] Examples of Incident Response Automations
+  - [ ] SOAR Automation Examples
+    - [ ] Swimlane
 - [ ] SIEM Case Examples
   - [ ] Elastic SIEM
   - [ ] Splunk
+  - [ ] Exabeam
+- [ ] Endpoint Security Examples
+  - [ ] SentinelOne
 
 
----------------------
-### INSPIRATION: Websites/Projects that I've used for building this project.
 
-- [Counteractive](https://www.counteractive.net/)
-- [MITRE](https://attack.mitre.org/)
-- https://us-cert.cisa.gov/
-- https://github.com/TonyPhipps/SIEM/
 
