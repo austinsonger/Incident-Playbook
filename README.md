@@ -1,3 +1,4 @@
+
 [![Join the chat at https://gitter.im/Incident-Playbook/community](https://badges.gitter.im/Incident-Playbook/community.svg)](https://gitter.im/Incident-Playbook/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ![](https://i.imgur.com/DLj8Enw.png)
