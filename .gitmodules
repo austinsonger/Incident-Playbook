@@ -1,24 +1,24 @@
-[submodule "Tools/Aurora-Incident-Response"]
-	path = Tools/Aurora-Incident-Response
+[submodule "Incident-Response/Tools/Aurora-Incident-Response"]
+	path = Incident-Response/Tools/Aurora-Incident-Response
 	url = https://github.com/cyb3rfox/Aurora-Incident-Response.git
-[submodule "Tools/grr"]
-	path = Tools/grr
+[submodule "Incident-Response/Tools/grr"]
+	path = Incident-Response/Tools/grr
 	url = https://github.com/google/grr.git
-[submodule "Tools/Loki"]
-	path = Tools/Loki
+[submodule "Incident-Response/Tools/Loki"]
+	path = Incident-Response/Tools/Loki
 	url = https://github.com/Neo23x0/Loki.git
-[submodule "Tools/cyphon"]
-	path = Tools/cyphon
+[submodule "Incident-Response/Tools/cyphon"]
+	path = Incident-Response/Tools/cyphon
 	url = https://github.com/cyphonmdr/cyphon.git
-[submodule "Tools/dfirtrack"]
-	path = Tools/dfirtrack
+[submodule "Incident-Response/Tools/dfirtrack"]
+	path = Incident-Response/Tools/dfirtrack
 	url = https://github.com/stuhli/dfirtrack.git
-[submodule "Tools/TheHive"]
-	path = Tools/TheHive
+[submodule "Incident-Response/Tools/TheHive"]
+	path = Incident-Response/Tools/TheHive
 	url = https://github.com/TheHive-Project/TheHive.git
-[submodule "Tools/beagle"]
-	path = Tools/beagle
+[submodule "Incident-Response/Tools/beagle"]
+	path = Incident-Response/Tools/beagle
 	url = https://github.com/yampelo/beagle.git
-[submodule "Tools/Meerkat"]
-	path = Tools/Meerkat
+[submodule "Incident-Response/Tools/Meerkat"]
+	path = Incident-Response/Tools/Meerkat
 	url = https://github.com/TonyPhipps/Meerkat.git
