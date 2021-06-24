@@ -53,4 +53,15 @@ This project will use a modified Incident Response Process of mixing SANS Incide
 
 
 
+#### Inspiration For This Project
+> Just felt like there was something missing for Incident Response and a centrally place for playbooks, SIEM Processes, Forensics and other processes around Incident Response.
+
+- [Blog - Alerting and Detection Strategy Framework](https://blog.palantir.com/alerting-and-detection-strategy-framework-52dc33722df2)
+- [Alerting and Detection Strategy Framework](https://github.com/palantir/alerting-detection-strategy-framework)
+- [MITRE](https://attack.mitre.org/)
+- https://us-cert.cisa.gov/
+- [Counteractive](https://www.counteractive.net/)
+- https://github.com/TonyPhipps/SIEM/
+
+
 
