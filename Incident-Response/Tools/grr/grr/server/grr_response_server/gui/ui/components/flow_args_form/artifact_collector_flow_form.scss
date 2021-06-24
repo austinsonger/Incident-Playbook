@@ -1,0 +1,67 @@
+.w100 {
+  width: 100%;
+}
+
+.artifact-option {
+  line-height: inherit;
+  height: auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.option-title {
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0.3px;
+  color: #202124; /* Grey/900 */
+}
+
+.option-description {
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 18px;
+  letter-spacing: 0.3px;
+  color: #5f6368; /* Grey/700 */
+}
+
+.option-small {
+  font-size: 11px;
+  line-height: 18px;
+  letter-spacing: 0.3px;
+  color: #9aa0a6; /* Grey/500 */
+}
+
+.unavailable {
+  background-color: #e8eaed;
+}
+
+.sources-tree {
+  ul,
+  li {
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+  }
+
+  .mat-tree-node {
+    min-height: 0;
+    line-height: 1.1;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .mat-icon-button {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    color: #868484;
+  }
+}
+
+.invisible {
+  display: none;
+}
+
+.links {
+  margin-top: 1em;
+}

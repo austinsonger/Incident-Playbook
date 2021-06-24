@@ -1,0 +1,56 @@
+@use '~material-theme' as c;
+@use '~main' as main;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.toolbar {
+  box-sizing: border-box;
+  height: main.$toolbar-height;
+  box-shadow: 0px 0px 4px c.mat-color(c.$background, shadow);
+  border-bottom: 1px solid c.mat-color(c.$foreground, divider-light);
+
+  .brand {
+    margin-left: 0.5em;
+
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+
+    .logo {
+      height: 38px;
+
+      img {
+        width: 38px;
+        margin-right: 0.5em;
+      }
+    }
+
+    .title {
+      color: c.mat-color(c.$foreground, logo);
+      font-size: 24px;
+      font-family: c.$google-sans-display-family;
+      margin-top: 2px;
+    }
+
+    .badge {
+      border-radius: 5px;
+      border: 1px solid c.mat-color(c.$foreground, divider-light);
+      color: c.mat-color(c.$foreground, logo);
+      display: inline-block;
+      font-size: 10px;
+      font-weight: bold;
+      line-height: 1;
+      margin-left: 1em;
+      padding: 4px;
+      vertical-align: middle;
+    }
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+}
