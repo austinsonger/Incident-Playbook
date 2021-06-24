@@ -1,0 +1,21 @@
+.. _labels:
+
+bottler.labels
+==============
+
+.. image:: ../_static/images/icons/label.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/labels.summary.txt
+
+:ref:`labels-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   bottler.labels.admin
+   bottler.labels.models
+   bottler.labels.serializers

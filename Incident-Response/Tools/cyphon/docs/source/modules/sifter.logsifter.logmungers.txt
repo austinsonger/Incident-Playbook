@@ -1,0 +1,20 @@
+.. _logmungers:
+
+sifter.logsifter.logmungers
+===========================
+
+.. image:: ../_static/images/icons/munger.png
+    :width: 120px
+    :align: left
+
+.. include:: ../summaries/logmungers.summary.txt
+
+:ref:`logmungers-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   sifter.logsifter.logmungers.admin
+   sifter.logsifter.logmungers.models

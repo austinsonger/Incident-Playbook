@@ -1,0 +1,25 @@
+.. _mailsieves-graph:
+
+MailSieves Graph
+================
+
+.. figure:: ../_static/images/graphs/mailsieves-graph.png
+    :target: ../_static/images/graphs/mailsieves-graph.png
+    :alt: MailSieves model graph
+
+    Graph of models in the :ref:`mailsieves` app and related apps.
+
+Overview
+--------
+
+.. include:: ../summaries/mailsieves.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models mailsieves mailchutes -X Chute,Rule,Sieve,SieveNode -g -o mailsieves-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`mailchutes-graph`
+* :ref:`sieves-graph`

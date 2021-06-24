@@ -1,0 +1,89 @@
+.. _faqs:
+
+####
+FAQs
+####
+
+* :ref:`server-faq`
+* :ref:`login-faq`
+* :ref:`delete-superuser-faq`
+* :ref:`logs-faq`
+* :ref:`backup-faq`
+
+.. _server-faq:
+
+************************************************************
+How can I access Cyphon through a domain name or IP address?
+************************************************************
+
+To access your Cyphon instance using the external IP address or domain name of your server, add the IP address or domain name to ``'ALLOWED_HOSTS'`` under ``HOST_SETTINGS`` in your ``conf.py`` settings file::
+
+    HOST_SETTINGS = {
+        'ALLOWED_HOSTS': [
+            'example.com',
+            'localhost',
+            'cyphon',
+        ],
+    }
+
+See the section on :ref:`configuring Django <django-config>` for details.
+
+
+.. _login-faq:
+
+*****************************************
+I just installed Cyphon. What's my login?
+*****************************************
+
+If you started Cyphon in development mode using `Cyphondock`_, it should have already created a superuser using the ``CYPHON_USERNAME`` and ``CYPHON_PASSWORD`` settings defined in your `.config/env/cyphon.env <https://github.com/dunbarcyber/cyphondock/blob/master/config-COPYME/env/cyphon.env#L1-L2>`__ file. You can use these credentials to login and create other users.
+
+If you started Cyphon in production mode, you’ll need to create a superuser account manually. You can find instructions under :ref:`create-superuser`.
+
+
+.. _delete-superuser-faq:
+
+**************************************
+How do I delete the default superuser?
+**************************************
+
+Option 1: Cyphon Admin
+======================
+
+Under "People and Permissions" on the main admin page, click "Users", and delete the superuser. If you were logged in as this user, you will be immediately logged out.
+
+Option 2: Command Line
+======================
+
+If you're running Cyphondock, you first need to access the shell of the Docker container::
+
+    $ sudo docker exec -it cyphondock_cyphon_1 /bin/sh
+
+This will put you in the main ``cyphon`` project directory where Django's ``manage.py`` file is found. If you're not running Cyphondock, you'll need to switch to this working directory before proceeding.
+
+Access the Django shell::
+
+    $ python manage.py shell
+
+Then delete the user::
+
+    >>> from django.contrib.auth import get_user_model
+    >>> USER_MODEL = get_user_model()
+    >>> USER_MODEL.objects.get(email="admin@example.com", is_superuser=True).delete()
+
+
+.. _logs-faq:
+
+****************************************************
+How do I get logs from a remote machine into Cyphon?
+****************************************************
+
+We recommend you use `Filebeat`_ and `Logstash`_. Check out our :ref:`Logstash tutorial <logstash-tutorial>` for guidance. If you're using a `Cyphondock`_-based deployment (such as our `Cyphon Virtual Machine <https://www.cyphon.io/cyphon-vm/>`__), see our `Cyphondock documentation <http://cyphondock.readthedocs.io/en/latest/configure-project.html#logstash-config>`__ for more details.
+
+
+.. _backup-faq:
+
+****************************************
+How do I backup my admin configurations?
+****************************************
+
+You can backup your configurations by exporting them as fixtures. See the section on :ref:`dumping-data` for details. Alernatively, you can backup your PostgreSQL database. Consult `PostgreSQL's documentation <https://www.postgresql.org/docs/9.6/static/backup.html>`__ for instructions.

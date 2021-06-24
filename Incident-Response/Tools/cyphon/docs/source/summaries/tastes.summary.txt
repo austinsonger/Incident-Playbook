@@ -1,0 +1,1 @@
+|Tastes| are :ref:`Teasers<teasers>` for data in :ref:`Containers<containers>`. |Tastes| provide basic information about the data, such as author, title, date, and location (Who, What, When, and Where).

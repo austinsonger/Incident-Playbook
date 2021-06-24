@@ -1,0 +1,123 @@
+schema {
+    query: ModernQueryExecutor
+}
+
+type IntStep {
+    toList: [Int!]!
+    head: Int!
+    headOption: Int
+}
+
+type ModernQueryExecutor {
+    allSoftwareList: [Software!]!
+    allPeople: PersonStep!
+}
+
+enum Order {
+    decr
+    incr
+    shuffle
+}
+
+type Person {
+    name: String!
+    age: Int!
+}
+
+type PersonStep {
+    created: SoftwareStep!
+    name: StringStep!
+    age: IntStep!
+    toList: [Person!]!
+    head: Person!
+    headOption: Person
+    filter(filter: PersonStepsFilter!): PersonStep!
+    sort(order: PersonStepsSort!): PersonStep!
+}
+
+input PersonStepsFilter {
+    name: String
+    name_not: String
+    name_in: [String!]
+    name_not_in: [String!]
+    name_lt: String
+    name_lte: String
+    name_gt: String
+    name_gte: String
+    name_contains: String
+    name_not_contains: String
+    name_starts_with: String
+    name_not_starts_with: String
+    name_ends_with: String
+    name_not_ends_with: String
+    age: Int
+    age_not: Int
+    age_in: [Int!]
+    age_not_in: [Int!]
+    age_lt: Int
+    age_lte: Int
+    age_gt: Int
+    age_gte: Int
+}
+
+input PersonStepsSort {
+    name: Order
+    age: Order
+}
+
+type Software {
+    name: String!
+    lang: String!
+}
+
+type SoftwareStep {
+    name: StringStep!
+    lang: StringStep!
+    toList: [Software!]!
+    head: Software!
+    headOption: Software
+    filter(filter: SoftwareStepsFilter!): SoftwareStep!
+    sort(order: SoftwareStepsSort!): SoftwareStep!
+}
+
+input SoftwareStepsFilter {
+    name: String
+    name_not: String
+    name_in: [String!]
+    name_not_in: [String!]
+    name_lt: String
+    name_lte: String
+    name_gt: String
+    name_gte: String
+    name_contains: String
+    name_not_contains: String
+    name_starts_with: String
+    name_not_starts_with: String
+    name_ends_with: String
+    name_not_ends_with: String
+    lang: String
+    lang_not: String
+    lang_in: [String!]
+    lang_not_in: [String!]
+    lang_lt: String
+    lang_lte: String
+    lang_gt: String
+    lang_gte: String
+    lang_contains: String
+    lang_not_contains: String
+    lang_starts_with: String
+    lang_not_starts_with: String
+    lang_ends_with: String
+    lang_not_ends_with: String
+}
+
+input SoftwareStepsSort {
+    name: Order
+    lang: Order
+}
+
+type StringStep {
+    toList: [String!]!
+    head: String!
+    headOption: String
+}

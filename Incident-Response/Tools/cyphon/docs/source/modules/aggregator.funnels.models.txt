@@ -1,0 +1,13 @@
+aggregator.funnels.models
+=========================
+
+.. figure:: ../_static/images/graphs/funnels-graph.png
+    :target: ../graphs/funnels.graph.html
+    :alt: Funnels model graph
+
+    Graph of models in the :ref:`funnels` app and related apps.
+
+.. automodule:: aggregator.funnels.models
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,26 @@
+.. _collectionqueries-graph:
+
+CollectionQueries Graph
+=======================
+
+.. figure:: ../_static/images/graphs/collectionqueries-graph.png
+    :target: ../_static/images/graphs/collectionqueries-graph.png
+    :alt: collectionqueries model graph
+
+    Graph of models in the :ref:`collectionqueries` app and related apps.
+
+Overview
+--------
+
+.. include:: ../summaries/collectionqueries.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models collectionqueries appusers warehouses -X AbstractBaseUser,PermissionsMixin -g -o collectionqueries-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`appusers-graph`
+* :ref:`locations-graph`
+* :ref:`reservoirqueries-graph`

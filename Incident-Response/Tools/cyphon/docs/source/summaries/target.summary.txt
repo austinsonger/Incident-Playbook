@@ -1,0 +1,1 @@
+The Target package defines parameters for searching :ref:`Reservoirs<reservoirs>`. These include :ref:`Followees<followees>`, :ref:`Locations<locations>`, :ref:`SearchTerms<searchterms>`, and :ref:`TimeFrames<timeframes>`.

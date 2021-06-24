@@ -1,0 +1,7 @@
+lab.sentiment.sentiment
+=======================
+
+.. automodule:: lab.sentiment.sentiment
+    :members:
+    :undoc-members:
+    :show-inheritance:

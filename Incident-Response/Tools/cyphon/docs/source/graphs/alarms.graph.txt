@@ -1,0 +1,26 @@
+.. _alarms-graph:
+
+Alarms Graph
+============
+
+.. figure:: ../_static/images/graphs/alarms-graph.png
+    :target: ../_static/images/graphs/alarms-graph.png
+    :alt: Alarms model graph
+
+    Model graph for the |Alarm| base class and its subclasses.
+
+Overview
+--------
+
+.. include:: ../summaries/alarms.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models auth monitors watchdogs -X Muzzle,Permission,Trigger -o alarms-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`auth-graph`
+* :ref:`monitors-graph`
+* :ref:`watchdogs-graph`

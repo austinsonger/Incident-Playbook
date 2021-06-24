@@ -1,0 +1,22 @@
+[
+  {
+    "model": "tastes.taste",
+    "fields": {
+      "container": ["mail"],
+      "author": "from",
+      "title": "subject",
+      "content": "body",
+      "datetime": "date"
+    }
+  },
+  {
+    "model": "tastes.taste",
+    "fields": {
+      "container": ["labeled_post"],
+      "author": "user.name",
+      "title": "post.title",
+      "content": "post.text",
+      "datetime": "created_date"
+    }
+  }
+]

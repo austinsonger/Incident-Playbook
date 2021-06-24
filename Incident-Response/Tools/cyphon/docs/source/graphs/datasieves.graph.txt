@@ -1,0 +1,26 @@
+.. _datasieves-graph:
+
+DataSieves Graph
+================
+
+.. figure:: ../_static/images/graphs/datasieves-graph.png
+    :target: ../_static/images/graphs/datasieves-graph.png
+    :alt: DataSieves model graph
+
+    Graph of models in the :ref:`datasieves` app and related apps.
+
+Overview
+--------
+
+.. include:: ../summaries/datasieves.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models datasieves datachutes watchdogs -X Alarm,Chute,FieldRule,Muzzle,Sieve,SieveNode -g -o datasieves-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`datachutes-graph`
+* :ref:`sieves-graph`
+* :ref:`watchdogs-graph`

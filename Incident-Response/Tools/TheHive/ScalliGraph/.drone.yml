@@ -1,0 +1,61 @@
+---
+kind: pipeline
+name: default
+type: docker
+
+steps:
+  # Restore cache of downloaded dependencies
+  - name: restore-cache
+    image: drillster/drone-volume-cache
+    settings:
+      restore: true
+      backend: "filesystem"
+      mount:
+        - .sbt
+        - .ivy2
+        - .cache
+    volumes: [{name: cache, path: /cache}]
+
+  # Run project tests
+  - name: run-tests
+    image: thehiveproject/drone-scala-node
+    commands:
+      - sbt -Duser.home=$PWD test:compile test
+
+  # Save external libraries in cache
+  - name: save-cache
+    image: drillster/drone-volume-cache
+    settings:
+      rebuild: true
+      backend: "filesystem"
+      mount:
+        - .sbt
+        - .ivy2
+        - .cache
+    volumes: [{name: cache, path: /cache}]
+
+  - name: send message
+    image: thehiveproject/drone_keybase
+    settings:
+      username: {from_secret: keybase_username}
+      paperkey: {from_secret: keybase_paperkey}
+      channel: {from_secret: keybase_channel}
+    commands:
+      - |
+        keybase oneshot -u "$PLUGIN_USERNAME" --paperkey "$PLUGIN_PAPERKEY"
+        URL="$DRONE_SYSTEM_PROTO://$DRONE_SYSTEM_HOST/$DRONE_REPO/$DRONE_BUILD_NUMBER"
+        if [ $DRONE_BUILD_STATUS = "success" ]
+        then
+          keybase chat send "$PLUGIN_CHANNEL" ":white_check_mark: $DRONE_REPO: build succeeded $URL"
+        else
+          keybase chat send "$PLUGIN_CHANNEL" ":x: $DRONE_REPO: build failed $URL"
+        fi
+    when:
+      status:
+      - success
+      - failure
+
+volumes:
+  - name: cache
+    host:
+      path: /opt/drone/cache

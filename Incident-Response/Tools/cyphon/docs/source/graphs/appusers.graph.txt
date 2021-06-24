@@ -1,0 +1,27 @@
+.. _appusers-graph:
+
+AppUsers Graph
+==============
+
+.. figure:: ../_static/images/graphs/appusers-graph.png
+    :target: ../_static/images/graphs/appusers-graph.png
+    :alt: AppUsers model graph
+
+    Graph of models in the :ref:`appusers` app and related apps.
+
+Overview
+--------
+
+.. include:: ../summaries/appusers.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models appusers alerts auth companies locations -X AbstractBaseUser,Comment,PermissionsMixin -g -o appusers-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`alerts-graph`
+* :ref:`auth-graph`
+* :ref:`companies-graph`
+* :ref:`locations-graph`

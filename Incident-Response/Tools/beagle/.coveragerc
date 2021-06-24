@@ -1,0 +1,6 @@
+[run]
+omit =
+    beagle/config_templates/*
+    beagle/web/static/*
+    beagle/web/wsgi.py
+    beagle/web/server.py

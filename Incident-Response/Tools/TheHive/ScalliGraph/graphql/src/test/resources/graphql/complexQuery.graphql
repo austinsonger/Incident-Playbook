@@ -1,0 +1,22 @@
+query AllPerson {
+  allPeople {
+    created {
+      sort(sort:{
+        name: incr
+      }) {
+        name {
+          toList
+        }
+      }
+    }
+    sort(
+      sort:{
+        name: incr
+      }) {
+      toList {
+        name
+        age
+      }
+    }
+  }
+}

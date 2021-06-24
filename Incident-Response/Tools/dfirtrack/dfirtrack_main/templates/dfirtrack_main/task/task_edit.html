@@ -1,0 +1,411 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    Edit task
+</title>
+
+{% load static %}
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+        
+<!-- headline -->
+<div class="bottom-distance">
+    <h4>
+        Edit task
+    </h4>
+</div>
+
+<!-- form -->
+<form method="POST" class="post-form">
+
+    <!-- button row -->
+    <div class="row">
+
+        <!-- save button -->
+        <div class="col-1">
+            {% include "dfirtrack_main/includes/button_save.html" %}
+        </div>
+
+        <!-- cancel button -->
+        <div class="col-1">
+            {% include "dfirtrack_main/includes/button_cancel.html" %}
+        </div>
+
+    <!-- button row -->
+    </div>
+
+    {% csrf_token %}
+
+    <!-- show form related errors -->
+    {% include "dfirtrack_main/includes/form_errors.html" %}
+
+    <!-- ############################################ -->
+
+    <!-- taskname block -->
+    <div class="card card-body bg-dark border-light top-distance">
+
+        <!-- taskname headline -->
+        <div class="row">
+            <div class="col">
+                <h5>
+                    Taskname (*):
+                </h5>
+            </div>
+        </div>
+
+        <!-- taskname -->
+        <div class="row">
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- taskname errors -->
+                    <div class="text-danger">
+                        {{ form.taskname.errors }}
+                    </div>
+                    {{ form.taskname }}
+                </div>
+            </div>
+        </div>
+
+        <!-- parent task headline -->
+        <div class="row">
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    Parent task:
+                </div>
+            </div>
+        </div>
+
+        <!-- parent task -->
+        <div class="row">
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- parent task errors -->
+                    <div class="text-danger">
+                        {{ form.parent_task.errors }}
+                    </div>
+                    {{ form.parent_task }}
+                </div>
+            </div>
+        </div>
+
+    <!-- taskname block -->
+    </div>
+
+    <!-- ############################################ -->
+
+    <!-- tag block -->
+    <div class="card card-body bg-dark border-light top-distance">
+
+        <!-- tag headline -->
+        <div class="row">
+            <div class="col">
+                <h5>
+                    Tags
+                </h5>
+            </div>
+        </div>
+
+        <!-- tags -->
+        <div class="row">
+            <div class="col-6">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- tag errors -->
+                    <div class="text-danger">
+                        {{ form.tag.errors }}
+                    </div>
+                    {% for i in form.tag %}
+                        {{ i }}<br>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    <!-- tag block -->
+    </div>
+
+    <!-- ############################################ -->
+
+    <!-- status information block -->
+    <div class="card card-body bg-dark border-light top-distance">
+
+        <!-- status information headline -->
+        <div class="row">
+            <div class="col">
+                <h5>
+                    Status information
+                </h5>
+            </div>
+        </div>
+
+        <!-- status information headlines row -->
+        <div class="row">
+
+            <!-- taskstatus headline -->
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    Status (*):
+                </div>
+            </div>
+
+            <!-- taskpriority headline -->
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    Priority (*):
+                </div>
+            </div>
+
+        <!-- status information headlines row -->
+        </div>
+
+        <!-- status information row -->
+        <div class="row">
+
+            <!-- taskstatus -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- taskstatus errors -->
+                    <div class="text-danger">
+                        {{ form.taskstatus.errors }}
+                    </div>
+                    {% for i in form.taskstatus %}
+                        {{ i }}<br>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- taskpriority -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- taskpriority errors -->
+                    <div class="text-danger">
+                        {{ form.taskpriority.errors }}
+                    </div>
+                    {% for i in form.taskpriority %}
+                        {{ i }}<br>
+                    {% endfor %}
+                </div>
+            </div>
+
+        <!-- status information row -->
+        </div>
+
+        <!-- system / user headlines row -->
+        <div class="row top-distance">
+
+            <!-- system headline -->
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    Corresponding system:
+                </div>
+            </div>
+
+            <!-- assigned user headline -->
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    Assigned to user:
+                </div>
+            </div>
+
+        <!-- system / user headlines row -->
+        </div>
+
+        <!-- system / user row -->
+        <div class="row">
+
+            <!-- system -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- system errors -->
+                    <div class="text-danger">
+                        {{ form.system.errors }}
+                    </div>
+                    {{ form.system }}
+                </div>
+            </div>
+
+            <!-- assigned user -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- assigned user errors -->
+                    <div class="text-danger">
+                        {{ form.task_assigned_to_user_id.errors }}
+                    </div>
+                    {% for i in form.task_assigned_to_user_id %}
+                        {{ i }}<br>
+                    {% endfor %}
+                </div>
+            </div>
+
+        <!-- system / user row -->
+        </div>
+
+    <!-- status information block -->
+    </div>
+
+    <!-- ############################################ -->
+
+    <!-- timing information block -->
+    <div class="card card-body bg-dark border-light top-distance">
+
+        <!-- timing information headline -->
+        <div class="row">
+            <div class="col">
+                <h5>
+                    Timing information
+                </h5>
+            </div>
+        </div>
+
+        <!-- headlines / tooltips -->
+        <div class="row font-weight-bold">
+
+            <!-- task scheduled time headline -->
+            <div class="col-2">
+                    Scheduled:<br>
+                    (YYYY-MM-DD HH:MM:SS)
+            </div>
+
+            <!-- task scheduled time tooltip -->
+            <div class="col-1">
+                <div data-toggle="tooltip" data-placement="auto" title="The time when a task can be started at the earliest.">
+                    {% include "dfirtrack_main/includes/button_tooltip.html" %}
+                </div>
+            </div>
+
+            <!-- task started time headline -->
+            <div class="col-1 text-muted">
+                Started:
+            </div>
+
+            <!-- task started time tooltip -->
+            <div class="col-2">
+                <div data-toggle="tooltip" data-placement="right" title="The starting time is affected by task status and therefore not manually editable.">
+                    {% include "dfirtrack_main/includes/button_tooltip.html" %}
+                </div>
+            </div>
+
+            <!-- task finished time headline -->
+            <div class="col-1 text-muted">
+                Finished:
+            </div>
+
+            <!-- task finished time tooltip -->
+            <div class="col-2">
+                <div data-toggle="tooltip" data-placement="right" title="The finishing time is affected by task status and therefore not manually editable.">
+                    {% include "dfirtrack_main/includes/button_tooltip.html" %}
+                </div>
+            </div>
+
+            <!-- task due time headline -->
+            <div class="col-2">
+                    Due:<br>
+                    (YYYY-MM-DD HH:MM:SS)
+            </div>
+
+            <!-- task due time tooltip -->
+            <div class="col-1">
+                <div data-toggle="tooltip" data-placement="right" title="The time when a task should be finished.">
+                    {% include "dfirtrack_main/includes/button_tooltip.html" %}
+                </div>
+            </div>
+
+        <!-- headlines / tooltips -->
+        </div>
+
+        <!-- timing information -->
+        <div class="row">
+
+            <!-- task scheduled time -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- task scheduled time errors -->
+                    <div class="text-danger">
+                        {{ form.task_scheduled_time.errors }}
+                    </div>
+                    {{ form.task_scheduled_time }}
+                </div>
+            </div>
+
+            <!-- placeholder -->
+            <div class="col-6">
+            </div>
+
+            <!-- task due time -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- task due time errors -->
+                    <div class="text-danger">
+                        {{ form.task_due_time.errors }}
+                    </div>
+                    {{ form.task_due_time }}
+                </div>
+            </div>
+
+        <!-- timing information -->
+        </div>
+
+    <!-- timing information block -->
+    </div>
+
+    <!-- ############################################ -->
+
+    <!-- task note block -->
+    <div class="card card-body bg-dark border-light top-distance bottom-distance">
+
+        <!-- task note headline -->
+        <div class="row">
+            <div class="col">
+                <h5>
+                    Note
+                </h5>
+            </div>
+        </div>
+
+        <!-- task note -->
+        <div class="row">
+            <div class="col">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- task note errors -->
+                    <div class="text-danger">
+                        {{ form.task_note.errors }}
+                    </div>
+                    {{ form.task_note }}
+                </div>
+            </div>
+        </div>
+
+    <!-- task note block -->
+    </div>
+
+    <!-- button row -->
+    <div class="row">
+
+        <!-- save button -->
+        <div class="col-1">
+            {% include "dfirtrack_main/includes/button_save.html" %}
+        </div>
+
+        <!-- cancel button -->
+        <div class="col-1">
+            {% include "dfirtrack_main/includes/button_cancel.html" %}
+        </div>
+
+    <!-- button row -->
+    </div>
+
+<!-- form -->
+</form>
+    
+<!-- HTML body in maintemplate -->
+{% endblock %}

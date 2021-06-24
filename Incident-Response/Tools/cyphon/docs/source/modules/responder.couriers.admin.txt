@@ -1,0 +1,7 @@
+responder.couriers.admin
+========================
+
+.. automodule:: responder.couriers.admin
+    :members:
+    :undoc-members:
+    :show-inheritance:

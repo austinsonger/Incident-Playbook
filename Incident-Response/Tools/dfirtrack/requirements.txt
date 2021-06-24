@@ -1,0 +1,15 @@
+coverage
+django
+django_q
+djangorestframework
+gitpython
+gunicorn
+mock
+mkdocs
+psycopg2
+psycopg2-binary
+PyYAML
+requests
+xlrd
+xlwt
+uritemplate

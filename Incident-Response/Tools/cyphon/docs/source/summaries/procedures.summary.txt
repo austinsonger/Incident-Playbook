@@ -1,0 +1,1 @@
+|Procedures| are used to enrich data by performing specific analyses on the data (for instance, language detection). |Procedures| reference analytic packages in the :ref:`Lab<lab>` package, which are used to examine data. The results of these analyses can then be attached to the data using :ref:`Labels<labels>`.

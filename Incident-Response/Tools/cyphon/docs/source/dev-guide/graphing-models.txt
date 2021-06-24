@@ -1,0 +1,62 @@
+.. _graphing-models:
+
+#####################################
+Creating Entity Relationship Diagrams
+#####################################
+
+You can view the relationships between Cyphon's Django models using the 
+`Graph Models`_ package of `Django Extensions`_. Cyphon is already 
+configured to use Graph Models, but you will need to install 
+``pygraphviz`` or ``pydot`` to help generate the graphs. 
+See the `Graph Models documentation`_ for details.
+
+Use the ``-a`` option to graph all models in the project. Use the ``-o`` 
+argument to specify an output file with either a ``.dot`` or ``.png`` 
+extension. For example: 
+
+.. code-block:: bash
+
+   $ python manage.py graph_models -a -o all_models.png
+
+You can also use the ``-g`` option to group models by app. 
+
+.. warning::
+
+    Grouping models by app imposes constraints on their arrangement that 
+    can make relationships harder to interpret. Generate graphs with 
+    and without the ``-g`` option to see which you prefer.
+
+To view relationships between specific apps, list them by their app 
+labels. For example, the following command would graphs models from  
+:mod:`sifter.datasifter.datacondensers.models` and :mod:`bottler.bottles.models`:
+
+.. code-block:: bash
+
+   $ python manage.py graph_models datacondensers bottles -o datacondensers_bottles.png
+
+This would generate a graph like this:
+
+.. figure:: ../_static/images/graphs/datacondensers-bottles.png
+   :alt: Model graph for DataCondensers and Bottles
+
+   Model graph for DataCondensers and Bottles.
+
+To view the same models grouped by application:
+
+.. code-block:: bash
+
+   $ python manage.py graph_models pipes datacondensers bottles -g -o condensers_bottles_by_grp.png
+
+This would generate a graph like this:
+
+.. figure:: ../_static/images/graphs/datacondensers-bottles-by-grp.png
+   :alt: Model graph for DataCondensers and Bottles
+
+   Model graph for DataCondensers and Bottles, grouped by app.
+
+To find out what models you can graph, refer to the list of 
+:const:`INSTALLED_APPS<cyphon.settings.base.INSTALLED_APPS>`.
+
+.. _Graph Models: http://django-extensions.readthedocs.org/en/latest/graph_models.html
+.. _Graph Models Documentation: http://django-extensions.readthedocs.org/en/latest/graph_models.html
+.. _Django Extensions: http://django-extensions.readthedocs.org/en/latest

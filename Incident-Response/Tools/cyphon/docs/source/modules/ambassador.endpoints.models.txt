@@ -1,0 +1,13 @@
+ambassador.endpoints.models
+===========================
+
+.. figure:: ../_static/images/graphs/endpoints-graph.png
+    :target: ../graphs/endpoints.graph.html
+    :alt: Endpoints model graph
+
+    Model graph for the |Endpoint| base class and subclasses.
+
+.. automodule:: ambassador.endpoints.models
+    :members:
+    :undoc-members:
+    :show-inheritance:

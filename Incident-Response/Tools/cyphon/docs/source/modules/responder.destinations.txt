@@ -1,0 +1,20 @@
+.. _destinations:
+
+responder.destinations
+======================
+
+.. image:: ../_static/images/icons/destination.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/destinations.summary.txt
+
+:ref:`destinations-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   responder.destinations.admin
+   responder.destinations.models

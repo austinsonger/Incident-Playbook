@@ -1,0 +1,1 @@
+|LogCondensers| allow log messages to be stored in custom formats defined by :ref:`Bottles<bottles>`. A |LogCondenser| is composed of |LogFittings| that map the |BottleFields| in a |Bottle| to |LogParsers|, which are used to process logs from :ref:`LogChutes<logchutes>`.

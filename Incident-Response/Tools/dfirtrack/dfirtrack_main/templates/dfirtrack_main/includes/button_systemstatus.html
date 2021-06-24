@@ -1,0 +1,57 @@
+{% load static %}
+<!--
+FOR NEW SYSTEMSTATUSES ADD NEW BUTTON HERE
+-->
+
+    <!-- systemstatus '10_unknown' -->
+    {% if systemstatus.systemstatus_name == '10_unknown' %}
+        <a href="{{ systemstatus.get_absolute_url }}" class="btn btn-orange btn-sm round copy-true">
+            <img src="{% static 'dfirtrack_main/icons/flag-light.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+
+    <!-- systemstatus '20_analysis_ongoing' -->
+    {% elif systemstatus.systemstatus_name == '20_analysis_ongoing' %}
+        <a href="{{ systemstatus.get_absolute_url }}" class="btn btn-orange btn-sm round copy-true">
+            <img src="{% static 'dfirtrack_main/icons/pulse-light.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+
+    <!-- systemstatus '30_compromised' -->
+    {% elif systemstatus.systemstatus_name == '30_compromised' %}
+        <a href="{{ systemstatus.get_absolute_url }}" class="btn btn-red btn-sm round copy-true">
+            <img src="{% static 'dfirtrack_main/icons/fire-light.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+
+    <!-- systemstatus '40_clean' -->
+    {% elif systemstatus.systemstatus_name == '40_clean' %}
+        <a href="{{ systemstatus.get_absolute_url }}" class="btn btn-green btn-sm round copy-true">
+            <img src="{% static 'dfirtrack_main/icons/shield-light.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+
+    <!-- systemstatus '50_remediation_done' -->
+    {% elif systemstatus.systemstatus_name == '50_remediation_done' %}
+        <a href="{{ systemstatus.get_absolute_url }}" class="btn btn-green btn-sm round copy-true">
+            <img src="{% static 'dfirtrack_main/icons/shield-light.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+
+    <!-- systemstatus '60_reinstalled' -->
+    {% elif systemstatus.systemstatus_name == '60_reinstalled' %}
+        <a href="{{ systemstatus.get_absolute_url }}" class="btn btn-green btn-sm round copy-true">
+            <img src="{% static 'dfirtrack_main/icons/shield-light.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+
+    <!-- systemstatus '70_removed' -->
+    {% elif systemstatus.systemstatus_name == '70_removed' %}
+        <a href="{{ systemstatus.get_absolute_url }}" class="btn btn-green btn-sm round copy-true">
+            <img src="{% static 'dfirtrack_main/icons/trash-light.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+
+    <!-- systemstatus '90_not_analyzed' -->
+    {% elif systemstatus.systemstatus_name == '90_not_analyzed' %}
+        <a href="{{ systemstatus.get_absolute_url }}" class="btn btn-orange btn-sm round copy-true">
+            <img src="{% static 'dfirtrack_main/icons/ban-light.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+
+    <!-- show blank text if systemstatus has no button defined -->
+    {% else %}
+        <a href="{{ systemstatus.get_absolute_url }}" class="copy-true">
+
+    {% endif %}
+
+    <!-- tooltip with systemstatus note -->
+    <span data-toggle="tooltip" data-placement="auto" title="{{ systemstatus.systemstatus_note }}">
+        <!-- systemstatus name itself (within button) -->
+        {{ systemstatus.systemstatus_name }}
+    </span>
+</a>

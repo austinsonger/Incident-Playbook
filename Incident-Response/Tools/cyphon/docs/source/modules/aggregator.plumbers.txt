@@ -1,0 +1,20 @@
+.. _plumbers:
+
+aggregator.plumbers
+===================
+
+.. image:: ../_static/images/icons/plumber.png
+    :width: 60px
+    :align: left
+
+.. include:: ../summaries/plumbers.summary.txt
+
+:ref:`plumbers-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   aggregator.plumbers.admin
+   aggregator.plumbers.models

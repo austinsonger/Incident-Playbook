@@ -1,0 +1,140 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    Systemstatus '{{ systemstatus.systemstatus_name }}'{% if systemstatus.systemstatus.all %} (s: {{ systemstatus.systemstatus.all|length }}){% endif %}
+</title>
+
+{% load static %}
+
+<!-- javascript and CSS for datatables -->
+<link rel="stylesheet" type="text/css" href="{% static 'dfirtrack_main/datatables-1.10.16/datatables.min.css' %}"/>
+<script src="{% static 'dfirtrack_main/datatables-1.10.16/datatables.js' %}"></script>
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- up button -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <a href="{% url 'systemstatus_list' %}" type="button" class="btn btn-light">
+            <img src="{% static 'dfirtrack_main/icons/arrow-circle-top.svg' %}" class="icon" alt="icon">
+            Up to systemstatus
+        </a>
+    </div>
+</div>
+
+<!-- javascript for copy button -->
+<script>
+    var clipboard = new ClipboardJS('.btn');
+</script>
+
+<!-- headline row -->
+<div class="row">
+
+    <!-- headline -->
+    <div class="col-3">
+        <h5>
+            Systemstatus
+	    {% include "dfirtrack_main/includes/button_systemstatus.html" %}
+	</h5>
+    </div>
+
+    <!-- copy button -->
+    <div class="col-3">
+        {% if systemstatus.systemstatus.all %}
+            {% with systems=systemstatus.systemstatus.all %}
+                {% include "dfirtrack_main/includes/button_copy_hostnames.html" %}
+            {% endwith %}
+        {% endif %}
+    </div>
+
+<!-- headline row -->
+</div>
+
+<!-- systemstatus id -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <small class="text-muted">
+            Systemstatus-ID: {{ systemstatus.systemstatus_id }}
+        </small>
+    </div>
+</div>
+
+<!-- systemstatus note headline -->
+<div class="row">
+    <div class="col-3">
+        <h5>
+            Note
+        </h5>
+    </div>
+</div>
+
+<!-- systemstatus note -->
+<div class="row bottom-distance">
+    <div class="col">
+        {% if systemstatus.systemstatus_note %}
+            {{ systemstatus.systemstatus_note|linebreaks }}
+        {% else %}
+            ---
+        {% endif %}
+    </div>
+</div>
+
+<!-- system headline -->
+<div class="row">
+    <div class="col-6">
+        <h5>
+            Systems with this status{% if systemstatus.systemstatus.all %} ({{ systemstatus.systemstatus.all|length }}){% endif %}
+        </h5>
+    </div>
+</div>
+
+<!-- systems -->
+{% if systemstatus.systemstatus.all %}
+
+    <!-- datatable system -->
+    <table id="table_system" class="display" width="100%">
+    
+        <!-- table head -->
+        <thead>
+            {% include "dfirtrack_main/includes/datatable_thead_table_system.html" %}
+        </thead>
+        
+        <!-- table body -->
+        <tbody>
+        </tbody>
+
+    <!-- datatable system -->
+    </table>
+
+    <!-- javascript for datatables -->
+    <script src="{% static 'dfirtrack_main/dfirtrack/datatables_dfirtrack.js' %}"></script>
+
+<!-- no systems -->
+{% else %}
+    <div class="row top-distance">
+        <div class="col-3">
+            ---
+        </div>
+    </div>
+
+<!-- systems -->
+{% endif %}
+
+<!-- javascript for datatables -->
+{% block datatables %}
+<script src="{% static 'dfirtrack_main/datatables-1.10.16/datatables.min.js' %}"></script>
+{% endblock %}
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

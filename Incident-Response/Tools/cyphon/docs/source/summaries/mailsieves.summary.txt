@@ -1,0 +1,3 @@
+|MailSieves| test whether email messages meet a certain set of criteria. When used by :ref:`MailChutes<mailchutes>`, they determine whether mail should proceed to :ref:`MailMungers<mailmungers>` for processing.
+
+|MailSieves| are rulesets that are composed of one of more |MailSieveNodes|. A |MailSieveNode| can point to either a |MailRule| or another |MailSieve|. This permits the construction of complex, nested rulesets.

@@ -1,0 +1,244 @@
+[
+  {
+    "model": "datasieves.datarule",
+    "fields": {
+      "id": 1,
+      "name": "subject_contains_CRIT",
+      "field_name": "subject",
+      "operator": "CharField:x",
+      "value": "CRIT-",
+      "case_sensitive": true
+    }
+  },
+  {
+    "model": "datasieves.datarule",
+    "fields": {
+      "id": 2,
+      "name": "subject_contains_WARN",
+      "field_name": "subject",
+      "operator": "CharField:x",
+      "value": "WARN-",
+      "case_sensitive": false
+    }
+  },
+  {
+    "model": "datasieves.datarule",
+    "fields": {
+      "id": 3,
+      "name": "subject_contains_INFO",
+      "field_name": "subject",
+      "operator": "CharField:x",
+      "value": "INFO-",
+      "case_sensitive": false
+    }
+  },
+  {
+    "model": "datasieves.datarule",
+    "fields": {
+      "id": 4,
+      "name": "message_contains_CRIT",
+      "field_name": "message",
+      "operator": "CharField:x",
+      "value": "CRIT-",
+      "case_sensitive": true
+    }
+  },
+  {
+    "model": "datasieves.datarule",
+    "fields": {
+      "id": 5,
+      "name": "message_contains_WARN",
+      "field_name": "message",
+      "operator": "CharField:x",
+      "value": "WARN-",
+      "case_sensitive": false
+    }
+  },
+  {
+    "model": "datasieves.datarule",
+    "fields": {
+      "id": 6,
+      "name": "message_contains_INFO",
+      "field_name": "message",
+      "operator": "CharField:x",
+      "value": "INFO-",
+      "case_sensitive": false
+    }
+  },
+  {
+    "model": "datasieves.datasievenode",
+    "fields": {
+      "id": 1,
+      "sieve": 1,
+      "content_type": ["datasieves", "datarule"],
+      "object_id": 1
+    }
+  },
+  {
+    "model": "datasieves.datasievenode",
+    "fields": {
+      "id": 2,
+      "sieve": 2,
+      "content_type": ["datasieves", "datarule"],
+      "object_id": 2
+    }
+  },
+  {
+    "model": "datasieves.datasievenode",
+    "fields": {
+      "id": 3,
+      "sieve": 3,
+      "content_type": ["datasieves", "datarule"],
+      "object_id": 3
+    }
+  },
+  {
+    "model": "datasieves.datasievenode",
+    "fields": {
+      "id": 4,
+      "sieve": 4,
+      "content_type": ["datasieves", "datarule"],
+      "object_id": 4
+    }
+  },
+  {
+    "model": "datasieves.datasievenode",
+    "fields": {
+      "id": 5,
+      "sieve": 5,
+      "content_type": ["datasieves", "datarule"],
+      "object_id": 5
+    }
+  },
+  {
+    "model": "datasieves.datasievenode",
+    "fields": {
+      "id": 6,
+      "sieve": 6,
+      "content_type": ["datasieves", "datarule"],
+      "object_id": 6
+    }
+  },
+  {
+    "model": "datasieves.datasieve",
+    "fields": {
+      "id": 1,
+      "name": "high_priority_email",
+      "logic": "OR"
+    }
+  },
+  {
+    "model": "datasieves.datasieve",
+    "fields": {
+      "id": 2,
+      "name": "medium_priority_email",
+      "logic": "OR"
+    }
+  },
+  {
+    "model": "datasieves.datasieve",
+    "fields": {
+      "id": 3,
+      "name": "low_priority_email",
+      "logic": "OR"
+    }
+  },
+  {
+    "model": "datasieves.datasieve",
+    "fields": {
+      "id": 4,
+      "name": "high_priority_snmp",
+      "logic": "OR"
+    }
+  },
+  {
+    "model": "datasieves.datasieve",
+    "fields": {
+      "id": 5,
+      "name": "medium_priority_snmp",
+      "logic": "OR"
+    }
+  },
+  {
+    "model": "datasieves.datasieve",
+    "fields": {
+      "id": 6,
+      "name": "low_priority_snmp",
+      "logic": "OR"
+    }
+  },
+  {
+    "model": "inspections.inspectionstep",
+    "fields": {
+      "id": 1,
+      "inspection": 1,
+      "sieve": 1,
+      "result_value": "HIGH",
+      "rank": 0
+    }
+  },
+  {
+    "model": "inspections.inspectionstep",
+    "fields": {
+      "id": 2,
+      "inspection": 1,
+      "sieve": 2,
+      "result_value": "MEDIUM",
+      "rank": 2
+    }
+  },
+  {
+    "model": "inspections.inspectionstep",
+    "fields": {
+      "id": 3,
+      "inspection": 1,
+      "sieve": 3,
+      "result_value": "LOW",
+      "rank": -2
+    }
+  },
+  {
+    "model": "inspections.inspectionstep",
+    "fields": {
+      "id": 4,
+      "inspection": 2,
+      "sieve": 4,
+      "result_value": "HIGH",
+      "rank": 0
+    }
+  },
+  {
+    "model": "inspections.inspectionstep",
+    "fields": {
+      "id": 5,
+      "inspection": 2,
+      "sieve": 5,
+      "result_value": "MEDIUM",
+      "rank": 2
+    }
+  },
+  {
+    "model": "inspections.inspectionstep",
+    "fields": {
+      "id": 6,
+      "inspection": 2,
+      "sieve": 6,
+      "result_value": "LOW",
+      "rank": -2
+    }
+  },
+  {
+    "model": "inspections.inspection",
+    "fields": {
+      "id": 1,
+      "name": "prioritize_emails"
+    }
+  },
+  {
+    "model": "inspections.inspection",
+    "fields": {
+      "id": 2,
+      "name": "prioritize_snmps"
+    }
+  }
+]

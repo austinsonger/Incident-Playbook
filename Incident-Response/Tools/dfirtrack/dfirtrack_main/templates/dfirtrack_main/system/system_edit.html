@@ -1,0 +1,838 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    Edit '{{ system.system_name }}{% if system.dnsname %}.{{ system.dnsname.dnsname_name }}{% endif %}'
+</title>
+
+{% load static %}
+
+<!-- javascript and CSS for datatables -->
+<script src="{% static 'dfirtrack_main/dfirtrack/dfirtrack.js' %}"></script>
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+        
+<!-- headline -->
+<div class="bottom-distance">
+    <h4>
+        Edit system
+    </h4>
+</div>
+
+<!-- form -->
+<form method="POST" class="post-form">
+
+    <!-- button row -->
+    <div class="row bottom-distance">
+
+        <!-- save button -->
+        <div class="col-1">
+            {% include "dfirtrack_main/includes/button_save.html" %}
+        </div>
+
+        <!-- cancel button -->
+        <div class="col-1">
+            {% include "dfirtrack_main/includes/button_cancel.html" %}
+        </div>
+
+    <!-- button row -->
+    </div>
+
+    <!-- ############################################ -->
+
+    {% csrf_token %}
+
+    <!-- show form related errors -->
+    {% include "dfirtrack_main/includes/form_errors.html" %}
+
+    <!-- ############################################ -->
+
+    <!-- system name block -->
+    <div class="card card-body bg-dark border-light top-distance">
+
+        <!-- system name headline row -->
+        <div class="row">
+
+            <!-- system name headline -->
+            <div class="col-3">
+                <h5>
+                    System name (*):
+                </h5>
+            </div>
+
+            <!-- dnsname headline -->
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    DNS name:
+                </div>
+            </div>
+
+            <!-- placeholder -->
+            <div class="col-3">
+            </div>
+
+            <!-- system export values -->
+            <div class="col-3">
+
+                <table>
+
+                    <!-- system export markdown -->
+                    <tr>
+                        <td>
+                            <span class="font-weight-bold right-distance">
+                                Export system to markdown
+                            </span>
+                        </td>
+                        <td>
+                            {{ form.system_export_markdown }}
+                        </td>
+                    </tr>
+
+                    <!-- system export spreadsheet -->
+                    <tr>
+                        <td>
+                            <span class="font-weight-bold right-distance">
+                                Export system to spreadsheet
+                            </span>
+                        </td>
+                        <td>
+                            {{ form.system_export_spreadsheet }}
+                        </td>
+                    </tr>
+
+                </table>
+
+            <!-- export values -->
+            </div>
+
+        <!-- system name headline row -->
+        </div>
+
+        <!-- system name row -->
+        <div class="row">
+
+            <!-- system name -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+
+                    <!-- show editable field if system_name_editable in dfirtrack_config is true -->
+                    {% if system_name_edit == True %}
+                        <!-- system name errors -->
+                        <div class="text-danger">
+                            {{ form.system_name.errors }}
+                        </div>
+                        {{ form.system_name }}
+
+                    <!-- show system_name only otherwise -->
+                    {% else %}
+                        <h5>
+                            {{ system.system_name }}
+                        </h5>
+                    {% endif %}
+
+                </div>
+            <!-- system name -->
+            </div>
+
+            <!-- dnsname -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- dnsname errors -->
+                    <div class="text-danger">
+                        {{ form.dnsname.errors }}
+                    </div>
+                    {% for i in form.dnsname %}
+                        {{ i }}
+                    {% endfor %}
+                </div>
+            </div>
+
+        <!-- system name row -->
+        </div>
+
+        <!-- button row -->
+        <div class="row">
+
+            <!-- placeholder -->
+            <div class="col-3">
+            </div>
+
+            <!-- dnsname add button -->
+            <div class="col-3">
+                <button onclick="dnsname_add_popup()" type="button" class="btn btn-light btn-sm top-distance copy-false">
+                    <img src="{% static 'dfirtrack_main/icons/plus.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                    Add DNS name
+                </button>
+            </div>
+
+        <!-- button row -->
+        </div>
+
+    <!-- system name block -->
+    </div>
+
+    <!-- ############################################ -->
+
+    <!-- tags / cases block -->
+    <div class="card card-body bg-dark border-light top-distance">
+
+        <!-- tags / cases headline row -->
+        <div class="row">
+
+            <!-- tags headline -->
+            <div class="col-6">
+                <h5>Tags</h5>
+            </div>
+
+            <!-- cases headline -->
+            <div class="col-6">
+                <h5>Cases</h5>
+            </div>
+
+        <!-- tags / cases headline row -->
+        </div>
+
+        <!-- tags / cases row -->
+        <div class="row">
+
+            <!-- tags -->
+            <div class="col-6">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- tags errors -->
+                    <div class="text-danger">
+                        {{ form.tag.errors }}
+                    </div>
+                    {% for i in form.tag %}
+                        {{ i }}<br>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- cases -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- cases errors -->
+                    <div class="text-danger">
+                        {{ form.case.errors }}
+                    </div>
+                    {% for i in form.case %}
+                        {{ i }}<br>
+                    {% endfor %}
+                </div>
+            </div>
+
+        <!-- tags / cases row -->
+        </div>
+
+    <!-- tags / cases block -->
+    </div>
+
+    <!-- ############################################ -->
+
+    <!-- status information block -->
+    <div class="card card-body bg-dark border-light top-distance">
+
+        <!-- status information headline row -->
+        <div class="row">
+            <div class="col">
+                <h5>
+                    Status information
+                </h5>
+            </div>
+        </div>
+
+        <!-- status information headlines row -->
+        <div class="row">
+
+            <!-- systemstatus headline -->
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    Systemstatus (*):
+                </div>
+            </div>
+
+            <!-- systemstatus headline -->
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    Analysisstatus:
+                </div>
+            </div>
+
+            <!-- reason headline -->
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    Reason for investigation:
+                </div>
+            </div>
+
+            <!-- recommendation headline -->
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    Recommendation:
+                </div>
+            </div>
+
+        <!-- status information headlines row -->
+        </div>
+
+        <!-- status information row -->
+        <div class="row">
+
+            <!-- systemstatus -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- systemstatus errors -->
+                    <div class="text-danger">
+                        {{ form.systemstatus.errors }}
+                    </div>
+                    {% for i in form.systemstatus %}
+                        {{ i }}<br>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- analysisstatus -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- analysisstatus errors -->
+                    <div class="text-danger">
+                        {{ form.analysisstatus.errors }}
+                    </div>
+                    {% for i in form.analysisstatus %}
+                        {{ i }}<br>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- reason -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- reason errors -->
+                    <div class="text-danger">
+                        {{ form.reason.errors }}
+                    </div>
+                    {% for i in form.reason %}
+                        {{ i }}<br>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- recommendation -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- recommendation errors -->
+                    <div class="text-danger">
+                        {{ form.recommendation.errors }}
+                    </div>
+                    {% for i in form.recommendation %}
+                        {{ i }}<br>
+                    {% endfor %}
+                </div>
+            </div>
+
+        <!-- status information row -->
+        </div>
+
+        <!-- button row -->
+        <div class="row">
+
+            <!-- placeholder -->
+            <div class="col-6">
+            </div>
+
+            <!-- reason add button -->
+            <div class="col-3">
+                <button onclick="reason_add_popup()" type="button" class="btn btn-light btn-sm top-distance copy-false">
+                    <img src="{% static 'dfirtrack_main/icons/plus.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                    Add reason
+                </button>
+            </div>
+
+            <!-- recommendation add button -->
+            <div class="col-3">
+                <button onclick="recommendation_add_popup()" type="button" class="btn btn-light btn-sm top-distance copy-false">
+                    <img src="{% static 'dfirtrack_main/icons/plus.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                    Add recommendation
+                </button>
+            </div>
+
+        <!-- button row -->
+        </div>
+
+    <!-- status information block -->
+    </div>
+
+    <!-- ############################################ -->
+
+    <!-- technical information block -->
+    <div class="card card-body bg-dark border-light top-distance">
+
+        <!-- technical information headline row -->
+        <div class="row">
+            <div class="col">
+                <h5>
+                    Technical information
+                </h5>
+            </div>
+        </div>
+
+        <!-- technical information headlines row -->
+        <div class="row">
+
+            <!-- systemtype headline -->
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    Systemtype:
+                </div>
+            </div>
+
+            <!-- ip addresses headline -->
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    IP addresses:
+                </div>
+            </div>
+
+            <!-- domain headline -->
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    Domain:
+                </div>
+            </div>
+
+            <!-- operating system headline -->
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    Operating system:
+                </div>
+            </div>
+
+        <!-- technical information headlines row -->
+        </div>
+
+        <!-- technical information row -->
+        <div class="row">
+
+            <!-- systemtype -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- systemtype errors -->
+                    <div class="text-danger">
+                        {{ form.systemtype.errors }}
+                    </div>
+                    {% for i in form.systemtype %}
+                        {{ i }}<br>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- ip addresses -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- ip addresses errors -->
+                    <div class="text-danger">
+                        {{ form.iplist.errors }}
+                    </div>
+                    {{ form.iplist }}<br>
+                </div>
+            </div>
+
+            <!-- domain -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- domain errors -->
+                    <div class="text-danger">
+                        {{ form.domain.errors }}
+                    </div>
+                    {% for i in form.domain %}
+                        {{ i }}<br>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- operating system -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <div class="text-danger">
+                        {{ form.os.errors }}
+                    </div>
+                    {% for i in form.os %}
+                        {{ i }}<br>
+                    {% endfor %}
+                </div>
+            </div>
+
+        <!-- technical information row -->
+        </div>
+
+        <!-- button row -->
+        <div class="row bottom-distance">
+
+            <!-- systemtype add button -->
+            <div class="col-3">
+                <button onclick="systemtype_add_popup()" type="button" class="btn btn-light btn-sm top-distance copy-false">
+                    <img src="{% static 'dfirtrack_main/icons/plus.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                    Add systemtype
+                </button>
+            </div>
+
+            <!-- placeholder -->
+            <div class="col-3">
+            </div>
+
+            <!-- domain add button -->
+            <div class="col-3">
+                <button onclick="domain_add_popup()" type="button" class="btn btn-light btn-sm top-distance copy-false">
+                    <img src="{% static 'dfirtrack_main/icons/plus.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                    Add domain
+                </button>
+            </div>
+
+            <!-- operating system add button -->
+            <div class="col-3">
+                <button onclick="os_add_popup()" type="button" class="btn btn-light btn-sm top-distance copy-false">
+                    <img src="{% static 'dfirtrack_main/icons/plus.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                    Add OS
+                </button>
+            </div>
+
+        <!-- button row -->
+        </div>
+
+        <!-- technical information headlines row -->
+        <div class="row">
+
+            <!-- installation time headline -->
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    Installation time:<br>
+                    (YYYY-MM-DD HH:MM:SS)
+                </div>
+            </div>
+
+            <!-- last boot time headline -->
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    Last booted:<br>
+                    (YYYY-MM-DD HH:MM:SS)
+                </div>
+            </div>
+
+            <!-- deprecated time headline -->
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    System is deprecated since:<br>
+                    (YYYY-MM-DD HH:MM:SS)
+                </div>
+            </div>
+
+            <!-- operating system architecture headline -->
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    OS architecture:
+                </div>
+            </div>
+
+        <!-- technical information headlines row -->
+        </div>
+
+        <!-- technical information row -->
+        <div class="row">
+
+            <!-- installation time -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- installation time errors -->
+                    <div class="text-danger">
+                        {{ form.system_install_time.errors }}
+                    </div>
+                    {{ form.system_install_time }}
+                </div>
+            </div>
+
+            <!-- last boot time -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- last boot time errors -->
+                    <div class="text-danger">
+                        {{ form.system_lastbooted_time.errors }}
+                    </div>
+                    {{ form.system_lastbooted_time }}
+                </div>
+            </div>
+
+            <!-- deprecated time -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- deprecated time errors -->
+                    <div class="text-danger">
+                        {{ form.system_deprecated_time.errors }}
+                    </div>
+                    {{ form.system_deprecated_time }}
+                </div>
+            </div>
+
+            <!-- operating system architecture -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- operating system architecture errors -->
+                    <div class="text-danger">
+                        {{ form.osarch.errors }}
+                    </div>
+                    {% for i in form.osarch %}
+                        {{ i }}
+                    {% endfor %}
+                </div>
+            </div>
+
+        <!-- technical information row -->
+        </div>
+
+    <!-- technical information block -->
+    </div>
+
+    <!-- ############################################ -->
+
+    <!-- virtualization information block -->
+    <div class="card card-body bg-dark border-light top-distance">
+
+        <!-- virtualization information headline row -->
+        <div class="row">
+            <div class="col">
+                <h5>
+                    Virtualization information
+                </h5>
+            </div>
+        </div>
+
+        <!-- virtualization information headlines row -->
+        <div class="row">
+
+            <!-- vm -->
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    System is a VM:
+                </div>
+            </div>
+
+            <!-- host system -->
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    Host system:
+                </div>
+            </div>
+
+        <!-- virtualization information headlines row -->
+        </div>
+
+        <!-- virtualization information row -->
+        <div class="row">
+
+            <!-- vm -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- vm errors -->
+                    <div class="text-danger">
+                        {{ form.system_is_vm.errors }}
+                    </div>
+                    {{ form.system_is_vm }}
+                </div>
+            </div>
+
+            <!-- host system -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- host system errors -->
+                    <div class="text-danger">
+                        {{ form.host_system.errors }}
+                    </div>
+                    {{ form.host_system }}
+                </div>
+            </div>
+
+        <!-- virtualization information row -->
+        </div>
+
+    <!-- virtualization information block -->
+    </div>
+
+    <!-- ############################################ -->
+
+    <!-- company information block -->
+    <div class="card card-body bg-dark border-light bottom-distance top-distance">
+
+        <!-- company information headline row -->
+        <div class="row">
+            <div class="col">
+                <h5>
+                    Company information
+                </h5>
+            </div>
+        </div>
+
+        <!-- company information headlines row -->
+        <div class="row">
+
+            <!-- company headline -->
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    Company:
+                </div>
+            </div>
+
+            <!-- location headline -->
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    Location:
+                </div>
+            </div>
+
+            <!-- serviceprovider headline -->
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    Serviceprovider:
+                </div>
+            </div>
+
+            <!-- contact headline -->
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    Contact:
+                </div>
+            </div>
+
+        <!-- company information headlines row -->
+        </div>
+
+        <!-- company information row -->
+        <div class="row">
+
+            <!-- company -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- company errors -->
+                    <div class="text-danger">
+                        {{ form.company.errors }}
+                    </div>
+                    {% for i in form.company %}
+                        {{ i }}<br>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- location -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- location errors -->
+                    <div class="text-danger">
+                        {{ form.location.errors }}
+                    </div>
+                    {% for i in form.location %}
+                        {{ i }}<br>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- serviceprovider -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- serviceprovider errors -->
+                    <div class="text-danger">
+                        {{ form.serviceprovider.errors }}
+                    </div>
+                    {% for i in form.serviceprovider %}
+                        {{ i }}<br>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- contact -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- contact errors -->
+                    <div class="text-danger">
+                        {{ form.contact.errors }}
+                    </div>
+                    {% for i in form.contact %}
+                        {{ i }}<br>
+                    {% endfor %}
+                </div>
+            </div>
+
+        <!-- company information row -->
+        </div>
+
+        <!-- button row -->
+        <div class="row">
+
+            <!-- company add button -->
+            <div class="col-3">
+                <button onclick="company_add_popup()" type="button" class="btn btn-light btn-sm top-distance copy-false">
+                    <img src="{% static 'dfirtrack_main/icons/plus.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                    Add company
+                </button>
+            </div>
+
+            <!-- location add button -->
+            <div class="col-3">
+                <button onclick="location_add_popup()" type="button" class="btn btn-light btn-sm top-distance copy-false">
+                    <img src="{% static 'dfirtrack_main/icons/plus.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                    Add location
+                </button>
+            </div>
+
+            <!-- serviceprovider add button -->
+            <div class="col-3">
+                <button onclick="serviceprovider_add_popup()" type="button" class="btn btn-light btn-sm top-distance copy-false">
+                    <img src="{% static 'dfirtrack_main/icons/plus.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                    Add serviceprovider
+                </button>
+            </div>
+
+            <!-- contact add button -->
+            <div class="col-3">
+                <button onclick="contact_add_popup()" type="button" class="btn btn-light btn-sm top-distance copy-false">
+                    <img src="{% static 'dfirtrack_main/icons/plus.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                    Add contact
+                </button>
+            </div>
+
+        <!-- button row -->
+        </div>
+
+    <!-- company information block -->
+    </div>
+
+    <!-- ############################################ -->
+
+    <!-- button row -->
+    <div class="row">
+
+        <!-- save button -->
+        <div class="col-1">
+            {% include "dfirtrack_main/includes/button_save.html" %}
+        </div>
+
+        <!-- cancel button -->
+        <div class="col-1">
+            {% include "dfirtrack_main/includes/button_cancel.html" %}
+        </div>
+
+    <!-- button row -->
+    </div>
+
+<!-- form -->
+</form>
+    
+<!-- HTML body in maintemplate -->
+{% endblock %}

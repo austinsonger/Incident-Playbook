@@ -1,0 +1,7 @@
+contexts.admin
+==============
+
+.. automodule:: contexts.admin
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,20 @@
+.. _pipes:
+
+aggregator.pipes
+================
+
+.. image:: ../_static/images/icons/pipe.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/pipes.summary.txt
+
+:ref:`pipes-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   aggregator.pipes.admin
+   aggregator.pipes.models

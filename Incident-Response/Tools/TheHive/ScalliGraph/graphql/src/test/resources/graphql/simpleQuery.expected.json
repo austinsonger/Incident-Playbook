@@ -1,0 +1,18 @@
+{
+  "data": {
+    "allPeople": {
+      "sort": {
+        "name": {
+          "toList": [
+            "franck",
+            "josh",
+            "marc",
+            "marko",
+            "peter",
+            "vadas"
+          ]
+        }
+      }
+    }
+  }
+}

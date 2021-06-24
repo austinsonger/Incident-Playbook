@@ -1,0 +1,21 @@
+.. _stamps:
+
+ambassador.stamps
+=================
+
+.. image:: ../_static/images/icons/stamp.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/stamps.summary.txt
+
+:ref:`stamps-graph`
+
+Subpackages
+-----------
+
+.. toctree::
+
+    ambassador.stamps.admin
+    ambassador.stamps.models
+    ambassador.stamps.serializers

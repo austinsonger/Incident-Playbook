@@ -1,0 +1,24 @@
+.. _utils:
+
+utils
+=====
+
+.. image:: ../_static/images/icons/utils.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/utils.summary.txt
+
+Subpackages
+-----------
+
+.. toctree::
+
+    utils.choices
+    utils.dateutils
+    utils.dbutils
+    utils.emailutils
+    utils.geometry
+    utils.parserutils
+    utils.settings
+    utils.validators

@@ -1,0 +1,21 @@
+.. _logcondensers:
+
+sifter.logsifter.logcondensers
+==============================
+
+.. image:: ../_static/images/icons/condenser.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/logcondensers.summary.txt
+
+:ref:`logcondensers-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   sifter.logsifter.logcondensers.admin
+   sifter.logsifter.logcondensers.models
+   sifter.logsifter.logcondensers.autocomplete_light_registry

@@ -1,0 +1,1 @@
+|Categories| are used to assign particular :ref:`Watchdogs<watchdogs>` to particular :ref:`Distilleries<distilleries>`. They can also be used to filter :ref:`Alerts<alerts>`.

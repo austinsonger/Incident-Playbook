@@ -1,0 +1,58 @@
+[
+  {
+    "model": "appusers.appuser",
+    "fields": {
+      "id": 1,
+      "email": "testuser1@testdomain.com",
+      "password": "testpassword1",
+      "first_name": "John",
+      "last_name": "Smith",
+      "is_staff": true,
+      "use_redaction": false,
+      "last_login": "2015-01-01T12:00:00-05:00",
+      "push_notification_id": "11111",
+      "groups": [1]
+    }
+  },
+  {
+    "model": "appusers.appuser",
+    "fields": {
+      "id": 2,
+      "email": "testuser2@testdomain.com",
+      "password": "testpassword2",
+      "first_name": "Jack",
+      "last_name": "Miller",
+      "last_login": "2015-01-01T12:00:00-05:00",
+      "company": ["Acme"],
+      "push_notification_id": "22222",
+      "groups": [1]
+    }
+  },
+  {
+    "model": "appusers.appuser",
+    "fields": {
+      "id": 3,
+      "email": "testuser3@testdomain.com",
+      "password": "testpassword3",
+      "first_name": "Jane",
+      "last_name": "Mason",
+      "last_login": "2015-01-01T12:00:00-05:00",
+      "company": ["ECorp"],
+      "push_notification_id": "33333",
+      "groups": [1]
+    }
+  },
+  {
+    "model": "appusers.appuser",
+    "fields": {
+      "id": 4,
+      "email": "testuser4@testdomain.com",
+      "password": "testpassword4",
+      "first_name": "Max",
+      "last_name": "Dixon",
+      "last_login": "2015-01-01T12:00:00-05:00",
+      "push_notification_id": "44444",
+      "groups": [2]
+    }
+  }
+]

@@ -1,0 +1,36 @@
+.. _managing-alerts:
+
+###############
+Managing Alerts
+###############
+
+.. image:: ../_static/images/icons/alert.png
+    :width: 100px
+    :align: left
+    :alt: Alert
+
+Administrators can edit or delete Alerts through the "Manage Alerts" panel on the main admin page.
+
+.. figure:: ../_static/images/admin/manage-alerts.png
+    :align: center
+    :alt: Alert Management
+
+
+.. _bulk-actions:
+
+************
+Bulk Actions
+************
+
+You can perform bulk admin actions on Alerts from the list view. Simply select the Alerts you want to edit, select an admin action from the actions toolbar, and click the "Go" button.
+
+.. figure:: ../_static/images/admin/alerts-bulk-admin.png
+    :align: center
+    :alt: Bulk admin actions on Alerts
+
+    **Bulk admin actions on Alerts.**
+
+
+.. note::
+
+    By default, the maximum number of Alerts you can delete at a time is 1000. If you need to delete more than this at once, adjust the settings for ``DATA_UPLOAD_MAX_MEMORY_SIZE`` and ``DATA_UPLOAD_MAX_NUMBER_FIELDS`` in your ``cyphon/settings/base.py`` file. See `Django's documentation <https://docs.djangoproject.com/en/1.11/ref/settings/#data-upload-max-memory-size>`__ for details.

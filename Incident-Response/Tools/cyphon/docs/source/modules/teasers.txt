@@ -1,0 +1,19 @@
+.. _teasers:
+
+teasers
+=======
+
+.. image:: ../_static/images/icons/teaser.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/teasers.summary.txt
+
+:ref:`teasers-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   teasers.models

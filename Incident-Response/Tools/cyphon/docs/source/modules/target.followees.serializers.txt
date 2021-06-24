@@ -1,0 +1,7 @@
+target.followees.serializers
+============================
+
+.. automodule:: target.followees.serializers
+    :members:
+    :undoc-members:
+    :show-inheritance:

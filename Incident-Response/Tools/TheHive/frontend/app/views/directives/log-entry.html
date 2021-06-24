@@ -1,0 +1,80 @@
+<hr/>
+
+<div class="log-entry">
+    <div class="row mb-xxs">
+        <div class="col-md-6">
+            <user user-id="log.owner" icon-size="xs"></user>
+        </div>
+        <div class="col-md-6">
+            <span class="pull-right ml-xs" ng-if="appConfig.connectors.cortex.enabled" if-permission="manageAction" allowed="{{permissions}}">
+                <a href class="text-primary noline nowrap" ng-click="getLogResponders(log, true)">
+                    <i class="fa fa-cog"></i>
+                    Responders
+                </a>
+                <!-- <ul class="dropdown-menu align-right" uib-dropdown-menu>
+                  <li ng-if="logResponders && logResponders.length === 0">
+                    <a href ng-click="getLogResponders(task.id, true)">
+                      <strong><i class="fa fa-refresh mr-xxs"></i> No responders available</strong>
+                    </a>
+                  </li>
+                  <li ng-repeat="responder in logResponders">
+                    <a href ng-click="runResponder(responder.id, responder.name, log)">
+                      <strong>{{responder.name}}</strong>
+                      <br>
+                      <small>{{responder.description}}</small></a>
+                  </li>
+                </ul> -->
+            </span>
+            <span class="pull-right" if-permission="manageTask" allowed="{{permissions}}">
+                <a href ng-click="dropLog()" uib-tooltip="Delete log" class="text-danger">
+                    <i class="fa fa-trash"></i> Delete
+                </a>
+            </span>
+            <span class="text-muted mr-xs pull-right">
+                <i class="fa fa-calendar"></i>
+                {{log.date | shortDate}}
+            </span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="description-pane" if-permission="manageTask" allowed="{{permissions}}">
+                <updatable-text on-update="updateLog()" value="log.message"></updatable-text>
+            </div>
+            <div class="description-pane" if-not-permission="manageTask" allowed="{{permissions}}">
+                <div marked="log.message" class="markdown"></div>
+            </div>
+        </div>
+        <div class="col-md-12" ng-show="log.attachment != undefined">
+            <div class="clearfix mt-xxs">
+                <div class="file-box">
+                    <div class="file">
+                        <div class="image" ng-show="isImage(log.attachment.contentType)">
+                            <img class="btn img-responsive" ng-src="./api/datastore/{{log.attachment.id}}" alt="{{log.attachment.name}}" class="img-thumbnail" width="200px" ng-click="showImage()"></img>
+                        </div>
+
+                        <a href="./api/datastore/{{log.attachment.id}}?name={{log.attachment.name | escape}}" target="_blank">
+                            <div class="icon" ng-hide="isImage(log.attachment.contentType)">
+                                <i class="glyphicon glyphicon-file"></i>
+                            </div>
+                            <div class="file-name">
+                                {{log.attachment.name}}
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" ng-if="log.extraData.actionCount > 0">
+        <div class="col-md-12">
+           <a href ng-show="showActions" ng-click="showActions=false">Hide Responder Jobs ({{log.extraData.actionCount}})</a>
+           <a href ng-show="!showActions" ng-click="showActions=true; getActions(log._id)">Show Responder Jobs ({{log.extraData.actionCount}})</a>
+        </div>
+        <div class="col-md-12" ng-show="showActions && actions">
+          <responder-actions header="" actions="actions"></responder-actions>
+        </div>
+    </div>
+</div>

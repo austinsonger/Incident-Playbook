@@ -1,0 +1,23 @@
+<div class="row" ng-controller="AlertStatsCtrl as statsCtrl">
+    <div class="col-md-4">
+        <div class="stats-item-wrapper">
+            <stats-item title="Alerts by Status" mode="'chart'" field="read" data="statsCtrl.byStatus.details" labels="statsCtrl.readAlerts" values="statsCtrl.readValues" on-item-clicked="$vm.addFilterValue(field, value)">
+            </stats-item>
+
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="stats-item-wrapper">
+            <stats-item title="Top 5 Types" mode="'chart'" field="type" data="statsCtrl.byType.details" on-item-clicked="$vm.addFilterValue(field, value)">
+            </stats-item>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="stats-item-wrapper">
+            <stats-item title="Top 5 tags" mode="'chart'" field="tags" data="statsCtrl.byTags.details" on-item-clicked="$vm.addFilterValue(field, value)">
+            </stats-item>
+        </div>
+    </div>
+</div>

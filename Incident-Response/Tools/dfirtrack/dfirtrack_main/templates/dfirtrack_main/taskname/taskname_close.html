@@ -1,0 +1,51 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    Close taskname '{{ taskname }}'
+</title>
+
+{% load static %}
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+        
+<!-- headline -->
+<div class="bottom-distance">
+    <h4>
+        Close taskname '{{ taskname }}'
+    </h4>
+</div>
+
+
+{% csrf_token %}
+
+<!-- description text -->
+This will set the status of all tasks with the taskname '{{ taskname }}' to 'Done'. </br>
+Please click the button below only if you are certain that you want to perform this action.
+
+<!-- button row -->
+<div class="row top-distance">
+
+    {% if show_button %}
+        <!-- close button -->
+        <div class="col-1">
+            {% include "dfirtrack_main/includes/button_close.html" %}
+        </div>
+    {% endif %}
+
+<!-- button row -->
+</div>
+
+    
+<!-- HTML body in maintemplate -->
+{% endblock %}

@@ -1,0 +1,707 @@
+{
+    "attributes": {
+        "analysis_date": 1551027115,
+        "files_attribute_changed": [
+            "%WINDIR%\\SysWOW64\\config\\systemprofile\\AppData\\Local\\Microsoft\\Windows\\<INETFILES>\\Content.IE5\\index.dat",
+            "%WINDIR%\\SysWOW64\\config\\systemprofile\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\index.dat",
+            "%WINDIR%\\SysWOW64\\config\\systemprofile\\AppData\\Local\\Microsoft\\Windows\\History\\History.IE5\\index.dat"
+        ],
+        "dns_lookups": [
+            {
+                "hostname": "www.google-analytics.com",
+                "resolved_ips": ["216.58.212.238"]
+            },
+            {
+                "hostname": "ocsp.pki.goog",
+                "resolved_ips": ["172.217.20.78"]
+            },
+            {
+                "hostname": "crl.pki.goog",
+                "resolved_ips": ["216.58.212.238"]
+            },
+            {
+                "hostname": "appwallsuite.azurewebsites.net",
+                "resolved_ips": ["52.178.105.179"]
+            },
+            {
+                "hostname": "wallhd.azurewebsites.net",
+                "resolved_ips": ["52.178.105.179"]
+            },
+            {
+                "hostname": "www.google-analytics.com",
+                "resolved_ips": ["172.217.168.238"]
+            },
+            {
+                "hostname": "ocsp.pki.goog",
+                "resolved_ips": ["216.58.212.238"]
+            }
+        ],
+        "files_copied": [
+            {
+                "destination": "%WINDIR%\\syswow64\\wordpadmouse.exe",
+                "source": "<PATH_SAMPLE.EXE>"
+            },
+            {
+                "destination": "%WINDIR%\\syswow64\\adminstarted.exe",
+                "source": "<PATH_SAMPLE.EXE>"
+            }
+        ],
+        "files_deleted": ["<PATH_SAMPLE.EXE>"],
+        "files_opened": [
+            "<SYSTEM32>\\ntdll.dll",
+            "%WINDIR%\\syswow64\\ntdll.dll",
+            "%WINDIR%\\syswow64\\wordpadmouse.exe",
+            "%WINDIR%\\syswow64\\config\\systemprofile\\appdata\\local\\microsoft\\windows\\<INETFILES>\\content.ie5\\index.dat",
+            "%WINDIR%\\syswow64\\config\\systemprofile\\appdata\\roaming\\microsoft\\windows\\cookies\\index.dat",
+            "%WINDIR%\\syswow64\\config\\systemprofile\\appdata\\local\\microsoft\\windows\\history\\history.ie5\\index.dat",
+            "%WINDIR%\\syswow64\\adminstarted.exe"
+        ],
+        "has_html_report": true,
+        "http_conversations": [
+            {
+                "request_method": "GET",
+                "url": "http://107.10.49.252/"
+            }
+        ],
+        "ip_traffic": [
+            {
+                "destination_ip": "24.151.31.150",
+                "destination_port": 465
+            }
+        ],
+        "processes_created": [
+            "<PATH_SAMPLE.EXE>",
+            "%WINDIR%\\syswow64\\wordpadmouse.exe",
+            "%WINDIR%\\syswow64\\adminstarted.exe"
+        ],
+        "processes_killed": [
+            "%WINDIR%\\syswow64\\wordpadmouse.exe",
+            "%WINDIR%\\syswow64\\adminstarted.exe"
+        ],
+        "processes_terminated": [
+            "<PATH_SAMPLE.EXE>",
+            "%WINDIR%\\syswow64\\wordpadmouse.exe",
+            "%WINDIR%\\syswow64\\adminstarted.exe"
+        ],
+        "processes_tree": [
+            {
+                "children": [
+                    {
+                        "name": "<PATH_SAMPLE.EXE>",
+                        "process_id": "1648"
+                    }
+                ],
+                "name": "<PATH_SAMPLE.EXE>",
+                "process_id": "1748"
+            },
+            {
+                "name": "<PATH_SAMPLE.EXE>",
+                "process_id": "1648"
+            },
+            {
+                "children": [
+                    {
+                        "name": "<SYSTEM32>\\svchost.exe",
+                        "process_id": "496"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\svchost.exe",
+                        "process_id": "556"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\svchost.exe",
+                        "process_id": "620"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\svchost.exe",
+                        "process_id": "668"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\svchost.exe",
+                        "process_id": "800"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\svchost.exe",
+                        "process_id": "840"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\svchost.exe",
+                        "process_id": "956"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\spoolsv.exe",
+                        "process_id": "1160"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\taskhost.exe",
+                        "process_id": "1192"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\svchost.exe",
+                        "process_id": "1224"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\svchost.exe",
+                        "process_id": "1496"
+                    },
+                    {
+                        "name": "%CommonProgramFiles(x86)%\\microsoft shared\\vs7debug\\mdm.exe",
+                        "process_id": "1560"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\svchost.exe",
+                        "process_id": "2176"
+                    },
+                    {
+                        "name": "%CommonProgramFiles%\\microsoft shared\\officesoftwareprotectionplatform\\osppsvc.exe",
+                        "process_id": "2364"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\taskhost.exe",
+                        "process_id": "2396"
+                    },
+                    {
+                        "name": "%WINDIR%\\syswow64\\wordpadmouse.exe",
+                        "process_id": "2500",
+                        "time_offset": 6
+                    }
+                ],
+                "name": "<SYSTEM32>\\services.exe",
+                "process_id": "420"
+            },
+            {
+                "name": "%WINDIR%\\syswow64\\wordpadmouse.exe",
+                "process_id": "1968",
+                "time_offset": 6
+            },
+            {
+                "children": [
+                    {
+                        "name": "%WINDIR%\\syswow64\\wordpadmouse.exe",
+                        "process_id": "1968",
+                        "time_offset": 6
+                    }
+                ],
+                "name": "%WINDIR%\\syswow64\\wordpadmouse.exe",
+                "process_id": "2500",
+                "time_offset": 6
+            },
+            {
+                "name": "<SYSTEM32>\\svchost.exe",
+                "process_id": "496"
+            },
+            {
+                "name": "<SYSTEM32>\\svchost.exe",
+                "process_id": "556"
+            },
+            {
+                "name": "<SYSTEM32>\\svchost.exe",
+                "process_id": "620"
+            },
+            {
+                "children": [
+                    {
+                        "name": "<SYSTEM32>\\audiodg.exe",
+                        "process_id": "2464"
+                    }
+                ],
+                "name": "<SYSTEM32>\\svchost.exe",
+                "process_id": "668"
+            },
+            {
+                "children": [
+                    {
+                        "name": "<SYSTEM32>\\dwm.exe",
+                        "process_id": "728"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\wudfhost.exe",
+                        "process_id": "1992"
+                    }
+                ],
+                "name": "<SYSTEM32>\\svchost.exe",
+                "process_id": "800"
+            },
+            {
+                "name": "<SYSTEM32>\\svchost.exe",
+                "process_id": "840"
+            },
+            {
+                "name": "<SYSTEM32>\\svchost.exe",
+                "process_id": "956"
+            },
+            {
+                "name": "<SYSTEM32>\\spoolsv.exe",
+                "process_id": "1160"
+            },
+            {
+                "name": "<SYSTEM32>\\taskhost.exe",
+                "process_id": "1192"
+            },
+            {
+                "name": "<SYSTEM32>\\svchost.exe",
+                "process_id": "1224"
+            },
+            {
+                "name": "<SYSTEM32>\\svchost.exe",
+                "process_id": "1496"
+            },
+            {
+                "name": "%CommonProgramFiles(x86)%\\microsoft shared\\vs7debug\\mdm.exe",
+                "process_id": "1560"
+            },
+            {
+                "name": "<SYSTEM32>\\svchost.exe",
+                "process_id": "2176"
+            },
+            {
+                "name": "%CommonProgramFiles%\\microsoft shared\\officesoftwareprotectionplatform\\osppsvc.exe",
+                "process_id": "2364"
+            },
+            {
+                "name": "<SYSTEM32>\\taskhost.exe",
+                "process_id": "2396"
+            },
+            {
+                "name": "<SYSTEM32>\\audiodg.exe",
+                "process_id": "2464"
+            },
+            {
+                "name": "<SYSTEM32>\\dwm.exe",
+                "process_id": "728"
+            },
+            {
+                "name": "<SYSTEM32>\\wudfhost.exe",
+                "process_id": "1992"
+            },
+            {
+                "children": [
+                    {
+                        "name": "<PATH_SAMPLE.EXE>",
+                        "process_id": "1372"
+                    }
+                ],
+                "name": "<PATH_SAMPLE.EXE>",
+                "process_id": "2156"
+            },
+            {
+                "name": "<PATH_SAMPLE.EXE>",
+                "process_id": "1372"
+            },
+            {
+                "children": [
+                    {
+                        "name": "<SYSTEM32>\\svchost.exe",
+                        "process_id": "552"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\svchost.exe",
+                        "process_id": "620"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\svchost.exe",
+                        "process_id": "676"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\svchost.exe",
+                        "process_id": "800"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\svchost.exe",
+                        "process_id": "840"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\svchost.exe",
+                        "process_id": "888"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\svchost.exe",
+                        "process_id": "952"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\spoolsv.exe",
+                        "process_id": "1172"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\taskhost.exe",
+                        "process_id": "1208"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\svchost.exe",
+                        "process_id": "1240"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\svchost.exe",
+                        "process_id": "1516"
+                    },
+                    {
+                        "name": "%CommonProgramFiles(x86)%\\microsoft shared\\vs7debug\\mdm.exe",
+                        "process_id": "1580"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\svchost.exe",
+                        "process_id": "2284"
+                    },
+                    {
+                        "name": "%CommonProgramFiles%\\microsoft shared\\officesoftwareprotectionplatform\\osppsvc.exe",
+                        "process_id": "2432"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\taskhost.exe",
+                        "process_id": "272"
+                    },
+                    {
+                        "name": "%WINDIR%\\syswow64\\adminstarted.exe",
+                        "process_id": "196",
+                        "time_offset": 7
+                    }
+                ],
+                "name": "<SYSTEM32>\\services.exe",
+                "process_id": "412"
+            },
+            {
+                "name": "%WINDIR%\\syswow64\\adminstarted.exe",
+                "process_id": "2544",
+                "time_offset": 7
+            },
+            {
+                "children": [
+                    {
+                        "name": "%WINDIR%\\syswow64\\adminstarted.exe",
+                        "process_id": "2544",
+                        "time_offset": 7
+                    }
+                ],
+                "name": "%WINDIR%\\syswow64\\adminstarted.exe",
+                "process_id": "196",
+                "time_offset": 7
+            },
+            {
+                "children": [
+                    {
+                        "name": "<SYSTEM32>\\rundll32.exe",
+                        "process_id": "2304"
+                    }
+                ],
+                "name": "<SYSTEM32>\\svchost.exe",
+                "process_id": "552"
+            },
+            {
+                "children": [
+                    {
+                        "name": "<SYSTEM32>\\audiodg.exe",
+                        "process_id": "2452"
+                    }
+                ],
+                "name": "<SYSTEM32>\\svchost.exe",
+                "process_id": "676"
+            },
+            {
+                "children": [
+                    {
+                        "name": "<SYSTEM32>\\dwm.exe",
+                        "process_id": "432"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\wudfhost.exe",
+                        "process_id": "2032"
+                    }
+                ],
+                "name": "<SYSTEM32>\\svchost.exe",
+                "process_id": "800"
+            },
+            {
+                "name": "<SYSTEM32>\\svchost.exe",
+                "process_id": "888"
+            },
+            {
+                "name": "<SYSTEM32>\\svchost.exe",
+                "process_id": "952"
+            },
+            {
+                "name": "<SYSTEM32>\\spoolsv.exe",
+                "process_id": "1172"
+            },
+            {
+                "name": "<SYSTEM32>\\taskhost.exe",
+                "process_id": "1208"
+            },
+            {
+                "name": "<SYSTEM32>\\svchost.exe",
+                "process_id": "1240"
+            },
+            {
+                "name": "<SYSTEM32>\\svchost.exe",
+                "process_id": "1516"
+            },
+            {
+                "name": "%CommonProgramFiles(x86)%\\microsoft shared\\vs7debug\\mdm.exe",
+                "process_id": "1580"
+            },
+            {
+                "name": "<SYSTEM32>\\svchost.exe",
+                "process_id": "2284"
+            },
+            {
+                "name": "%CommonProgramFiles%\\microsoft shared\\officesoftwareprotectionplatform\\osppsvc.exe",
+                "process_id": "2432"
+            },
+            {
+                "name": "<SYSTEM32>\\taskhost.exe",
+                "process_id": "272"
+            },
+            {
+                "name": "<SYSTEM32>\\rundll32.exe",
+                "process_id": "2304"
+            },
+            {
+                "name": "<SYSTEM32>\\audiodg.exe",
+                "process_id": "2452"
+            },
+            {
+                "name": "<SYSTEM32>\\dwm.exe",
+                "process_id": "432"
+            },
+            {
+                "name": "<SYSTEM32>\\wudfhost.exe",
+                "process_id": "2032"
+            }
+        ],
+        "registry_keys_deleted": [
+            "\\REGISTRY\\USER\\S-1-5-18\\Software\\Microsoft\\windows\\CurrentVersion\\Internet Settings\\ProxyServer",
+            "\\REGISTRY\\USER\\S-1-5-18\\Software\\Microsoft\\windows\\CurrentVersion\\Internet Settings\\ProxyOverride",
+            "\\REGISTRY\\USER\\S-1-5-18\\Software\\Microsoft\\windows\\CurrentVersion\\Internet Settings\\AutoConfigURL",
+            "<HKLM>\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\\DhcpNameServer",
+            "<HKLM>\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces\\{6a52be73-ec8e-4f63-a268-7517a50dcb38}\\DhcpNameServer",
+            "<HKLM>\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\\DhcpDomain",
+            "<HKLM>\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces\\{6a52be73-ec8e-4f63-a268-7517a50dcb38}\\DhcpDomain",
+            "<HKLM>\\SYSTEM\\CurrentControlSet\\Services\\NetBT\\Parameters\\Interfaces\\Tcpip_{6a52be73-ec8e-4f63-a268-7517a50dcb38}\\DhcpNameServerList",
+            "<HKLM>\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces\\{6a52be73-ec8e-4f63-a268-7517a50dcb38}\\DhcpSubnetMaskOpt",
+            "<HKLM>\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces\\{6a52be73-ec8e-4f63-a268-7517a50dcb38}\\DhcpDefaultGateway",
+            "<HKLM>\\SYSTEM\\CurrentControlSet\\Services\\NetBT\\Parameters\\DhcpScopeID",
+            "<HKLM>\\SYSTEM\\CurrentControlSet\\Services\\NetBT\\Parameters\\Interfaces\\Tcpip_{6a52be73-ec8e-4f63-a268-7517a50dcb38}\\DhcpNetbiosOptions"
+        ],
+        "registry_keys_opened": [
+            "<HKLM>\\System\\CurrentControlSet\\Control\\Session Manager",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\SafeBoot\\Option",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\Srp\\GP\\DLL",
+            "<HKLM>\\SYSTEM\\CurrentControlSet\\Services\\crypt32",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows NT\\CurrentVersion\\Diagnostics",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows NT\\CurrentVersion\\GRE_Initialize",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows NT\\CurrentVersion\\Compatibility32",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows NT\\CurrentVersion\\IME Compatibility",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\MUI\\UILanguages",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\MUI\\UILanguages\\en-US",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\MUI\\UILanguages\\PendingDelete",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\MUI\\Settings\\LanguageConfiguration",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows NT\\CurrentVersion\\Windows",
+            "<HKLM>\\SOFTWARE\\Wow6432Node\\Microsoft\\OLE",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\OLE\\Tracing",
+            "<HKLM>\\SOFTWARE\\Wow6432Node\\Microsoft\\OLEAUT",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\Session Manager\\AppCertDlls",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\Session Manager\\AppCompatibility",
+            "<HKCU>\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Rpc",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\ComputerName\\ActiveComputerName",
+            "<HKLM>\\Software\\Microsoft\\SQMClient\\Windows",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Explorer\\KnownFolderSettings",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\ComputerName",
+            "<HKCU>\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer",
+            "<HKLM>\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\ShellCompatibility\\Applications\\hnlh.exe",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\CMF\\Config",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows\\Windows Error Reporting\\WMR",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Setup",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion",
+            "<HKCU>\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\",
+            "<HKCU>\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\PropertySystem\\PropertyHandlers\\.exe",
+            "<HKLM>\\Software\\Microsoft\\COM3",
+            "<HKLM>\\Software\\Microsoft\\SQMClient\\Windows\\DisabledProcesses\\",
+            "<HKLM>\\Software\\Microsoft\\SQMClient\\Windows\\DisabledSessions\\",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows\\Shell\\RegisteredApplications\\UrlAssociations\\Directory\\OpenWithProgids",
+            "<HKCU>\\Software\\Microsoft\\Windows\\Shell\\Associations\\UrlAssociations\\Directory",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced",
+            "<HKCU>\\Software\\Microsoft\\Windows\\CurrentVersion\\App Paths\\hnlh.exe",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\App Paths\\hnlh.exe",
+            "<HKCU>\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\SessionInfo\\1",
+            "<HKCU>\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\SessionInfo\\1\\KnownFolders",
+            "<HKCU>\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\LSA\\AccessProviders",
+            "<HKLM>\\System\\CurrentControlSet\\Services\\LDAP",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\SQMServiceList",
+            "<HKLM>\\System\\CurrentControlSet\\Services\\wordpadmouse",
+            "\\REGISTRY\\USER\\S-1-5-18\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Tracing",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Tracing\\wordpadmouse_RASAPI32",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Tracing\\wordpadmouse_RASMANCS",
+            "\\REGISTRY\\USER\\S-1-5-18\\Software\\Microsoft\\windows\\CurrentVersion\\Internet Settings\\Connections",
+            "<HKLM>\\SOFTWARE\\CLASSES",
+            "\\REGISTRY\\USER\\S-1-5-18\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Network\\Location Awareness",
+            "\\REGISTRY\\USER\\S-1-5-18\\SOFTWARE",
+            "\\REGISTRY\\USER\\S-1-5-18\\SOFTWARE\\Microsoft",
+            "\\REGISTRY\\USER\\S-1-5-18\\SOFTWARE\\Microsoft\\Windows NT",
+            "\\REGISTRY\\USER\\S-1-5-18\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion",
+            "\\REGISTRY\\USER\\S-1-5-18\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Network",
+            "<HKLM>\\System\\CurrentControlSet\\Services\\Tcpip\\Parameters",
+            "<HKLM>\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\NetworkList\\Nla\\Cache",
+            "<HKLM>\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\NetworkList\\Nla\\Cache\\Intranet",
+            "<HKLM>\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\NetworkList\\Nla\\Cache\\Intranet\\",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\DeviceClasses",
+            "<HKLM>\\Software\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Compatibility Assistant\\Quarantined",
+            "<HKLM>\\Software\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Compatibility Assistant\\Monitored",
+            "<HKCU>\\Software\\Microsoft\\RAS AutoDial",
+            "<HKCU>\\Software\\Microsoft\\RAS AutoDial\\Default",
+            "<HKLM>\\Software\\Microsoft\\RAS AutoDial",
+            "<HKLM>\\Software\\Microsoft\\RAS AutoDial\\Default",
+            "\\REGISTRY\\A\\{ff02461a-2e87-11e9-8021-68a4dc27a81b}\\DefaultObjectStore\\ObjectTable\\E7",
+            "\\REGISTRY\\A\\{ff02461a-2e87-11e9-8021-68a4dc27a81b}\\DefaultObjectStore\\LruList\\00000000000002F7",
+            "\\REGISTRY\\A\\{ff02461a-2e87-11e9-8021-68a4dc27a81b}\\DefaultObjectStore\\IndexTable\\FileIdIndex-{c84d25cd-f368-11e4-889d-806e6f6e6963}\\5000000003EDE",
+            "\\REGISTRY\\A\\{ff02461a-2e87-11e9-8021-68a4dc27a81b}\\DefaultObjectStore\\ObjectTable\\E7\\Indexes",
+            "\\REGISTRY\\A\\{ff02461a-2e87-11e9-8021-68a4dc27a81b}\\DefaultObjectStore\\ObjectTable\\E7\\Indexes\\FileIdIndex-{c84d25cd-f368-11e4-889d-806e6f6e6963}",
+            "<HKLM>\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\ShellCompatibility\\Applications\\jhujcd.exe",
+            "<HKCU>\\Software\\Microsoft\\Windows\\CurrentVersion\\App Paths\\jhujcd.exe",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\App Paths\\jhujcd.exe",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\OLE\\AppCompat",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\Lsa",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\Lsa\\FipsAlgorithmPolicy",
+            "<HKLM>\\SYSTEM\\CurrentControlSet\\Policies\\Microsoft\\Cryptography\\Configuration",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Rpc\\Extensions",
+            "<HKLM>\\SYSTEM\\CurrentControlSet\\Services\\BFE",
+            "<HKLM>\\System\\CurrentControlSet\\Services\\adminstarted",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Tracing\\adminstarted_RASAPI32",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Tracing\\adminstarted_RASMANCS",
+            "\\REGISTRY\\A\\{d16ef4ea-2f05-11e9-9481-da0b803e015c}\\DefaultObjectStore\\ObjectTable\\E7",
+            "\\REGISTRY\\A\\{d16ef4ea-2f05-11e9-9481-da0b803e015c}\\DefaultObjectStore\\LruList\\00000000000002F9",
+            "\\REGISTRY\\A\\{d16ef4ea-2f05-11e9-9481-da0b803e015c}\\DefaultObjectStore\\IndexTable\\FileIdIndex-{c84d25cd-f368-11e4-889d-806e6f6e6963}\\5000000003EDE",
+            "\\REGISTRY\\A\\{d16ef4ea-2f05-11e9-9481-da0b803e015c}\\DefaultObjectStore\\ObjectTable\\E7\\Indexes",
+            "\\REGISTRY\\A\\{d16ef4ea-2f05-11e9-9481-da0b803e015c}\\DefaultObjectStore\\ObjectTable\\E7\\Indexes\\FileIdIndex-{c84d25cd-f368-11e4-889d-806e6f6e6963}"
+        ],
+        "registry_keys_set": [
+            {
+                "key": "<HKLM>\\System\\CurrentControlSet\\Services\\wordpadmouse\\Type",
+                "value": "0x00000010"
+            },
+            {
+                "key": "<HKLM>\\System\\CurrentControlSet\\Services\\wordpadmouse\\Start",
+                "value": "0x00000002"
+            },
+            {
+                "key": "<HKLM>\\System\\CurrentControlSet\\Services\\wordpadmouse\\ErrorControl",
+                "value": "0x00000000"
+            },
+            {
+                "key": "<HKLM>\\System\\CurrentControlSet\\Services\\wordpadmouse\\ImagePath",
+                "value": "\"%WINDIR%\\SysWOW64\\wordpadmouse.exe\""
+            },
+            {
+                "key": "<HKLM>\\System\\CurrentControlSet\\Services\\wordpadmouse\\DisplayName",
+                "value": "wordpadmouse"
+            },
+            {
+                "key": "<HKLM>\\System\\CurrentControlSet\\Services\\wordpadmouse\\WOW64",
+                "value": "0x00000001"
+            },
+            {
+                "key": "<HKLM>\\System\\CurrentControlSet\\Services\\wordpadmouse\\ObjectName",
+                "value": "LocalSystem"
+            },
+            {
+                "key": "<HKCU>\\Software\\Classes\\Local Settings\\MuiCache\\12c\\52C64B7E\\LanguageList",
+                "value": "en-US\\nen"
+            },
+            {
+                "key": "<HKLM>\\System\\CurrentControlSet\\Services\\wordpadmouse\\Description",
+                "value": "The Base Filtering Engine (BFE) is a service that manages firewall and Internet Protocol security (IPsec) policies and implements user mode filtering. Stopping or disabling the BFE service will significantly reduce the security of the system. It will also result in unpredictable behavior in IPsec management and firewall applications."
+            },
+            {
+                "key": "\\REGISTRY\\USER\\S-1-5-18\\Software\\Microsoft\\windows\\CurrentVersion\\Internet Settings\\ProxyEnable",
+                "value": "0x00000000"
+            },
+            {
+                "key": "\\REGISTRY\\USER\\S-1-5-18\\Software\\Microsoft\\windows\\CurrentVersion\\Internet Settings\\Connections\\SavedLegacySettings",
+                "value": "\\x46\\x00\\x00\\x00\\x02\\x00\\x00\\x00\\x09\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00"
+            },
+            {
+                "key": "\\REGISTRY\\USER\\S-1-5-18\\Software\\Microsoft\\windows\\CurrentVersion\\Internet Settings\\Connections\\DefaultConnectionSettings",
+                "value": "\\x46\\x00\\x00\\x00\\x02\\x00\\x00\\x00\\x09\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x04\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x60\\x90\\x95\\x8f\\xce\\xcc\\xd4\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x02\\x00\\x00\\x00\\x17\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\xfe\\x80\\x00\\x00\\x00\\x00\\x00\\x00\\xed\\x51\\x73\\x3f\\x11\\x26\\xb4\\xdd\\x0b\\x00\\x00\\x00\\x00..."
+            },
+            {
+                "key": "<HKLM>\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\NetworkList\\Nla\\Cache\\Intranet\\\\{6A52BE73-EC8E-4F63-A268-7517A50DCB38}",
+                "value": "\\x0a\\x00\\x27\\x00\\x00\\x1b"
+            },
+            {
+                "key": "<HKLM>\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\\DhcpNameServer",
+                "value": "8.8.8.8 8.8.4.4"
+            },
+            {
+                "key": "<HKLM>\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces\\{6a52be73-ec8e-4f63-a268-7517a50dcb38}\\DhcpNameServer",
+                "value": "8.8.8.8 8.8.4.4"
+            },
+            {
+                "key": "<HKLM>\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces\\{6a52be73-ec8e-4f63-a268-7517a50dcb38}\\DhcpDefaultGateway",
+                "value": "10.0.27.1"
+            },
+            {
+                "key": "<HKLM>\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces\\{6a52be73-ec8e-4f63-a268-7517a50dcb38}\\DhcpSubnetMaskOpt",
+                "value": "255.255.255.0"
+            },
+            {
+                "key": "<HKLM>\\System\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces\\{6a52be73-ec8e-4f63-a268-7517a50dcb38}\\DhcpInterfaceOptions",
+                "value": "\\xfc\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x05\\x83\\x73\\x5c\\x06\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x08\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\xc0\\x93\\xef\\x7f\\x08\\x08\\x08\\x08\\x08\\x08\\x04\\x04\\x03\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x04\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\xc0\\x93\\xef\\x7f\\x0a\\x00\\x1b\\x01\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x04\\x00\\x00\\x00\\x00..."
+            },
+            {
+                "key": "<HKLM>\\System\\CurrentControlSet\\Services\\adminstarted\\Type",
+                "value": "0x00000010"
+            },
+            {
+                "key": "<HKLM>\\System\\CurrentControlSet\\Services\\adminstarted\\Start",
+                "value": "0x00000002"
+            },
+            {
+                "key": "<HKLM>\\System\\CurrentControlSet\\Services\\adminstarted\\ErrorControl",
+                "value": "0x00000000"
+            },
+            {
+                "key": "<HKLM>\\System\\CurrentControlSet\\Services\\adminstarted\\ImagePath",
+                "value": "\"%WINDIR%\\SysWOW64\\adminstarted.exe\""
+            },
+            {
+                "key": "<HKLM>\\System\\CurrentControlSet\\Services\\adminstarted\\DisplayName",
+                "value": "adminstarted"
+            },
+            {
+                "key": "<HKLM>\\System\\CurrentControlSet\\Services\\adminstarted\\WOW64",
+                "value": "0x00000001"
+            },
+            {
+                "key": "<HKLM>\\System\\CurrentControlSet\\Services\\adminstarted\\ObjectName",
+                "value": "LocalSystem"
+            },
+            {
+                "key": "<HKLM>\\System\\CurrentControlSet\\Services\\adminstarted\\Description",
+                "value": "Processes application compatibility cache requests for applications as they are launched"
+            },
+            {
+                "key": "\\REGISTRY\\USER\\S-1-5-18\\Software\\Microsoft\\windows\\CurrentVersion\\Internet Settings\\Connections\\DefaultConnectionSettings",
+                "value": "\\x46\\x00\\x00\\x00\\x02\\x00\\x00\\x00\\x09\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x04\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\xc0\\x7c\\xdd\\x5f\\x83\\xcc\\xd4\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x02\\x00\\x00\\x00\\x17\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\xfe\\x80\\x00\\x00\\x00\\x00\\x00\\x00\\xed\\xfb\\xac\\xa8\\xd1\\x13\\x76\\x77\\x0b\\x00\\x00\\x00\\x00..."
+            },
+            {
+                "key": "<HKLM>\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces\\{6a52be73-ec8e-4f63-a268-7517a50dcb38}\\DhcpDefaultGateway",
+                "value": "10.0.92.1"
+            },
+            {
+                "key": "<HKLM>\\System\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces\\{6a52be73-ec8e-4f63-a268-7517a50dcb38}\\DhcpInterfaceOptions",
+                "value": "\\xfc\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\xe1\\x04\\x73\\x5c\\x06\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x08\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x1f\\x4f\\xf0\\x7f\\x08\\x08\\x08\\x08\\x08\\x08\\x04\\x04\\x03\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x04\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x1f\\x4f\\xf0\\x7f\\x0a\\x00\\x5c\\x01\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x04\\x00\\x00\\x00\\x00..."
+            }
+        ],
+        "sandbox_name": "Dr.Web vxCube",
+        "services_created": ["wordpadmouse", "adminstarted"],
+        "services_started": ["wordpadmouse", "adminstarted"]
+    },
+    "id": "4727d1df4e0b782b2e708e6bb6c6cda6406314e6b2d0d5edbfd262476913aff4_Dr.Web vxCube",
+    "links": {
+        "self": "https://www.virustotal.com/api/v3/file_behaviours/4727d1df4e0b782b2e708e6bb6c6cda6406314e6b2d0d5edbfd262476913aff4_Dr.Web vxCube"
+    },
+    "type": "file_behaviour"
+}

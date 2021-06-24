@@ -1,0 +1,20 @@
+.. _categories:
+
+categories
+==========
+
+.. image:: ../_static/images/icons/category.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/categories.summary.txt
+
+:ref:`categories-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   categories.admin
+   categories.models

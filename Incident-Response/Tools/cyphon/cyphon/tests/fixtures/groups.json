@@ -1,0 +1,18 @@
+[
+  {
+    "model": "auth.group",
+    "fields": {
+      "id": 1,
+      "name": "Group 1",
+      "permissions": []
+    }
+  },
+  {
+    "model": "auth.group",
+    "fields": {
+      "id": 2,
+      "name": "Group 2",
+      "permissions": []
+    }
+  }
+]

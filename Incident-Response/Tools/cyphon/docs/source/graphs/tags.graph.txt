@@ -1,0 +1,27 @@
+.. _tags-graph:
+
+Tags Graph
+==========
+
+.. figure:: ../_static/images/graphs/tags-graph.png
+    :target: ../_static/images/graphs/tags-graph.png
+    :alt: Tags model graph
+
+    Graph of models in the :ref:`tags` app and related apps.
+
+Overview
+--------
+
+.. include:: ../summaries/tags.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models tags appusers articles containers -X AbstractBaseUser,PermissionsMixin,Taxonomy --no-inheritance -g -o tags-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`appusers-graph`
+* :ref:`articles-graph`
+* :ref:`containers-graph`
+* :ref:`taxonomies-graph`

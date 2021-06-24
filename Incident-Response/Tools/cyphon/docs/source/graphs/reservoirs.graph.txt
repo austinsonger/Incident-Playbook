@@ -1,0 +1,25 @@
+.. _reservoirs-graph:
+
+Reservoirs Graph
+================
+
+.. figure:: ../_static/images/graphs/reservoirs-graph.png
+    :target: ../_static/images/graphs/reservoirs-graph.png
+    :alt: Reservoirs model graph
+
+    Graph of models in the :ref:`reservoirs` app and related apps.
+
+Overview
+--------
+
+.. include:: ../summaries/reservoirs.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models reservoirs pipes -X Endpoint,PipeSpecSheet,Platform -g -o reservoirs-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`pipes-graph`
+* :ref:`platforms-graph`

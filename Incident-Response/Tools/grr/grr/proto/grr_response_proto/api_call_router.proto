@@ -1,0 +1,197 @@
+syntax = "proto2";
+
+import "grr_response_proto/api_utils.proto";
+import "grr_response_proto/jobs.proto";
+import "grr_response_proto/semantic.proto";
+
+package grr;
+
+message ApiAuthorization {
+  optional string router = 1 [(sem_type) = {
+    description: "api_call_router.ApiCallRouter class name that this "
+                 "authorization applies to."
+  }];
+  optional ApiDataObject router_params = 4 [(sem_type) = {
+    description: "Router configuration. Will be passed to router "
+                 "constructor as keyword arguments."
+  }];
+
+  repeated string users = 2 [(sem_type) = {
+    description: "List of users that will use a given API router."
+  }];
+  repeated string groups = 3 [(sem_type) = {
+    description: "List of groups that will use a given API router."
+  }];
+}
+
+message ApiLabelsRestrictedCallRouterParams {
+  repeated string allow_labels = 1;
+  repeated string allow_labels_owners = 2;
+
+  optional bool allow_flows_access = 3;
+  optional bool allow_vfs_access = 4;
+}
+
+message RobotRouterSearchClientsParams {
+  optional bool enabled = 1;
+}
+
+message RobotRouterFileFinderFlowParams {
+  optional bool enabled = 1;
+
+  optional bool globs_allowed = 2 [(sem_type) = {
+    description: "If false, using '*' in FileFinder paths is not allowed."
+  }];
+
+  optional bool interpolations_allowed = 3 [(sem_type) = {
+    description: "If false, using interpolations in FileFinder is not "
+                 "allowed."
+  }];
+
+  optional string file_finder_flow_name = 4 [(sem_type) = {
+    description: "Name of the flow to use. Must be interface-compatible "
+                 "with FileFinder. Default is 'FileFinder'."
+  }];
+
+  optional uint64 max_flows_per_client_daily = 5 [(sem_type) = {
+    description: "Maximum number of FileFinder flows that can be started on a "
+                 "single client within 24 hours. Default is 0, meaning no limit."
+  }];
+  optional uint64 min_interval_between_duplicate_flows = 6 [(sem_type) = {
+    type: "DurationSeconds",
+    description: "Minimum time that has to pass between 2 FileFinder flows "
+                 "with same arguments. Default is 0, meaning any time."
+  }];
+
+  optional uint64 max_file_size = 7 [(sem_type) = {
+    description: "Maximum file size in bytes. Will be enforced for all "
+                 "FileFinder actions. Files bigger than max_file_size will be skipped."
+  }];
+}
+
+message RobotRouterArtifactCollectorFlowParams {
+  optional bool enabled = 1;
+
+  repeated string allow_artifacts = 2 [(sem_type) = {
+    description: "Only artifacts from this list can be collected. "
+                 "Empty list means no artifacts can be collected."
+  }];
+
+  optional string artifact_collector_flow_name = 3 [(sem_type) = {
+    description: "Name of the flow to use. Must be interface-compatible "
+                 "with CollectArtifacts."
+  }];
+
+  optional uint64 max_flows_per_client_daily = 5 [(sem_type) = {
+    description: "Maximum number of ArtifactCollectorFlow flows that can be "
+                 "started on a single client within 24 hours. Default is 0, meaning no "
+                 "limit."
+  }];
+  optional uint64 min_interval_between_duplicate_flows = 6 [(sem_type) = {
+    type: "DurationSeconds",
+    description: "Minimum time that has to pass between 2 "
+                 "ArtifactCollectorFlow flows with same arguments. Default is 0, "
+                 "meaning any time."
+  }];
+}
+
+message RobotRouterGetFlowParams {
+  optional bool enabled = 1;
+}
+
+message RobotRouterListFlowResultsParams {
+  optional bool enabled = 1;
+}
+
+message RobotRouterListFlowLogsParams {
+  optional bool enabled = 1;
+}
+
+message RobotRouterGetFlowFilesArchiveParams {
+  optional bool enabled = 1;
+
+  repeated string exclude_path_globs = 2 [(sem_type) = {
+    type: "GlobExpression",
+    description: "Only files not matching these globs will be included "
+                 "into the archive. Exclusion is always applied first, then "
+                 "include_only_path_globs is applied."
+  }];
+
+  repeated string include_only_path_globs = 3 [(sem_type) = {
+    type: "GlobExpression",
+    description: "Only files matching these globs will be included into "
+                 "the archive. Inclusion is applied after exclude_path_globs."
+  }];
+
+  optional bool skip_glob_checks_for_artifact_collector = 4;
+}
+
+// Next message id: 9
+message ApiCallRobotRouterParams {
+  optional RobotRouterSearchClientsParams search_clients = 1;
+
+  optional RobotRouterFileFinderFlowParams file_finder_flow = 2;
+  optional RobotRouterArtifactCollectorFlowParams artifact_collector_flow = 3;
+
+  optional RobotRouterGetFlowParams get_flow = 4;
+  optional RobotRouterListFlowResultsParams list_flow_results = 5;
+  optional RobotRouterListFlowLogsParams list_flow_logs = 8;
+  optional RobotRouterGetFlowFilesArchiveParams get_flow_files_archive = 6;
+
+  // DEPRECATED, don't use.
+  // Note: this field wasn't renamed to DEPRECATED_robot_id, since router params
+  // are read from YAML files and therefore field-name-sensitive.
+  optional string robot_id = 7;
+}
+
+message ApiYaraHuntCallRouterParams {
+  // A client limit allowed for production hunts. This values also determines
+  // what kind of hunt is being created.
+  optional int64 prod_client_limit = 1;
+
+  // A client limit allowed for canary hunts. This value also determines what
+  // kind of hunt is being created.
+  optional int64 canary_client_limit = 2;
+
+  // A duration limiting how often production hunts can be created. New hunts
+  // cannot be created earlier than this duration after the previous hunt has
+  // been created.
+  optional uint64 prod_expiry_duration = 3 [(sem_type) = { type: "Duration" }];
+
+  // A duration limiting how often canary hunts can be created. New hunts cannot
+  // be created earlier than this duration after the previous hunt has been
+  // created.
+  optional uint64 canary_expiry_duration = 4
+      [(sem_type) = { type: "Duration" }];
+
+  // The following values are treated as the only allowed and default values for
+  // various hunt settings. If the user specifies a hunt creation setting other
+  // than one of these, an exception will be raised.
+  optional ForemanClientRuleSet client_rule_set = 5;
+  optional float client_rate = 6;
+  optional uint64 crash_limit = 7;
+  optional uint64 avg_results_per_client_limit = 8;
+  optional uint64 avg_cpu_seconds_per_client_limit = 9;
+  optional uint64 avg_network_bytes_per_client_limit = 10;
+  optional uint64 per_client_cpu_seconds_limit = 11;
+  optional uint64 per_client_network_bytes_limit = 12;
+  optional uint64 total_network_bytes_limit = 13;
+
+  // Similarly to the ones above, these values are the only allowed and default
+  // values allowed for the arguments specific to the YARA flow.
+  enum ErrorPolicy {
+    NO_ERRORS = 0;
+    ALL_ERRORS = 1;
+    CRITICAL_ERRORS = 2;
+  }
+  optional ErrorPolicy include_errors_in_results = 14;
+  optional bool include_misses_in_results = 15;
+  optional uint64 per_process_scan_seconds_limit = 16;
+  optional uint64 per_process_results_limit = 17;
+  optional uint64 per_process_dump_size_limit = 18
+      [(sem_type) = { type: "ByteSize" }];
+}
+
+message ApiInterrogateRouterParams {
+  optional uint64 daily_limit_per_client_and_user = 1;
+}

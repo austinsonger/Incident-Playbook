@@ -1,0 +1,27 @@
+.. _logsifter-graph:
+
+LogSifter Graph
+===============
+
+.. figure:: ../_static/images/graphs/logsifter-graph.png
+    :target: ../_static/images/graphs/logsifter-graph.png
+    :alt: LogSifter model graph
+
+    Graph of models in the :ref:`logsifter` package.
+
+Overview
+--------
+
+.. include:: ../summaries/logsifter.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models logchutes logcondensers logsieves logmungers -I LogChute,LogMunger,LogSieve,LogCondenser -g -o logsifter-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`logchutes-graph`
+* :ref:`logcondensers-graph`
+* :ref:`logmungers-graph`
+* :ref:`logsieves-graph`

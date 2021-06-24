@@ -1,0 +1,17 @@
+.. _language:
+
+lab.language
+============
+
+.. image:: ../_static/images/icons/language.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/language.summary.txt
+
+Submodules
+----------
+
+.. toctree::
+
+   lab.language.language

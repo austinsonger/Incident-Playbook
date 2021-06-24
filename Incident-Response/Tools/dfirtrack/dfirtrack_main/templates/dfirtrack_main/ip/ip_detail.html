@@ -1,0 +1,85 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    IP '{{ ip.ip_ip }}'{% if ip.system_set.all %} (s: {{ ip.system_set.all|length }}){% endif %}
+</title>
+
+{% load static %}
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- up button -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <a href="{% url 'ip_list' %}" type="button" class="btn btn-light copy-false">
+            <img src="{% static 'dfirtrack_main/icons/arrow-circle-top.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Up to IP addresses
+        </a>
+    </div>
+</div>
+
+<!-- ip address -->
+<div class="row">
+    <div class="col-3">
+        <h5>
+            IP address "{{ ip.ip_ip}}"
+        </h5>
+    </div>
+</div>
+
+<!-- ip id -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <small class="text-muted">
+            IP-ID: {{ ip.ip_id }}
+        </small>
+    </div>
+</div>
+
+<!-- system headline -->
+<div class="row">
+    <div class="col-6">
+        <h5>
+            Systems with this IP address{% if ip.system_set.all %} ({{ ip.system_set.all|length }}){% endif %}
+        </h5>
+    </div>
+</div>
+
+<!-- systems -->
+{% if ip.system_set.all %}
+
+    {% for i in ip.system_set.all %}
+        <div class="row top-distance">
+            <div class="col-3">
+                <a href="{{ i.get_absolute_url }}" type="button" class="btn btn-primary btn-sm copy-true">
+                    <img src="{% static 'dfirtrack_main/icons/monitor-light.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                    {{ i.system_name }}
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+
+<!-- no systems -->
+{% else %}
+    <div class="row top-distance">
+        <div class="col-3">
+            ---
+        </div>
+    </div>
+
+<!-- systems -->
+{% endif %}
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

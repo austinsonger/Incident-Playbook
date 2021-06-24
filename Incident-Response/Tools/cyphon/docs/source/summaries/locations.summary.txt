@@ -1,0 +1,1 @@
+|Locations| represent geographic locations, which can be points, polygons, or multipolygons. |Locations| are created by |AppUsers| to gather data associated with particular locations. Data associated with |Locations| can be collected from Reservoirs by creating :ref:`Filters<filters>`.

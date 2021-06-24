@@ -1,0 +1,7 @@
+bottler.tastes.serializers
+==========================
+
+.. automodule:: bottler.tastes.serializers
+    :members:
+    :undoc-members:
+    :show-inheritance:

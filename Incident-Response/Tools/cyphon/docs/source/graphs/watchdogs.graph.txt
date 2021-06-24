@@ -1,0 +1,26 @@
+.. _watchdogs-graph:
+
+Watchdogs Graph
+===============
+
+.. figure:: ../_static/images/graphs/watchdogs-graph.png
+    :target: ../_static/images/graphs/watchdogs-graph.png
+    :alt: Watchdogs model graph
+
+    Graph of models in the :ref:`watchdogs` app and related apps.
+
+Overview
+--------
+
+.. include:: ../summaries/watchdogs.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models watchdogs auth categories datasieves -X FieldRule,Sieve,SieveNode -g -o watchdogs-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`auth-graph`
+* :ref:`categories-graph`
+* :ref:`datasieves-graph`

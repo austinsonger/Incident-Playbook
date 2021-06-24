@@ -1,0 +1,1 @@
+|Condensers| allow data to be stored in custom formats defined by :ref:`Bottles<bottles>`. A |Condenser| is composed of |Fittings| that map the |BottleFields| in a |Bottle| to :ref:`Parsers<parsers>`, which are used to process data from :ref:`Pipes<pipes>` or :ref:`Chutes<chutes>`.

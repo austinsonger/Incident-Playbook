@@ -1,0 +1,13 @@
+sifter.logsifter.logcondensers.models
+=====================================
+
+.. figure:: ../_static/images/graphs/logcondensers-graph.png
+    :target: ../graphs/logcondensers.graph.html
+    :alt: LogCondensers model graph
+
+    Graph of models in the :ref:`logcondensers` app and related apps.
+
+.. automodule:: sifter.logsifter.logcondensers.models
+    :members:
+    :undoc-members:
+    :show-inheritance:

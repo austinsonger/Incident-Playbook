@@ -1,0 +1,7 @@
+sifter.datasifter.datamungers.admin
+===================================
+
+.. automodule:: sifter.datasifter.datamungers.admin
+    :members:
+    :undoc-members:
+    :show-inheritance:

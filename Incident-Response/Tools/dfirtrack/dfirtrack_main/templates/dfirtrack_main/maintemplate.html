@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HTML head -->
+<head>
+
+<!-- HTML head from templates -->
+{% block head %}
+{% endblock %}
+
+<meta charset="utf-8" />
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'dfirtrack_main/bootstrap-4.0.0/css/bootstrap.min.css' %}" type = "text/css"/>
+
+<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+    html,
+    body {
+      height:100%
+    }
+</style>
+
+<!-- custom CSS -->
+<link rel="stylesheet" href="{% static 'dfirtrack_main/dfirtrack/dfirtrack.css' %}" type = "text/css"/>
+<!-- custom javascript -->
+<script src="{% static 'dfirtrack_main/dfirtrack/dfirtrack.js' %}"></script>
+<!-- javascript for copy button -->
+<script src="{% static 'dfirtrack_main/clipboard-2.0.1/clipboard.min.js' %}"></script>
+
+<!-- HTML head -->
+</head>
+
+<!-- ############################################ -->
+
+<!-- HTML body -->
+<body class="body bg-dark text-light">
+
+<!-- dfirtrack_main.templatetags.dfirtrack_main_tags  -->
+{% load dfirtrack_main_tags %}
+
+<!-- overall container -->
+<div class="container-fluid" style="min-height:95%; ">
+
+    <!-- upper row -->
+    <div class="row">
+
+        <!-- DFIRTrack logo -->
+        <div class="col-2 top-distance copy-false">
+            <center>
+                <img src="{% static 'dfirtrack_main/img/logo.png' %}" class="responsive-img copy-false" style='max-height:60px;' alt="place a logo in 'dfirtrack_main/static/dfirtrack_main/img/logo.png'">
+            </center>
+        </div>
+
+        <!-- DFIRTrack headline -->
+        <div class="col top-distance copy-false">
+            <center>
+                <h3>
+                    <!-- DFIRTrack -->
+                    DFIRTrack
+
+                    <!-- DFIRTrack subtitle -->
+                    <small class="text-muted">
+                        The Incident Response Tracking Application
+                    </small>
+
+                    <!-- DFIRTrack version number and branch -->
+                    <!-- dfirtrack_main.templatetags.dfirtrack_main_tags.dfirtrack_version   -->
+                    <small>
+                        {% dfirtrack_version %}
+                    </small>
+
+                    <!-- register templatetag, otherwise following if-statement wont work -->
+                    {% github_ci as ci %}
+
+                    <!-- show current branch only if not in GitHub action -->
+                    {% if not ci %}
+                        <!-- dfirtrack_main.templatetags.dfirtrack_main_tags.dfirtrack_branch   -->                    
+                        <small class="text-muted">
+                            ({% dfirtrack_branch %})
+                        </small>
+                    {% endif %}
+                </h3>
+            </center>
+        </div>
+
+        <!-- logged in user -->
+        <div class="col-1 top-distance copy-false">
+            <center>
+                <div class="text-muted">
+                    Logged in as
+                </div>
+            </center>
+            <center>
+                <div class="top-distance copy-false">
+                <img src="{% static 'dfirtrack_main/icons/person-light.svg' %}" class="icon-sm copy-false" alt="icon">
+                {{ user.get_username }}
+                </div>
+            </center>
+        </div>
+
+        <!-- logout button -->
+        <div class="col-1">
+            <center>
+                <a href="/logout" type="button" class="btn btn-light copy-false" style="margin-top:20px">
+                    <img src="{% static 'dfirtrack_main/icons/account-logout.svg' %}" class="icon copy-false" alt="icon">
+                    Logout
+                </a>
+            </center>
+        </div>
+
+    <!-- upper row -->
+    </div><hr>
+
+    <!-- main row -->
+    <div class="row">
+
+        <!-- nav bar column -->
+        <div class="col-2 copy-false">
+
+            <!-- nav bar -->
+            <ul class="nav flex-column nav-pills">
+
+                <!-- nav bar item -->
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'system_list' %}">
+                        <img src="{% static 'dfirtrack_main/icons/monitor-light.svg' %}" class="icon right-distance copy-false" alt="icon">
+                        Systems
+                    </a>
+                </li>
+
+                <!-- nav bar dropdown item -->
+                <li class="nav-item dropdown">
+
+                    <!-- nav bar dropdown toggle -->
+                    <a class="nav-link dropdown-toggle active top-distance nav-left-distance" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        Systemitems
+                    </a>
+
+                    <!-- nav bar dropdown menu -->
+                    <div class="dropdown-menu">
+
+                        <!-- section -->
+                        <div class="dropdown-header">Status information</div>
+                        <a class="dropdown-item" href="{% url 'systemstatus_list' %}">Systemstatus</a>
+                        <a class="dropdown-item" href="{% url 'analysisstatus_list' %}">Analysisstatus</a>
+                        <a class="dropdown-item" href="{% url 'reason_list' %}">Reasons</a>
+                        <a class="dropdown-item" href="{% url 'recommendation_list' %}">Recommendations</a>
+
+                        <!-- section -->
+                        <div class="dropdown-header">Technical information</div>
+                        <a class="dropdown-item" href="{% url 'systemtype_list' %}">Systemtypes</a>
+                        <a class="dropdown-item" href="{% url 'ip_list' %}">IPs</a>
+                        <a class="dropdown-item" href="{% url 'domain_list' %}">Domains</a>
+                        <a class="dropdown-item" href="{% url 'dnsname_list' %}">DNS names</a>
+                        <a class="dropdown-item" href="{% url 'os_list' %}">OS</a>
+
+                        <!-- section -->
+                        <div class="dropdown-header">Company information</div>
+                        <a class="dropdown-item" href="{% url 'company_list' %}">Companies</a>
+                        <a class="dropdown-item" href="{% url 'location_list' %}">Locations</a>
+                        <a class="dropdown-item" href="{% url 'serviceprovider_list' %}">Serviceproviders</a>
+                        <a class="dropdown-item" href="{% url 'contact_list' %}">Contacts</a>
+                        <a class="dropdown-item" href="{% url 'division_list' %}">Divisions</a>
+
+                        <!-- section -->
+                        <div class="dropdown-header">Users</div>
+                        <a class="dropdown-item" href="{% url 'domainuser_list' %}">Domainusers</a>
+                        <a class="dropdown-item" href="{% url 'systemuser_list' %}">Systemusers</a>
+
+                        <!-- section -->
+                        <div class="dropdown-header">System information</div>
+                        <a class="dropdown-item" href="{% url 'analystmemo_list' %}">Analystmemos</a>
+                        <a class="dropdown-item" href="{% url 'reportitem_list' %}">Reportitems</a>
+
+                        <!-- section -->
+                        <div class="dropdown-header">Case information</div>
+                        <a class="dropdown-item" href="{% url 'case_list' %}">Cases</a>
+                        <a class="dropdown-item" href="{% url 'entry_list' %}">Entries</a>
+
+                        <!-- section -->
+                        <div class="dropdown-header">Meta utilities</div>
+                        <a class="dropdown-item" href="{% url 'headline_list' %}">Headlines</a>
+                        <a class="dropdown-item" href="{% url 'osimportname_list' %}">OS-Importnames</a>
+
+                    <!-- nav bar dropdown menu -->
+                    </div>
+                <!-- nav bar dropdown item -->
+                </li>
+
+                <!-- nav bar item -->
+                <li class="nav-item">
+                    <a class="nav-link active top-distance" href="{% url 'artifacts_artifact_list' %}">
+                        <img src="{% static 'dfirtrack_main/icons/bug-light.svg' %}" class="icon right-distance copy-false" alt="icon">
+                        Artifacts
+                    </a>
+                </li>
+
+                <!-- nav bar dropdown item -->
+                <li class="nav-item dropdown">
+
+                    <!-- nav bar dropdown toggle -->
+                    <a class="nav-link dropdown-toggle active top-distance nav-left-distance" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        Artifactitems
+                    </a>
+
+                    <!-- nav bar dropdown menu -->
+                    <div class="dropdown-menu">
+
+                        <!-- section -->
+                        <div class="dropdown-header">Artifact information</div>
+                        <a class="dropdown-item" href="{% url 'artifacts_artifactpriority_list' %}">Artifactpriority</a>
+                        <a class="dropdown-item" href="{% url 'artifacts_artifactstatus_list' %}">Artifactstatus</a>
+                        <a class="dropdown-item" href="{% url 'artifacts_artifacttype_list' %}">Artifacttype</a>
+
+                    <!-- nav bar dropdown menu -->
+                    </div>
+                <!-- nav bar dropdown item -->
+                </li>
+
+                <!-- nav bar item -->
+                <li class="nav-item">
+                    <a class="nav-link active top-distance" href="{% url 'task_list' %}">
+                        <img src="{% static 'dfirtrack_main/icons/task-light.svg' %}" class="icon right-distance copy-false" alt="icon">
+                        Tasks
+                    </a>
+                </li>
+
+                <!-- nav bar dropdown item -->
+                <li class="nav-item dropdown">
+
+                    <!-- nav bar dropdown toggle -->
+                    <a class="nav-link dropdown-toggle active top-distance nav-left-distance" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        Taskitems
+                    </a>
+
+                    <!-- nav bar dropdown menu -->
+                    <div class="dropdown-menu">
+
+                        <!-- section -->
+                        <div class="dropdown-header">Status information</div>
+                        <a class="dropdown-item" href="{% url 'taskpriority_list' %}">Taskpriorities</a>
+                        <a class="dropdown-item" href="{% url 'taskstatus_list' %}">Taskstatus</a>
+
+                        <!-- section -->
+                        <div class="dropdown-header">Meta utilities</div>
+                        <a class="dropdown-item" href="{% url 'taskname_list' %}">Tasknames</a>
+
+                    <!-- nav bar dropdown menu -->
+                    </div>
+
+                <!-- nav bar dropdown item -->
+                </li>
+
+                <!-- nav bar item -->
+                <li class="nav-item">
+                    <a class="nav-link active top-distance" href="{% url 'tag_list' %}">
+                        <img src="{% static 'dfirtrack_main/icons/tag-light.svg' %}" class="icon right-distance copy-false" alt="icon">
+                        Tags
+                    </a>
+                </li>
+
+                <!-- nav bar item -->
+                <li class="nav-item">
+                    <a class="nav-link active top-distance" href="{% url 'status' %}" style="background-color: white; color: black;">
+                        <img src="{% static 'dfirtrack_main/icons/bar-chart.svg' %}" class="icon right-distance copy-false" alt="icon">
+                        Status
+                    </a>
+                </li>
+
+                <!-- nav bar item -->
+                <li class="nav-item">
+                    <a onclick="main_config_popup()" class="nav-link active copy-false top-distance" style="background-color: white; color: black;">
+                        <img src="{% static 'dfirtrack_main/icons/wrench.svg' %}" class="icon right-distance copy-false" alt="icon">
+                        Main config
+                    </a>
+                </li>
+
+                <!-- nav bar item -->
+                <li class="nav-item">
+                    <a class="nav-link active top-distance" target="_blank" href="/admin/" style="background-color: white; color: black;">
+                        <img src="{% static 'dfirtrack_main/icons/cog.svg' %}" class="icon right-distance copy-false" alt="icon">
+                        Admin
+                    </a>
+                </li>
+
+            <!-- nav bar -->
+            </ul>
+
+        <!-- nav bar column -->
+        </div>
+
+        <!-- main column -->
+        <div class="col">
+
+            <!-- main content container -->
+            <div class='container-fluid'>
+
+                    <!-- messages -->
+                    {% if messages %}
+                        {% for message in messages %}
+
+                            <!-- the corresponding alert for message level error is danger -->
+                            {% if message.tags == 'error' %}
+                                <div class="alert alert-danger copy-false">
+                                    {{ message }}
+                                </div>
+
+                            <!-- all other alert levels correspond with the message level -->
+                            {% else %}
+                                <div class="alert alert-{{ message.tags }} copy-false">
+                                    {{ message }}
+                                </div>
+                            {% endif %}
+
+                        {% endfor %}
+                    <!-- messages -->
+                    {% endif %}
+
+                    <!-- HTML body from templates -->
+                    {% block content %}
+                    {% endblock %}
+
+                    <!-- go to top of page button -->
+                    <button type="button" class="btn btn-primary copy-false" onclick="go_to_top()" id="btn-top">
+                        <img src="{% static 'dfirtrack_main/icons/arrow-circle-top-light.svg' %}" class="icon copy-false" alt="icon">
+                    </button>
+
+            <!-- main content container -->
+            </div>
+
+        <!-- main column -->
+        </div>
+
+    <!-- main row -->
+    </div> 
+
+<!-- overall container -->
+</div>
+
+<!-- ############################################ -->
+
+<!-- bootstrap relevant javascript -->
+<script src="{% static 'dfirtrack_main/jquery-3.5.1/jquery-3.5.1.min.js' %}"></script>
+<script src="{% static 'dfirtrack_main/popper-1.12.9/popper.min.js' %}"></script>
+<script src="{% static 'dfirtrack_main/bootstrap-4.0.0/js/bootstrap.min.js' %}"></script>
+
+<!-- extend datatables javascript where necessary -->
+{% block datatables %}
+{% endblock %}
+
+<!-- HTML body -->
+</body>
+
+</html>

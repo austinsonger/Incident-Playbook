@@ -1,0 +1,24 @@
+{% load static %}
+<!--
+FOR NEW ARTIFACTPRIORITIES ADD NEW BUTTONS HERE
+-->
+
+<!-- artifactpriority '30_high' -->
+{% if artifactpriority.artifactpriority_name == '30_high' %}
+    <div class="btn btn-primary btn-sm btn-red copy-false">
+        <img src="{% static 'dfirtrack_main/icons/arrow-thick-top.svg' %}" class="icon-sm copy-false" alt="icon">
+    </div>
+
+<!-- artifactpriority '20_medium' -->
+{% elif artifactpriority.artifactpriority_name == '20_medium' %}
+    <div class="btn btn-primary btn-sm btn-orange copy-false">
+        <img src="{% static 'dfirtrack_main/icons/arrow-thick-right.svg' %}" class="icon-sm copy-false" alt="icon">
+    </div>
+
+<!-- artifactpriority '10_low' -->
+{% elif artifactpriority.artifactpriority_name == '10_low' %}
+    <div class="btn btn-primary btn-sm btn-green copy-false">
+        <img src="{% static 'dfirtrack_main/icons/arrow-thick-bottom.svg' %}" class="icon-sm copy-false" alt="icon">
+    </div>
+
+{% endif %}

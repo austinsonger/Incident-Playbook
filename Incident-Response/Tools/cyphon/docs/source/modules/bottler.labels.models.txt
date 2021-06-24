@@ -1,0 +1,13 @@
+bottler.labels.models
+=====================
+
+.. figure:: ../_static/images/graphs/labels-graph.png
+    :target: ../graphs/labels.graph.html
+    :alt: Labels model graph
+
+    Graph of models in the :ref:`labels` app and related apps.
+
+.. automodule:: bottler.labels.models
+    :members:
+    :undoc-members:
+    :show-inheritance:

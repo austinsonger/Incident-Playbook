@@ -1,0 +1,7 @@
+platforms.jira.handlers
+=======================
+
+.. automodule:: platforms.jira.handlers
+    :members:
+    :undoc-members:
+    :show-inheritance:

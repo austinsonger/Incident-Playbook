@@ -1,0 +1,57 @@
+.kv-label {
+	display: table;
+    margin-top: 0;
+    margin-left: 0;
+}
+.kv-label>span {
+	color: #ffffff;
+	display: table-cell;
+	font-weight: 400;
+	line-height: 1;
+	padding: .3em .6em;
+	text-align: center;
+	vertical-align: baseline;
+	white-space: nowrap;
+}
+.kv-label span.kv-label-key {
+    /* border-bottom-left-radius: 0.25em;
+    border-top-left-radius: .25em; */
+    border-left-color: #3c8dbc;
+    border-left-width: 3px;
+    border-left-style: solid;
+}
+.kv-label span.kv-label-val {
+    border-bottom-right-radius: 0.25em;
+    border-top-right-radius: .25em;
+    border-left: 1px dashed #3c8dbc;
+
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 200px;
+}
+
+.kv-label.kv-label-addon span.kv-label-val {
+	border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.kv-label.kv-label-addon span:last-child {
+	border-bottom-right-radius: 0.25em;
+	border-top-right-radius: .25em;
+}
+
+.kv-label>span.primary {
+	background-color: #3c8dbc;
+    color: #fff;
+}
+.kv-label>span.default {
+    background-color: #d2d6de;
+    color: #444;
+}
+
+
+.kv-label .tooltip-inner{
+	word-wrap: break-word;
+	text-align: left;
+	white-space: pre-line;
+}

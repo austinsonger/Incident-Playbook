@@ -1,0 +1,13 @@
+.. _geometry:
+
+utils.geometry
+==============
+
+Submodules
+----------
+
+.. toctree::
+
+   utils.geometry.bounds
+   utils.geometry.shapes
+   utils.geometry.units

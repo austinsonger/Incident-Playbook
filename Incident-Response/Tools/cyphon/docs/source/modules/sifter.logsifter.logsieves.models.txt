@@ -1,0 +1,13 @@
+sifter.logsifter.logsieves.models
+=================================
+
+.. figure:: ../_static/images/graphs/logsieves-graph.png
+    :target: ../graphs/logsieves.graph.html
+    :alt: LogSieves model graph
+
+    Graph of models in the :ref:`logsieves` app and related apps.
+
+.. automodule:: sifter.logsifter.logsieves.models
+    :members:
+    :undoc-members:
+    :show-inheritance:

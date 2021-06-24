@@ -1,0 +1,13 @@
+query.collectionqueries.models
+==============================
+
+.. figure:: ../_static/images/graphs/collectionqueries-graph.png
+    :target: ../graphs/collectionqueries.graph.html
+    :alt: collectionqueries model graph
+
+    Graph of models in the :ref:`collectionqueries` app and related apps.
+
+.. automodule:: query.collectionqueries.models
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,41 @@
+.. _documentation:
+
+######################
+Documentation Standard
+######################
+
+Cyphon uses `Sphinx`_ to build its documentation. The text files that Sphinx uses are formatted as `reStructuredText`_ (reST). Refer to the `Style Guide for Sphinx-based Documentation`_ for usage guidelines.
+
+Most of the API documentation for Cyphon's :ref:`packages` is generated automagically from docstrings in the code. As such, we pay special attention to how docstrings are formatted.
+
+
+**************
+Public members
+**************
+
+Docstrings for public members (classes, public methods, etc.) are formatted using the `NumPy documentation style`_. Sphinx can interpret NumPy style using the `Napoleon`_ extension. 
+
+
+******************
+Non-public members
+******************
+
+Non-public members (whose names begin with '_' or '__') also have docstrings, but these are not included in the API documentation. As such, their docstrings are generally shorter and more informal than those of public members.
+
+
+****************
+Cross-references
+****************
+
+Cyphon's docstrings use `cross-references`_ to create hyperlinks to other objects in the documentation. However, to keep docstrings human readable within the source code, we try to avoid using cross-references in their raw form. Instead, we use reST `substitutions`_ to create shorter, more readable cross-references. For example, the cross-reference ``:class:`DataCondensers<sifter.datasifter.datacondensers.models.DataCondenser>``` becomes simply ``|DataCondensers|`` in the docstring text.
+
+Substitutions that are used in multiple files are defined in the `rst_epilog`_ setting of the Sphinx conf.py file. These sustitutions can be used in any docstring or documentation file within the project. However, substitutions that are only needed in one file are defined in that file, rather than in the conf.py file.
+
+.. _cross-references: http://www.sphinx-doc.org/en/stable/markup/inline.html#xref-syntax
+.. _Napoleon: http://www.sphinx-doc.org/en/stable/ext/napoleon.html
+.. _NumPy documentation style: http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html.. _Sphinx: http://www.sphinx-doc.org/en/stable/
+.. _reStructuredText: http://www.sphinx-doc.org/en/stable/rest.html
+.. _rst_epilog: http://www.sphinx-doc.org/en/stable/config.html#confval-rst_epilog
+.. _Sphinx: http://www.sphinx-doc.org/
+.. _Style Guide for Sphinx-based Documentation: http://documentation-style-guide-sphinx.readthedocs.io/en/latest/style-guide.html.. _NumPy documentation style: https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt
+.. _substitutions: http://www.sphinx-doc.org/en/stable/rest.html#substitutions

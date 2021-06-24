@@ -1,0 +1,11 @@
+[
+  {
+    "model": "dispatches.dispatch",
+    "fields": {
+      "id": 1,
+      "alert": 3,
+      "data": {"foo": "bar"},
+      "stamp": 1
+    }
+  }
+]

@@ -1,0 +1,7 @@
+distilleries.admin
+==================
+
+.. automodule:: distilleries.admin
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,23 @@
+{
+  "data": {
+    "allPeople": {
+      "created": {
+        "sort": {
+          "name": {
+            "toList": ["lop", "lop", "lop", "ripple"]
+          }
+        }
+      },
+      "sort": {
+        "toList": [
+          {"name": "franck", "age": 28},
+          {"name": "josh", "age": 32},
+          {"name": "marc", "age": 34},
+          {"name": "marko", "age": 29},
+          {"name": "peter", "age": 35},
+          {"name": "vadas", "age": 27}
+        ]
+      }
+    }
+  }
+}

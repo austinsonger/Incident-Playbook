@@ -1,0 +1,7 @@
+bottler.containers.serializers
+==============================
+
+.. automodule:: bottler.containers.serializers
+    :members:
+    :undoc-members:
+    :show-inheritance:

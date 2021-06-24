@@ -1,0 +1,7 @@
+ambassador.passports.admin
+==========================
+
+.. automodule:: ambassador.passports.admin
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,109 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    Division '{{ division.division_name }}'
+</title>
+
+{% load static %}
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- up button -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <a href="{% url 'division_list' %}" type="button" class="btn btn-light copy-false">
+            <img src="{%static 'dfirtrack_main/icons/arrow-circle-top.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Up to divisions
+        </a>
+    </div>
+</div>
+
+<!-- division name -->
+<div class="row">
+    <div class="col-3">
+        <h5>
+            Division "{{ division.division_name }}"
+        </h5>
+    </div>
+</div>
+
+<!-- division id -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <small class="text-muted">
+            Division-ID: {{ division.division_id }}
+        </small>
+    </div>
+</div>
+
+<!-- division note headline -->
+<div class="row">
+    <div class="col-3">
+        <h5>
+            Note
+        </h5>
+    </div>
+</div>
+
+<!-- division note -->
+<div class="row">
+    <div class="col">
+        {% if division.division_note %}
+            {{ division.division_note|linebreaks }}
+        {% else %}
+            ---
+        {% endif %}
+    </div>
+</div>
+
+<!-- company headline -->
+<div class="row">
+    <div class="col-3">
+        <h5>
+            Companies assigned to this division
+        </h5>
+    </div>
+</div>
+
+<!-- companies -->
+{% if division.company_set.all %}
+    {% for i in division.company_set.all %}
+        <div class="row top-distance">
+            <div class="col-3">
+                <a href="{{ i.get_absolute_url }}">
+                    {{ i.company_name }}
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+
+<!-- no companies -->
+{% else %}
+<div class="row top-distance">
+    <div class="col-3">
+        ---
+    </div>
+</div>
+
+<!-- companies -->
+{% endif %}
+
+<!-- edit button -->
+<a href="{{ division.get_update_url }}" type="button" class="btn btn-light top-distance copy-false">
+    <img src="{% static 'dfirtrack_main/icons/pencil.svg' %}" class="icon right-distance copy-false" alt="icon">
+    Edit
+</a>
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

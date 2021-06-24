@@ -1,0 +1,10 @@
+#################
+API Documentation
+#################
+
+.. toctree::
+   :maxdepth: 1
+
+   modules/packages
+   graphs/graphs
+   rest-api

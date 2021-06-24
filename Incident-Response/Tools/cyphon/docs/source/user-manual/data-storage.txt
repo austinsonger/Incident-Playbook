@@ -1,0 +1,83 @@
+.. _data-storage:
+
+############
+Data Storage
+############
+
+For Cyphon to save and retrieve data, it needs to know what the data looks like and where it should be stored.
+
+
+.. _containers-overview:
+
+**********
+Containers
+**********
+
+.. image:: ../_static/images/icons/container.png
+    :width: 60px
+    :align: left
+
+You can tell Cyphon what your data looks like by designing a `Container` for it. A Container consists of two parts: a `Bottle` and a `Label`.
+
+.. _bottles-overview:
+
+Bottles
+=======
+
+A Bottle holds the data itself. It describes the structure of the data, or the "data model." The data model specifies the fields in the data, including the names of the fields and the types of data they represent (strings, numbers, dates, etc.).
+
+If you're cyphoning different kinds of data (syslog messages, emails, social media posts, etc.), you can use different Bottles to store them. However, in some cases, you may be pulling in data from sources that use different data models to describe a similar event. For example, different social media platforms use different data models to describe a social media post. Cyphon lets you use Condensers to boil down data from different sources, so they can be stored in the same type of Bottle. This way you can use data from different sources more easily.
+
+.. _labels-overview:
+
+Labels
+======
+
+In addition to a Bottle, a Container can also have a Label. A Label stores important information about a Bottle's contents. For instance, if the Bottle is storing a social media post, you might want to give it a Label that shows the results of a sentiment analysis of the post (e.g., whether it is positive, negative, or neutral in tone). You can use Labels to enhance your data set. However, Labels are strictly optional! See the section on :ref:`data-enhancement` for more info.
+
+.. _tastes-overview:
+
+Tastes
+======
+
+What if you want to preview data stored in different Containers all at once? That's where Tastes come in. Tastes are used to sample data. They extract essential information common to many kinds of data, such as "title", "date", and "location." A Taste tells Cyphon how to identify those critical fields in a Container.
+
+The title fields of Tastes are also used to title Alerts triggered by data. For this reason, it's extremely important to define a Taste for every Container associated with Alert data.
+
+Setup Instructions
+==================
+
+You can create Bottles, Labels, and Containers by opening the "Shaping Data" panel on Cyphon's main admin page.
+
+.. image:: ../_static/images/admin/shaping-data-admin.png
+    :alt: Shaping data
+
+
+.. _warehouses-overview:
+
+**********
+Warehouses
+**********
+
+.. image:: ../_static/images/icons/warehouse.png
+    :width: 100px
+    :align: left
+
+Once you've designed a Container for the data you want to store, you need to decide where to keep it. Cyphon stores data in `Warehouses`. A Warehouse represents either a database or a search index, depending on the backend used. Currently, Cyphon supports storage in both Elasticsearch (a search engine) and MongoDB (a NoSQL database system).
+
+.. _collections-overview:
+
+Collections
+===========
+
+A Warehouse contains one or more `Collections` for organizing data. Each Collection is associated with a particular kind of Container. This ensures that all data in a Collection takes the same form. 
+
+If you're using Elasticsearch as a storage engine, Collections correspond to different document types in a search index. If you're using MongoDB, they correspond to different document collections within a database. 
+
+Setup Instructions
+==================
+
+You can create Warehouses and Collections by opening the "Storing Data" panel on Cyphon's main admin page.
+
+.. image:: ../_static/images/admin/storing-data-admin.png
+    :alt: Shaping data

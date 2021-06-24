@@ -1,0 +1,1 @@
+|Fittings| are used to construct :ref:`Condensers<condensers>`, which store data in :ref:`Bottles<bottles>`. |Fittings| map the |BottleFields| in a |Bottle| to :ref:`Parsers<parsers>`, which are used to process data from :ref:`Pipes<pipes>` or :ref:`Chutes<chutes>`.

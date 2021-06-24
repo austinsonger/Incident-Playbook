@@ -1,0 +1,1 @@
+|Actions| send REST API requests to :ref:`Destinations<destinations>`, such as JIRA. |Actions| are used to respond to :ref:`Alerts<alerts>`. They are performed with the help of :ref:`Couriers<couriers>`, which authenticate the calls to the REST APIs.

@@ -1,0 +1,7 @@
+alerts.admin
+============
+
+.. automodule:: alerts.admin
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,20 @@
+.. _samples:
+
+aggregator.samples
+==================
+
+.. image:: ../_static/images/icons/sample.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/samples.summary.txt
+
+:ref:`samples-graph`
+
+Subpackages
+-----------
+
+.. toctree::
+
+    aggregator.samples.admin
+    aggregator.samples.models

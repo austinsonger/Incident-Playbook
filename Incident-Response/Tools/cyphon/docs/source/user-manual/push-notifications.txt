@@ -1,0 +1,79 @@
+.. _push-notifications:
+
+##################
+Push Notifications
+##################
+
+
+Push notifications let the user know when a new alert has been generated, even when they're not viewing Cyphon. These only work either on your local machine or over SSH. Activating them involves setting up a project on `Firebase`_ and adding certain keys from the project page to the Django configurations.
+
+
+.. _setup-firebase-project:
+
+**********************
+Setup Firebase Project
+**********************
+
+The first thing you need to do is setup an account on `Firebase`_ by signing in and following the account setup process. After that, you'll see a button in the top right of the home page that says "Go To Console."
+
+.. image:: ../_static/images/notifications/notifications-tutorial-1.png
+    :align: center
+    :alt: Setup Firebase account
+
+Click this button and you should be brought to a project overview page. On this page you should see a giant button that says "Add Project."
+
+.. image:: ../_static/images/notifications/notifications-tutorial-2.png
+    :align: center
+    :alt: Add Firebase project
+
+Click this button to name your project and set it up.
+
+
+.. configure-push-notifications
+
+************************
+Configure Cyphon/Cyclops
+************************
+
+After setting up the project, you should be brought to the project page. In the top left there is a gear that opens a dropdown.
+
+.. image:: ../_static/images/notifications/notifications-tutorial-3.png
+    :align: center
+    :alt: Go to project settings
+
+Click on "Project Settings" in the dropdown menu. You should be brought to the settings overview page that includes your project name and your Web API key.
+
+.. image:: ../_static/images/notifications/notifications-tutorial-4.png
+    :align: center
+    :alt: Project settings overview
+
+On this page there will be a tab called "CLOUD MESSAGING." Click on that tab.
+
+.. image:: ../_static/images/notifications/notifications-tutorial-5.png
+    :align: center
+    :alt: Cloud messaging credentials
+
+All of the information to get push notifications set up is on this page. At first, you won't have a server key. Click the button that says "ADD SERVER KEY" in the top right to create a server key.
+
+Once you have this key, you need to place it in your Cyphon settings ``conf.py`` file. There is a setting called ``NOTIFICATIONS``::
+
+    NOTIFICATIONS = {
+        'PUSH_NOTIFICATION_KEY': '',
+        'GCM_SENDER_ID': '',
+        'IGNORED_ALERT_LEVELS': ['INFO'],
+    }
+
+Set ``'PUSH_NOTIFICATION_KEY'`` to your created server key.
+
+After that, go back to the Firebase "CLOUD MESSANGING" tab and look at the "Sender ID" credential. Set ``'GCM_SENDER_ID'`` to this value.
+
+After you've set these two credentials, start up your Cyphon instance. Visit the admin page, and open the "App Configurations" panel. Under "Notifications," click "Config."  You should see a configuration for ``PUSH_NOTIFICATIONS_ENABLED``.
+
+.. image:: ../_static/images/notifications/notifications-tutorial-6.png
+    :align: center
+    :alt: Turn on push notifications
+
+Set this configuration to true and hit save. Push notifications should be
+activated now.
+
+.. _Firebase: https://firebase.google.com/

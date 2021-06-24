@@ -1,0 +1,29 @@
+.. _timeframes:
+
+target.timeframes
+=================
+
+.. image:: ../_static/images/icons/timeframe.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/timeframes.summary.txt
+
+:ref:`timeframes-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   target.timeframes.admin
+   target.timeframes.models
+   target.timeframes.serializers
+
+Module contents
+---------------
+
+.. automodule:: target.timeframes
+    :members:
+    :undoc-members:
+    :show-inheritance:

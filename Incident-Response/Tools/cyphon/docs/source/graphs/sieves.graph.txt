@@ -1,0 +1,27 @@
+.. _sieves-graph:
+
+Sieves Graph
+============
+
+.. figure:: ../_static/images/graphs/sieves-graph.png
+    :target: ../_static/images/graphs/sieves-graph.png
+    :alt: Sieves model graph
+
+    Model graph for the |Sieve| base class and its subclasses.
+
+Overview
+--------
+
+.. include:: ../summaries/sieves.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models datasieves logsieves mailsieves -I DataSieve,LogSieve,MailSieve,Sieve -o sieves-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`datasieves-graph`
+* :ref:`logsieves-graph`
+* :ref:`mailsieves-graph`
+* :ref:`rules-graph`

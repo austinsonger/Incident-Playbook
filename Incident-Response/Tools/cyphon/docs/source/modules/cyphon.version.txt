@@ -1,0 +1,7 @@
+cyphon.version
+==============
+
+.. automodule:: cyphon.version
+    :members:
+    :undoc-members:
+    :show-inheritance:

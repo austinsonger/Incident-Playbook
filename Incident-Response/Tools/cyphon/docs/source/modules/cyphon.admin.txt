@@ -1,0 +1,7 @@
+cyphon.admin
+============
+
+.. automodule:: cyphon.admin
+    :members:
+    :undoc-members:
+    :show-inheritance:

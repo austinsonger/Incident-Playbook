@@ -1,0 +1,16 @@
+[Unit]
+Description=gunicorn daemon
+After=network.target
+
+[Service]
+PIDFile=/run/gunicorn/pid
+User={{ ansible_user }}
+Group={{ ansible_user }}
+WorkingDirectory={{ dfirtrack_dir }}
+ExecStart={{ venv_dir }}/bin/gunicorn --log-file={{ log_dir }}/gunicorn.log --workers 4 --bind localhost:5000 dfirtrack.wsgi
+Restart=always
+TimeoutStartSec=10
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

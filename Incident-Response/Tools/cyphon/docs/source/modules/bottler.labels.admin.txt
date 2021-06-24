@@ -1,0 +1,7 @@
+bottler.labels.admin
+====================
+
+.. automodule:: bottler.labels.admin
+    :members:
+    :undoc-members:
+    :show-inheritance:

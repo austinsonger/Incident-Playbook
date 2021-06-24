@@ -1,0 +1,7 @@
+monitors.views
+==============
+
+.. automodule:: monitors.views
+    :members:
+    :undoc-members:
+    :show-inheritance:

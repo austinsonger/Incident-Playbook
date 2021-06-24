@@ -1,0 +1,28 @@
+[
+  {
+    "model": "stamps.stamp",
+    "fields": {
+      "id": 1,
+      "content_type": ["pipes", "pipe"],
+      "object_id": 1,
+      "passport": 1,
+      "user": 1,
+      "job_start": "2015-01-01T12:00:00+05:00",
+      "job_end": "2015-01-01T12:30:00+05:00",
+      "status_code": "200"
+    }
+  },
+  {
+    "model": "stamps.stamp",
+    "fields": {
+      "id": 2,
+      "content_type": ["pipes", "pipe"],
+      "object_id": 1,
+      "passport": 2,
+      "user": 2,
+      "job_start": "2015-01-01T12:00:00+05:00",
+      "job_end": "2015-01-01T12:30:00+05:00",
+      "status_code": "200"
+    }
+  }
+]

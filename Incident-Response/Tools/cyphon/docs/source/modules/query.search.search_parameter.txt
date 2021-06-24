@@ -1,0 +1,7 @@
+query.search.search_parameter
+=============================
+
+.. automodule:: query.search.search_parameter
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,1 @@
+|Rules| are logical tests that are used to analyze and categorize data. |Rules| are used to construct :ref:`Sieves<sieves>`.

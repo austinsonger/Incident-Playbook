@@ -1,0 +1,50 @@
+<!-- Observable details header-->
+<div class="row" ng-show="artifact.data != undefined">
+    <div class="col-md-12">
+        <h4>
+            <span class="text-muted fa " ng-class="{true:'text-primary fa-star'}[artifact.ioc]" tooltip-placement="bottom" tooltip-popup-delay="500" uib-tooltip="is an IOC"></span>
+            [<span ng-bind="artifact.dataType" style="text-transform: uppercase;"></span>]: <em><span class="wrap">{{artifact.data | fang}}</span></em>
+        </h4>
+    </div>
+</div>
+<div class="row" ng-show="artifact.attachment != undefined">
+    <div class="col-md-8">
+        <h4>
+            [<span ng-bind="artifact.dataType" style="text-transform: uppercase;"></span>]: <em><span class="wrap" ng-bind="artifact.attachment.name"></span></em>
+        </h4>
+    </div>
+    <div class="col-md-3 text-center">
+        <div>
+            <a href="./api/datastorezip/{{artifact.attachment.id}}?name={{artifact.attachment.name | escape}}" target="_blank">
+                <i class="glyphicon glyphicon-download"></i>
+                <span class="wrap">{{artifact.attachment.name | ellipsis:30}}</span>
+            </a>
+        </div>
+        <div>
+            <small class="text-danger">Zip are protected with password "{{protectDownloadsWith}}"</small>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <!-- Observable analysers short reports -->
+    <!-- <mini-report-list observable="artifact" reports="artifact.reports" on-item-clicked="showReport(observable, analyzerId)"></mini-report-list> -->
+    <div class="col-md-12 flexwrap">
+        <mini-report-list observable="artifact" reports="artifact.reports"></mini-report-list>
+    </div>
+</div>
+
+<div class="clearfix">
+    <div class="col-md-6 col-md-offset-3"><hr></div>
+</div>
+
+<!-- Observable details and links sections -->
+<div ng-include="'views/partials/observables/details/summary.html'"></div>
+
+<!-- Observable responder jobs -->
+<div ng-include="'views/partials/observables/details/responders.html'"></div>
+
+<!-- Observable analyzer jobs -->
+<div ng-include="'views/partials/observables/details/analysers.html'"></div>
+
+<!-- Observable sharing rules -->
+<div ng-include="'views/partials/observables/details/sharing.html'"></div>

@@ -1,0 +1,52 @@
+.. _data-enhancement:
+
+##############
+Enhancing Data
+##############
+
+Once raw data has been refined, Cyphon can perform analyses on it and label it with the results of those analyses. There are two general kinds of analyses: `Inspections` and `Procedures`. Both are used by :ref:`Labels<labels-overview>` to convey information about a document.
+
+You can configure Inspections and Procedures through the "Enhancing Data" panel on Cyphon's main admin page.
+
+.. image:: ../_static/images/admin/enhancing-data-admin.png
+    :alt: Enhancing Data
+
+
+.. _inspections-overview:
+
+***********
+Inspections
+***********
+
+.. image:: ../_static/images/icons/inspection.png
+  :width: 50px
+  :align: left
+  :alt: Inspection
+
+An Inspection tests data against a set of rules, defined by `InspectionSteps`.
+Each InspectionStep has a DataSieve to test the data, a result value to return if the data is a match, and a rank that determines the order of the InspectionStep relative to other steps in the Inspection.
+
+.. seealso::
+    DataSieves are described in the section on :ref:`Data Processing<sieves-overview>`.
+
+The highest ranking InspectionStep is performed first. If the data is a match, the Inspection ends and that InspectionStep's result value is returned. Otherwise, the next InspectionStep is called. If no InspectionSteps match the data, the Inspection returns a null value.
+
+.. seealso::
+    Inspections work in a very similar way to :ref:`Watchdogs<watchdogs-overview>`.
+
+
+.. _procedures-overview:
+
+**********
+Procedures
+**********
+
+.. image:: ../_static/images/icons/procedure.png
+  :width: 85px
+  :align: left
+  :alt: Procedure
+
+A Procedure is used to perform an analysis that is too complicated to be performed by a DataSieve. A Procedure represents a function in an analytic package that can examine the data and return a result. For example. the function might detect the language of text, or it could determine the geolocation of an IP address.
+
+A Procedure can either examine a particular field in a document, or it can examine the document as a whole.
+

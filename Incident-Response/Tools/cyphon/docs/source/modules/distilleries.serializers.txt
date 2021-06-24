@@ -1,0 +1,7 @@
+distilleries.serializers
+========================
+
+.. automodule:: distilleries.serializers
+    :members:
+    :undoc-members:
+    :show-inheritance:

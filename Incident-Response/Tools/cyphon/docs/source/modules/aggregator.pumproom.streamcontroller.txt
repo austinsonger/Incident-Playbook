@@ -1,0 +1,7 @@
+aggregator.pumproom.streamcontroller
+====================================
+
+.. automodule:: aggregator.pumproom.streamcontroller
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,5 @@
+coverage:
+  precision: 0
+  range: "60...80"
+  status:
+    patch: off

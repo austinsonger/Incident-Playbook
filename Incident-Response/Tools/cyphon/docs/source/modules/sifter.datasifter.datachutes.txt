@@ -1,0 +1,20 @@
+.. _datachutes:
+
+sifter.datasifter.datachutes
+============================
+
+.. image:: ../_static/images/icons/chute.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/datachutes.summary.txt
+
+:ref:`datachutes-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   sifter.datasifter.datachutes.admin
+   sifter.datasifter.datachutes.models

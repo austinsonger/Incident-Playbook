@@ -1,0 +1,7 @@
+appusers.serializers
+====================
+
+.. automodule:: appusers.serializers
+    :members:
+    :undoc-members:
+    :show-inheritance:

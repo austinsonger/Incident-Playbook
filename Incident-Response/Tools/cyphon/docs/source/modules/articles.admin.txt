@@ -1,0 +1,7 @@
+articles.admin
+==============
+
+.. automodule:: articles.admin
+    :members:
+    :undoc-members:
+    :show-inheritance:

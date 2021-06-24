@@ -1,0 +1,20 @@
+.. _streams:
+
+aggregator.streams
+==================
+
+.. image:: ../_static/images/icons/stream.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/streams.summary.txt
+
+:ref:`streams-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   aggregator.streams.admin
+   aggregator.streams.models

@@ -1,0 +1,7 @@
+aggregator.streams.admin
+========================
+
+.. automodule:: aggregator.streams.admin
+    :members:
+    :undoc-members:
+    :show-inheritance:

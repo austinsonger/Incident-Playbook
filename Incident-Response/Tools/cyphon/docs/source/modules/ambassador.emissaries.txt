@@ -1,0 +1,19 @@
+.. _emissaries:
+
+ambassador.emissaries
+=====================
+
+.. image:: ../_static/images/icons/emissary.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/emissaries.summary.txt
+
+:ref:`emissaries-graph`
+
+Subpackages
+-----------
+
+.. toctree::
+
+    ambassador.emissaries.models

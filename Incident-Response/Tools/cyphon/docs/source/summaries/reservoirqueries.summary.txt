@@ -1,0 +1,1 @@
+A |ReservoirQuery| specifies search criteria for searching a :ref:`Reservoir<reservoirs>`. |ReservoirQueryParameters| are used for constructing a |ReservoirQuery| from form input.

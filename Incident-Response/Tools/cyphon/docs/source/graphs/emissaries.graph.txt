@@ -1,0 +1,23 @@
+.. _emissaries-graph:
+
+Emissaries Graph
+================
+
+.. figure:: ../_static/images/graphs/emissaries-graph.png
+    :target: ../graphs/emissaries.graph.html
+    :alt: Emissaries model graph
+
+Overview
+--------
+
+.. include:: ../summaries/emissaries.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models couriers passports plumbers visas -o emissaries-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`couriers-graph`
+* :ref:`plumbers-graph`

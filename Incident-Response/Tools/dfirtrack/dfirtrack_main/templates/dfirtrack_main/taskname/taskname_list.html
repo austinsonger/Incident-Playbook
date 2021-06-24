@@ -1,0 +1,96 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    DFIRTrack - Tasknames
+</title>
+
+{% load static %}
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- headline -->
+<div class="row bottom-distance">
+    <div class="col">
+        <h5>
+            Tasknames
+        </h5>
+    </div>
+</div>
+
+<!-- headlines -->
+<div class="row font-weight-bold">
+
+    <!-- taskname id headline -->
+    <div class="col-1">
+        ID
+    </div>
+
+    <!-- taskname name headline -->
+    <div class="col-10">
+        Taskname
+    </div>
+
+<!-- headlines -->
+</div>
+
+<!-- taskname list -->
+{% for i in taskname_list %}
+
+    <!-- taskname row -->
+    <div class="row top-distance">
+
+        <!-- taskname id -->
+        <div class="col-1">
+            {{ i.taskname_id }}
+        </div>
+
+        <!-- taskname name -->
+        <div class="col-9">
+            <a href="{{ i.get_absolute_url }}">
+                {{ i.taskname_name }}
+            </a>
+        </div>
+
+        <!-- edit & close button -->
+        <div class="col-1">
+            <a href="{{ i.get_update_url }}" type="button" class="btn btn-sm btn-light copy-false">
+                <img src="{% static 'dfirtrack_main/icons/pencil.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                Edit
+            </a>
+        </div>
+        <div class="col-1">
+            <a href="{{ i.get_close_url }}" type="button" class="btn btn-sm btn-light copy-false">
+                <img src="{% static 'dfirtrack_main/icons/check.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                Close all
+            </a>
+        </div>
+
+    <!-- taskname row -->
+    </div>
+
+<!-- taskname list -->
+{% endfor %}
+
+<!-- add button -->
+<div class="row top-distance">
+    <div class="col-1">
+        <a href="{% url 'taskname_create' %}" type="button" class="btn btn-light copy-false">
+            <img src="{% static 'dfirtrack_main/icons/plus.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Add taskname
+        </a>
+    </div>
+</div>
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

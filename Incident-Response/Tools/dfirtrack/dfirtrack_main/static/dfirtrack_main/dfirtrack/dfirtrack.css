@@ -1,0 +1,144 @@
+/* icon sizes */
+
+.icon {
+    width: 16px;
+    height: 16px;
+}
+
+.icon-sm {
+    width: 12px;
+    height: 12px;
+}
+
+/* allow or disable user-select */
+
+.copy-true {
+    -moz-user-select:all;
+    -ms-user-select:all;
+    -webkit-user-user-select:all;
+}
+
+.copy-false {
+    -moz-user-select:none;
+    -ms-user-select:none;
+    -webkit-user-user-select:none;
+}
+
+/* button colors */
+
+.btn-black {
+    background: Black;
+    border: Black;
+    color: White;
+   }
+
+.btn-black:hover {
+    background: DarkGray;
+    color: White;
+}
+
+.btn-green {
+    background: MediumSeaGreen;
+    border: MediumSeaGreen;
+    color: White;
+   }
+
+.btn-green:hover {
+    background: ForestGreen;
+    color: White;
+}
+
+.btn-orange {
+    background: Orange;
+    border: Orange;
+    color: White;
+   }
+
+.btn-orange:hover {
+    background: DarkOrange;
+    color: White;
+}
+
+.btn-red {
+    background: Red;
+    border: Red;
+    color: White;
+   }
+
+.btn-red:hover {
+    background: DarkRed;
+    color: White;
+}
+
+.btn-white {
+    background: White;
+    border: White;
+    color: Black;
+   }
+
+.btn-white:hover {
+    background: LightGray;
+    color: Black;
+}
+
+/* button shapes */
+
+.btn.round {
+    border-radius: 20px;
+}
+
+.btn.sharp {
+    border-radius: 0px;
+}
+
+.btn.top-right {
+    border-top-right-radius: 15px;
+}
+
+.btn.top-right-lg {
+    border-top-right-radius: 25px;
+}
+
+/* distances */
+
+.top-distance {
+    margin-top: 10px;
+}
+
+.bottom-distance {
+    margin-bottom: 20px;
+}
+
+.right-distance {
+    margin-right: 10px;
+}
+
+.left-distance {
+    margin-left: 10px;
+}
+
+.nav-left-distance {
+    margin-left: 30px;
+}
+
+.status-table-distance td
+{
+    padding:0 15px;
+}
+
+a {
+    color: White;
+}
+a:hover {
+    color: White;
+}
+
+/* go to top of page button */
+
+#btn-top {              /* id selector */
+    display: none;      /* hide per default */
+    position: fixed;    /* fixed position */
+    bottom: 20px;       /* 20px from the bottom */
+    right: 30px;        /* 30px from the right */
+    z-index: 99;        /* show in foreground */
+}

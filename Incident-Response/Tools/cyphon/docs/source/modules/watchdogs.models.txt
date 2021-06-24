@@ -1,0 +1,14 @@
+watchdogs.models
+================
+
+.. figure:: ../_static/images/graphs/watchdogs-graph.png
+    :target: ../graphs/watchdogs.graph.html
+    :alt: Watchdogs model graph
+
+    Graph of models in the :ref:`watchdogs` app and related apps.
+
+.. automodule:: watchdogs.models
+    :members:
+    :undoc-members:
+    :show-inheritance:
+    :inherited-members:

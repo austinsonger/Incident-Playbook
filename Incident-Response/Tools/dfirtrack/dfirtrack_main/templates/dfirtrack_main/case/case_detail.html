@@ -1,0 +1,185 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    Case '{{ case.case_name }}'{% if case.system_set.all %} (s: {{ case.system_set.all|length }}){% endif %}
+</title>
+
+{% load static %}
+
+<!-- javascript and CSS for datatables -->
+<link rel="stylesheet" type="text/css" href="{% static 'dfirtrack_main/datatables-1.10.16/datatables.min.css' %}"/>
+<script src="{% static 'dfirtrack_main/datatables-1.10.16/datatables.js' %}"></script>
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- up button -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <a href="{% url 'case_list' %}" type="button" class="btn btn-light copy-false">
+            <img src="{%static 'dfirtrack_main/icons/arrow-circle-top.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Up to cases
+        </a>
+    </div>
+</div>
+
+<!-- javascript for copy button -->
+<script>
+    var clipboard = new ClipboardJS('.btn');
+</script>
+
+<!-- case name row -->
+<div class="row">
+
+    <!-- case name -->
+    <div class="col-3">
+        <h5>
+            Case "{{ case.case_name }}"
+        </h5>
+    </div>
+
+    <!-- copy button -->
+    <div class="col-3">
+        {% if case.system_set.all %}
+            {% with systems=case.system_set.all %}
+                {% include "dfirtrack_main/includes/button_copy_hostnames.html" %}
+            {% endwith %}
+        {% endif %}
+    </div>
+
+<!-- case name row -->
+</div>
+
+<!-- case id row -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <small class="text-muted">
+            Case-ID: {{ case.case_id }}
+        </small>
+    </div>
+</div>
+
+<!-- case is incident row -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <h5>
+            Is incident: {{ case.case_is_incident }}
+        </h5>
+    </div>
+</div>
+
+<!-- systems headline row -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <h5>
+            Systems associated with this case{% if case.system_set.all %} ({{ case.system_set.all|length }}){% endif %}
+        </h5>
+    </div>
+</div>
+
+<!-- systems -->
+{% if case.system_set.all %}
+
+    <!-- datatable system -->
+    <table id="table_system" class="display" width="100%">
+
+        <!-- table head -->
+        <thead>
+            {% include "dfirtrack_main/includes/datatable_thead_table_system.html" %}
+        </thead>
+
+        <!-- table body -->
+        <tbody>
+        </tbody>
+
+    <!-- datatable system -->
+    </table>
+
+    <!-- javascript for datatables -->
+    <script src="{% static 'dfirtrack_main/dfirtrack/datatables_dfirtrack.js' %}"></script>
+
+<!-- no systems -->
+{% else %}
+    <div class="row top-distance">
+        <div class="col-3">
+            ---
+        </div>
+    </div>
+
+<!-- systems -->
+{% endif %}
+
+<!-- check for artifacts app -->
+{% if dfirtrack_artifacts == True %}
+
+<!-- artifacts headline row -->
+<div class="row bottom-distance top-distance">
+    <div class="col-3">
+        <h5>
+            Artifacts associated with this case{% if artifacts %} ({{ artifacts|length }}){% endif %}
+        </h5>
+    </div>
+</div>
+
+<!-- artifacts -->
+{% if artifacts %}
+
+    <!-- datatable artifact -->
+    <table id="table_artifact" class="display" width="100%">
+
+        <!-- table head -->
+        <thead>
+            {% include "dfirtrack_artifacts/includes/datatable_thead_table_artifact.html" %}
+        </thead>
+
+        <!-- table body -->
+        <tbody>
+            <!-- iterate over rows -->
+            {% for i in artifacts %}
+                {% include "dfirtrack_artifacts/includes/datatable_tbody_table_artifact.html" %}
+            {% endfor %}
+        </tbody>
+
+    <!-- datatable artifact -->
+    </table>
+
+    <!-- javascript for datatables -->
+    <script src="{% static 'dfirtrack_artifacts/datatables_artifacts.js' %}"></script>
+
+<!-- no artifacts -->
+{% else %}
+    <div class="row top-distance">
+        <div class="col-3">
+            ---
+        </div>
+    </div>
+
+<!-- artifacts -->
+{% endif %}
+
+<!-- check for artifacts app -->
+{% endif %}
+
+<!-- javascript for datatables -->
+{% block datatables %}
+<script src="{% static 'dfirtrack_main/datatables-1.10.16/datatables.min.js' %}"></script>
+{% endblock %}
+
+<!-- edit button -->
+<a href="{{ case.get_update_url }}" type="button" class="btn btn-light top-distance copy-false">
+    <img src="{% static 'dfirtrack_main/icons/pencil.svg' %}" class="icon right-distance copy-false" alt="icon">
+    Edit
+</a>
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

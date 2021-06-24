@@ -1,0 +1,25 @@
+.. _invoices-graph:
+
+Invoices Graph
+==============
+
+.. figure:: ../_static/images/graphs/invoices-graph.png
+    :target: ../_static/images/graphs/invoices-graph.png
+    :alt: Invoices model graph
+
+    Graph of models in the :ref:`invoices` app and related apps.
+
+Overview
+--------
+
+.. include:: ../summaries/invoices.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models invoices stamps -g -o invoices-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`records-graph`
+* :ref:`stamps-graph`

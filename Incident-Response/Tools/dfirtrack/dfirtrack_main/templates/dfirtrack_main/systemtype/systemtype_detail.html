@@ -1,0 +1,109 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    Systemtype '{{ systemtype.systemtype_name }}'{% if systemtype.system_set.all %} (s: {{ systemtype.system_set.all|length }}){% endif %}
+</title>
+
+{% load static %}
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- up button -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <a href="{% url 'systemtype_list' %}" type="button" class="btn btn-light copy-false">
+            <img src="{% static 'dfirtrack_main/icons/arrow-circle-top.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Up to systemtype
+        </a>
+    </div>
+</div>
+
+<!-- javascript for copy button -->
+<script>
+    var clipboard = new ClipboardJS('.btn');
+</script>
+
+<!-- systemtype name row -->
+<div class="row">
+
+    <!-- systemtype name -->
+    <div class="col-3">
+        <h5>
+            Systemtype "{{ systemtype.systemtype_name }}"
+        </h5>
+    </div>
+
+    <!-- copy button -->
+    <div class="col-3">
+        {% if systemtype.system_set.all %}
+            {% with systems=systemtype.system_set.all %}
+                {% include "dfirtrack_main/includes/button_copy_hostnames.html" %}
+            {% endwith %}
+        {% endif %}
+    </div>
+
+<!-- systemtype name row -->
+</div>
+
+<!-- systemtype id -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <small class="text-muted">
+            Systemtype-ID: {{ systemtype.systemtype_id }}
+        </small>
+    </div>
+</div>
+
+<!-- system headline -->
+<div class="row">
+    <div class="col-6">
+        <h5>
+            Systems of this type{% if systemtype.system_set.all %} ({{ systemtype.system_set.all|length }}){% endif %}
+        </h5>
+    </div>
+</div>
+
+<!-- systems -->
+{% if systemtype.system_set.all %}
+
+    {% for i in systemtype.system_set.all %}
+        <div class="row top-distance">
+            <div class="col-3">
+                <a href="{{ i.get_absolute_url }}" type="button" class="btn btn-primary btn-sm copy-true">
+                    <img src="{% static 'dfirtrack_main/icons/monitor-light.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                    {{ i.system_name }}
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+
+<!-- no systems -->
+{% else %}
+<div class="row top-distance">
+    <div class="col-3">
+        ---
+    </div>
+</div>
+
+<!-- systems -->
+{% endif %}
+
+<!-- edit button -->
+<a href="{{ systemtype.get_update_url }}" type="button" class="btn btn-light top-distance copy-false">
+    <img src="{% static 'dfirtrack_main/icons/pencil.svg' %}" class="icon right-distance copy-false" alt="icon">
+    Edit
+</a>
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

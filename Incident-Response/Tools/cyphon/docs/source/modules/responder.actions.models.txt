@@ -1,0 +1,13 @@
+responder.actions.models
+========================
+
+.. figure:: ../_static/images/graphs/actions-graph.png
+    :target: ../graphs/actions.graph.html
+    :alt: Actions model graph
+
+    Graph of models in the :ref:`actions` app and related apps.
+
+.. automodule:: responder.actions.models
+    :members:
+    :undoc-members:
+    :show-inheritance:

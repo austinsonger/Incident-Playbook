@@ -1,0 +1,25 @@
+.. _email-notifications:
+
+###################
+Email Notifications
+###################
+
+Cyphon can notify users when an Alert they are working on has been commented on by another user. To enable this behavior, configure the following values under the ``EMAIL`` setting in your ``conf.py`` settings file:
+
+==============  ==============================================================
+DEFAULT_FROM    Default email address to use for email notifications.
+HOST            The SMTP server used for sending email.
+HOST_USER       Username for the SMTP server defined by ``HOST``.
+HOST_PASSWORD   Password for the ``HOST_USER``.
+PORT            Port for connecting to the SMTP server.
+SUBJECT_PREFIX  Subject-line prefix for admin-related email messages.
+USE_TLS         Whether to use a TLS (secure) connection with the SMTP server.
+==============  ==============================================================
+
+Then open the "App Configurations" panel of the main admin page. Under "Notifications," click "Config."  Confirm that ``EMAIL_NOTIFICATIONS_ENABLED`` is set to True.
+
+.. image:: ../_static/images/notifications/notifications-tutorial-6.png
+    :align: center
+    :alt: Turn on push notifications
+
+Users should now receive email notifications when others comment on Alerts that are assigned to them or that they've commented on.

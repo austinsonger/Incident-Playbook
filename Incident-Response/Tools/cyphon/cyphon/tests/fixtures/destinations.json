@@ -1,0 +1,18 @@
+[
+  {
+    "model": "destinations.destination",
+    "fields": {
+      "id": 1,
+      "name": "jira",
+      "enabled": true
+    }
+  },
+  {
+    "model": "destinations.destination",
+    "fields": {
+      "id": 2,
+      "name": "twitter",
+      "enabled": true
+    }
+  }
+]

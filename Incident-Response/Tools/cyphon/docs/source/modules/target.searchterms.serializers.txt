@@ -1,0 +1,7 @@
+target.searchterms.serializers
+==============================
+
+.. automodule:: target.searchterms.serializers
+    :members:
+    :undoc-members:
+    :show-inheritance:

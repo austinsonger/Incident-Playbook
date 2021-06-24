@@ -1,0 +1,447 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    Task '{{ task.taskname.taskname_name }}'
+    {% if task.system %}- System '{{ task.system.system_name }}{% if task.system.dnsname %}.{{ task.system.dnsname }}{% endif %}
+    '
+    ({{ task.taskstatus.taskstatus_name }})
+    {% endif %}
+</title>
+
+{% load static %}
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- button row -->
+<div class="row bottom-distance">
+
+    <!-- up button -->
+    <div class="col-6">
+        <a href="{% url 'task_list' %}" type="button" class="btn btn-light copy-false">
+            <img src="{% static 'dfirtrack_main/icons/arrow-circle-top.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Up to tasks
+        </a>
+    </div>
+
+    <!-- edit button -->
+    <div class="col-1">
+        <a href="{{ task.get_update_url }}" type="button" class="btn btn-light copy-false">
+            <img src="{% static 'dfirtrack_main/icons/pencil.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Edit
+        </a>
+    </div>
+
+<!-- button row -->
+</div>
+
+<!-- taskname -->
+<div class="row">
+    <div class="col-6">
+        <div class="btn btn-primary btn-lg sharp copy-true">
+            <img src="{% static 'dfirtrack_main/icons/task-light.svg' %}" class="icon right-distance copy-true" alt="icon">  
+            {{task.taskname}}
+        </div>
+    </div>
+</div>
+
+<!-- task id row -->
+<div class="row top-distance">
+
+    <!-- task id -->
+    <div class="col-3">
+        <small class="text-muted">
+            Task-ID: {{task.task_id}}
+        </small>
+    </div>
+
+    <!-- parent task id -->
+    <div class="col-3">
+        <small class="text-muted">
+            Parent-Task-ID:
+            {% if task.parent_task %}
+                <a href="{{ task.parent_task.get_absolute_url }}">
+                    {{ task.parent_task.task_id }}
+                </a>
+            {% else %}
+                ---
+            {% endif %}
+        </small>
+    </div>
+
+<!-- task id row -->
+</div>
+
+<!-- tags -->
+{% if task.tag.all %}
+    <div class="row">
+        <div class="col-6">
+            {% for i in task.tag.all %}
+                <a href="{{ i.get_absolute_url }}" type="button" class="btn btn-{{ i.tagcolor }} btn-sm round top-distance copy-true">
+                    <!-- black tag icon for white tag (black color of font is defined in corresponding CSS for button) -->
+                    {% if i.tagcolor.tagcolor_name == 'white' %}
+                        <img src="{% static 'dfirtrack_main/icons/tag.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                    <!-- white tag icon for other tags (white color of font is defined in corresponding CSS for button) -->
+                    {% else %}
+                        <img src="{% static 'dfirtrack_main/icons/tag-light.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                    {% endif %}
+                    {{ i }}
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}
+
+<!-- ############################################ -->
+
+<!-- status information -->
+<div class="card bg-dark border-light card-body top-distance">
+
+    <!-- status information headline -->
+    <div class="row">
+        <div class="col">
+            <h5>
+                Status information
+            </h5>
+        </div>
+    </div>
+    
+    <!-- status information row -->
+    <div class="row top-distance bottom-distance">
+
+        <!-- taskstatus -->
+        <div class="col-3">
+            <div class="font-weight-bold">
+                Status:
+            </div>
+            <a href="{{ task.taskstatus.get_absolute_url }}">
+                {% with taskstatus=task.taskstatus %}
+                    {% include "dfirtrack_main/includes/button_taskstatus.html" %}
+                {% endwith %}
+                {{ task.taskstatus }}
+            </a>
+        </div>
+
+        <!-- taskpriority -->
+        <div class="col-3">
+            <div class="font-weight-bold">
+                Priority:
+            </div>
+            <a href="{{ task.taskpriority.get_absolute_url }}">
+                {% with taskpriority=task.taskpriority %}
+                    {% include "dfirtrack_main/includes/button_taskpriority.html" %}
+                {% endwith %}
+                {{ task.taskpriority }}
+            </a>
+        </div>
+
+    <!-- status information row -->
+    </div>
+    
+    <!-- system / user row -->
+    <div class="row">
+
+        <!-- system -->
+        <div class="col-3">
+            <div class="font-weight-bold">
+                Corresponding system:
+            </div>
+            {% if task.system %}
+                <a href="{{ task.system.get_absolute_url }}" type="button" class="btn btn-primary btn-sm top-distance copy-true">
+                    <img src="{% static 'dfirtrack_main/icons/monitor-light.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                    {{ task.system.system_name }}
+                </a>
+            {% else %}
+                ---
+            {% endif %}
+        </div>
+
+        <!-- assigned user -->
+        <div class="col-3">
+            <div class="font-weight-bold">
+                Assigned to user:
+            </div>
+            {% if task.task_assigned_to_user_id %}
+                {{ task.task_assigned_to_user_id }}
+            {% else %}
+                ---
+            {% endif %}
+        </div>
+
+    <!-- system / user row -->
+    </div>
+
+    <!-- button row -->
+    <div class="row top-distance">
+
+        <!-- placeholder -->
+        <div class="col-3">
+        </div>
+
+        <!-- grab / free user assignement button -->
+        <div class="col-3">
+
+            <!-- grab button -->
+            {% if not task.task_assigned_to_user_id %}
+                <a href="{{ task.get_set_user_url }}" type="button" class="btn btn-sm btn-light copy-false">
+                    <img src="{% static 'dfirtrack_main/icons/person.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                    Grab
+                </a>
+
+            <!-- free button -->
+            {% else %}
+                <a href="{{ task.get_unset_user_url }}" type="button" class="btn btn-sm btn-light copy-false">
+                    <img src="{% static 'dfirtrack_main/icons/delete.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                    Free
+                </a>
+            {% endif %}
+
+        <!-- grab / free user assignement button -->
+        </div>
+
+    <!-- button row -->
+    </div>
+
+<!-- status information -->
+</div>
+
+<!-- ############################################ -->
+
+<!-- timing information -->
+<div class="card bg-dark border-light card-body top-distance">
+
+    <!-- timing information headline -->
+    <div class="row">
+        <div class="col">
+            <a href="#timing_information" data-toggle="collapse">
+                <h5>
+                    Timing information
+                    <img src="{% static 'dfirtrack_main/icons/caret-bottom-light.svg' %}" class="icon left-distance copy-false" alt="icon">
+                </h5>
+            </a>
+        </div>
+    </div>
+    
+    <!-- timing information collapse -->
+    <div id="timing_information" class="collapse">
+
+        <!-- timing information row -->
+        <div class="row">
+
+            <!-- task scheduled time -->
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    Scheduled:
+                </div>
+                {% if task.task_scheduled_time %}
+                    {{ task.task_scheduled_time|date:"Y-m-d H:i" }}
+                {% else %}
+                    ---
+                {% endif %}
+            </div>
+
+            <!-- task started time -->
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    Started:
+                </div>
+                {% if task.task_started_time %}
+                    {{ task.task_started_time|date:"Y-m-d H:i" }}
+                {% else %}
+                    ---
+                {% endif %}
+            </div>
+
+            <!-- task finished time -->
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    Finished:
+                </div>
+                {% if task.task_finished_time %}
+                    {{ task.task_finished_time|date:"Y-m-d H:i" }}
+                {% else %}
+                    ---
+                {% endif %}
+            </div>
+
+            <!-- task scheduled time -->
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    Due:
+                </div>
+                {% if task.task_due_time %}
+                    {{ task.task_due_time|date:"Y-m-d H:i" }}
+                {% else %}
+                    ---
+                {% endif %}
+            </div>
+
+        <!-- timing information row -->
+        </div>
+
+        <!-- button row -->
+        <div class="row top-distance">
+
+            <!-- placeholder -->
+            <div class="col-3">
+            </div>
+
+            <!-- task start button -->
+            <div class="col-3">
+                {% if not task.task_started_time %}
+                    <a href="{{ task.get_start_url }}" type="button" class="btn btn-sm btn-light copy-false">
+                        <img src="{% static 'dfirtrack_main/icons/play-circle.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                        Start
+                    </a>
+                {% endif %}
+            </div>
+
+            <!-- task finish button -->
+            <div class="col-1">
+                {% if not task.task_finished_time %}
+                    <a href="{{ task.get_finish_url }}" type="button" class="btn btn-sm btn-light copy-false">
+                        <img src="{% static 'dfirtrack_main/icons/circle-check.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                        Finish
+                    </a>
+                {% endif %}
+            </div>
+
+            <!-- task renew button -->
+            <div class="col-1">
+                {% if task.task_started_time or task.task_finished_time %}
+                    <a href="{{ task.get_renew_url }}" type="button" class="btn btn-sm btn-secondary">
+                        <img src="{% static 'dfirtrack_main/icons/circle-x.svg' %}" class="icon-sm" alt="icon">
+                        Renew
+                    </a>
+                {% endif %}
+            </div>
+
+        <!-- button row -->
+        </div>
+
+    <!-- timing information collapse -->
+    </div>
+
+<!-- timing information -->
+</div>
+
+<!-- ############################################ -->
+
+<!-- task note -->
+<div class="card bg-dark border-light card-body top-distance">
+
+    <!-- task note headline -->
+    <div class="row">
+        <div class="col">
+            <a href="#note" data-toggle="collapse">
+                <h5>
+                    Note
+                    <img src="{% static 'dfirtrack_main/icons/caret-bottom-light.svg' %}" class="icon left-distance copy-false" alt="icon">
+                </h5>
+            </a>
+        </div>
+    </div>
+    
+    <!-- task note collapse -->
+    <div id="note" class="collapse">
+        <div class="row">
+            <div class="col">
+            {% if task.task_note %}
+                {{ task.task_note|linebreaks }}
+            {% else %}
+                ---
+            {% endif %}
+            </div>
+        </div>
+    </div>
+
+<!-- task note -->
+</div>
+
+<!-- meta information -->
+<div class="card bg-dark border-secondary card-body top-distance bottom-distance">
+
+    <!-- meta information headline -->
+    <div class="row text-muted">
+        <div class="col">
+            <h5>
+                Meta information
+            </h5>
+        </div>
+    </div>
+    
+    <!-- meta information row -->
+    <div class="row text-muted">
+
+        <!-- task create time -->
+        <div class="col-3">
+            <div class="font-weight-bold">
+                Created:
+            </div>
+            {{ task.task_create_time|date:"Y-m-d H:i" }}
+        </div>
+
+        <!-- task create user -->
+        <div class="col-3">
+            <div class="font-weight-bold">
+                Created by:
+            </div>
+            {{ task.task_created_by_user_id }}
+        </div>
+
+        <!-- task modify time -->
+        <div class="col-3">
+            <div class="font-weight-bold">
+                Last modified:
+            </div>
+            {{ task.task_modify_time|date:"Y-m-d H:i" }}
+        </div>
+
+        <!-- task modify user -->
+        <div class="col-3">
+            <div class="font-weight-bold">
+                Modified by:
+            </div>
+            {{ task.task_modified_by_user_id }}
+        </div>
+
+    <!-- meta information row -->
+    </div>
+
+<!-- meta information -->
+</div>
+
+<!-- button row -->
+<div class="row top-distance">
+
+    <!-- up button -->
+    <div class="col-6">
+        <a href="{% url 'task_list' %}" type="button" class="btn btn-light copy-false">
+            <img src="{% static 'dfirtrack_main/icons/arrow-circle-top.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Up to tasks
+        </a>
+    </div>
+
+    <!-- edit button -->
+    <div class="col-1">
+        <a href="{{ task.get_update_url }}" type="button" class="btn btn-light copy-false">
+            <img src="{% static 'dfirtrack_main/icons/pencil.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Edit
+        </a>
+    </div>
+
+<!-- button row -->
+</div>
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

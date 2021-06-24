@@ -1,0 +1,38 @@
+.. _investigating-alerts:
+
+####################
+Investigating Alerts
+####################
+
+In many cases, you may want to investigate the context of an Alert, by examining data related to the event. Cyphon simplifies this process by letting you create `Contexts` for your data. 
+
+
+.. _contexts-overview:
+
+********
+Contexts
+********
+
+.. image:: ../_static/images/icons/context.png
+    :width: 100px
+    :align: left
+    :alt: Contexts
+
+A Context allows you to quickly find data that may pertain to an Alert. A Context uses the data from an Alert to find related documents in a specific Collection, based on a timeframe and/or one or more `ContextFilters`. A ContextFilter locates relevant documents by matching a field value from the original data and a field value in the related data.
+
+You can configure Contexts by clicking on the "Investigating Alerts" panel on Cyphon's main admin page. Then click on the plus sign to go to the page for adding a new Context.
+
+.. image:: ../_static/images/admin/investigating-data-admin.png
+    :alt: Investigating Data
+
+To create a new Context, specify the "primary" Distillery and the "related" Distillery. The primary Distillery is the Distillery that saved the data that triggered an Alert. The related Distillery indicates the Collection that you wish to search with reference to that event.
+
+If you wish to restrict the search to data saved within a specific time frame relative to an Alert, you can enter intervals for the amount of time to search before and after the event. 
+
+You can also add one or more ContextFilters to narrow the search results to specific matches. "Filter logic" indicates how the ContextFilters will be combined: "AND" means that the related data must match all ContextFilters, while "OR" means that the data should match at least one ContextFilter.
+
+.. figure:: ../_static/images/admin/context-admin.png
+    :align: center
+    :alt: Context admin page
+
+    **The admin page for creating a Context.**

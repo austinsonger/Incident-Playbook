@@ -1,0 +1,19 @@
+.. _procedures-graph:
+
+Procedures Graph
+================
+
+.. figure:: ../_static/images/graphs/procedures-graph.png
+    :target: ../_static/images/graphs/procedures-graph.png
+    :alt: Procedures model graph
+
+    Graph of models in the :ref:`procedures` app and related apps.
+
+Overview
+--------
+
+.. include:: ../summaries/procedures.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models procedures -g -o procedures-graph.png

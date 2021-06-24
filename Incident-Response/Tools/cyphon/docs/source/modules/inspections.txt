@@ -1,0 +1,20 @@
+.. _inspections:
+
+inspections
+===========
+
+.. image:: ../_static/images/icons/inspection.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/inspections.summary.txt
+
+:ref:`inspections-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   inspections.admin
+   inspections.models

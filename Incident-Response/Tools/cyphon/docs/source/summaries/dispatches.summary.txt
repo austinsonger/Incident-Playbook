@@ -1,0 +1,1 @@
+|Dispatches| save API responses from :ref:`Actions<actions>` taken on :ref:`Alerts<alerts>`. They also save :ref:`Stamps<stamps>` of the API calls.

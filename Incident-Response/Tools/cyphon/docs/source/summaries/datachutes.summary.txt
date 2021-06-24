@@ -1,0 +1,1 @@
+|DataChutes| sift, parse, and save structured data to appropriate storage locations. |DataChutes| use :ref:`DataSieves<datasieves>` to sift data and :ref:`DataMungers<datamungers>` to parse and save data.

@@ -1,0 +1,140 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    OS '{{ os.os_name }}'{% if os.system_set.all %} (s: {{ os.system_set.all|length }}){% endif %}
+</title>
+
+{% load static %}
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- up button -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <a href="{% url 'os_list' %}" type="button" class="btn btn-light copy-false">
+            <img src="{% static 'dfirtrack_main/icons/arrow-circle-top.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Up to operating systems
+        </a>
+    </div>
+</div>
+
+<!-- javascript for copy button -->
+<script>
+    var clipboard = new ClipboardJS('.btn');
+</script>
+
+<!-- operating system name row -->
+<div class="row">
+
+    <!-- operating system name -->
+    <div class="col-3">
+        <h5>
+            Operating system "{{ os.os_name }}"
+        </h5>
+    </div>
+
+    <!-- copy button -->
+    <div class="col-3">
+        {% if os.system_set.all %}
+            {% with systems=os.system_set.all %}
+                {% include "dfirtrack_main/includes/button_copy_hostnames.html" %}
+            {% endwith %}
+        {% endif %}
+    </div>
+
+<!-- operating system name row -->
+</div>
+
+<!-- operating system id -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <small class="text-muted">
+            OS-ID: {{ os.os_id }}
+        </small>
+    </div>
+</div>
+
+<!-- system headline  -->
+<div class="row">
+    <div class="col-6">
+        <h5>
+            Systems with this operating system{% if os.system_set.all %} ({{ os.system_set.all|length }}){% endif %}
+        </h5>
+    </div>
+</div>
+
+<!-- systems -->
+{% if os.system_set.all %}
+
+    {% for i in os.system_set.all %}
+        <div class="row top-distance">
+            <div class="col-3">
+                <a href="{{ i.get_absolute_url }}" type="button" class="btn btn-primary btn-sm copy-true">
+                    <img src="{% static 'dfirtrack_main/icons/monitor-light.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                    {{ i.system_name }}
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+
+<!-- no systems -->
+{% else %}
+    <div class="row top-distance">
+        <div class="col-3">
+            ---
+        </div>
+    </div>
+
+<!-- systems -->
+{% endif %}
+
+<div class="row">
+    <div class="col-6">
+    <br>
+        <h5>Importnames referencing this operating system</h5>
+    </div>
+</div>
+
+<!-- importnames -->
+{% if os.osimportname_set.all %}
+
+    {% for i in os.osimportname_set.all %}
+        <div class="row top-distance">
+            <div class="col-3">
+                <a href="{% url 'osimportname_list' %}">
+                    {{ i.osimportname_name }}
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+
+<!-- no importnames -->
+{% else %}
+    <div class="row top-distance">
+        <div class="col-3">
+            ---
+        </div>
+    </div>
+
+<!-- importnames -->
+{% endif %}
+
+<!-- edit button -->
+<a href="{{ os.get_update_url }}" type="button" class="btn btn-light copy-false">
+    <img src="{% static 'dfirtrack_main/icons/pencil.svg' %}" class="icon right-distance copy-false" alt="icon">
+    Edit
+</a>
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

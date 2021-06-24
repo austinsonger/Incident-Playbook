@@ -1,0 +1,20 @@
+.. _reservoirs:
+
+aggregator.reservoirs
+=====================
+
+.. image:: ../_static/images/icons/reservoir.png
+    :width: 120px
+    :align: left
+
+.. include:: ../summaries/reservoirs.summary.txt
+
+:ref:`reservoirs-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   aggregator.reservoirs.admin
+   aggregator.reservoirs.models

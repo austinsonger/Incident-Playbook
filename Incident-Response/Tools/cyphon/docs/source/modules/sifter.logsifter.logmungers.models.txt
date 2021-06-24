@@ -1,0 +1,13 @@
+sifter.logsifter.logmungers.models
+==================================
+
+.. figure:: ../_static/images/graphs/logmungers-graph.png
+    :target: ../graphs/logmungers.graph.html
+    :alt: LogMungers model graph
+
+    Graph of models in the :ref:`logmungers` app and related apps.
+
+.. automodule:: sifter.logsifter.logmungers.models
+    :members:
+    :undoc-members:
+    :show-inheritance:

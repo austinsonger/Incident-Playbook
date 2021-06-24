@@ -1,0 +1,7 @@
+articles.models
+===============
+
+.. automodule:: articles.models
+    :members:
+    :undoc-members:
+    :show-inheritance:

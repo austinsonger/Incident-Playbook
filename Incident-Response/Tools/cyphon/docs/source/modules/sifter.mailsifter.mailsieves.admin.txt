@@ -1,0 +1,7 @@
+sifter.mailsifter.mailsieves.admin
+==================================
+
+.. automodule:: sifter.mailsifter.mailsieves.admin
+    :members:
+    :undoc-members:
+    :show-inheritance:

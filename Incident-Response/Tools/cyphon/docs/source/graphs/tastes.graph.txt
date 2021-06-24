@@ -1,0 +1,25 @@
+.. _tastes-graph:
+
+Tastes Graph
+============
+
+.. figure:: ../_static/images/graphs/tastes-graph.png
+    :target: ../_static/images/graphs/tastes-graph.png
+    :alt: Tastes model graph
+
+    Graph of models in the :ref:`tastes` app and related apps.
+
+Overview
+--------
+
+.. include:: ../summaries/tastes.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models tastes containers -g -o tastes-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`containers-graph`
+* :ref:`teasers-graph`

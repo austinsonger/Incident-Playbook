@@ -1,0 +1,24 @@
+[
+  {
+    "model": "samples.sample",
+    "fields": {
+      "pipe": 1,
+      "author": "user.screen_name",
+      "title": "text",
+      "content": "text",
+      "location": "coordinates.coordinates",
+      "datetime": "created_at"
+    }
+  },
+  {
+    "model": "samples.sample",
+    "fields": {
+      "pipe": 2,
+      "author": "user.screen_name",
+      "title": "text",
+      "content": "text",
+      "location": "coordinates.coordinates",
+      "datetime": "created_at"
+    }
+  }
+]

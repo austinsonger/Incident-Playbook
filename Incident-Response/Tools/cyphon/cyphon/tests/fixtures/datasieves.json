@@ -1,0 +1,162 @@
+[
+  {
+    "model": "datasieves.datarule",
+    "fields": {
+      "id": 1,
+      "name": "type_is_syslog",
+      "field_name": "_type",
+      "operator": "CharField:^x$",
+      "value": "syslog",
+      "is_regex": false
+    }
+  },
+  {
+    "model": "datasieves.datarule",
+    "fields": {
+      "id": 2,
+      "name": "type_is_snmptrap",
+      "field_name": "_type",
+      "operator": "CharField:^x$",
+      "value": "snmptrap",
+      "is_regex": false
+    }
+  },
+  {
+    "model": "datasieves.datarule",
+    "fields": {
+      "id": 3,
+      "name": "subject_contains_critical",
+      "field_name": "subject",
+      "operator": "CharField:x",
+      "value": "critical",
+      "is_regex": false
+    }
+  },
+  {
+    "model": "datasieves.datarule",
+    "fields": {
+      "id": 4,
+      "name": "subject_contains_alert",
+      "field_name": "subject",
+      "operator": "CharField:x",
+      "value": "alert",
+      "is_regex": false
+    }
+  },
+  {
+    "model": "datasieves.datarule",
+    "fields": {
+      "id": 5,
+      "name": "priority_is_high",
+      "field_name": "_meta.priority",
+      "operator": "CharField:^x$",
+      "value": "HIGH",
+      "is_regex": false
+    }
+  },
+  {
+    "model": "datasieves.datarule",
+    "fields": {
+      "id": 6,
+      "name": "priority_is_medium",
+      "field_name": "_meta.priority",
+      "operator": "CharField:^x$",
+      "value": "MEDIUM",
+      "is_regex": false
+    }
+  },
+  {
+    "model": "datasieves.datasievenode",
+    "fields": {
+      "id": 1,
+      "sieve": 1,
+      "content_type": ["datasieves", "datarule"],
+      "object_id": 1
+    }
+  },
+  {
+    "model": "datasieves.datasievenode",
+    "fields": {
+      "id": 2,
+      "sieve": 2,
+      "content_type": ["datasieves", "datarule"],
+      "object_id": 2
+    }
+  },
+  {
+    "model": "datasieves.datasievenode",
+    "fields": {
+      "id": 3,
+      "sieve": 3,
+      "content_type": ["datasieves", "datarule"],
+      "object_id": 3
+    }
+  },
+  {
+    "model": "datasieves.datasievenode",
+    "fields": {
+      "id": 4,
+      "sieve": 3,
+      "content_type": ["datasieves", "datarule"],
+      "object_id": 4
+    }
+  },
+  {
+    "model": "datasieves.datasievenode",
+    "fields": {
+      "id": 5,
+      "sieve": 4,
+      "content_type": ["datasieves", "datarule"],
+      "object_id": 5
+    }
+  },
+  {
+    "model": "datasieves.datasievenode",
+    "fields": {
+      "id": 6,
+      "sieve": 5,
+      "content_type": ["datasieves", "datarule"],
+      "object_id": 6
+    }
+  },
+  {
+    "model": "datasieves.datasieve",
+    "fields": {
+      "id": 1,
+      "name": "test_syslog_sieve",
+      "logic": "AND"
+    }
+  },
+  {
+    "model": "datasieves.datasieve",
+    "fields": {
+      "id": 2,
+      "name": "test_snmptrap_sieve",
+      "logic": "AND"
+    }
+  },
+  {
+    "model": "datasieves.datasieve",
+    "fields": {
+      "id": 3,
+      "name": "test_datasieve",
+      "logic": "AND"
+    }
+  },
+  {
+    "model": "datasieves.datasieve",
+    "fields": {
+      "id": 4,
+      "name": "test_high_priority",
+      "logic": "AND"
+    }
+  },
+  {
+    "model": "datasieves.datasieve",
+    "fields": {
+      "id": 5,
+      "name": "test_med_priority",
+      "logic": "AND"
+    }
+  }
+]

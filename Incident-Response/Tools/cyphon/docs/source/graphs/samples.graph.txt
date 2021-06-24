@@ -1,0 +1,25 @@
+.. _samples-graph:
+
+Samples Graph
+=============
+
+.. figure:: ../_static/images/graphs/samples-graph.png
+    :target: ../_static/images/graphs/samples-graph.png
+    :alt: Samples model graph
+
+    Graph of models in the :ref:`samples` app and related apps.
+
+Overview
+--------
+
+.. include:: ../summaries/samples.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models samples pipes -X Endpoint,PipeSpecSheet -g -o samples-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`pipes-graph`
+* :ref:`teasers-graph`

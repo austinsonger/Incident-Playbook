@@ -1,0 +1,32 @@
+[
+  {
+    "model": "labels.labelfield",
+    "fields": {
+      "id": 1,
+      "field_name": "priority",
+      "field_type": "CharField",
+      "target_type": "Keyword",
+      "content_type": ["inspections", "inspection"],
+      "object_id": 1
+    }
+  },
+  {
+    "model": "labels.labelfield",
+    "fields": {
+      "id": 2,
+      "field_name": "source_ip_location",
+      "field_type": "PointField",
+      "target_type": "Location",
+      "content_type": ["procedures", "procedure"],
+      "object_id": 1
+    }
+  },
+  {
+    "model": "labels.label",
+    "fields": {
+      "id": 1,
+      "name": "mail",
+      "fields": [1, 2]
+    }
+  }
+]

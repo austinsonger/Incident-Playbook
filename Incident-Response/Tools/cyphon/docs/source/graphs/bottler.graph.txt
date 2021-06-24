@@ -1,0 +1,28 @@
+.. _bottler-graph:
+
+Bottler Graph
+=============
+
+.. figure:: ../_static/images/graphs/bottler-graph.png
+    :target: ../_static/images/graphs/bottler-graph.png
+    :alt: Bottler model graph
+
+    Graph of models in the :ref:`bottler` package.
+
+Overview
+--------
+
+.. include:: ../summaries/bottler.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models containers bottles labels tastes -X DataField,Teaser --no-inheritance -g -o containers-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`containers-graph`
+* :ref:`bottles-graph`
+* :ref:`distilleries-graph`
+* :ref:`labels-graph`
+* :ref:`tastes-graph`

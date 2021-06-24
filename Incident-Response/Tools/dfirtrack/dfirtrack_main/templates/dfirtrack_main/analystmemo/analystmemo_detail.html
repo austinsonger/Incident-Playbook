@@ -1,0 +1,125 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    Analystmemo '{{ analystmemo.system.system_name }}{% if analystmemo.system.dnsname %}.{{ analystmemo.system.dnsname }}{% endif %}'
+</title>
+
+{% load static %}
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- up button -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <a href="{% url 'analystmemo_list' %}" type="button" class="btn btn-light copy-false">
+            <img src="{% static 'dfirtrack_main/icons/arrow-circle-top.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Up to analystmemos
+        </a>
+    </div>
+</div>
+
+<!-- headline -->
+<div class="row">
+    <div class="col-3">
+        <h5>
+            Analystmemo {{ analystmemo.analystmemo_id }} for 
+            <!-- system -->
+            <a href="{{ analystmemo.system.get_absolute_url }}" type="button" class="btn btn-primary btn-sm btn-lg left-distance copy-true">
+                <img src="{% static 'dfirtrack_main/icons/monitor-light.svg' %}" class="icon right-distance copy-false" alt="icon">
+                {{ analystmemo.system.system_name }}
+            </a>
+        </h5>
+    </div>
+</div>
+
+<!-- analystmemo id -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <small class="text-muted">
+            Analystmemo-ID: {{ analystmemo.analystmemo_id }}
+        </small>
+    </div>
+</div>
+
+<!-- analystmemo note headline -->
+<div class="row">
+    <div class="col-3">
+        <h5>
+            Note
+        </h5>
+    </div>
+</div>
+
+<!-- analystmemo note -->
+<div class="row bottom-distance">
+    <div class="col">
+        {{ analystmemo.analystmemo_note|linebreaks }}
+    </div>
+</div>
+
+<!-- meta information headline -->
+<div class="row text-muted">
+    <div class="col">
+        <h5>
+            Meta information
+        </h5>
+    </div>
+</div>
+
+<!-- meta information content -->
+<div class="row text-muted bottom-distance">
+
+    <!-- analystmemo create time -->
+    <div class="col-3">
+        <div class="font-weight-bold">
+            Created:
+        </div>
+        {{ analystmemo.analystmemo_create_time|date:"Y-m-d H:i" }}
+    </div>
+
+    <!-- analystmemo create user -->
+    <div class="col-3">
+        <div class="font-weight-bold">
+            Created by:
+        </div>
+        {{ analystmemo.analystmemo_created_by_user_id }}
+    </div>
+
+    <!-- analystmemo modify time -->
+    <div class="col-3">
+        <div class="font-weight-bold">
+            Last modified:
+        </div>
+        {{ analystmemo.analystmemo_modify_time|date:"Y-m-d H:i" }}
+    </div>
+
+    <!-- analystmemo modify user -->
+    <div class="col-3">
+        <div class="font-weight-bold">
+            Modified by:
+        </div>
+        {{ analystmemo.analystmemo_modified_by_user_id }}
+    </div>
+
+<!-- meta information content -->
+</div>
+
+<!-- edit button -->
+<a href="{{ analystmemo.get_update_url }}" type="button" class="btn btn-light top-distance copy-false">
+    <img src="{% static 'dfirtrack_main/icons/pencil.svg' %}" class="icon right-distance copy-false" alt="icon">
+    Edit
+</a>
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

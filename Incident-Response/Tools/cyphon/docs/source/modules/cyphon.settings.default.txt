@@ -1,0 +1,7 @@
+cyphon.settings.default
+=======================
+
+.. automodule:: cyphon.settings.default
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,1 @@
+|Timeframes| specify a start and/or end date and time for a time frame. |Timeframes| can be used to construct |ReservoirQueries|.

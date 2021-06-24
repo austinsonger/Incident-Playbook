@@ -1,0 +1,20 @@
+.. _taxonomies:
+
+taxonomies
+==========
+
+.. image:: ../_static/images/icons/taxonomy.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/taxonomies.summary.txt
+
+:ref:`taxonomies-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   taxonomies.admin
+   taxonomies.models

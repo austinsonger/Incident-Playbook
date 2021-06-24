@@ -1,0 +1,32 @@
+# Unfortunately the ** syntax isn't supported before docker 1.10
+# https://github.com/docker/docker/issues/13113
+# and installing a newer version is difficult.
+*.changes
+*.deb
+*.dsc
+*.egg-info
+*/*/server.local.yaml
+*.pyc
+*/*.pyc
+*/*/*.pyc
+*/*/*/*.pyc
+*/*/*/*/*.pyc
+*_pb2.*
+*/*_pb2.*
+*/*/*_pb2.*
+ACKNOWLEDGEMENTS
+AUTHORS
+build
+dist
+executables
+!executables/windows/templates/unzipsfx/*.exe
+grr/config/grr_response_templates
+grr/gui/static/bower_components
+grr/gui/static/node_modules
+grr/gui/static/tmp
+grr/var
+grr-server*.tar.gz
+LICENSE
+README.md
+travis
+vagrant

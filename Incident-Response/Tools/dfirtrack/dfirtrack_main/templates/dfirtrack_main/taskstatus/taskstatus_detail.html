@@ -1,0 +1,96 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    Taskstatus '{{ taskstatus.taskstatus_name }}'{% if taskstatus.task_set.all %} (t: {{ taskstatus.task_set.all|length }}){% endif %}
+</title>
+
+{% load static %}
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- up button -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <a href="{% url 'taskstatus_list' %}" type="button" class="btn btn-light copy-false">
+            <img src="{% static 'dfirtrack_main/icons/arrow-circle-top.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Up to taskstatus
+        </a>
+    </div>
+</div>
+
+<!-- taskstatus name row -->
+<div class="row">
+
+    <!-- taskstatus name -->
+    <div class="col-3">
+        <h5>
+            Taskstatus
+            {% with taskstatus=taskstatus %}
+                {% include "dfirtrack_main/includes/button_taskstatus.html" %}
+            {% endwith %}
+            {{ taskstatus.taskstatus_name }}
+        </h5>
+    </div>
+
+<!-- taskstatus name row -->
+</div>
+
+<!-- taskstatus id -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <small class="text-muted">
+            Taskstatus-ID: {{ taskstatus.taskstatus_id }}
+        </small>
+    </div>
+</div>
+
+<!-- task headline -->
+<div class="row">
+    <div class="col-6">
+        <h5>
+            Tasks with this status{% if taskstatus.task_set.all %} ({{ taskstatus.task_set.all|length }}){% endif %}
+        </h5>
+    </div>
+</div>
+
+<!-- tasks -->
+{% if taskstatus.task_set.all %}
+
+    {% for i in taskstatus.task_set.all %}
+        <div class="row top-distance">
+            <div class="col-3">
+                <a href="{{ i.get_absolute_url }}" type="button" class="btn btn-primary btn-sm sharp copy-true">
+                    <img src="{% static 'dfirtrack_main/icons/task-light.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                    {{ i.taskname }}
+                    {% if i.system %}
+                        | {{ i.system.system_name }}
+                    {% endif %}
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+
+<!-- no tasks -->
+{% else %}
+    <div class="row top-distance">
+        <div class="col-3">
+            ---
+        </div>
+    </div>
+
+<!-- tasks -->
+{% endif %}
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

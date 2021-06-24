@@ -1,0 +1,23 @@
+query filterPerson {
+    allPeople {
+        peopleFilteredByName: filter(
+            filter: {
+                name_contains: "o"
+                name_ends_with: "s"
+            }
+        )
+        {
+            peopleFilteredByAge: filter(
+            filter: {
+                age_gt: 30
+            }
+        ) {
+            sort(sort: { age:incr }) {
+                age {
+                    toList
+                }
+            }
+        }
+        }
+    }
+}

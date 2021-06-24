@@ -1,0 +1,115 @@
+[  
+  {
+    "model": "tags.topic",
+    "fields": {
+      "id": 1,
+      "name": "Animals"
+    }
+  },
+  {
+    "model": "tags.topic",
+    "fields": {
+      "id": 2,
+      "name": "Names"
+    }
+  },  
+  {
+    "model": "tags.tag",
+    "fields": {
+      "id": 1,
+      "name": "bird",
+      "topic": ["Animals"],
+      "article": 1
+    }
+  },
+  {
+    "model": "tags.tag",
+    "fields": {
+      "id": 2,
+      "name": "cat",
+      "topic": ["Animals"],
+      "article": 2
+    }
+  },
+  {
+    "model": "tags.tag",
+    "fields": {
+      "id": 3,
+      "name": "dog",
+      "topic": ["Animals"],
+      "article": 3
+    }
+  },
+   {
+    "model": "tags.tag",
+    "fields": {
+      "id": 4,
+      "name": "turtle",
+      "topic": ["Animals"],
+      "article": 4
+    }
+  },
+  {
+    "model": "tags.tagrelation",
+    "fields": {
+      "id": 1,
+      "content_type": ["alerts", "alert"],
+      "object_id": 1,
+      "tag": ["Animals", "cat"]
+    }
+  },
+  {
+    "model": "tags.tagrelation",
+    "fields": {
+      "id": 2,
+      "content_type": ["alerts", "alert"],
+      "object_id": 3,
+      "tag": ["Animals", "bird"]
+    }
+  },
+  {
+    "model": "tags.tagrelation",
+    "fields": {
+      "id": 3,
+      "content_type": ["alerts", "alert"],
+      "object_id": 3,
+      "tag": ["Animals", "cat"]
+    }
+  },
+  {
+    "model": "tags.tagrelation",
+    "fields": {
+      "id": 4,
+      "content_type": ["alerts", "alert"],
+      "object_id": 4,
+      "tag": ["Animals", "cat"]
+    }
+  },
+  {
+    "model": "tags.tagrelation",
+    "fields": {
+      "id": 5,
+      "content_type": ["alerts", "comment"],
+      "object_id": 1,
+      "tag": ["Animals", "dog"]
+    }
+  },
+  {
+    "model": "tags.tagrelation",
+    "fields": {
+      "id": 6,
+      "content_type": ["alerts", "comment"],
+      "object_id": 2,
+      "tag": ["Animals", "cat"]
+    }
+  },
+  {
+    "model": "tags.tagrelation",
+    "fields": {
+      "id": 7,
+      "content_type": ["alerts", "analysis"],
+      "object_id": 3,
+      "tag": ["Animals", "turtle"]
+    }
+  }
+]

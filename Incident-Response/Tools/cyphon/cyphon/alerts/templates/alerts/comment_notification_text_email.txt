@@ -1,0 +1,4 @@
+{{ comment.user.first_name }} {{ comment.user.last_name }} commented on Alert #{{ comment.alert.id }} ({{ comment.alert.title }}):
+{{ comment.content }}
+
+You can view the alert here: {{ comment.alert.link }}

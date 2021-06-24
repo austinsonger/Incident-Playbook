@@ -1,0 +1,7 @@
+bottler.tastes.views
+====================
+
+.. automodule:: bottler.tastes.views
+    :members:
+    :undoc-members:
+    :show-inheritance:

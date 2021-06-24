@@ -1,0 +1,26 @@
+.. _streams-graph:
+
+Streams Graph
+=============
+
+.. figure:: ../_static/images/graphs/streams-graph.png
+    :target: ../_static/images/graphs/streams-graph.png
+    :alt: Streams model graph
+
+    Graph of models in the :ref:`streams` app and related apps.
+
+Overview
+--------
+
+.. include:: ../summaries/streams.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models streams invoices passports pipes -X Endpoint,PipeSpecSheet -g -o streams-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`invoices-graph`
+* :ref:`passports-graph`
+* :ref:`pipes-graph`

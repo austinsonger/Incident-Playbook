@@ -1,0 +1,13 @@
+distilleries.models
+===================
+
+.. figure:: ../_static/images/graphs/distilleries-graph.png
+    :target: ../graphs/distilleries.graph.html
+    :alt: Distilleries model graph
+
+    Graph of models in the :ref:`distilleries` app and related apps.
+
+.. automodule:: distilleries.models
+    :members:
+    :undoc-members:
+    :show-inheritance:

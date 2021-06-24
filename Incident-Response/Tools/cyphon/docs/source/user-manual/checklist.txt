@@ -1,0 +1,67 @@
+.. _checklist:
+
+#######################
+Configuration Checklist
+#######################
+
+
+- :ref:`data-storage`
+
+    - Containers
+    - Collections
+
+
+- :ref:`data-collection`
+
+    - Mailboxes
+    - Reservoirs
+    - Pipes
+    - Plumbers
+    - Filters
+
+
+- :ref:`data-processing`
+
+    - Distilleries
+    - Condensers
+    - Sieves
+    - Mungers
+    - Chutes
+
+
+- :ref:`data-enhancement`
+
+    - Inspections
+    - Procedures
+
+
+- :ref:`configuring-alarms`
+
+    - Watchdogs
+    - Monitors
+
+
+- :ref:`tagging-alerts`
+
+    - DataTaggers
+    - Articles
+    - Topics
+    - Tags
+
+
+- :ref:`investigating-alerts`
+
+    - Contexts
+
+
+- :ref:`acting-on-alerts`
+
+    - Destinations
+    - Actions
+    - Couriers
+
+
+- :ref:`provisioning-users`
+
+    - Groups
+    - Users

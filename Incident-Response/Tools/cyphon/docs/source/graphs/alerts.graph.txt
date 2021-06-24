@@ -1,0 +1,26 @@
+.. _alerts-graph:
+
+Alerts Graph
+============
+
+.. figure:: ../_static/images/graphs/alerts-graph.png
+    :target: ../_static/images/graphs/alerts-graph.png
+    :alt: Alerts model graph
+
+    Graph of models in the :ref:`alerts` app and related apps.
+
+Overview
+--------
+
+.. include:: ../summaries/alerts.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models alerts appusers distilleries tags -X AbstractBaseUser,PermissionsMixin,Taxonomy --no-inheritance -g -o alerts-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`appusers-graph`
+* :ref:`distilleries-graph`
+* :ref:`tags-graph`

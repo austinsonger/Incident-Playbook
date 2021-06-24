@@ -1,0 +1,7 @@
+ambassador.stamps.admin
+=======================
+
+.. automodule:: ambassador.stamps.admin
+    :members:
+    :undoc-members:
+    :show-inheritance:

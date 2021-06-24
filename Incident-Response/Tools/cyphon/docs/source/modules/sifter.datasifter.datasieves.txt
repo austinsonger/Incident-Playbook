@@ -1,0 +1,26 @@
+.. _datasieves:
+
+sifter.datasifter.datasieves
+============================
+
+.. image:: ../_static/images/icons/sieve.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/datasieves.summary.txt
+
+:ref:`datasieves-graph`
+
+.. figure:: ../_static/images/figures/sieve-diagram.png
+    :width: 450px
+    :alt: Sieve structure
+
+    Sieves can be used to create complex rulesets.
+
+Submodules
+----------
+
+.. toctree::
+
+   sifter.datasifter.datasieves.admin
+   sifter.datasifter.datasieves.models

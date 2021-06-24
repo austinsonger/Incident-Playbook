@@ -1,0 +1,27 @@
+.. _containers-graph:
+
+Containers Graph
+================
+
+.. figure:: ../_static/images/graphs/containers-graph.png
+   :target: ../_static/images/graphs/containers-graph.png
+   :alt: Containers model graph
+
+   Graph of models in the :ref:`containers` app and related apps.
+
+Overview
+--------
+
+.. include:: ../summaries/containers.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models containers bottles distilleries labels tastes -X DataField,Teaser --no-inheritance -g -o containers-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`containers-graph`
+* :ref:`distilleries-graph`
+* :ref:`labels-graph`
+* :ref:`tastes-graph`

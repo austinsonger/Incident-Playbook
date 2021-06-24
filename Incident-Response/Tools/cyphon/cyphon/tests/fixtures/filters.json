@@ -1,0 +1,82 @@
+[  
+  {
+    "model": "filters.filter",
+    "fields": {
+      "content_type": ["locations", "location"],
+      "object_id": 2,
+      "date_created": "2015-01-01T12:00:00-05:00",
+      "last_used": "2015-01-01T12:00:00-05:00",
+      "enabled": true
+    }
+  },
+  {
+    "model": "filters.filter",
+    "fields": {
+      "content_type": ["locations", "location"],
+      "object_id": 3,
+      "date_created": "2015-01-01T12:00:00-05:00",
+      "last_used": "2015-01-01T12:00:00-05:00",
+      "enabled": true
+    }
+  },
+  {
+    "model": "filters.filter",
+    "fields": {
+      "content_type": ["locations", "location"],
+      "object_id": 5,
+      "date_created": "2015-01-01T12:00:00-05:00",
+      "last_used": "2015-01-01T12:00:00-05:00",
+      "enabled": true
+    }
+  },
+  {
+    "model": "filters.filter",
+    "fields": {
+      "content_type": ["searchterms", "searchterm"],
+      "object_id": 1,
+      "date_created": "2015-01-01T12:00:00-05:00",
+      "last_used": "2015-01-01T12:00:00-05:00",
+      "enabled": false
+    }
+  },
+  {
+    "model": "filters.filter",
+    "fields": {
+      "content_type": ["searchterms", "searchterm"],
+      "object_id": 2,
+      "date_created": "2015-01-01T12:00:00-05:00",
+      "last_used": "2015-01-01T12:00:00-05:00",
+      "enabled": true
+    }
+  },
+  {
+    "model": "filters.filter",
+    "fields": {
+      "content_type": ["followees", "followee"],
+      "object_id": 1,
+      "date_created": "2015-01-01T12:00:00-05:00",
+      "last_used": "2000-01-01T00:00:00-05:00",
+      "enabled": true
+    }
+  },
+  {
+    "model": "filters.filter",
+    "fields": {
+      "content_type": ["followees", "followee"],
+      "object_id": 2,
+      "date_created": "2015-01-01T12:00:00-05:00",
+      "last_used": "2000-01-01T00:00:00-05:00",
+      "enabled": false
+    }
+  },
+  {
+    "model": "filters.filter",
+    "fields": {
+      "content_type": ["followees", "followee"],
+      "object_id": 3,
+      "date_created": "2015-01-01T12:00:00-05:00",
+      "last_used": "2000-01-01T00:00:00-05:00",
+      "enabled": true
+    }
+  }
+]

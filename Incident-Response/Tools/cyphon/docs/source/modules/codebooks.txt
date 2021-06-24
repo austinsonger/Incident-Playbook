@@ -1,0 +1,19 @@
+.. _codebooks:
+
+codebooks
+=========
+
+.. image:: ../_static/images/icons/codebook.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/codebooks.summary.txt
+
+:ref:`codebooks-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   codebooks.models

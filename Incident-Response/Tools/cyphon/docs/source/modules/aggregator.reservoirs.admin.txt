@@ -1,0 +1,7 @@
+aggregator.reservoirs.admin
+===========================
+
+.. automodule:: aggregator.reservoirs.admin
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,7 @@
+warehouses.apps
+===============
+
+.. automodule:: warehouses.apps
+    :members:
+    :undoc-members:
+    :show-inheritance:

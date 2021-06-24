@@ -1,0 +1,11 @@
+[
+  {"from": "certro@thehive.local","to": "ro-cert"},
+  {"from": "certuser@thehive.local","to": "user-cert"},
+  {"from": "certadmin@thehive.local","to": "admin-cert"},
+  {"from": "socro@thehive.local","to": "ro-soc"},
+  {"from": "socuser@thehive.local","to": "user-soc"},
+  {"from": "socadmin@thehive.local","to": "admin-soc"},
+  {"from": "pugro@thehive.local","to": "ro-pug"},
+  {"from": "puguser@thehive.local","to": "user-pug"},
+  {"from": "pugadmin@thehive.local","to": "admin-pug"}
+]

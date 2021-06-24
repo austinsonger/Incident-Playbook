@@ -1,0 +1,30 @@
+.. _mailsifter:
+
+sifter.mailsifter
+=================
+
+.. image:: ../_static/images/icons/sifter.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/mailsifter.summary.txt
+
+:ref:`mailsifter-graph`
+
+Subpackages
+-----------
+
+.. toctree::
+
+    sifter.mailsifter.mailchutes
+    sifter.mailsifter.mailcondensers
+    sifter.mailsifter.mailmungers
+    sifter.mailsifter.mailsieves
+
+Submodules
+----------
+
+.. toctree::
+
+   sifter.mailsifter.accessors
+   sifter.mailsifter.attachments

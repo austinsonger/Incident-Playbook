@@ -1,0 +1,13 @@
+monitors.models
+===============
+
+.. figure:: ../_static/images/graphs/monitors-graph.png
+    :target: ../graphs/monitors.graph.html
+    :alt: Monitors model graph
+
+    Graph of models in the :ref:`monitors` app and related apps.
+
+.. automodule:: monitors.models
+    :members:
+    :undoc-members:
+    :show-inheritance:

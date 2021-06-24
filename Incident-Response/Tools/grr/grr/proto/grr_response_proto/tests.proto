@@ -1,0 +1,272 @@
+// Protobufs used in tests.
+
+syntax = "proto2";
+
+import "google/protobuf/any.proto";
+import "grr_response_proto/export.proto";
+import "grr_response_proto/jobs.proto";
+import "grr_response_proto/semantic.proto";
+
+package grr;
+
+message ClientActionRunnerArgs {
+  optional string action = 1 [(sem_type) = {
+    description: "Action to run.",
+  }];
+}
+
+message BadArgsFlow1Args {
+  optional PathSpec arg1 = 1;
+}
+
+message DummyFlowProgress {
+  optional string status = 1;
+}
+
+message SendingFlowArgs {
+  optional uint64 message_count = 1;
+}
+
+message DummyCronHuntOutputPluginArgs {
+  optional string output_path = 1;
+  optional string collection_name = 2;
+}
+
+message RecursiveTestFlowArgs {
+  optional uint64 depth = 1;
+}
+
+message MultiGetFileTestFlowArgs {
+  optional uint64 file_limit = 1 [
+    (sem_type) = {
+      description: "The number of files to retrieve.",
+    },
+    default = 3
+  ];
+}
+
+// Used for DataAgnosticConverter tests.
+message DataAgnosticConverterTestValue {
+  optional string string_value = 1;
+  optional uint64 int_value = 2;
+  optional bool bool_value = 3;
+
+  repeated string repeated_string_value = 4;
+  optional ExportedMetadata message_value = 5;
+
+  enum EnumOption {
+    OPTION_1 = 0;
+    OPTION_2 = 1;
+  }
+  optional EnumOption enum_value = 6 [default = OPTION_1];
+  optional EnumOption another_enum_value = 7 [default = OPTION_2];
+
+  optional string urn_value = 8 [(sem_type) = {
+    type: "RDFURN",
+  }];
+  optional uint64 datetime_value = 9 [(sem_type) = {
+    type: "RDFDatetime",
+  }];
+}
+
+// Used for DataAgnosticConverter tests.
+message DataAgnosticConverterTestValueWithMetadata {
+  optional uint64 metadata = 1;
+  optional string value = 2;
+}
+
+// For forms_test.py to test that default protobuf values are rendered
+// correctly.
+message DefaultArgsTestFlowArgs {
+  enum EnumOption {
+    OPTION_1 = 0;
+    OPTION_2 = 1;
+  }
+  optional string string_value = 1;
+  optional uint64 int_value = 2;
+  optional bool bool_value = 3;
+  optional EnumOption enum_value = 4;
+
+  optional string string_value_with_default = 5 [default = "default string"];
+  optional uint64 int_value_with_default = 6 [default = 42];
+  optional bool bool_value_with_default = 7 [default = true];
+  optional EnumOption enum_value_with_default = 8 [default = OPTION_2];
+}
+
+// For gui/http_api_test.py.
+message SampleGetHandlerArgs {
+  optional string path = 1;
+  optional string foo = 2;
+}
+
+message SampleGetHandlerResult {
+  optional string method = 1;
+  optional string path = 2;
+  optional string foo = 3;
+}
+
+message ApiRDFProtoStructRendererSample {
+  optional uint64 index = 1 [(sem_type) = { description: "Sample index." }];
+  repeated string values = 2 [(sem_type) = { description: "Sample values." }];
+}
+
+message SampleDeleteHandlerArgs {
+  optional string resource_id = 1;
+}
+
+message SampleDeleteHandlerResult {
+  optional string method = 1;
+  optional string resource = 2;
+}
+
+message SamplePatchHandlerArgs {
+  optional string resource_id = 1;
+}
+
+message SamplePatchHandlerResult {
+  optional string method = 1;
+  optional string resource = 2;
+}
+
+// For `NoDynamicTypeLookupTest`.
+message NoDynamicTypeLookupMessage {
+  optional google.protobuf.Any any = 1
+      [(sem_type) = { no_dynamic_type_lookup: true }];
+}
+
+// For api_auth_manager_test.py
+
+message DummyAuthManagerTestConfigurableApiRouterParams {
+  optional string foo = 1;
+  optional uint64 bar = 2;
+}
+
+message BoolMessage {
+  optional bool foo = 1;
+}
+
+message EnumMessage {
+  enum NestedEnum {
+    // NULL instead of ZERO to conform to default value naming convention.
+    NULL = 0;
+    ONE = 1;
+    TWO = 2;
+  }
+  optional NestedEnum foo = 1;
+}
+
+// For metadata_test.py
+message MetadataSimpleMessage {
+  optional string metadata_id = 1;
+  optional int64 metadata_arg1 = 2;
+  optional bool metadata_arg2 = 3;
+}
+
+message MetadataPrimitiveTypesMessage {
+  optional double field_double = 1;
+  optional float field_float = 2;
+  optional int64 field_int64 = 3;
+  optional uint64 field_uint64 = 4;
+  optional int32 field_int32 = 5;
+  optional fixed64 field_fixed64 = 6;
+  optional fixed32 field_fixed32 = 7;
+  optional bool field_bool = 8;
+  optional string field_string = 9;
+  optional bytes field_bytes = 10;
+  optional uint32 field_uint32 = 11;
+  optional sfixed32 field_sfixed32 = 12;
+  optional sfixed64 field_sfixed64 = 13;
+  optional sint32 field_sint32 = 14;
+  optional sint64 field_sint64 = 15;
+}
+
+message MetadataRepeatedFieldMessage {
+  repeated int64 field_repeated = 1;
+}
+
+message MetadataEnumFieldMessage {
+  enum MetadataEnum {
+    UNKNOWN = 0;
+    FOO = 1;
+    BAR = 2;
+  }
+  optional MetadataEnum field_enum = 1;
+}
+
+message MetadataTypesHierarchyRoot {
+  optional int64 field_int64 = 1;
+  optional MetadataTypesHierarchyCyclic child_1 = 2;
+  optional MetadataTypesHierarchyLeaf child_2 = 3;
+}
+
+message MetadataTypesHierarchyCyclic {
+  optional MetadataTypesHierarchyRoot root = 1;
+  optional MetadataTypesHierarchyLeaf child_1 = 2;
+}
+
+message MetadataTypesHierarchyLeaf {
+  optional string field_string = 1;
+}
+
+message MetadataOneofMessage {
+  oneof metadata_oneof {
+    int64 oneof_int64 = 1;
+    MetadataSimpleMessage oneof_simplemsg = 2;
+  }
+  optional int64 field_int64 = 3;
+}
+
+message MetadataMapMessage {
+  map<sfixed64, MetadataSimpleMessage> field_map = 1;
+}
+
+message MetadataSemTypeMessage {
+  optional uint64 field_datetime = 1 [(sem_type) = {
+    type: "RDFDatetime",
+    description: "field_datetime with `sem_type` option."
+  }];
+  optional uint64 field_datetimeseconds = 2 [(sem_type) = {
+    type: "RDFDatetimeSeconds",
+    description: "field_datetimeseconds with `sem_type` option."
+  }];
+  optional uint64 field_durationmicros = 3 [(sem_type) = {
+    type: "Duration",
+    description: "field_duration with `sem_type` option."
+  }];
+  optional uint64 field_durationseconds = 4 [(sem_type) = {
+    type: "DurationSeconds",
+    description: "field_durationseconds with `sem_type` option."
+  }];
+  optional bytes field_rdfbytes = 5 [(sem_type) = {
+    type: "RDFBytes",
+    description: "field_rdfbytes with `sem_type` option."
+  }];
+  optional bytes field_hashdigest = 6 [(sem_type) = {
+    type: "HashDigest",
+    description: "field_hashdigest with `sem_type` option."
+  }];
+  optional string field_globexpression = 7 [(sem_type) = {
+    type: "GlobExpression",
+    description: "field_globexpression with `sem_type` option."
+  }];
+  optional uint64 field_bytesize = 8 [(sem_type) = {
+    type: "ByteSize",
+    description: "field_bytesize with `sem_type` option."
+  }];
+  optional string field_rdfurn = 9 [(sem_type) = {
+    type: "RDFURN",
+    description: "field_rdfurn with `sem_type` option."
+  }];
+  optional string field_sessionid = 10 [(sem_type) = {
+    type: "SessionID",
+    description: "field_sessionid with `sem_type` option."
+  }];
+
+  oneof semtype_oneof {
+    uint64 oneof_datetime = 11 [(sem_type) = {
+      type: "RDFDatetime",
+      description: "Oneof field with `sem_type` option."
+    }];
+    string oneof_string = 12;
+  }
+}

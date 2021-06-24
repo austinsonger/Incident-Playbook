@@ -1,0 +1,24 @@
+.. _codebooks-graph:
+
+CodeBooks Graph
+===============
+
+.. figure:: ../_static/images/graphs/codebooks-graph.png
+    :target: ../_static/images/graphs/codebooks-graph.png
+    :alt: CodeBooks model graph
+
+    Graph of models in the :ref:`codebooks` app and related apps.
+
+Overview
+--------
+
+.. include:: ../summaries/codebooks.summary.txt
+
+To graph these models::
+
+     $ python manage.py graph_models codebooks companies --no-inheritance -g -o codebooks-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`companies-graph`

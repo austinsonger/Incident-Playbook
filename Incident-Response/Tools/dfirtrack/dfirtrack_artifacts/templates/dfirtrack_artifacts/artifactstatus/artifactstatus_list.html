@@ -1,0 +1,86 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    DFIRTrack - Artifactstatus
+</title>
+
+{% load static %}
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- headline -->
+<div class="row bottom-distance">
+    <div class="col">
+        <h5>
+            Artifacstatus
+        </h5>
+    </div>
+</div>
+
+<!-- headlines -->
+<div class="row font-weight-bold">
+
+    <!-- artifactstatus id headline -->
+    <div class="col-1">
+        ID
+    </div>
+
+    <!-- artifactstatus name headline -->
+    <div class="col-2">
+        Artifacstatus
+    </div>
+
+    <!-- artifactstatus note headline -->
+    <div class="col-8">
+        Note
+    </div>
+
+<!-- headlines -->
+</div>
+
+<!-- artifactstatus list -->
+{% for i in artifactstatus_list %}
+
+    <!-- artifactstatus row -->
+    <div class="row top-distance">
+
+        <!-- artifactstatus id -->
+        <div class="col-1">
+            {{ i.artifactstatus_id }}
+        </div>
+
+        <!-- artifactstatus name -->
+        <div class="col-2">
+            <a href="{{ i.get_absolute_url }}">
+                {{ i.artifactstatus_name }}
+            </a>
+        </div>
+
+        <!-- artifactstatus note -->
+        <div class="col-9">
+            {% if i.artifactstatus_note %}
+                {{ i.artifactstatus_note|linebreaks }}
+            {% else %}
+                ---
+            {% endif %}
+        </div>
+
+    <!-- artifactstatus row -->
+    </div>
+
+<!-- artifactstatus list -->
+{% endfor %}
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

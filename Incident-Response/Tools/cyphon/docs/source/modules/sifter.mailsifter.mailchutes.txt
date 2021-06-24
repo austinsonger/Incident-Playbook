@@ -1,0 +1,22 @@
+.. _mailchutes:
+
+sifter.mailsifter.mailchutes
+============================
+
+.. image:: ../_static/images/icons/chute.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/mailchutes.summary.txt
+
+:ref:`mailchutes-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   sifter.mailsifter.mailchutes.admin
+   sifter.mailsifter.mailchutes.apps
+   sifter.mailsifter.mailchutes.models
+   sifter.mailsifter.mailchutes.signals

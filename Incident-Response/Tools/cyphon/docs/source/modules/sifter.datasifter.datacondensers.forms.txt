@@ -1,0 +1,7 @@
+sifter.datasifter.datacondensers.forms
+======================================
+
+.. automodule:: sifter.datasifter.datacondensers.forms
+    :members:
+    :undoc-members:
+    :show-inheritance:

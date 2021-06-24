@@ -1,0 +1,300 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    Entry for '{{ entry.system.system_name }}{% if entry.system.dnsname %}.{{ entry.system.dnsname }}{% endif %}'
+</title>
+
+{% load static %}
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- up button -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <a href="{% url 'entry_list' %}" type="button" class="btn btn-light copy-false">
+            <img src="{%static 'dfirtrack_main/icons/arrow-circle-top.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Up to entries
+        </a>
+    </div>
+</div>
+
+<!-- headline -->
+<div class="row">
+    <div class="col-6">
+        <h5>
+            Entry "{{ entry.entry_id }} - {{ entry.entry_sha1 }}"
+        </h5>
+    </div>
+</div>
+
+<!-- entry id -->
+<div class="row bottom-distance">
+    <div class="col-6">
+        <small class="text-muted">
+            Entry-ID: {{ entry.entry_id }}
+        </small>
+    </div>
+</div>
+
+<!-- headlines -->
+<div class="row">
+
+    <!-- entry note headline -->
+    <div class="col-6">
+        <h5>
+            Note
+        </h5>
+    </div>
+
+    <!-- entry time headline -->
+    <div class="col-6">
+        <h5>
+            Time
+        </h5>
+    </div>
+
+<!-- headlines -->
+</div>
+
+<!-- entry note / time -->
+<div class="row bottom-distance">
+
+    <!-- entry note -->
+    <div class="col-6">
+        {% if entry.entry_note %}
+            {{ entry.entry_note|linebreaks }}
+        {% else %}
+            ---
+        {% endif %}
+    </div>
+
+    <!-- entry time -->
+    <div class="col-6">
+        {{ entry.entry_time|date:"Y-m-d H:i:s" }}
+    </div>
+
+<!-- entry note / time -->
+</div>
+
+<!-- headlines -->
+<div class="row">
+
+    <!-- system headline -->
+    <div class="col-6">
+        <h5>
+            Entry associated to this system
+        </h5>
+    </div>
+
+    <!-- case headline -->
+    <div class="col-6">
+        <h5>
+            Entry associated to this case
+        </h5>
+    </div>
+
+<!-- headlines -->
+</div>
+
+<!-- system / case -->
+<div class="row top-distance">
+
+    <!-- system -->
+    <div class="col-6">
+        <a href="{{ entry.system.get_absolute_url }}" type="button" class="btn btn-primary btn-sm copy-true">
+            <img src="{% static 'dfirtrack_main/icons/monitor-light.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+            {{ entry.system.system_name }}
+        </a>
+    </div>
+
+    <!-- case -->
+    <div class="col-6">
+        {% if entry.case %}
+            <a href="{{ entry.case.get_absolute_url }}">
+                {{ entry.case.case_name }}
+            </a>
+        {% else %}
+            ---
+        {% endif %}
+    </div>
+
+<!-- system / case -->
+</div>
+
+<!-- timeline entry block -->
+<div class="card bg-dark border-light card-body top-distance">
+
+    <!-- headline row -->
+    <div class="row">
+
+        <!-- headline -->
+        <div class="col-11">
+            <h5>Timeline entry</h5>
+        </div>
+
+        <!-- tooltip -->
+        <div class="col-1">
+            <div data-toggle="tooltip" data-placement="right" title="These are the fields to be exported to the markdown system report.">
+                {% include "dfirtrack_main/includes/button_tooltip.html" %}
+            </div>
+        </div>
+
+    <!-- headline row -->
+    </div>
+
+    <!-- headlines -->
+    <div class="row font-weight-bold">
+
+        <!-- entry date -->
+        <div class="col-1">
+            Date
+        </div>
+
+        <!-- entry time -->
+        <div class="col-1">
+            Time (UTC)
+        </div>
+
+        <!-- entry system -->
+        <div class="col-1">
+            System
+        </div>
+
+        <!-- entry type -->
+        <div class="col-1">
+            Type
+        </div>
+
+        <!-- entry content -->
+        <div class="col-8">
+            Content
+        </div>
+
+    <!-- headlines -->
+    </div>
+    
+    <!-- entry -->
+    <div class="row">
+
+        <!-- entry date -->
+        <div class="col-1">
+            {{ entry.entry_date }}
+        </div>
+
+        <!-- entry time -->
+        <div class="col-1">
+            {{ entry.entry_utc }}
+        </div>
+
+        <!-- entry system -->
+        <div class="col-1">
+            {{ entry.entry_system }}
+        </div>
+
+        <!-- entry type -->
+        <div class="col-1">
+            {{ entry.entry_type }}
+        </div>
+
+        <!-- entry content -->
+        <div class="col-8">
+            {{ entry.entry_content }}
+        </div>
+
+    <!-- entry -->
+    </div>
+
+<!-- timeline entry block -->
+</div>
+
+<!-- meta information block -->
+<div class="card bg-dark border-secondary card-body bottom-distance top-distance">
+
+    <!-- meta information headline -->
+    <div class="row text-muted">
+        <div class="col">
+            <h5>Meta information</h5>
+        </div>
+    </div>
+
+    <!-- meta information row -->
+    <div class="row text-muted">
+
+        <!-- entry created time -->
+        <div class="col-3">
+            <div class="font-weight-bold">
+                Created:
+            </div>
+            {{ entry.entry_create_time|date:"Y-m-d H:i" }}
+        </div>
+
+        <!-- entry created user -->
+        <div class="col-3">
+            <div class="font-weight-bold">
+                Created by:
+            </div>
+            {{ entry.entry_created_by_user_id }}
+        </div>
+
+        <!-- entry modified time -->
+        <div class="col-3">
+            <div class="font-weight-bold">
+                Last modified:
+            </div>
+            {{ entry.entry_modify_time|date:"Y-m-d H:i" }}
+        </div>
+
+        <!-- entry modified user -->
+        <div class="col-3">
+            <div class="font-weight-bold">
+                Modified by:
+            </div>
+            {{ entry.entry_modified_by_user_id }}
+        </div>
+
+    <!-- meta information row -->
+    </div>
+
+    <!-- meta information row -->
+    <div class="row text-muted">
+
+        <!-- placeholder -->
+        <div class="col-6"></div>
+
+        <!-- entry api time -->
+        <div class="col-3">
+            <div class="font-weight-bold">
+                Last API update:
+            </div>
+            {% if entry.entry_api_time %}
+                {{ entry.entry_api_time|date:"Y-m-d H:i" }}
+            {% else %}
+                ---
+            {% endif %}
+        </div>
+
+    <!-- meta information row -->
+    </div>
+
+<!-- meta information block -->
+</div>
+
+<!-- edit button -->
+<a href="{{ entry.get_update_url }}" type="button" class="btn btn-light copy-false">
+    <img src="{% static 'dfirtrack_main/icons/pencil.svg' %}" class="icon right-distance copy-false" alt="icon">
+    Edit
+</a>
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

@@ -1,0 +1,19 @@
+.. _filters-graph:
+
+Filters Graph
+=============
+
+.. figure:: ../_static/images/graphs/filters-graph.png
+    :target: ../_static/images/graphs/filters-graph.png
+    :alt: Filters model graph
+
+    Graph of models in the :ref:`filters` app.
+
+Overview
+--------
+
+.. include:: ../summaries/filters.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models filters -g -o filters-graph.png

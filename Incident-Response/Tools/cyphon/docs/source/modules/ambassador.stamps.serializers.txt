@@ -1,0 +1,7 @@
+ambassador.stamps.serializers
+=============================
+
+.. automodule:: ambassador.stamps.serializers
+    :members:
+    :undoc-members:
+    :show-inheritance:

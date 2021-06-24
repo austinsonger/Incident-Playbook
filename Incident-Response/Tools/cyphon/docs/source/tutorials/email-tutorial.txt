@@ -1,0 +1,318 @@
+.. _email-tutorial:
+
+############################
+Generating Alerts from Email
+############################
+
+.. note::
+
+    If you'd like to run through this tutorial more quickly, be sure you've loaded Cyohon's :ref:`starter settings <load-settings>` before you begin. These settings provide many of the configurations used in this tutorial.
+
+************
+Introduction
+************
+
+Suppose we have an email with the following header and attachment::
+
+    To: Alerts <alerts@mycompany.com>
+    From: Log Management <logmgmt@example.com>
+    Date: Tue, 23 May 2017 12:05:17 +0000
+    Subject: Daily X Report
+    Attachment: daily_x_report-2017-05-23.pdf
+
+We want to parse this email into this format::
+
+    {
+        "date": "2017-05-23T12:05:17.000Z",
+        "from": "'Log Management' logmgmt@example.com",
+        "subject": "Daily X Report",
+        "content": "Your daily x report is attached.",
+        "attachment": "https://www.example.com/media/4d61f162909249be9cc56d3ab9a54656/attachments/2017/05/22/6afbc2d9d73f4b87bed83d7da8eb516d.pdf",
+    }
+
+In this tutorial, we'll show you how to use Cyphon's MailChutes to parse and save this email, and generate an Alert for it using a Watchdog.
+
+
+***************
+Step 1: Mailbox
+***************
+
+.. image:: ../_static/images/icons/mailbox.png
+    :width: 100px
+    :align: left
+
+First, we strongly recommend setting up a dedicated email account for receiving email that will be processed by Cyphon. Cyphon uses `Django Mailbox`_ to handle email, which deletes messages from the inboxes it checks. Although it's possible to save copies of messages on your email server using IMAP's 'Archive' feature, it's still a good idea to set up an account specifically for Cyphon's use.
+
+Under the “Manage Mail” panel on Cyphon’s main admin page, click the plus sign by "Mailboxes" to add a new mailbox. For example::
+
+    imap+ssl://youremailaddress%40gmail.com:1234@imap.gmail.com?archive=Archived
+
+This will fetch emails from the inbox of ``youremailaddress@gmail.com`` using password ``1234``. It will also save copies of the emails to a mail folder called "Archived." For more examples on supported mailbox types, see Django Mailbox's `documentation <http://django-mailbox.readthedocs.io/en/latest/topics/mailbox_types.html>`__.
+
+The frequency with which the mail is fetched is determined by the ``CELERYBEAT_SCHEDULE`` setting for the ``get_new_mail`` task, which you can adjust in the ``cyphon/settings/base.py`` file. The default interval is 30 seconds.
+
+.. note::
+
+    If you are using a Gmail account and are having trouble fetching mail, you may need to grant access to the account. See the `Google help page <https://support.google.com/accounts/answer/6010255>`__ for instructions.
+
+
+*****************
+Step 2: Container
+*****************
+
+.. image:: ../_static/images/icons/container.png
+    :width: 50px
+    :align: left
+
+To store the parsed email message, we'll create a Container. We won't be performing any extra analyses on the message fields, so we don't need a Label for the Container, just a Bottle.
+
+Open the "Shaping Data" panel on Cyphon's main admin page, and create the following BottleFields:
+
+    ================  =====================  ===========
+    Field Name        Field Type             Target Type
+    ================  =====================  ===========
+    date              DateTimeField          DateTime
+    from              CharField              Account
+    subject           CharField              Keyword
+    content           TextField              Keyword
+    attachment        URLField
+    ================  =====================  ===========
+
+Add these BottleFields to a Bottle called "mail_w_attachment". 
+
+Next, create a Container using the "mail_w_attachment" Bottle. Define a Taste for the Container with the following properties:
+
+    ==============  =======
+    Taste.author    from
+    Taste.title     subject
+    taste.content   content
+    taste.datetime  date
+    ==============  =======
+
+
+*****************
+Step 3: Condenser
+*****************
+
+.. container:: clearfix
+
+    .. image:: ../_static/images/icons/condenser.png
+        :width: 100px
+        :align: left
+
+    We now need to map the fields from the email message to the fields of the Container we created. We can do this by creating a Condenser.
+
+Under the "Condensing Data" panel on the main admin page, click on "Email" and create the following MailParsers:
+
+    ================  ============  ========
+    Name              Source Field  Method
+    ================  ============  ========
+    date__COPY        Date          Copy
+    from__COPY        From          Copy
+    subject__COPY     Subject       Copy
+    content__COPY     Content       Copy
+    attachment__COPY  Attachment    Copy
+    ================  ============  ========
+
+Next, create a new MailCondenser called "mail_w_attachment" and associate it with the "mail_w_attachment" Bottle. Then add the following MailFittings:
+
+    ============  ====================
+    Target Field  Parser (mail parser)
+    ============  ====================
+    date          date__COPY
+    from          from__COPY
+    subject       subject__COPY
+    content       content__COPY
+    attachment    attachment__COPY
+    ============  ====================
+
+
+******************
+Step 4: Distillery
+******************
+
+.. container:: clearfix
+
+    .. image:: ../_static/images/icons/distillery.png
+        :width: 100px
+        :align: left
+
+    Next, we need to specify where the data will be stored. To do this, we'll create a Distillery, which defines the data store and the data schema for our document. The data schema is represented by the Distillery's Container (which we just created). The data store is represented by the Distillery's Collection.
+
+Before we create the Collection, we first need to establish a Warehouse for it.
+You can create the Warehouse by opening the "Storing Data" panel on Cyphon's main admin page.
+
+Create a Warehouse with the following properties:
+
+    =====================  =============
+    Warehouse.backend      elasticsearch
+    Warehouse.name         cyphon
+    Warehouse.time_series  True
+    =====================  =============
+
+This will establish daily indexes in Elasticsearch with the pattern "cyphon-YYYY-MM-dd."
+
+.. note::
+    
+    Time-series indexes make it easier to archive or delete old data. See Elasticsearch's documentation on `retiring data <https://www.elastic.co/guide/en/elasticsearch/guide/current/retiring-data.html>`__ for more info. 
+
+Next, create a Collection in this Warehouse for reports:
+
+    =====================  =============
+    Collection.warehouse   cyphon
+    Collection.name        reports
+    =====================  =============
+
+This will create a "reports" document type within the "cyphon" Elasticsearch index. (If you were using MongoDB as a backend instaad, it would create a collection called "reports" in a database called "cyphon.")
+
+Under the "Distilling Data" panel on the main admin page, create a Distillery that uses this Collection and the Container we previously created:
+
+    =====================  ============================
+    Distillery.collection  elasticsearch.cyphon.reports
+    Distillery.container   mail_w_attachment
+    =====================  ============================
+
+
+**************
+Step 5: Munger
+**************
+
+.. container:: clearfix
+
+    .. image:: ../_static/images/icons/munger.png
+        :width: 100px
+        :align: left
+
+    Now that we have a Condenser to process the data and a Distillery to store it, we can put them together to create a Munger.
+
+Open the "Sifting Data" panel on the main admin page, and click om "Email." Create a MailMunger with the following properties:
+
+    =====================  ============================
+    MailMunger.name        PDF Report
+    MailMunger.distillery  elasticsearch.cyphon.reports
+    MailMunger.condenser   mail_w_attachment
+    =====================  ============================
+
+
+*************
+Step 6: Sieve
+*************
+
+.. container:: clearfix
+
+    .. image:: ../_static/images/icons/sieve.png
+        :width: 100px
+        :align: left
+
+    We next need to create a Sieve that will identify documents that should be processed by the Munger.
+
+First, create a couple MailRules:
+
+    =======================  ===========  =========  =======
+    MailRule Name            Field Name   Operator   Value
+    =======================  ===========  =========  =======
+    subject_contains_report  subject      contains   report
+    has_pdf_attachment       attachment   contains   .pdf
+    =======================  ===========  =========  =======
+
+Then create a MailSieve with these rules:
+
+    ==============  =======  =======================  =======================
+    MailSieve Name  Logic    Node 1 (mail rule)       Node 2 (mail rule)
+    ==============  =======  =======================  =======================
+    PDF Report      AND      subject_contains_report  has_pdf_attachment
+    ==============  =======  =======================  =======================
+
+
+*************
+Step 7: Chute
+*************
+
+.. container:: clearfix
+
+    .. image:: ../_static/images/icons/chute.png
+        :width: 100px
+        :align: left
+
+    Now that we hava a Munger and a Sieve, we can put them together to create a Chute.
+
+    Create a MailChute with the following properties:
+
+        =================   ==========
+        MailChute.sieve     PDF Report
+        MailChute.munger    PDF Report
+        MailChute.enabled   True
+        =================   ==========
+
+The Chute will identify emails with a PDF attachment and "report" in the subject line. It will then parse those messages and save them in the "elasticsearch.cyphon.reports" Collection.
+
+
+****************
+Step 8: Watchdog
+****************
+
+.. container:: clearfix
+
+    .. image:: ../_static/images/icons/watchdog.png
+        :width: 100px
+        :align: left
+
+    Now that the we've made a Chute to save the messages, we need to create a Watchdog to generate Alerts from them.
+
+Let's start by making some DataRules to identify different kinds of daily reports. Under the "Sifting Data" panel on the main admin page, click on "JSON Data" and create the following DataRules:
+
+    ===============================  ===========  =========  ==============  =======
+    DataRule Name                    Field Name   Operator   Value           Regex  
+    ===============================  ===========  =========  ==============  =======
+    subject_contains_daily_report    subject      contains   daily.*report   True
+    subject_contains_authentication  subject      contains   authentication  False
+    subject_contains_executive       subject      contains   executive       False
+    ===============================  ===========  =========  ==============  =======
+
+We can then use these DataRules to create DataSieves that a Watchdog will use to inspect the document:
+
+    ==============================  =====  ===============================  ===============================
+    DataSieve Name                  Logic  Node 1 (data rule)               Node 2 (data rule)
+    ==============================  =====  ===============================  ===============================
+    Daily Authentication Report     AND    subject_contains_daily_report    subject_contains_authentication
+    Daily Executive Report          AND    subject_contains_daily_report    subject_contains_executive
+    Daily Report                    AND    subject_contains_daily_report
+    ==============================  =====  ===============================  ===============================
+
+Now go to the "Configuring Alerts" panel and create the Watchdog:
+
+    ================  ========    
+    Watchdog.name     Reports
+    Watchdog.enabled  True
+    ================  ======== 
+
+Add the following Triggers to the Watchdog:
+
+    ==============================  ===============  ======== 
+    DataSieve                       Alert Level      Rank
+    ==============================  ===============  ========
+    Daily Authentication Report     Medium           0
+    Daily Executive Report          Info             10
+    Daily Report                    Low              20
+    ==============================  ===============  ========
+
+It's important that the "Daily Report" Trigger has the lowest rank; it uses a less specific ruleset, so we only want it to come into play if none of the other Triggers have fired.
+
+.. note::
+
+    Although we could assign ranks of 0, 1, and 2 to the Triggers, we're using 0, 10, and 20 to make it easier to insert additional Triggers at a later date.
+
+
+***************
+Step 9: Testing
+***************
+
+Finally, you should test your configuration by sending some test emails with various subject lines and attachments to the email account you established. If you configured everything correctly, you should see Alerts for emails with PDF attachments and subject lines that mention daily reports!
+
+
+**********
+Conclusion
+**********
+
+In this tutorial, we showed you how to parse emails and generate Alerts using a simple set of criteria. Now that you have a basic idea of how email parsing works, feel free to explore Cyphon's more advanced parsing methods to extract specific information from your emails.
+

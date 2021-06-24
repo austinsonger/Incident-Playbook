@@ -1,0 +1,11 @@
+[
+  {"id": "ro-cert"},
+  {"id": "user-cert"},
+  {"id": "admin-cert"},
+  {"id": "ro-soc"},
+  {"id": "user-soc"},
+  {"id": "admin-soc"},
+  {"id": "ro-pug"},
+  {"id": "user-pug"},
+  {"id": "admin-pug"}
+]

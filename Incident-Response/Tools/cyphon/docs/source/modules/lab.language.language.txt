@@ -1,0 +1,7 @@
+lab.language.language
+=====================
+
+.. automodule:: lab.language.language
+    :members:
+    :undoc-members:
+    :show-inheritance:

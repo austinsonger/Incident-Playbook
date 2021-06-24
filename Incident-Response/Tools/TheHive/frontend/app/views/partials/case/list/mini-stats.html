@@ -1,0 +1,22 @@
+<div class="row" ng-controller="CaseStatsCtrl as statsCtrl">
+    <div class="col-md-4">
+        <div class="stats-item-wrapper">
+            <stats-item title="Case by Status" mode="'chart'" field="status" data="statsCtrl.byStatus.details" on-item-clicked="$vm.addFilterValue(field, value)">
+            </stats-item>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="stats-item-wrapper">
+            <stats-item title="Case by Resolution" mode="'chart'" field="resolutionStatus" data="statsCtrl.byResolution.details" on-item-clicked="$vm.addFilterValue(field, value)">
+            </stats-item>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="stats-item-wrapper">
+            <stats-item title="Top 5 tags" mode="'chart'" field="tags" data="statsCtrl.byTags.details" on-item-clicked="$vm.addFilterValue(field, value)">
+            </stats-item>
+        </div>
+    </div>
+</div>

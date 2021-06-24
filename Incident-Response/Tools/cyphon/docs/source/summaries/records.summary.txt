@@ -1,0 +1,1 @@
+|Records| save responses from requests to REST API :ref:`Endpoints<endpoints>`. They also save :ref:`Stamps<stamps>` of the API calls. |Records| can take the form of :ref:`Dispatches<dispatches>` or :ref:`Invoices<invoices>`.

@@ -1,0 +1,75 @@
+[
+  {
+    "model": "logsieves.logrule",
+    "fields": {
+      "id": 1,
+      "name": "contains_critical",
+      "operator": "CharField:x",
+      "value": "critical",
+      "is_regex": false
+    }
+  },
+  {
+    "model": "logsieves.logrule",
+    "fields": {
+      "id": 2,
+      "name": "contains_alert",
+      "operator": "CharField:x",
+      "value": "alert",
+      "is_regex": false
+    }
+  },
+  {
+    "model": "logsieves.logrule",
+    "fields": {
+      "id": 3,
+      "name": "contains_test",
+      "operator": "CharField:x",
+      "value": "test",
+      "is_regex": false
+    }
+  },
+  {
+    "model": "logsieves.logsievenode",
+    "fields": {
+      "id": 1,
+      "sieve": 1,
+      "content_type": ["logsieves", "logrule"],
+      "object_id": 1
+    }
+  },
+  {
+    "model": "logsieves.logsievenode",
+    "fields": {
+      "id": 2,
+      "sieve": 1,
+      "content_type": ["logsieves", "logrule"],
+      "object_id": 2
+    }
+  },
+  {
+    "model": "logsieves.logsievenode",
+    "fields": {
+      "id": 3,
+      "sieve": 2,
+      "content_type": ["logsieves", "logrule"],
+      "object_id": 3
+    }
+  },
+  {
+    "model": "logsieves.logsieve",
+    "fields": {
+      "id": 1,
+      "name": "check_subject",
+      "logic": "AND"
+    }
+  },
+  {
+    "model": "logsieves.logsieve",
+    "fields": {
+      "id": 2,
+      "name": "contains_test",
+      "logic": "AND"
+    }
+  }
+]

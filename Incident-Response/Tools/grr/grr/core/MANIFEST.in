@@ -1,0 +1,19 @@
+include version.ini
+
+recursive-include * *
+
+recursive-exclude .git *
+recursive-exclude build *
+recursive-exclude dist *
+recursive-exclude executables *.zip
+recursive-exclude executables/installers *
+recursive-exclude executables *.bin
+recursive-exclude executables/components *
+recursive-exclude executables/linux *
+recursive-exclude executables/darwin *
+recursive-exclude grr/var *
+recursive-exclude grr-response-* *
+
+recursive-exclude * *.pyc
+
+exclude install_data/etc/server.local.yaml

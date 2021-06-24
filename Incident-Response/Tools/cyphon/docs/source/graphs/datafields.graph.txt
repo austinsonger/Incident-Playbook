@@ -1,0 +1,25 @@
+.. _datafields-graph:
+
+DataFields Graph
+================
+
+.. figure:: ../_static/images/graphs/datafields-graph.png
+    :target: ../_static/images/graphs/datafields-graph.png
+    :alt: DataFields model graph
+
+    Graph of models for the |DataField| base class and its subclasses.
+
+Overview
+--------
+
+.. include:: ../summaries/datafields.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models bottles labels -o datafields-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`bottles-graph`
+* :ref:`labels-graph`

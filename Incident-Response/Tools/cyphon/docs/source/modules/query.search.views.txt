@@ -1,0 +1,7 @@
+query.search.views
+==================
+
+.. automodule:: query.search.views
+    :members:
+    :undoc-members:
+    :show-inheritance:

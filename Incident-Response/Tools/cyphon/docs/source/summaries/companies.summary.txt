@@ -1,0 +1,1 @@
+|Companies| associate groups of :ref:`AppUsers<appusers>` with particular :ref:`Distilleries<distilleries>`. |Companies| can have :ref:`CodeBooks<codebooks>` that their Distilleries can use to redact document teasers.

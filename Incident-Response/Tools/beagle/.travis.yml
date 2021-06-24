@@ -1,0 +1,65 @@
+language: python
+group: travis_latest
+
+env:
+    - BEAGLE__STORAGE__DIR=data/ BEAGLE__STORAGE__DATABASE=sqlite:///beagle.db
+
+cache: pip
+
+matrix:
+    include:
+    - name: "Linux Python 3.6"
+      os: linux
+      python: 3.6
+      install: pip install ".[all]"
+
+    - name: "Linux Python 3.7"
+      os: linux
+      python: 3.7
+      dist: xenial
+      install: pip install ".[pcap,splunk,elasticsearch]"
+
+    - name: "Linux Python 3.7 CodeCov"
+      os: linux
+      python: 3.7
+      dist: xenial
+      install: pip install ".[pcap,splunk,elasticsearch]" codecov
+      script: mkdir -p data && pytest --cov=./beagle
+      after_success: codecov
+
+
+    - name: "Windows Python 3.6"
+      os: windows
+      language: sh
+      install: pip install ".[pcap,splunk,elasticsearch]"
+      before_install:
+        - choco install python3 --version 3.6.8
+        - export PATH="/c/Python36:/c/Python36/Scripts:$PATH"
+        - export TMPDIR=.
+        - pip install setuptools wheel
+
+    - name: "Windows Python 3.7"
+      os: windows
+      language: sh
+      install: pip install ".[pcap,splunk,elasticsearch]"
+      before_install:
+          - choco install python3 --version 3.7.3
+          - export PATH="/c/Python37:/c/Python37/Scripts:$PATH"
+          - export TMPDIR=.
+          - pip install setuptools wheel
+
+    - name: "MacOSX Python 3.6"
+      os: osx
+      python: 3.6
+      language: sh
+      install: pip3 install --user -e ".[all]"
+      script: mkdir -p data && $(python3 -m site --user-base)/bin/pytest
+
+    - name: "MacOSX Python 3.7"
+      os: osx
+      python: 3.7
+      language: sh
+      install: pip3 install --user -e ".[pcap,splunk,elasticsearch]"
+      script: mkdir -p data && $(python3 -m site --user-base)/bin/pytest
+
+script: mkdir -p data && pytest

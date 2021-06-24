@@ -1,0 +1,22 @@
+.. _watchdogs:
+
+watchdogs
+=========
+
+.. image:: ../_static/images/icons/watchdog.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/watchdogs.summary.txt
+
+:ref:`watchdogs-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   watchdogs.admin
+   watchdogs.apps
+   watchdogs.models
+   watchdogs.signals

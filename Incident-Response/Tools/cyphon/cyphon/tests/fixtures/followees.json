@@ -1,0 +1,89 @@
+[
+  {
+    "model": "followees.followee",
+    "fields": {
+      "id": 1,
+      "nickname": "John"
+    }
+  },
+  {
+    "model": "followees.followee",
+    "fields": {
+      "id": 2,
+      "nickname": "Jane"
+    }
+  },
+  {
+    "model": "followees.followee",
+    "fields": {
+      "id": 3,
+      "nickname": "Jack"
+    }
+  },
+  {
+    "model": "followees.legalname",
+    "fields": {
+      "followee": 1,
+      "first": "John",
+      "middle": "Adam",
+      "last": "Smith"
+    }
+  },
+  {
+    "model": "followees.legalname",
+    "fields": {
+      "followee": 2,
+      "first": "Jane",
+      "last": "Smith"
+    }
+  },
+  {
+    "model": "followees.account",
+    "fields": {
+      "id": 1,
+      "followee": 1,
+      "platform": ["twitter"],
+      "user_id": "73987",
+      "username": "jad"
+    }
+  },
+  {
+    "model": "followees.account",
+    "fields": {
+      "id": 2,
+      "followee": 1,
+      "platform": ["twitter"],
+      "user_id": "89632",
+      "username": "jad2"
+    }
+  },
+  {
+    "model": "followees.account",
+    "fields": {
+      "id": 3,
+      "followee": 1,
+      "platform": ["facebook"],
+      "user_id": "jad",
+      "username": "jad"
+    }
+  },
+  {
+    "model": "followees.account",
+    "fields": {
+      "id": 4,
+      "followee": 3,
+      "platform": ["twitter"],
+      "user_id": "57634",
+      "username": "jackbnimble"
+    }
+  },
+  {
+    "model": "followees.alias",
+    "fields": {
+      "account": 1,
+      "handle": "John Smith",
+      "role": "name",
+      "date_added": "2015-03-01 02:46:24.468404+00:00"
+    }
+  }
+]

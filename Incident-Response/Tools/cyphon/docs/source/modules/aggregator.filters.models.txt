@@ -1,0 +1,12 @@
+aggregator.filters.models
+=========================
+
+.. figure:: ../_static/images/graphs/filters-graph.png
+    :target: ../graphs/filters.graph.html
+    :alt: Filters model graph
+
+    Graph of models in the :ref:`filters` app.
+
+.. automodule:: aggregator.filters.models
+    :members:
+    :show-inheritance:

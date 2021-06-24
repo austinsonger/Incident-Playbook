@@ -1,0 +1,7 @@
+sifter.logsifter.logcondensers.admin
+====================================
+
+.. automodule:: sifter.logsifter.logcondensers.admin
+    :members:
+    :undoc-members:
+    :show-inheritance:

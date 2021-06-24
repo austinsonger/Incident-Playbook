@@ -1,0 +1,13 @@
+.. _testing:
+
+*************
+Running Tests
+*************
+
+To run the test suite, run this command from the ``cyphon`` directory containing the ``manage.py`` file::
+
+    $ python manage.py test
+
+.. note::
+    
+    You can use the ``--keepdb`` flag if you want to save time between test runs. If you'd like to see more output when running tests, include the ``--verbosity=2`` flag. See `Django's documentation <https://docs.djangoproject.com/en/1.11/topics/testing/overview/#running-tests>`__ for more details on running tests.

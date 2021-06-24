@@ -1,0 +1,1 @@
+|Filters| define search parameters for :ref:`Reservoirs<reservoirs>`. A |Filter| can represent a :ref:`Followee<followees>`, :ref:`Location<locations>`, or :ref:`SearchTerm<searchterms>`.

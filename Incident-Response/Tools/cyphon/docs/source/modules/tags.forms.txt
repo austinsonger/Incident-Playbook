@@ -1,0 +1,7 @@
+tags.forms
+==========
+
+.. automodule:: tags.forms
+    :members:
+    :undoc-members:
+    :show-inheritance:

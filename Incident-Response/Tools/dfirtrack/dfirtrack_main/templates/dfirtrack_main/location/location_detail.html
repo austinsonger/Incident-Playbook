@@ -1,0 +1,128 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    Location '{{ location.location_name }}'{% if location.system_set.all %} (s: {{ location.system_set.all|length }}){% endif %}
+</title>
+
+{% load static %}
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- up button -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <a href="{% url 'location_list' %}" type="button" class="btn btn-light copy-false">
+            <img src="{% static 'dfirtrack_main/icons/arrow-circle-top.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Up to locations
+        </a>
+    </div>
+</div>
+
+<!-- javascript for copy button -->
+<script>
+    var clipboard = new ClipboardJS('.btn');
+</script>
+
+<!-- location name row -->
+<div class="row">
+
+    <!-- location name -->
+    <div class="col-3">
+        <h5>
+            Location "{{ location.location_name }}"
+        </h5>
+    </div>
+
+    <!-- copy button -->
+    <div class="col-3">
+        {% if location.system_set.all %}
+            {% with systems=location.system_set.all %}
+                {% include "dfirtrack_main/includes/button_copy_hostnames.html" %}
+            {% endwith %}
+        {% endif %}
+    </div>
+
+<!-- location name row -->
+</div>
+
+<!-- location id -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <small class="text-muted">
+            Location-ID: {{ location.location_id }}
+        </small>
+    </div>
+</div>
+
+<!-- location note headline -->
+<div class="row">
+    <div class="col-3">
+        <h5>
+            Note
+        </h5>
+    </div>
+</div>
+
+<!-- location note -->
+<div class="row bottom-distance">
+    <div class="col">
+        {% if location.location_note %}
+            {{ location.location_note|linebreaks }}
+        {% else %}
+            ---
+        {% endif %}
+    </div>
+</div>
+
+<!-- system headline -->
+<div class="row">
+    <div class="col-6">
+        <h5>
+            Systems at this location{% if location.system_set.all %} ({{ location.system_set.all|length }}){% endif %}
+        </h5>
+    </div>
+</div>
+
+<!-- systems -->
+{% if location.system_set.all %}
+
+    {% for i in location.system_set.all %}
+        <div class="row top-distance">
+            <div class="col-3">
+                <a href="{{ i.get_absolute_url }}" type="button" class="btn btn-primary btn-sm copy-true">
+                    <img src="{% static 'dfirtrack_main/icons/monitor-light.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                    {{ i.system_name }}
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+
+<!-- no systems -->
+{% else %}
+<div class="row top-distance">
+    <div class="col-3">
+        ---
+    </div>
+</div>
+
+<!-- systems -->
+{% endif %}
+
+<a href="{{ location.get_update_url }}" type="button" class="btn btn-light top-distance copy-false">
+    <img src="{% static 'dfirtrack_main/icons/pencil.svg' %}" class="icon right-distance copy-false" alt="icon">
+    Edit
+</a>
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

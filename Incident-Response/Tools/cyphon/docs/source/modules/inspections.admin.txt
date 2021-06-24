@@ -1,0 +1,7 @@
+inspections.admin
+=================
+
+.. automodule:: inspections.admin
+    :members:
+    :undoc-members:
+    :show-inheritance:

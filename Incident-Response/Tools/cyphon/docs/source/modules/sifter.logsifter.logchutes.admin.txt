@@ -1,0 +1,7 @@
+sifter.logsifter.logchutes.admin
+================================
+
+.. automodule:: sifter.logsifter.logchutes.admin
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,4 @@
+[
+  {"from": "alert1", "to": "spam"},
+  {"from": "alert5", "to": "spam"}
+]

@@ -1,0 +1,27 @@
+.. _logmungers-graph:
+
+LogMungers Graph
+================
+
+.. figure:: ../_static/images/graphs/logmungers-graph.png
+    :target: ../_static/images/graphs/logmungers-graph.png
+    :alt: LogMungers model graph
+
+    Graph of models in the :ref:`logmungers` app and related apps.
+
+Overview
+--------
+
+.. include:: ../summaries/logmungers.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models logmungers distilleries logchutes logcondensers -X Chute,Condenser,LogParser,StringParser,Fitting -g -o logmungers-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`distilleries-graph`
+* :ref:`logchutes-graph`
+* :ref:`logcondensers-graph`
+* :ref:`mungers-graph`

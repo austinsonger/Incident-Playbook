@@ -1,0 +1,10 @@
+cyphon.tasks
+============
+
+.. automodule:: cyphon.tasks
+    :members:
+    :undoc-members:
+    :show-inheritance:
+    
+    .. autofunction:: get_new_mail()
+    .. autofunction:: run_health_check()

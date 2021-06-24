@@ -1,0 +1,7 @@
+static/
+docs/
+etc/
+.gitignore
+.travis.yml
+docker-compose.travis.yml
+README.md

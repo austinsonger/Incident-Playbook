@@ -1,0 +1,20 @@
+.. _funnels:
+
+aggregator.funnels
+==================
+
+.. image:: ../_static/images/icons/funnel.png
+    :width: 120px
+    :align: left
+
+.. include:: ../summaries/funnels.summary.txt
+
+:ref:`funnels-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   aggregator.funnels.admin
+   aggregator.funnels.models

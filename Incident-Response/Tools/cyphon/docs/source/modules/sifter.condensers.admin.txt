@@ -1,0 +1,7 @@
+sifter.condensers.forms
+=======================
+
+.. automodule:: sifter.condensers.forms
+    :members:
+    :undoc-members:
+    :show-inheritance:

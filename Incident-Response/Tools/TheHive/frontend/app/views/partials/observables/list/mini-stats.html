@@ -1,0 +1,22 @@
+<div class="row" ng-controller="ObservablesStatsCtrl as statsCtrl">
+    <div class="col-md-4">
+        <div class="stats-item-wrapper">
+            <stats-item title="Observables by type" mode="'chart'" field="dataType" data="statsCtrl.byType.details" on-item-clicked="addFilterValue(field, value)">
+            </stats-item>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="stats-item-wrapper">
+            <stats-item title="Observables as IOC" mode="'chart'" field="ioc" data="statsCtrl.byIoc.details" labels="statsCtrl.iocLabels" values="statsCtrl.iocValues" on-item-clicked="addFilterValue(field, value)">
+            </stats-item>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="stats-item-wrapper">
+            <stats-item title="Top 5 tags" mode="'chart'" field="tags" data="statsCtrl.byTags.details" on-item-clicked="addFilterValue(field, value)">
+            </stats-item>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+.. _mailcondensers:
+
+sifter.mailsifter.mailcondensers
+================================
+
+.. image:: ../_static/images/icons/condenser.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/mailcondensers.summary.txt
+
+:ref:`mailcondensers-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   sifter.mailsifter.mailcondensers.admin
+   sifter.mailsifter.mailcondensers.models
+   sifter.mailsifter.mailcondensers.autocomplete_light_registry

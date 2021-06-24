@@ -1,0 +1,75 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    Systemuser '{{ systemuser.systemuser_name }}' ({{ systemuser.system.system_name }}{% if systemuser.system.dnsname %}.{{ systemuser.system.dnsname }}{% endif %})
+</title>
+
+{% load static %}
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- up button -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <a href="{% url 'systemuser_list' %}" type="button" class="btn btn-light copy-false">
+            <img src="{% static 'dfirtrack_main/icons/arrow-circle-top.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Up to systemusers
+        </a>
+    </div>
+</div>
+
+
+<!-- systemuser name / system row -->
+<div class="row">
+    <div class="col-3">
+        <h5>
+            <!-- systemuser name -->
+            Systemuser "{{ systemuser.systemuser_name }}" at system
+            <!-- system -->
+            <a href="{{ systemuser.system.get_absolute_url }}" type="button" class="btn btn-primary btn-sm btn-lg copy-true">
+                <img src="{% static 'dfirtrack_main/icons/monitor-light.svg' %}" class="icon right-distance copy-false" alt="icon">
+                {{ systemuser.system.system_name }}
+            </a>
+            <!-- systemuser admin -->
+            {% if systemuser.systemuser_is_systemadmin %}
+                (Admin)
+            {% endif %}
+        </h5>
+    </div>
+</div>
+
+<!-- systemuser id -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <small class="text-muted">
+            Systemuser-ID: {{ systemuser.systemuser_id }}
+        </small>
+    </div>
+</div>
+
+<!-- systemuser last logon time -->
+<div class="row bottom-distance">
+    <div class="col-3">
+            Last logon: {{ systemuser.systemuser_lastlogon_time|date:"Y-m-d H:i" }}
+    </div>
+</div>
+
+<!-- edit button -->
+<a href="{{ systemuser.get_update_url }}" type="button" class="btn btn-light top-distance copy-false">
+    <img src="{% static 'dfirtrack_main/icons/pencil.svg' %}" class="icon right-distance copy-false" alt="icon">
+    Edit
+</a>
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

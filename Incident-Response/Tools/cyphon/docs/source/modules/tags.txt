@@ -1,0 +1,25 @@
+.. _tags:
+
+tags
+====
+
+.. image:: ../_static/images/icons/tag.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/tags.summary.txt
+
+:ref:`tags-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   tags.admin
+   tags.apps
+   tags.forms
+   tags.models
+   tags.serializers
+   tags.signals
+   tags.views

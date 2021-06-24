@@ -1,0 +1,3 @@
+|DataSieves| test whether data meets a certain set of criteria. When used by :ref:`DataChutes<datachutes>`, they determine whether data should proceed to :ref:`DataMungers<datamungers>` for processing. When used by :ref:`Watchdogs<watchdogs>`, they determine whether :ref:`Alerts<alerts>` should be generated.
+
+|DataSieves| are rulesets that are composed of one of more |DataSieveNodes|. A |DataSieveNode| can point to either a |DataRule| or another |DataSieve|. This permits the construction of complex, nested rulesets.

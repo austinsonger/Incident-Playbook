@@ -1,0 +1,190 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/mainpopup.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    Main config
+</title>
+
+{% load static %}
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- headline -->
+<div class="row col bottom-distance">
+    <h4>
+        Main config
+    </h4>
+</div>
+
+<!-- form -->
+<form method="POST" class="post-form">
+
+    {% csrf_token %}
+
+    <!-- show form related errors -->
+    {% include "dfirtrack_main/includes/form_errors.html" %}
+
+    <!-- row -->
+    <div class="row">
+
+        <!-- config block -->
+        <div class="col-6">
+
+            <div class="card card-body bg-dark border-light top-distance">
+
+                <h5>
+                    General options
+                </h5>
+
+                <table>
+                    <tr><td>{{ form.system_name_editable }}</td> <td>{{ form.system_name_editable.label }}</td></tr>
+                    <tr><td>{{ form.statushistory_entry_numbers }}</td> <td>{{ form.statushistory_entry_numbers.label }}</td></tr>
+                </table>
+
+                <h5 class="top-distance">
+                    Scheduled tasks options
+                </h5>
+
+                <!-- cron_export_path -->
+                <div class="row">
+
+                    <div class="col top-distance bottom-distance">
+                        {{ form.cron_export_path.label }}
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-12">
+                            {{ form.cron_export_path }}
+                    </div>
+
+                <!-- cron_export_path -->
+                </div>
+
+                <!-- cron_username -->
+                <div class="row">
+
+                    <div class="col top-distance bottom-distance">
+                        {{ form.cron_username.label }}
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-12">
+                            {{ form.cron_username }}
+                    </div>
+
+                <!-- cron_username -->
+                </div>
+
+            </div>
+
+        <!-- config block -->
+        </div>
+
+        <!-- artifactstatus_open block -->
+        <div class="col-6">
+            <div class="card card-body bg-dark border-light top-distance">
+
+                <h5>
+                    {{ form.artifactstatus_open.label }}
+                </h5>
+
+                <!-- errors -->
+                <div class="text-danger">
+                    {{ form.artifactstatus_open.errors }}
+                </div>
+                {% for i in form.artifactstatus_open %}
+                    {{ i }}<br>
+                {% endfor %}
+
+            <!-- artifactstatus_open block -->
+            </div>
+        </div>
+
+    <!-- row -->
+    </div>
+
+    <!-- row -->
+    <div class="row">
+
+        <!-- artifactstatus_requested block -->
+        <div class="col-6">
+
+            <div class="card card-body bg-dark border-light top-distance">
+
+                <h5>
+                    {{ form.artifactstatus_requested.label }}
+                </h5>
+
+                <!-- errors -->
+                <div class="text-danger">
+                    {{ form.artifactstatus_requested.errors }}
+                </div>
+                {% for i in form.artifactstatus_requested %}
+                    {{ i }}<br>
+                {% endfor %}
+
+            </div>
+
+        <!-- artifactstatus_requested block -->
+        </div>
+
+        <!-- artifactstatus_acquisition block -->
+        <div class="col-6">
+            <div class="card card-body bg-dark border-light top-distance">
+
+                <h5>
+                    {{ form.artifactstatus_acquisition.label }}
+                </h5>
+
+                <!-- errors -->
+                <div class="text-danger">
+                    {{ form.artifactstatus_acquisition.errors }}
+                </div>
+                {% for i in form.artifactstatus_acquisition %}
+                    {{ i }}<br>
+                {% endfor %}
+
+            <!-- artifactstatus_acquisition block -->
+            </div>
+        </div>
+
+    <!-- row -->
+    </div>
+
+    <!-- button row -->
+    <div class="row top-distance">
+
+        <!-- save button -->
+        <div class="col-2">
+            {% include "dfirtrack_main/includes/button_save.html" %}
+        </div>
+
+        <!-- cancel button -->
+        <div class="col-1">
+            {% include "dfirtrack_main/includes/button_cancel_popup.html" %}
+        </div>
+
+    <!-- button row -->
+    </div>
+
+<!-- form -->
+</form>
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

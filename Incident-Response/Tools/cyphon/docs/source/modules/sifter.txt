@@ -1,0 +1,23 @@
+.. _sifter:
+
+sifter
+======
+
+.. image:: ../_static/images/icons/sifter.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/sifter.summary.txt
+
+Subpackages
+-----------
+
+.. toctree::
+
+   sifter.chutes
+   sifter.condensers
+   sifter.mungers
+   sifter.sieves
+   sifter.datasifter
+   sifter.logsifter
+   sifter.mailsifter

@@ -1,0 +1,13 @@
+target.followees.models
+=======================
+
+.. figure:: ../_static/images/graphs/followees-graph.png
+    :target: ../graphs/followees.graph.html
+    :alt: Followees model graph
+
+    Graph of models in the :ref:`followees` app and related apps.
+
+.. automodule:: target.followees.models
+    :members:
+    :undoc-members:
+    :show-inheritance:

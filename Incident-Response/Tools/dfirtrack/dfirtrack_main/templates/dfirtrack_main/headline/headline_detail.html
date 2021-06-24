@@ -1,0 +1,57 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    Headline '{{ headline.headline_name }}'
+</title>
+
+{% load static %}
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- up button -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <a href="{% url 'headline_list' %}" type="button" class="btn btn-light copy-false">
+            <img src="{% static 'dfirtrack_main/icons/arrow-circle-top.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Up to headlines
+        </a>
+    </div>
+</div>
+
+<!-- headline name -->
+<div class="row">
+    <div class="col-3">
+        <h5>
+            Headline "{{ headline.headline_name }}"
+        </h5>
+    </div>
+</div>
+
+<!-- headline id -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <small class="text-muted">
+            Headline-ID: {{ headline.headline_id }}
+        </small>
+    </div>
+</div>
+
+<!-- edit button -->
+<a href="{{ headline.get_update_url }}" type="button" class="btn btn-light">
+    <img src="{% static 'dfirtrack_main/icons/pencil.svg' %}" class="icon" alt="icon">
+    Edit
+</a>
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

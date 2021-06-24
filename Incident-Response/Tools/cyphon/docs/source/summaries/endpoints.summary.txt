@@ -1,0 +1,1 @@
+|Endpoints| are REST API endpoints of third-party :ref:`Platforms<platforms>`. They can represent :ref:`Actions<actions>` or :ref:`Pipes<pipes>`.

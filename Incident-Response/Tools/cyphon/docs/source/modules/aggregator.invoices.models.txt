@@ -1,0 +1,13 @@
+aggregator.invoices.models
+==========================
+
+.. figure:: ../_static/images/graphs/invoices-graph.png
+    :target: ../graphs/invoices.graph.html
+    :alt: Invoices model graph
+
+    Graph of models in the :ref:`invoices` app and related apps.
+
+.. automodule:: aggregator.invoices.models
+    :members:
+    :undoc-members:
+    :show-inheritance:

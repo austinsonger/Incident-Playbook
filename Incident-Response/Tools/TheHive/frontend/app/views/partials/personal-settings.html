@@ -1,0 +1,273 @@
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <h3>
+            <center>Settings</center>
+        </h3>
+
+        <!-- Update basic user information -->
+        <form name="basicForm" class="form-horizontal" ng-submit="updateBasicInfo(basicForm)" novalidate>
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">Update basic information</h3>
+                </div>
+                <div class="box-body">
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Username</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control input-sm" ng-model="basicData.username" readonly/>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error' : !basicForm.name.$pristine && basicForm.name.$invalid}">
+                        <label class="col-md-3 control-label">Full name
+                            <i class="fa fa-asterisk text-danger"></i>
+                        </label>
+                        <div class="col-md-9">
+                            <input type="text" name="name" class="form-control input-sm" placeholder="Full name" ng-model="basicData.name" required/>
+                            <div ng-messages="basicForm.name.$error" ng-show="!basicForm.name.$pristine && basicForm.name.$error">
+                                <div ng-messages-include="settings-error.html"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group" ng-class="{ 'has-error' : basicForm.avatar.$error.maxsize}">
+                        <label class="col-md-3 control-label">Avatar</label>
+                        <div class="col-md-9">
+                            <div ng-show="!basicData.avatarB64 && !basicData.avatar">
+                                <div style="width: 100px;">
+                                    <img alt="User avatar" src="images/no-avatar.png"/>
+                                    <input type="file" class="mt-xxs avatar-input" ng-model="avatarB64" id="avatar-input" name="avatar"
+                                        accept="image/jpg|image/png|image/jpeg"
+                                        maxsize="500"
+                                        base-sixty-four-input
+                                        do-not-parse-if-oversize>
+                                    <label for="avatar-input" class="mt-xxs btn btn-block btn-sm btn-primary">Choose File</label>
+                                </div>
+                                <div class="help-block">Images must not exceed 500 KB. Recommended dimensions are 100x100px</div>
+
+                            </div>
+
+                            <div ng-show="basicData.avatar || basicData.avatarB64" style="width: 100px;">
+                                <img ng-if="basicData.avatar" alt="User avatar" data-ng-src=".{{basicData.avatar}}"/>
+                                <img ng-if="basicData.avatarB64" alt="User avatar" data-ng-src="{{'data:image/jpeg;base64,' + basicData.avatarB64}}"/>
+                                <!-- <img alt="User avatar" data-ng-src="{{'data:image/jpeg;base64,' + basicData.avatar}}"/> -->
+                                <br>
+                                <button class="mt-xxs btn btn-block btn-sm btn-danger" type="button" ng-click="clearAvatar(basicForm)">Clear</button>
+                            </div>
+
+                            <div ng-messages="basicForm.avatar.$error" ng-show="!basicForm.avatar.$pristine && basicForm.avatar.$error">
+                                <div ng-messages-include="settings-error.html"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Profile</label>
+                        <div class="col-md-9">
+                            <p class="form-control-static">{{currentUser.profile}}</p>
+                            <permission-list permissions="currentUser.permissions" showLabel="false"></permission-list>
+                        </div>
+                    </div>
+
+                    <div class="mt-s">
+                        <button class="btn btn-default" ng-click="cancel()" type="button">Cancel</button>
+                        <span class="ml-xxs">
+                            <i class="fa fa-asterisk text-danger"></i>&nbsp;Required field</span>
+                        <button class="btn btn-primary pull-right" ng-disabled="basicForm.$invalid" type="submit">Save</button>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+
+        <!-- Update user password -->
+        <form ng-if="canChangePass" class="form-horizontal mt-s" name="passForm" ng-submit="updatePassword(passForm);" novalidate>
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title"><input type="checkbox" ng-model="passData.changePassword" ng-click="clearPassword(passForm, passData.changePassword)">
+                        Update password</h3>
+                </div>
+                <div class="box-body" ng-show="passData.changePassword">
+                    <div class="form-group" ng-class="{ 'has-error' : !passForm.currentPassword.$pristine && passForm.currentPassword.$invalid}">
+                        <label class="col-md-3 control-label">Old password
+                            <i class="fa fa-asterisk text-danger"></i>
+                        </label>
+                        <div class="col-md-9">
+                            <input type="password" name="currentPassword" class="form-control input-sm" placeholder="Current password" autocomplete="off" ng-model="passData.currentPassword" ng-required="passData.changePassword"/>
+                            <div ng-messages="passForm.currentPassword.$error" ng-show="!passForm.currentPassword.$pristine && passForm.currentPassword.$error">
+                                <div ng-messages-include="settings-error.html"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group" ng-class="{ 'has-error' : !passForm.password.$pristine && passForm.password.$invalid}">
+                        <label class="col-md-3 control-label">New password
+                            <i class="fa fa-asterisk text-danger"></i>
+                        </label>
+                        <div class="col-md-9">
+                            <input type="password" name="password" class="form-control input-sm" placeholder="New password" autocomplete="off" ng-model="passData.password" ng-required="passData.changePassword"/>
+                            <div ng-messages="passForm.password.$error" ng-show="!passForm.password.$pristine && passForm.password.$error">
+                                <div ng-messages-include="settings-error.html"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group" ng-class="{ 'has-error' : !passForm.confirmPassword.$pristine && passForm.confirmPassword.$invalid}">
+                        <label class="col-md-3 control-label">Confirm new password
+                            <i class="fa fa-asterisk text-danger"></i>
+                        </label>
+                        <div class="col-md-9">
+                            <input type="password" name="confirmPassword" class="form-control input-sm" placeholder="Confirm Password" compare-to="passData.password" autocomplete="off" ng-model="passData.passwordConfirm" ng-required="passData.changePassword"/>
+                            <div ng-messages="passForm.confirmPassword.$error" ng-show="!passForm.confirmPassword.$pristine && passForm.confirmPassword.$error">
+                                <div ng-messages-include="settings-error.html"></div>
+                            </div>
+                            <div ng-class="{'has-error': passData.password!=passData.password2, 'has-success': passData.password==passData.password2 && passData.password1!=''}">
+                                <div ng-show="passData.password1 != passData.password2">Oops, that's not the same password as the first one</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-s">
+                        <button class="btn btn-default" ng-click="cancel()" type="button">Cancel</button>
+                        <span class="ml-xxs">
+                            <i class="fa fa-asterisk text-danger"></i>&nbsp;Required field</span>
+                        <button class="btn btn-primary pull-right" ng-disabled="passForm.$invalid" type="submit">Save</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!-- Update API Key -->
+        <form ng-if="canChangeKey">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">API Key</h3>
+                </div>
+                <div class="box-body">
+                    <div class="callout callout-warning mv-0" ng-if="!currentUser.hasKey">
+                        <h4>You don't have any API key.</h4>
+                        <p> Please contact your organization's administrator.</p>
+                    </div>
+                    <div class="form-group" ng-if="currentUser.hasKey">
+                        <p>You have an API key defined. You can renew it if needed.</p>
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <span class="btn btn-default" ng-click="createKey()">Renew</span>
+                                <span class="btn btn-primary" ng-click="getKey()" ng-if="!keyData.key">Reveal</span>
+                            </span>
+                            <input class="form-control" readonly ng-model="keyData.key" ng-if="keyData.key">
+                            <span class="input-group-btn" ng-if="keyData.key">
+                                <button class="btn btn-primary" type="button" ng-click="copyKey()">
+                                    <i class="fa fa-copy"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!-- Update mfa -->
+        <form ng-if="canChangeMfa" class="mt-s" name="mfaForm" ng-submit="setMfaSettings(mfaForm);" novalidate>
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">
+                        <input type="checkbox" ng-model="mfaData.enabled" ng-change="enableMfa()" ng-disabled="currentUser.hasMFA">
+                        Enable Multi-Factor Authentication
+                    </h3>
+                </div>
+                <div class="box-body" ng-show="mfaData.enabled === true">
+                    <div ng-if="currentUser.hasMFA === true" class="text-center">
+                        Your have enabled Multi-Factor Authentication, do you want to disabled it?
+                        <div class="mv-s">
+                            <button type="button" class="btn btn-danger" ng-click="resetMfa()">Disable MFA</button>
+                        </div>
+                    </div>
+
+                    <div ng-if="currentUser.hasMFA === false">
+                        <div class="mb-m text-center">
+                            Your are going to enable Multi-Factor Authentication.
+                            Use the QRCode or the Secret to generate a MFA code and submit it.
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                                <div class="alert bg-primary">
+                                    Need a two-step authenticator app? Download one of the following:
+                                    <div>
+                                        <i class="fa fa-apple"></i> iOS devices: <a href="https://apps.apple.com/fr/app/authy/id494168017" target="_blank">Authy</a>
+                                    </div>
+                                    <div>
+                                        <i class="fa fa-android"></i> Android devices: <a href="https://play.google.com/store/apps/details?id=com.authy.authy&hl=fr" target="_blank">Authy</a>
+                                    </div>
+                                    <div>
+                                        <i class="fa fa-windiws"></i> Windows devices: <a href="https://www.microsoft.com/en-us/p/microsoft-authenticator/9nblgggzmcj6" target="_blank">Microsoft Authenticator</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="text-center" ng-if="mfaData.uri">
+                            <qr text="mfaData.uri"></qr>
+                        </div>
+
+                        <div class="text-center mv-s" ng-if="mfaData.secret">
+                            <h3>{{mfaData.secret}}</h3>
+                            <div>
+                                <a href ng-click="copySecret(mfaData.secret)"><i class="fa fa-copy"></i> Copy secret </a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-xs-offset-3 col-xs-6 form-group" ng-class="{ 'has-error' : !mfaForm.mfaCode.$pristine && mfaForm.mfaCode.$invalid}">
+                                <label class="control-label">Code
+                                    <i class="fa fa-asterisk text-danger"></i>
+                                </label>
+                                <input type="number" name="mfaCode" class="form-control input-lg text-center"
+                                    placeholder="MFA Code" autocomplete="off"
+                                    ng-model="mfaData.code"
+                                    ng-required="!currentUser.hasMFA"/>
+                                <div ng-messages="mfaForm.mfaCode.$error" ng-show="!mfaForm.mfaCode.$pristine && mfaForm.mfaCode.$error">
+                                    <div ng-messages-include="settings-error.html"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="mt-s">
+                            <button class="btn btn-default" ng-click="cancel()" type="button">Cancel</button>
+                            <span class="ml-xxs">
+                                <i class="fa fa-asterisk text-danger"></i>&nbsp;Required field</span>
+                            <!-- <button class="btn btn-primary pull-right" ng-disabled="mfaForm.$invalid" type="submit">Save</button> -->
+                            <button class="btn btn-primary pull-right" ng-disabled="!mfaData.code" type="submit">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<script id="settings-error.html" type="text/ng-template">
+    <div class="mt-xxs text-danger" ng-message="required">
+        This field is required
+    </div>
+    <div class="mt-xxs text-danger" ng-message="minlength">
+        <span translate="error.form.minlength"></span>
+    </div>
+    <div class="mt-xxs text-danger" ng-message="maxlength">
+        <span translate="error.form.maxlength"></span>
+    </div>
+    <div class="mt-xxs text-danger" ng-message="maxsize">
+        Files must not exceed 500 KB
+    </div>
+    <div class="mt-xxs text-danger" ng-message="compareTo">
+        Oops, that's not the same password as the first one
+    </div>
+    <div class="mt-xxs text-danger" ng-message="mfaInvalid">
+        Oops, that's not a valid MFA code
+    </div>
+</script>

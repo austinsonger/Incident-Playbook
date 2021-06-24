@@ -1,0 +1,146 @@
+.. _cyphon-overview:
+
+############################
+Cyphon Architecture Overview
+############################
+
+Cyphon ingests, sifts, reshapes, enhances, and stores data. It can also generate alerts, retrieve data related to the context of an alert, and allow users to take actions on alerts. Below is a brief overview of the Cyphon packages that provide these functionalities.
+
+
+************
+Getting Data
+************
+
+.. image:: ../_static/images/icons/aggregator.png
+    :target: ../architecture/collecting-data.html
+    :width: 100px
+    :align: left
+
+Cyphon can gather data from emails, logs, and external APIs, such as Twitter. In some cases, Cyphon must listen for incoming data, while in other cases, it must actively request new data. Cyphon's |Aggregator| and |Responder| packages coordinate requests to external APIs. Cyphon uses `Django Mailbox`_ to ingest emails, and it works with Logstash_ and RabbitMQ_ to gather logs.
+
+:ref:`Read More<collecting-data>`
+
+
+************
+Sifting Data
+************
+
+.. image:: ../_static/images/icons/sifter.png
+    :width: 100px
+    :align: left
+
+As Cyphon ingests data, it examines the data to determine how it should be processed. Based on the data's characteristics, it can be sent to a specific parser and storage location. This preliminary sorting is performed by |Chutes| and |Sieves| within Cyphon's :ref:`Sifter<sifter>` package. The :ref:`Sifter<sifter>` package contains separate subpackages for sifting through incoming emails, logs, and API data.
+
+
+**************
+Reshaping Data
+**************
+
+.. image:: ../_static/images/icons/condenser.png
+    :width: 100px
+    :align: left
+
+Once data has been sorted, it can be transformed into a custom data model using the :ref:`Bottler<bottler>` package, which defines |Containers| for holding data. Data is "bottled" with the help of a |Condenser|, which converts the data into the model defined by the |Container|'s |Bottle|. |Condensers| are controlled by |Mungers|, which process data that has passed through a |Chute|'s |Sieve|.
+
+
+**************
+Enhancing Data
+**************
+
+.. image:: ../_static/images/icons/procedure.png
+    :width: 100px
+    :align: left
+
+After data has been "bottled", it can be analyzed using |Inspections| in the :ref:`Inspections<inspections>` package and |Procedures| in the :ref:`Lab<lab>` package. An |Inspection| tests data against a set of rules and returns a predefined value if the data is a match. A |Procedure| is used to perform more complicated analyses, such as language detection. The results of |Inspections| and |Procedures| can be attached to data using :ref:`Labels<labels>`.
+
+
+***************
+Distilling Data
+***************
+
+.. image:: ../_static/images/icons/distillery.png
+    :width: 100px
+    :align: left
+
+
+The :ref:`Distilleries<distilleries>` package coordinates several aspects of data processing. A |Distillery| specifies the |Container| for a set of documents, the |Collection| where they are stored, and the :ref:`Categories<categories>` associated with the documents. A |Distillery| can also enhance data before storing it by applying :ref:`Labels<labels>`, and it can construct teasers for those documents using :ref:`Tastes<tastes>`.
+
+
+************
+Storing Data
+************
+
+.. image:: ../_static/images/icons/warehouse.png
+    :width: 100px
+    :align: left
+
+The :ref:`Warehouses<warehouses>` package allows Cyphon to save and retrieve data. Cyphon supports both Elasticsearch_ and MongoDB_ storage engines. A |Warehouse| can represent an Elasticsearch index or a MongoDB database, and a |Collection| within a |Warehouse| can represent an Elasticsearch document type or a MongoDB collection. The :ref:`Engines<engines>` package provides interfaces for these backends.
+
+
+*****************
+Generating Alerts
+*****************
+
+.. image:: ../_static/images/icons/alarm.png
+    :target: ../architecture/generating-alerts.html
+    :width: 100px
+    :align: left
+
+Cyphon can generate alerts based on either the characteristics of the data itself or the rate at which the data is being saved. The :ref:`Watchdogs<watchdogs>` package analyzes the data being saved and generates alerts for data that meet certain conditions. The :ref:`Monitors<monitors>` package monitors data flow and generates alerts if data is not being saved at an expected rate. The :ref:`Alerts<alerts>` package manages records of these alerts.
+
+:ref:`Read More<generating-alerts>`
+
+
+**************
+Tagging Alerts
+**************
+
+.. image:: ../_static/images/icons/tag.png
+    :width: 100px
+    :align: left
+
+The :ref:`Tags<tags>` package is used to automagically tag |Alerts|, |Comments|, and |Analyses|. |Tags| can link to |Articles|, which can provide detailed information to help diagnose and remediate |Alerts|. |DataTaggers| can create new |Tags| from specific data fields from |Alerts|.
+
+
+********************
+Investigating Alerts
+********************
+
+.. image:: ../_static/images/icons/query.png
+    :width: 100px
+    :align: left
+
+The :ref:`Contexts<contexts>` package allows users to quickly investigate incidents by locating data that may pertain to an |Alert|. A |Context| uses the data from an |Alert| to find related documents in a specific |Collection|. |Contexts| can perform searches based on relative time frames and/or specific data fields, using values from an alert-related event.
+
+
+********************
+Responding to Alerts
+********************
+
+.. image:: ../_static/images/icons/responder.png
+    :width: 100px
+    :align: left
+
+The |Responder| package allows users to take action on :ref:`Alerts<alerts>`. An |Action| takes an |Alert| and sends a request to a REST API to perform a predefined operation. The response from the API is saved as a |Dispatch|. The |Dispatch| also saves a |Stamp| of the API call, which shows the |AppUser| who made the API call, the start and end times of the call, and the |Passport| used to authenticate the call.
+
+
+**************
+Managing Users
+**************
+
+.. image:: ../_static/images/icons/users.png
+    :width: 100px
+    :align: left
+
+Cyphon manages users with the :ref:`AppUsers<appusers>` package. An |AppUser| is a modified version of Django's default |User| model. |AppUser| permissions can be managed either on a per-user basis or by creating user |Groups| with specific permissions. |Groups| can also be associated with :ref:`Alarms<alarms>`, which can be used to filter :ref:`Alerts<alerts>`.
+
+
+**********
+Learn More
+**********
+
+.. toctree::
+   :maxdepth: 1
+  
+   collecting-data
+   generating-alerts

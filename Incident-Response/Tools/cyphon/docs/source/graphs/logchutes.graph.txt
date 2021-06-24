@@ -1,0 +1,26 @@
+.. _logchutes-graph:
+
+LogChutes Graph
+===============
+
+.. figure:: ../_static/images/graphs/logchutes-graph.png
+    :target: ../_static/images/graphs/logchutes-graph.png
+    :alt: LogChutes model graph
+
+    Graph of models in the :ref:`logchutes` app and related apps.
+
+Overview
+--------
+
+.. include:: ../summaries/logchutes.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models logchutes logmungers logsieves -I LogChute,LogCondenser,LogMunger,LogSieve -g -o logchutes-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`chutes-graph`
+* :ref:`logmungers-graph`
+* :ref:`logsieves-graph`

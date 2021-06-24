@@ -1,0 +1,27 @@
+.. _datamungers-graph:
+
+DataMungers Graph
+=================
+
+.. figure:: ../_static/images/graphs/datamungers-graph.png
+    :target: ../_static/images/graphs/datamungers-graph.png
+    :alt: DataMungers model graph
+
+    Graph of models in the :ref:`datamungers` app and related apps.
+
+Overview
+--------
+
+.. include:: ../summaries/datamungers.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models datamungers datachutes datacondensers distilleries -X Chute,Condenser,DataParser,FieldParser,Fitting -g -o datamungers-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`datachutes-graph`
+* :ref:`datacondensers-graph`
+* :ref:`distilleries-graph`
+* :ref:`mungers-graph`

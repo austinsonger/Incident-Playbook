@@ -1,0 +1,94 @@
+[
+  {
+    "model": "funnels.reducer",
+    "fields": {
+      "id": 1,
+      "name": "created_at__COPY",
+      "source_fields": "created_at",
+      "method": "COPY"
+    }
+  },
+  {
+    "model": "funnels.reducer",
+    "fields": {
+      "id": 2,
+      "name": "coordinates.coordinates__COPY",
+      "source_fields": "coordinates.coordinates",
+      "method": "COPY"
+    }
+  },
+  {
+    "model": "funnels.reducer",
+    "fields": {
+      "id": 3,
+      "name": "text__COPY",
+      "source_fields": "text",
+      "method": "COPY"
+    }
+  },
+  {
+    "model": "funnels.reducer",
+    "fields": {
+      "id": 4,
+      "name": "user.id_str__COPY",
+      "source_fields": "user.id_str",
+      "method": "COPY"
+    }
+  },
+  {
+    "model": "funnels.reducer",
+    "fields": {
+      "id": 5,
+      "name": "user.name__COPY",
+      "source_fields": "user.name",
+      "method": "COPY"
+    }
+  },
+  {
+    "model": "funnels.reducer",
+    "fields": {
+      "id": 6,
+      "name": "user.screen_name__COPY",
+      "source_fields": "user.screen_name",
+      "method": "COPY"
+    }
+  },
+  {
+    "model": "funnels.reducer",
+    "fields": {
+      "id": 7,
+      "name": "user.profile_image_url__COPY",
+      "source_fields": "user.profile_image_url",
+      "method": "COPY"
+    }
+  },
+    {
+    "model": "funnels.reducer",
+    "fields": {
+      "id": 8,
+      "name": "twitter__content_link",
+      "source_fields": "user.screen_name, id_str",
+      "formatter": "https://twitter.com/%s/statuses/%s",
+      "method": "COPY"
+    }
+  },
+  {
+    "model": "funnels.reducer",
+    "fields": {
+      "id": 9,
+      "name": "twitter__user_link",
+      "source_fields": "user.screen_name",  
+      "formatter": "https://twitter.com/%s/",
+      "method": "COPY"
+    }
+  },
+  {
+    "model": "funnels.reducer",
+    "fields": {
+      "id": 10,
+      "name": "twitter__content_image",
+      "source_fields": "entities.media[0].media_url_https",  
+      "method": "COPY"
+    }
+  }
+]

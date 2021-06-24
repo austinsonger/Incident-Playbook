@@ -1,0 +1,72 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="btn-toolbar" role="toolbar">
+            <div class="btn-group" if-permission="manageObservable" allowed="{{userPermissions}}" uib-dropdown is-open="status.isopen">
+                <button class="btn btn-sm btn-default dropdown-toggle" uib-dropdown-toggle ng-disabled="selection.artifacts.length == 0" type="button">
+                    <ng-pluralize count="selection.artifacts.length" when="{'0': 'No observable selected', 'one': '{} selected observable', 'other': '{} selected observables'}"></ng-pluralize>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" uib-dropdown-menu>
+                    <li>
+                        <a ng-click="bulkEdit()"><i class="fa fa-edit"></i> Edit</a>
+                    </li>
+
+                    <li ng-if="analysisEnabled" if-permission="manageAnalyse" allowed="{{userPermissions}}">
+                        <a ng-click="bulkAnalyze();"><i class="glyphicon glyphicon-fire"></i> Run analyzers</a>
+                    </li>
+
+                    <li class="divider"></li>
+                    <li>
+                        <a href ng-click="removeObservables()">
+                            <i class="fa fa-trash"></i> Delete
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="btn-group" if-permission="manageObservable" allowed="{{userPermissions}}">
+                <button class="btn btn-sm btn-primary" ng-click="addArtifact()">
+                    <i class="glyphicon glyphicon-plus"></i>
+                    Add observable(s)
+                </button>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-sm btn-default" ng-disabled="selection.artifacts.length == 0" ng-click="showExport()">
+                    <i class="fa fa-download"></i>
+                    Export
+                </button>
+            </div>
+
+            <div class="btn-group pull-right" role="group">
+                <page-sizer collection="artifacts" sizes="[10, 15, 30, 100]"></page-sizer>
+            </div>
+
+            <div class="btn-group pull-right" role="group">
+                <button class="btn btn-sm" ng-class="{true: 'btn-primary', false:'btn-default'}[filtering.context.showFilters]" type="button" ng-click="toggleFilters()">
+                    <i class="fa fa-search"></i> Filters
+                </button>
+            </div>
+
+            <div class="btn-group pull-right" role="group">
+                <button class="btn btn-sm" ng-class="{true: 'btn-primary', false:'btn-default'}[filtering.context.showStats]" type="button" ng-click="toggleStats()">
+                    <i class="fa fa-bar-chart"></i> Stats
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-xs stats-panel" ng-include="'views/partials/observables/list/mini-stats.html'" ng-if="filtering.context.showStats"></div>
+
+<div class="mt-xs filter-panel" ng-include="'views/partials/observables/list/filters.html'" ng-show="filtering.context.showFilters"></div>
+
+<!-- Main page : Table + Text/CSV -->
+<div class="mt-xs row">
+    <div class="selection" ng-if="showExportPanel">
+        <div ng-include="'views/partials/observables/list/export.html'"></div>
+    </div>
+    <div class="selection" ng-if="!showExportPanel">
+        <div ng-include="'views/partials/observables/list/observables.html'"></div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+sifter.mungers.models
+=====================
+
+.. automodule:: sifter.mungers.models
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,7 @@
+sifter.mailsifter.attachments
+=============================
+
+.. automodule:: sifter.mailsifter.attachments
+    :members:
+    :undoc-members:
+    :show-inheritance:

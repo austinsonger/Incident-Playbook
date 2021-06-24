@@ -1,0 +1,40 @@
+# Creates a minimal stack for testing Cyphon Engine on Travis CI.
+#
+# Copyright 2017-2019 ControlScan, Inc.
+#
+# This file is part of Cyphon Engine.
+#
+# Cyphon Engine is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, version 3 of the License.
+#
+# Cyphon Engine is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with Cyphon Engine. If not, see <http://www.gnu.org/licenses/>.
+
+version: '2'
+
+services:
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:5.4.0
+    environment:
+      - http.host=0.0.0.0
+      - transport.host=127.0.0.1
+      - xpack.security.enabled=0
+    ports:
+      - "9200:9200"
+
+  geoip:
+    image: dunbar/geoip:latest
+    volumes:
+      - /home/travis/build/dunbarcyber/cyphon/GeoIP:/usr/share/cyphondock
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"

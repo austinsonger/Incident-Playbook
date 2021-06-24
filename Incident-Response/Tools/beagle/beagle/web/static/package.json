@@ -1,0 +1,59 @@
+{
+    "name": "beagle",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "formsy-react": "^1.1.5",
+        "formsy-semantic-ui-react": "^0.3.3",
+        "lodash": "^4.17.11",
+        "object-hash": "^1.3.1",
+        "react": "^16.8.3",
+        "react-contextmenu": "^2.10.0",
+        "react-dom": "^16.8.3",
+        "react-dropzone": "^9.0.0",
+        "react-graph-vis": "^1.0.2",
+        "react-redux": "^6.0.1",
+        "react-redux-toastr": "^7.4.8",
+        "react-router-dom": "^4.3.1",
+        "react-scripts-ts": "^4.0.8",
+        "react-vis": "^1.11.6",
+        "react-visjs-timeline": "^1.5.0",
+        "redux-undo": "^1.0.0-beta9-9-7",
+        "reselect": "^4.0.0",
+        "semantic-ui-css": "^2.4.1",
+        "semantic-ui-react": "^0.84.0",
+        "tslib": "^1.10.0",
+        "underscore": "^1.9.1",
+        "vis": "^4.21.0"
+    },
+    "scripts": {
+        "start": "react-scripts-ts start",
+        "build": "react-scripts-ts build",
+        "test": "react-scripts-ts test --env=jsdom",
+        "eject": "react-scripts-ts eject"
+    },
+    "devDependencies": {
+        "@types/object-hash": "^1.2.0",
+        "@types/react-redux-toastr": "^7.4.1",
+        "@types/react-router-dom": "^4.3.1",
+        "@types/vis": "^4.21.11",
+        "@types/jest": "^23.3.14",
+        "@types/lodash": "^4.14.121",
+        "@types/node": "^10.12.29",
+        "@types/react": "^16.8.6",
+        "@types/react-dom": "^16.8.2",
+        "@types/react-dropzone": "^4.2.2",
+        "@types/react-redux": "^6.0.13",
+        "@types/redux-logger": "^3.0.7",
+        "@types/semantic-ui": "^2.2.7",
+        "gulp": "^4.0.0",
+        "redux-logger": "^3.0.6",
+        "typescript": "^3.3.3333"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ]
+}

@@ -1,0 +1,13 @@
+codebooks.models
+================
+
+.. figure:: ../_static/images/graphs/codebooks-graph.png
+    :target: ../graphs/codebooks.graph.html
+    :alt: CodeBooks model graph
+
+    Graph of models in the :ref:`codebooks` app and related apps.
+
+.. automodule:: codebooks.models
+    :members:
+    :undoc-members:
+    :show-inheritance:

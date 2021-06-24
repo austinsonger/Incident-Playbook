@@ -1,0 +1,27 @@
+.. _plumbers-graph:
+
+Plumbers Graph
+==============
+
+.. figure:: ../_static/images/graphs/plumbers-graph.png
+    :target: ../_static/images/graphs/plumbers-graph.png
+    :alt: Plumbers model graph
+
+    Graph of models in the :ref:`plumbers` app and related apps.
+
+Overview
+--------
+
+.. include:: ../summaries/plumbers.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models plumbers passports pipes visas -X Endpoint,PipeSpecSheet -g -o plumbers-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`emissaries-graph`
+* :ref:`passports-graph`
+* :ref:`pipes-graph`
+* :ref:`visas-graph`

@@ -1,0 +1,7 @@
+platforms.registry
+==================
+
+.. automodule:: platforms.registry
+    :members:
+    :undoc-members:
+    :show-inheritance:

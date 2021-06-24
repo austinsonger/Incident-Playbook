@@ -1,0 +1,29 @@
+.. _searchterms:
+
+target.searchterms
+==================
+
+.. image:: ../_static/images/icons/searchterm.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/searchterms.summary.txt
+
+:ref:`searchterms-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   target.searchterms.admin
+   target.searchterms.models
+   target.searchterms.serializers
+
+Module contents
+---------------
+
+.. automodule:: target.searchterms
+    :members:
+    :undoc-members:
+    :show-inheritance:

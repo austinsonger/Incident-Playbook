@@ -1,0 +1,7 @@
+responder.dispatches.admin
+==========================
+
+.. automodule:: responder.dispatches.admin
+    :members:
+    :undoc-members:
+    :show-inheritance:

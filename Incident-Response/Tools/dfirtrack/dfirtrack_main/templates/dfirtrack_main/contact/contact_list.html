@@ -1,0 +1,128 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    DFIRTrack - Contacts
+</title>
+
+{% load static %}
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- headline -->
+<div class="row bottom-distance">
+    <div class="col">
+        <h5>
+            Contacts
+        </h5>
+    </div>
+</div>
+
+<!-- headlines -->
+<div class="row font-weight-bold">
+
+    <!-- contact id headline -->
+    <div class="col-1">
+        ID
+    </div>
+
+    <!-- contact name headline -->
+    <div class="col-2">
+        Contact name
+    </div>
+
+    <!-- contact phone headline -->
+    <div class="col-2">
+        Contact phone
+    </div>
+
+    <!-- contact email headline -->
+    <div class="col-2">
+        Contact email
+    </div>
+
+    <!-- contact note headline -->
+    <div class="col-4">
+        Note
+    </div>
+
+<!-- headlines -->
+</div>
+
+<!-- contact list -->
+{% for i in contact_list %}
+
+    <!-- contact row -->
+    <div class="row top-distance">
+
+        <!-- contact id -->
+        <div class="col-1">
+            {{ i.contact_id }}
+        </div>
+
+        <!-- contact name -->
+        <div class="col-2">
+            <a href="{{ i.get_absolute_url }}">
+                {{ i.contact_name }}
+            </a>
+        </div>
+
+        <!-- contact phone -->
+        <div class="col-2">
+            {% if i.contact_phone %}
+                {{ i.contact_phone }}
+            {% else %}
+                ---
+            {% endif %}
+        </div>
+
+        <!-- contact email -->
+        <div class="col-2">
+            {{ i.contact_email }}
+        </div>
+
+        <!-- contact note -->
+        <div class="col-4">
+            {% if i.contact_note %}
+                {{ i.contact_note|linebreaks }}
+            {% else %}
+                ---
+            {% endif %}
+        </div>
+
+        <!-- edit button -->
+        <div class="col-1">
+            <a href="{{ i.get_update_url }}" type="button" class="btn btn-sm btn-light copy-false">
+                <img src="{% static 'dfirtrack_main/icons/pencil.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                Edit
+            </a>
+        </div>
+
+    <!-- contact row -->
+    </div>
+
+<!-- contact list -->
+{% endfor %}
+
+<!-- add button -->
+<div class="row top-distance">
+    <div class="col-1">
+        <a href="{% url 'contact_create' %}" type="button" class="btn btn-light copy-false">
+            <img src="{% static 'dfirtrack_main/icons/plus.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Add contact
+        </a>
+    </div>
+</div>
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

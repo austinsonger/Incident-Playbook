@@ -1,0 +1,20 @@
+.. _invoices:
+
+aggregator.invoices
+===================
+
+.. image:: ../_static/images/icons/invoice.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/invoices.summary.txt
+
+:ref:`invoices-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   aggregator.invoices.admin
+   aggregator.invoices.models

@@ -1,0 +1,157 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    DFIRTrack - Entries
+</title>
+
+{% load static %}
+
+<!-- javascript and CSS for datatables -->
+<link rel="stylesheet" type="text/css" href="{% static 'dfirtrack_main/datatables-1.10.16/datatables.min.css' %}"/>
+<script src="{% static 'dfirtrack_main/datatables-1.10.16/datatables.js' %}"></script>
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- headline -->
+<div class="row bottom-distance">
+    <div class="col">
+        <h5>
+            Entries
+        </h5>
+    </div>
+</div>
+
+<!-- entry datatable -->
+<table id="table_entry" class="display" width="100%">
+
+    <!-- table head -->
+    <thead>
+
+        <!-- headline row -->
+        <tr>
+
+            <!-- entry id -->
+            <th>
+                ID
+            </th>
+
+            <!-- entry date -->
+            <th>
+                Date
+            </th>
+
+            <!-- entry time -->
+            <th>
+                Time (UTC)
+            </th>
+
+            <!-- entry system -->
+            <th>
+                System
+            </th>
+
+            <!-- entry type -->
+            <th>
+                Type
+            </th>
+
+            <!-- entry content -->
+            <th>
+                Content
+            </th>
+
+        <!-- headline row -->
+        </tr>
+
+    <!-- table head -->
+    </thead>
+
+    <!-- table body -->
+    <tbody>
+
+        <!-- entries -->
+        {% for i in entry_list %}
+
+            <!-- table row -->
+            <tr>
+
+                <!-- entry id -->
+                <td>
+                    <a href="{{ i.get_absolute_url }}">
+                        {{ i.entry_id }}
+                    </a>
+                </td>
+
+                <!-- entry date -->
+                <td>
+                    {{ i.entry_date }}
+                </td>
+
+                <!-- entry time -->
+                <td>
+                    {{ i.entry_utc }}
+                </td>
+
+                <!-- entry system -->
+                <td>
+                    {{ i.entry_system }}
+                </td>
+
+                <!-- entry type -->
+                <td>
+                    {{ i.entry_type }}
+                </td>
+
+                <!-- entry content -->
+                <td>
+                    {{ i.entry_content }}
+                </td>
+
+
+            <!-- table row -->
+            </tr>
+
+        <!-- entries -->
+        {% endfor %}
+
+    <!-- table body -->
+    </tbody>
+
+<!-- entry datatable -->
+</table>
+
+<!-- javascript for datatables -->
+<script src="{% static 'dfirtrack_main/dfirtrack/datatables_dfirtrack.js' %}"></script>
+
+<!-- button row -->
+<div class="row top-distance">
+
+    <!-- entry add button -->
+    <div class="col-1">
+        <a href="{% url 'entry_create' %}" type="button" class="btn btn-light copy-false">
+            <img src="{% static 'dfirtrack_main/icons/plus.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Add entry
+        </a>
+    </div>
+
+<!-- button row -->
+</div>
+
+<!-- javascript for datatables -->
+{% block datatables %}
+<script src="{% static 'dfirtrack_main/datatables-1.10.16/datatables.min.js' %}"></script>
+{% endblock %}
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

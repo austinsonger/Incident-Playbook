@@ -1,0 +1,115 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    DFIRTrack - Serviceproviders
+</title>
+
+{% load static %}
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- headline -->
+<div class="row bottom-distance">
+    <div class="col">
+        <h5>
+            Serviceproviders
+        </h5>
+    </div>
+</div>
+
+<!-- headlines -->
+<div class="row font-weight-bold">
+
+    <!-- serviceprovider id headline -->
+    <div class="col-1">
+        ID
+    </div>
+
+    <!-- serviceprovider name headline -->
+    <div class="col-2">
+        Serviceprovider name
+    </div>
+
+    <!-- system headline -->
+    <div class="col-1">
+        Systems
+    </div>
+
+    <!-- serviceprovider note headline -->
+    <div class="col-8">
+        Note
+    </div>
+
+
+<!-- headlines -->
+</div>
+
+<!-- serviceprovider list -->
+{% for i in serviceprovider_list %}
+
+    <!-- serviceprovider row -->
+    <div class="row top-distance">
+
+        <!-- serviceprovider id -->
+        <div class="col-1">
+            {{ i.serviceprovider_id }}
+        </div>
+
+        <!-- serviceprovider name -->
+        <div class="col-2">
+            <a href="{{ i.get_absolute_url }}">
+                {{ i.serviceprovider_name }}
+            </a>
+        </div>
+
+        <!-- system -->
+        <div class="col-1">
+            {{ i.system_set.all|length }}
+        </div>
+
+        <!-- serviceprovider note -->
+        <div class="col-7">
+            {% if i.serviceprovider_note %}
+                {{ i.serviceprovider_note|linebreaks }}
+            {% else %}
+                ---
+            {% endif %}
+        </div>
+
+        <!-- edit button -->
+        <div class="col-1">
+            <a href="{{ i.get_update_url }}" type="button" class="btn btn-sm btn-light copy-false">
+                <img src="{% static 'dfirtrack_main/icons/pencil.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                Edit
+            </a>
+        </div>
+
+    <!-- serviceprovider row -->
+    </div>
+
+<!-- serviceprovider list -->
+{% endfor %}
+
+<!-- add button -->
+<div class="row top-distance">
+    <div class="col-1">
+        <a href="{% url 'serviceprovider_create' %}" type="button" class="btn btn-light">
+            <img src="{% static 'dfirtrack_main/icons/plus.svg' %}" class="icon" alt="icon">
+            Add serviceprovider
+        </a>
+    </div>
+</div>
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

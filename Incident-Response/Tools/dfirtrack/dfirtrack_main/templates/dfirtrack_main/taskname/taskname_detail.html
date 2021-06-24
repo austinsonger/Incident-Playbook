@@ -1,0 +1,98 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    Taskname '{{ taskname.taskname_name }}'{% if taskname.task_set.all %} (t: {{ taskname.task_set.all|length }}){% endif %}
+</title>
+
+{% load static %}
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- up button -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <a href="{% url 'taskname_list' %}" type="button" class="btn btn-light copy-false">
+            <img src="{% static 'dfirtrack_main/icons/arrow-circle-top.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Up to tasknames
+        </a>
+    </div>
+</div>
+
+<!-- taskname name row -->
+<div class="row">
+
+    <!-- taskname name -->
+    <div class="col-3">
+        <h5>
+            Taskname "{{ taskname.taskname_name }}"
+        </h5>
+    </div>
+
+<!-- taskname name row -->
+</div>
+
+<!-- taskname id -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <small class="text-muted">
+            Taskname-ID: {{ taskname.taskname_id }}
+        </small>
+    </div>
+</div>
+
+<!-- task headline -->
+<div class="row">
+    <div class="col-6">
+        <h5>
+            Tasks with this name{% if taskname.task_set.all %} ({{ taskname.task_set.all|length }}){% endif %}
+        </h5>
+    </div>
+</div>
+
+<!-- tasks -->
+{% if taskname.task_set.all %}
+
+    {% for i in taskname.task_set.all %}
+        <div class="row top-distance">
+            <div class="col-3">
+                <a href="{{ i.get_absolute_url }}" type="button" class="btn btn-primary btn-sm sharp copy-true">
+                    <img src="{% static 'dfirtrack_main/icons/task-light.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                    {{ i.taskname }}
+                    {% if i.system %}
+                        | {{ i.system.system_name }}
+                    {% endif %}
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+
+<!-- no tasks -->
+{% else %}
+    <div class="row top-distance">
+        <div class="col-3">
+            ---
+        </div>
+    </div>
+
+<!-- tasks -->
+{% endif %}
+
+<!-- edit button -->
+<a href="{{ taskname.get_update_url }}" type="button" class="btn btn-light top-distance copy-false">
+    <img src="{% static 'dfirtrack_main/icons/pencil.svg' %}" class="icon copy-false" alt="icon">
+    Edit
+</a>
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

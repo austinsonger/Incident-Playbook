@@ -1,0 +1,30 @@
+[
+  {
+    "model": "couriers.courier",
+    "fields": {
+      "id": 1,
+      "name": "jira_private",
+      "endpoints": [1],
+      "passport": 2
+    }
+  },
+  {
+    "model": "couriers.courier",
+    "fields": {
+      "id": 2,
+      "name": "jira_public",
+      "endpoints": [1],
+      "passport": 4
+    }
+  },
+  {
+    "model": "couriers.courier",
+    "fields": {
+      "id": 3,
+      "name": "twitter_private",
+      "endpoints": [2],
+      "passport": 2,
+      "visa": 1
+    }
+  }
+]

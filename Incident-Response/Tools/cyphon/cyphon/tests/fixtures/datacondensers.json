@@ -1,0 +1,394 @@
+[
+  {
+    "model": "datacondensers.dataparser",
+    "fields": {
+      "id": 1,
+      "name": "created_at__COPY",
+      "source_fields": "created_at",
+      "method": "COPY"
+    }
+  },
+  {
+    "model": "datacondensers.dataparser",
+    "fields": {
+      "id": 2,
+      "name": "coordinates.coordinates__COPY",
+      "source_fields": "coordinates.coordinates",
+      "method": "COPY"
+    }
+  },
+  {
+    "model": "datacondensers.dataparser",
+    "fields": {
+      "id": 3,
+      "name": "text__COPY",
+      "source_fields": "text",
+      "method": "COPY"
+    }
+  },
+  {
+    "model": "datacondensers.dataparser",
+    "fields": {
+      "id": 4,
+      "name": "user.id_str__COPY",
+      "source_fields": "user.id_str",
+      "method": "COPY"
+    }
+  },
+  {
+    "model": "datacondensers.dataparser",
+    "fields": {
+      "id": 5,
+      "name": "user.name__COPY",
+      "source_fields": "user.name",
+      "method": "COPY"
+    }
+  },
+  {
+    "model": "datacondensers.dataparser",
+    "fields": {
+      "id": 6,
+      "name": "user.screen_name__COPY",
+      "source_fields": "user.screen_name",
+      "method": "COPY"
+    }
+  },
+  {
+    "model": "datacondensers.dataparser",
+    "fields": {
+      "id": 7,
+      "name": "user.profile_image_url__COPY",
+      "source_fields": "user.profile_image_url",
+      "method": "COPY"
+    }
+  },
+    {
+    "model": "datacondensers.dataparser",
+    "fields": {
+      "id": 8,
+      "name": "twitter__content_link",
+      "source_fields": "user.screen_name, id_str",
+      "formatter": "https://twitter.com/{}/statuses/{}",
+      "method": "COPY"
+    }
+  },
+  {
+    "model": "datacondensers.dataparser",
+    "fields": {
+      "id": 9,
+      "name": "twitter__user_link",
+      "source_fields": "user.screen_name",  
+      "formatter": "https://twitter.com/{}/",
+      "method": "COPY"
+    }
+  },
+  {
+    "model": "datacondensers.dataparser",
+    "fields": {
+      "id": 10,
+      "name": "twitter__content_image",
+      "source_fields": "entities.media[0].media_url_https",  
+      "method": "COPY"
+    }
+  },
+  {
+    "model": "datacondensers.dataparser",
+    "fields": {
+      "id": 11,
+      "name": "syslog__host",
+      "source_fields": "host",  
+      "method": "COPY"
+    }
+  },
+  {
+    "model": "datacondensers.dataparser",
+    "fields": {
+      "id": 12,
+      "name": "syslog__timestamp",
+      "source_fields": "@timestamp",  
+      "method": "COPY"
+    }
+  },
+  {
+    "model": "datacondensers.dataparser",
+    "fields": {
+      "id": 13,
+      "name": "syslog__message",
+      "source_fields": "",  
+      "method": "SUBSTRING",
+      "regex": ""
+    }
+  },
+  {
+    "model": "datacondensers.dataparser",
+    "fields": {
+      "id": 14,
+      "name": "snmptrap__host",
+      "source_fields": "host",  
+      "method": "COPY"
+    }
+  },
+  {
+    "model": "datacondensers.dataparser",
+    "fields": {
+      "id": 15,
+      "name": "snmptrap__timestamp",
+      "source_fields": "@timestamp",  
+      "method": "COPY"
+    }
+  },
+  {
+    "model": "datacondensers.dataparser",
+    "fields": {
+      "id": 16,
+      "name": "snmptrap__message",
+      "source_fields": "message",  
+      "method": "SUBSTRING",
+      "regex": "@name=[1.3.6.1.2.1.1.6.0], @value=\"(?.*?)\">"
+    }
+  },
+  {
+    "model": "datacondensers.datacondenser",
+    "fields": {
+      "id": 1,
+      "name": "twitter__post",
+      "bottle": ["post"]
+    }
+  },
+  {
+    "model": "datacondensers.datacondenser",
+    "fields": {
+      "id": 2,
+      "name": "twitter__content",
+      "bottle": ["post_content"]
+    }
+  },
+  {
+    "model": "datacondensers.datacondenser",
+    "fields": {
+      "id": 3,
+      "name": "twitter__user",
+      "bottle": ["user"]
+    }
+  },
+  {
+    "model": "datacondensers.datacondenser",
+    "fields": {
+      "id": 4,
+      "name": "instagram__post",
+      "bottle": ["post"]
+    }
+  },
+  {
+    "model": "datacondensers.datacondenser",
+    "fields": {
+      "id": 5,
+      "name": "youtube__post",
+      "bottle":["post"]
+    }
+  },
+  {
+    "model": "datacondensers.datacondenser",
+    "fields": {
+      "id": 6,
+      "name": "demo__syslog",
+      "bottle":["syslog"]
+    }
+  },
+  {
+    "model": "datacondensers.datacondenser",
+    "fields": {
+      "id": 7,
+      "name": "demo__snmptrap",
+      "bottle": ["snmptrap"]
+    }
+  },
+  {
+    "model": "datacondensers.datacondenser",
+    "fields": {
+      "id": 8,
+      "name": "mail",
+      "bottle": ["mail"]
+    }
+    },
+  {
+    "model": "datacondensers.datafitting",
+    "fields": {
+      "id": 1,
+      "condenser": ["twitter__post"],
+      "target_field": ["created_date"],
+      "object_id": 1,
+      "content_type": ["datacondensers", "dataparser"]
+    }
+  },
+  {
+    "model": "datacondensers.datafitting",
+    "fields": {
+      "id": 2,
+      "condenser": ["twitter__post"],
+      "target_field": ["location"],
+      "object_id": 2,
+      "content_type": ["datacondensers", "dataparser"]
+    }
+  },
+  {
+    "model": "datacondensers.datafitting",
+    "fields": {
+      "id": 3,
+      "condenser": ["twitter__content"],
+      "target_field": ["text"],
+      "object_id": 3,
+      "content_type": ["datacondensers", "dataparser"]
+    }
+  },
+  {
+    "model": "datacondensers.datafitting",
+    "fields": {
+      "id": 4,
+      "condenser": ["twitter__content"],
+      "target_field": ["link"],
+      "object_id": 8,
+      "content_type": ["datacondensers", "dataparser"]
+    }
+  },
+  {
+    "model": "datacondensers.datafitting",
+    "fields": {
+      "id": 5,
+      "condenser": ["twitter__user"],
+      "target_field": ["id"],
+      "object_id": 4,
+      "content_type": ["datacondensers", "dataparser"]
+    }
+  },
+  {
+    "model": "datacondensers.datafitting",
+    "fields": {
+      "id": 6,
+      "condenser": ["twitter__user"],
+      "target_field": ["name"],
+      "object_id": 5,
+      "content_type": ["datacondensers", "dataparser"]
+    }
+  },
+  {
+    "model": "datacondensers.datafitting",
+    "fields": {
+      "id": 7,
+      "condenser": ["twitter__user"],
+      "target_field": ["screen_name"],
+      "object_id": 6,
+      "content_type": ["datacondensers", "dataparser"]
+    }
+  },
+  {
+    "model": "datacondensers.datafitting",
+    "fields": {
+      "id": 8,
+      "condenser": ["twitter__user"],
+      "target_field": ["profile_pic"],
+      "object_id": 7,
+      "content_type": ["datacondensers", "dataparser"]
+    }
+  },
+  {
+    "model": "datacondensers.datafitting",
+    "fields": {
+      "id": 9,
+      "condenser": ["twitter__user"],
+      "target_field": ["link"],
+      "object_id": 9,
+      "content_type": ["datacondensers", "dataparser"]
+    }
+  },
+  {
+    "model": "datacondensers.datafitting",
+    "fields": {
+      "id": 10,
+      "condenser": ["twitter__content"],
+      "target_field": ["image"],
+      "object_id": 10,
+      "content_type": ["datacondensers", "dataparser"]
+    }
+  },
+  {
+    "model": "datacondensers.datafitting",
+    "fields": {
+      "id": 11,
+      "condenser": ["twitter__post"],
+      "target_field": ["content"],
+      "object_id": 2,
+      "content_type": ["datacondensers", "datacondenser"]
+    }
+  },
+  {
+    "model": "datacondensers.datafitting",
+    "fields": {
+      "id": 12,
+      "condenser": ["twitter__post"],
+      "target_field": ["user"],
+      "object_id": 3,
+      "content_type": ["datacondensers", "datacondenser"]
+    }
+  },
+  {
+    "model": "datacondensers.datafitting",
+    "fields": {
+      "id": 13,
+      "condenser": ["demo__syslog"],
+      "target_field": ["host"],
+      "object_id": 11,
+      "content_type": ["datacondensers", "dataparser"]
+    }
+  },
+  {
+    "model": "datacondensers.datafitting",
+    "fields": {
+      "id": 14,
+      "condenser": ["demo__syslog"],
+      "target_field": ["timestamp"],
+      "object_id": 12,
+      "content_type": ["datacondensers", "dataparser"]
+    }
+  },
+  {
+    "model": "datacondensers.datafitting",
+    "fields": {
+      "id": 15,
+      "condenser": ["demo__syslog"],
+      "target_field": ["message"],
+      "object_id": 13,
+      "content_type": ["datacondensers", "dataparser"]
+    }
+  },
+  {
+    "model": "datacondensers.datafitting",
+    "fields": {
+      "id": 16,
+      "condenser": ["demo__snmptrap"],
+      "target_field": ["host"],
+      "object_id": 14,
+      "content_type": ["datacondensers", "dataparser"]
+    }
+  },
+  {
+    "model": "datacondensers.datafitting",
+    "fields": {
+      "id": 17,
+      "condenser": ["demo__snmptrap"],
+      "target_field": ["timestamp"],
+      "object_id": 15,
+      "content_type": ["datacondensers", "dataparser"]
+    }
+  },
+  {
+    "model": "datacondensers.datafitting",
+    "fields": {
+      "id": 18,
+      "condenser": ["demo__snmptrap"],
+      "target_field": ["message"],
+      "object_id": 16,
+      "content_type": ["datacondensers", "dataparser"]
+    }
+  }
+]

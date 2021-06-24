@@ -1,0 +1,19 @@
+.. _endpoints:
+
+ambassador.endpoints
+====================
+
+.. image:: ../_static/images/icons/endpoint.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/endpoints.summary.txt
+
+:ref:`endpoints-graph`
+
+Subpackages
+-----------
+
+.. toctree::
+
+    ambassador.endpoints.models

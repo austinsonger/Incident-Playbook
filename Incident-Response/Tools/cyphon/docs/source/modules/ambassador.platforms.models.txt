@@ -1,0 +1,13 @@
+ambassador.platforms.models
+===========================
+
+.. figure:: ../_static/images/graphs/platforms-graph.png
+    :target: ../graphs/platforms.graph.html
+    :alt: Platforms model graph
+
+    Model graph for the |Platform| base class and subclasses.
+
+.. automodule:: ambassador.platforms.models
+    :members:
+    :undoc-members:
+    :show-inheritance:

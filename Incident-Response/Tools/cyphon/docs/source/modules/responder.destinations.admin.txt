@@ -1,0 +1,7 @@
+responder.destinations.admin
+============================
+
+.. automodule:: responder.destinations.admin
+    :members:
+    :undoc-members:
+    :show-inheritance:

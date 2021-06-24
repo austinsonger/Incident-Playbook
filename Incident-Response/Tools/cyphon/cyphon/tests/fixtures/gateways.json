@@ -1,0 +1,37 @@
+[
+  {
+    "model": "reservoirs.gateway",
+    "fields": {
+      "id": 1,
+      "reservoir": ["twitter"],
+      "task": "ADHOC_SRCH",
+      "pipe": ["twitter", "SearchAPI"]
+    }
+  }, 
+  {
+    "model": "reservoirs.gateway",
+    "fields": {
+      "id": 2,
+      "reservoir": ["twitter"],
+      "task": "BKGD_SRCH",
+      "pipe": ["twitter", "PublicStreamsAPI"]
+    }
+  },
+  {
+    "model": "reservoirs.gateway",
+    "fields": {
+      "id": 3,
+      "reservoir": ["facebook"],
+      "task": "ADHOC_SRCH",
+      "pipe": ["facebook", "GraphAPI"]
+    }
+  },
+  {
+    "model": "reservoirs.gateway",
+    "fields": {
+      "id": 4,
+      "reservoir": ["instagram"],
+      "task": "ADHOC_SRCH"
+    }
+  }
+]

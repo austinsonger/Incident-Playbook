@@ -1,0 +1,138 @@
+.. _using-fixtures:
+
+#######################################
+Backing Up and Restoring Configurations
+#######################################
+
+Django provides a way to import and export data from its database. 
+Because your project's settings (its rules, parsers, etc.) are stored 
+there, you can import or export them using Django commands. 
+
+Django loads and dumps data as `fixtures <initial data>`_, which can be JSON, XML, or YAML. For example, JSON fixtures for |BottleFields| might look like this::
+
+   [
+     {
+       "model": "bottles.bottlefield",
+       "pk": 1,
+       "fields": {
+         "field_name": "content",
+         "field_type": "CharField",
+         "target_type": "Keyword",
+         "embedded_doc": null
+       }
+     },
+     {
+       "model": "bottles.bottlefield",
+       "pk": 2,
+       "fields": {
+         "field_name": "created_date",
+         "field_type": "DateTimeField",
+         "target_type": "DateTime",
+         "embedded_doc": null
+       }
+     }
+   ]
+
+
+.. _dumping-data:
+
+************
+Dumping data
+************
+
+You can export data as fixtures using Django's `dumpdata`_ command.
+The output from this command can be used as input for the `loaddata`_
+command.
+
+For example::
+  
+    $ python manage.py dumpdata /opt/cyphon/fixtures.json
+
+.. _exporting-configs:
+
+Exporting your configurations
+=============================
+
+To export your settings as fixtures, you'll want to exclude data that 
+aren't project settings. These include data from the following apps and 
+models:
+
+  * ``alerts``
+  * ``dispatches``
+  * ``invoices``
+  * ``stamps``
+  * ``streams``
+  * ``django.contrib.admin``
+  * ``django.contrib.auth.permission``
+  * ``django.contrib.contenttypes``
+  * ``django.contrib.sessions``
+  * ``django_mailbox.Message``
+  * ``django_mailbox.MessageAttachment``
+
+Use the ``--exclude`` argument to exclude these apps. You can make your 
+output more readable by using the ``--indent`` argument. You can also use the 
+``--natural-foreign`` argument to include `natural keys`_ in your fixtures, 
+so you can easily interpret object relationships in the output file.
+
+This example shows how to export your project settings to a ``fixtures.json``
+file in the ``/opt/cyphon/`` directory::
+
+   $ python manage.py dumpdata --settings=cyphon.settings.prod --indent=2 --natural-foreign --exclude alerts --exclude dispatches --exclude invoices --exclude stamps --exclude streams --exclude admin --exclude auth.permission --exclude contenttypes --exclude sessions --exclude django_mailbox.Message --exclude django_mailbox.MessageAttachment --output /opt/cyphon/fixtures.json
+
+.. warning:: The above command excludes the ``django.contrib.auth.permission`` 
+             model because of its relationship with ``django.contrib.contenttypes`` 
+             (which is better left out when configuring new instances). 
+             Be aware that custom permissions for user groups will 
+             therefore not be included in the fixture dump.
+
+You can also export fixtures for a single Django app. This example shows 
+how to export data for models in the Bottles package::
+
+   $ python manage.py dumpdata bottles --indent=2 --natural-foreign --output /opt/cyphon/bottles.json
+
+
+.. _loading-data:
+
+************
+Loading data
+************
+
+Fixtures can be loaded into the database using Django's `loaddata`_ command. 
+For example::
+
+  $ python manage.py loaddata /opt/cyphon/fixtures.json
+
+.. warning::
+
+   If you encounter an error while loading fixtures (for example, if they 
+   are improperly formatted), you may encounter an IntegrityError when you
+   try to load them again. For example::
+
+      django.db.utils.IntegrityError: Problem installing fixture 'fixtures.json':
+      Could not load your_app_label.YourModelName(pk=None): duplicate key value 
+      violates unique constraint "yourapplabel_yourmodelname_pkey"
+      DETAIL:  Key (id)=(1) already exists.
+
+   This may occur if PostgreSQL autoincremented the sequence for a primary key
+   during the previous failed attempt to load the fixture. If the table in 
+   question is empty, try resetting the sequence within PostgreSQL::
+
+      ALTER SEQUENCE mytable_id_seq RESTART WITH 1;
+
+.. _test-fixtures:
+
+Test fixtures
+=============
+
+Cyphon uses fixtures to set up testing environments for many of its tests. 
+These fixtures can be found in the ``tests/fixtures`` project directory. 
+You can refer to these files to find fixture examples for most of Cyphon's
+models. See Django's documentation on `test fixtures`_ to learn how to use 
+them in tests.
+
+
+.. _fixtures ref: https://docs.djangoproject.com/en/1.11/howto/initial-data/
+.. _loaddata: https://docs.djangoproject.com/en/1.11/ref/django-admin/#loaddata
+.. _dumpdata: https://docs.djangoproject.com/en/1.11/ref/django-admin/#dumpdata
+.. _natural keys: https://docs.djangoproject.com/en/1.11/topics/serialization/#topics-serialization-natural-keys
+.. _test fixtures: https://docs.djangoproject.com/en/1.11/topics/testing/tools/#topics-testing-fixtures

@@ -1,0 +1,67 @@
+.. _install-cyphon:
+
+#################
+Installing Cyphon
+#################
+
+* :ref:`docker-install`
+* :ref:`virtual-machine`
+* :ref:`manual-install`
+
+
+.. _docker-install:
+
+******
+Docker
+******
+
+Cyphon is most easily installed using `Docker`_. We maintain a collection of Docker Compose files for this purpose. See our `Cyphondock documentation <http://cyphondock.readthedocs.io/en/latest/>`__ for instructions on this kind of deployment.  
+
+
+.. _virtual-machine:
+
+*************
+Installer ISO
+*************
+
+If you'd like a quick way to try out Cyphon, you can download our `Cyphon installer ISO <https://www.cyphon.io/download/>`__, which creates a `Cyphondock`_ deployment on an Ubuntu Server 16.04.3 LTS.
+
+
+.. _manual-install:
+
+**************
+Manual Install
+**************
+
+Services
+--------
+
+If you prefer to manually install Cyphon, you'll need to have running instances of the following services:
+    
+    * `PostgreSQL`_/`PostGIS <http://postgis.net/>`__
+    * `RabbitMQ`_
+    * `Logstash`_
+    * `Elasticsearch`_ and/or `MongoDB`_
+    * `Nginx <https://www.nginx.com/>`__ or `Apache <https://www.apache.org/>`__
+
+Cyphon
+------
+
+Clone the project from GitHub::
+
+    $ git clone https://github.com/dunbarcyber/cyphon.git
+
+Use the example files in ``./cyphon/cyphon/settings`` to create your own ``conf.py``, ``base.py``, ``dev.py``, and ``prod.py`` files.
+
+Dependencies
+------------
+
+Cyphon is compatible with Python 3.4 or higher. To install Cyphon's required Python packages, run the setup script::
+
+    $ python3 setup.py install
+
+
+GeoLite2 City Database
+----------------------
+
+Cyphon's :ref:`GeoIP <geoip>` package requires the `GeoLite2 City database <https://dev.maxmind.com/geoip/geoip2/geolite2/>`__. Download this database and update the ``GEOIP`` setting in ``./cyphon/cyphon/settings/conf.py`` with the path to the database.

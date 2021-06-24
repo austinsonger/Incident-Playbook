@@ -1,0 +1,11 @@
+.. _choices:
+
+utils.choices
+=============
+
+Submodules
+----------
+
+.. toctree::
+
+   utils.choices.choices

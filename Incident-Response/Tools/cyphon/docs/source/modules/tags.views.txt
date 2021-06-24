@@ -1,0 +1,7 @@
+tags.views
+==========
+
+.. automodule:: tags.views
+    :members:
+    :undoc-members:
+    :show-inheritance:

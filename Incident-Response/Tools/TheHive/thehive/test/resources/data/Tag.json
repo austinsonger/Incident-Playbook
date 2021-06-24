@@ -1,0 +1,9 @@
+[
+  {
+    "id": "taxonomy-tag1",
+    "namespace": "taxonomy1",
+    "predicate": "pred1",
+    "value": "value1",
+    "colour": "#00f300"
+  }
+]

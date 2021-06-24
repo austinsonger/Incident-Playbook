@@ -1,0 +1,454 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- ############################################ -->
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+
+<title>
+    [{{ artifact.artifact_id }}] '{{ artifact.artifact_name }}' ({{ artifact.system.system_name }})
+</title>
+
+<!-- static files -->
+{% load static %}
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- upper buttons row -->
+<div class="row bottom-distance">
+
+    <!-- up button -->
+    <div class="col-6">
+        <a href="{% url 'artifacts_artifact_list' %}" type="button" class="btn btn-light copy-false">
+            <img src="{% static 'dfirtrack_main/icons/arrow-circle-top.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Up to artifacts
+        </a>
+    </div>
+
+    <!-- edit button -->
+    <div class="col-6">
+        <a href="{{ artifact.get_update_url }}" type="button" class="btn btn-light copy-false">
+            <img src="{% static 'dfirtrack_main/icons/pencil.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Edit
+        </a>
+    </div>
+
+<!-- upper buttons row -->
+</div>
+
+<!-- javascript for copy button -->
+<script>
+    var clipboard = new ClipboardJS('.btn');
+</script>
+
+<!-- artifact name row -->
+<div class="row bottom-distance">
+
+    <!-- artifact name -->
+    <div class="col-3">
+        <div class="btn btn-primary btn-lg top-right-lg copy-true">
+            <img src="{% static 'dfirtrack_main/icons/bug-light.svg' %}" class="icon right-distance copy-false" alt="icon">
+            {{ artifact.artifact_name }}
+        </div>
+    </div>
+
+    <!-- system -->
+    <div class="col-3">
+        <a href="{{ artifact.system.get_absolute_url }}" type="button" class="btn btn-primary btn-sm copy-true">
+            <img src="{% static 'dfirtrack_main/icons/monitor-light.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+            {{ artifact.system.system_name }}
+        </a>
+    </div>
+
+<!-- artifact name row -->
+</div>
+
+<!-- id row -->
+<div class="row bottom-distance">
+
+    <!-- artifact id -->
+    <div class="col-3">
+        <small class="text-muted">
+            Artifact-ID: {{ artifact.artifact_id }}
+        </small>
+    </div>
+
+    <!-- artifact uuid -->
+    <div class="col-3">
+        <small class="text-muted">
+            Artifact-UUID:
+            {% if artifact.artifact_uuid %}
+                {{ artifact.artifact_uuid }}
+            {% else %}
+                ---
+            {% endif  %}
+        </small>
+    </div>
+
+<!-- id row -->
+</div>
+
+<!-- case row -->
+<div class="row">
+
+    <!-- case -->
+    <div class="col">
+        <div class="font-weight-bold">Case:</div>
+        {% if artifact.case %}
+            <a href="{{ artifact.case.get_absolute_url }}">
+                {{ artifact.case.case_name }}
+            </a>
+        {% else %}
+            ---
+        {% endif %}
+    </div>
+
+<!-- case row -->
+</div>
+
+<!-- ############################################ -->
+
+<!-- artifact information -->
+<div class="card bg-dark border-light card-body top-distance">
+
+    <!-- artifact information headline -->
+    <div class="row">
+        <div class="col">
+            <h5>Artifact information</h5>
+        </div>
+    </div>
+
+    <!-- artifact information row -->
+    <div class="row bottom-distance">
+
+        <!-- artifactstatus -->
+        <div class="col-3">
+            <div class="font-weight-bold">Artifactstatus:</div>
+            <a href="{{ artifact.artifactstatus.get_absolute_url }}">
+                {{ artifact.artifactstatus.artifactstatus_name }}
+            </a>
+        </div>
+
+        <!-- artifactpriority -->
+        <div class="col-3">
+            <div class="font-weight-bold">Artifactpriority:</div>
+            <a href="{{ artifact.artifactpriority.get_absolute_url }}">
+                {% with artifactpriority=artifact.artifactpriority %}
+                    {% include "dfirtrack_artifacts/includes/button_artifactpriority.html" %}
+                {% endwith %}
+                {{ artifact.artifactpriority.artifactpriority_name }}
+            </a>
+        </div>
+
+        <!-- artifact requested time -->
+        <div class="col-3">
+            <div class="font-weight-bold">Requested time:</div>
+            {% if artifact.artifact_requested_time %}
+                {{ artifact.artifact_requested_time|date:"Y-m-d H:i" }}
+            {% else %}
+                ---
+            {% endif  %}
+        </div>
+
+        <!-- artifact acquisition time -->
+        <div class="col-3">
+            <div class="font-weight-bold">Acquisition time:</div>
+            {% if artifact.artifact_acquisition_time %}
+                {{ artifact.artifact_acquisition_time|date:"Y-m-d H:i" }}
+            {% else %}
+                ---
+            {% endif  %}
+        </div>
+
+    <!-- artifact information row -->
+    </div>
+
+    <!-- artifact information row -->
+    <div class="row bottom-distance">
+
+        <!-- artifacttype -->
+        <div class="col-3">
+            <div class="font-weight-bold">Artifacttype:</div>
+            <a href="{{ artifact.artifacttype.get_absolute_url }}">
+                {{ artifact.artifacttype.artifacttype_name }}
+            </a>
+        </div>
+
+    <!-- artifact information row -->
+    </div>
+
+    <!-- artifact source path row -->
+    <div class="row">
+
+        <!-- artifact source path -->
+        <div class="col-12">
+            <div class="font-weight-bold">Artifact source path:</div>
+            {% if artifact.artifact_source_path %}
+                <p style="font-family:'Lucida Console', monospace">{{ artifact.artifact_source_path }}</p>
+            {% else %}
+                ---
+            {% endif  %}
+        </div>
+
+    <!-- artifact source path row -->
+    </div>
+
+    <!-- copy button row-->
+    <div class="row bottom-distance">
+
+        <!-- copy button -->
+        <div class="col-12">
+                <button class="btn btn-outline-success btn-sm" data-clipboard-text="{{ artifact.artifact_source_path }}">
+                    Copy path
+                </button>
+        </div>
+
+    <!-- copy button row-->
+    </div>
+
+    <!-- artifact storage path row -->
+    <div class="row">
+
+        <!-- artifact storage path -->
+        <div class="col-12">
+            <div class="font-weight-bold">Artifact storage path:</div>
+            {% if artifact.artifact_storage_path %}
+                <p style="font-family:'Lucida Console', monospace">{{ artifact.artifact_storage_path }}</p>
+            {% else %}
+                ---
+            {% endif  %}
+        </div>
+
+    <!-- artifact storage path row -->
+    </div>
+
+    <!-- copy button row-->
+    <div class="row bottom-distance">
+
+        <!-- copy button -->
+        <div class="col-12">
+                <button class="btn btn-outline-success btn-sm" data-clipboard-text="{{ artifact.artifact_storage_path }}">
+                    Copy path
+                </button>
+        </div>
+
+    <!-- copy button row-->
+    </div>
+
+    <!-- hash information row -->
+    <div class="row top-distance">
+
+        <!-- md5 -->
+        <div class="col-3">
+            <div class="font-weight-bold">MD5:</div>
+            {% if artifact.artifact_md5 %}
+                <p style="font-family:'Lucida Console', monospace">{{ artifact.artifact_md5 }}</p>
+            {% else %}
+                ---
+            {% endif  %}
+        </div>
+
+        <!-- sha1 -->
+        <div class="col-3">
+            <div class="font-weight-bold">SHA1:</div>
+            {% if artifact.artifact_sha1 %}
+                <p style="font-family:'Lucida Console', monospace">{{ artifact.artifact_sha1 }}</p>
+            {% else %}
+                ---
+            {% endif  %}
+        </div>
+
+        <!-- sha256 -->
+        <div class="col-6">
+            <div class="font-weight-bold">SHA256:</div>
+            {% if artifact.artifact_sha256 %}
+                <p style="font-family:'Lucida Console', monospace">{{ artifact.artifact_sha256 }}</p>
+            {% else %}
+                ---
+            {% endif  %}
+        </div>
+
+    <!-- hash information row -->
+    </div>
+
+    <!-- copy button row-->
+    <div class="row">
+
+        <!-- copy button -->
+        <div class="col-3">
+                <button class="btn btn-outline-success btn-sm" data-clipboard-text="{{ artifact.artifact_md5 }}">
+                    Copy hash
+                </button>
+        </div>
+
+        <!-- copy button -->
+        <div class="col-3">
+                <button class="btn btn-outline-success btn-sm" data-clipboard-text="{{ artifact.artifact_sha1 }}">
+                    Copy hash
+                </button>
+        </div>
+
+        <!-- copy button -->
+        <div class="col-3">
+                <button class="btn btn-outline-success btn-sm" data-clipboard-text="{{ artifact.artifact_sha256 }}">
+                    Copy hash
+                </button>
+        </div>
+
+    <!-- copy button row-->
+    </div>
+
+<!-- artifact information end -->
+</div>
+
+<!-- ############################################ -->
+
+<!-- artifact notes -->
+<div class="card bg-dark border-light card-body top-distance">
+
+    <!-- artifact notes - headline row-->
+    <div class="row">
+
+        <!-- artifact internal note headline -->
+        <div class="col-4">
+            <h5>
+                Internal note
+            </h5>
+        </div>
+
+        <!-- artifact external note headline -->
+        <div class="col-4">
+            <h5>
+                External note
+            </h5>
+        </div>
+
+        <!-- artifact analysis result note headline -->
+        <div class="col-4">
+            <h5>
+                Analysis result
+            </h5>
+        </div>
+
+    <!-- artifact notes - headline row-->
+    </div>
+
+    <!-- artifact notes - content row-->
+    <div class="row">
+
+        <!-- artifact internal note -->
+        <div class="col-4">
+            {% if artifact.artifact_note_internal %}
+                {{ artifact.artifact_note_internal|linebreaks }}
+            {% else %}
+                ---
+            {% endif  %}
+        </div>
+
+        <!-- artifact external note -->
+        <div class="col-4">
+            {% if artifact.artifact_note_external %}
+                {{ artifact.artifact_note_external|linebreaks }}
+            {% else %}
+                ---
+            {% endif  %}
+        </div>
+
+        <!-- artifact analysis result note -->
+        <div class="col-4">
+            {% if artifact.artifact_note_analysisresult %}
+                {{ artifact.artifact_note_analysisresult|linebreaks }}
+            {% else %}
+                ---
+            {% endif  %}
+        </div>
+
+    <!-- artifact notes - content row-->
+    </div>
+
+<!-- artifact notes -->
+</div>
+
+<!-- ############################################ -->
+
+<!-- meta information -->
+<div class="card bg-dark border-secondary card-body bottom-distance top-distance">
+
+    <!-- meta information headline -->
+    <div class="row text-muted">
+        <div class="col">
+            <h5>Meta information</h5>
+        </div>
+    </div>
+
+    <!-- meta information row -->
+    <div class="row text-muted">
+
+        <!-- artifact create time -->
+        <div class="col-3">
+            <div class="font-weight-bold">Created:</div>
+            {{ artifact.artifact_create_time|date:"Y-m-d H:i" }}
+        </div>
+
+        <!-- user creating artifact -->
+        <div class="col-3">
+            <div class="font-weight-bold">Created by:</div>
+            {{ artifact.artifact_created_by_user_id }}
+        </div>
+
+        <!-- artifact modify time -->
+        <div class="col-3">
+            <div class="font-weight-bold">Last modified:</div>
+            {{ artifact.artifact_modify_time|date:"Y-m-d H:i" }}
+        </div>
+
+        <!-- user modifying artifact -->
+        <div class="col-3">
+            <div class="font-weight-bold">Modified by:</div>
+            {{ artifact.artifact_modified_by_user_id }}
+        </div>
+
+    <!-- meta information row -->
+    </div>
+
+<!-- meta information -->
+</div>
+
+<!-- lower buttons row -->
+<div class="row top-distance">
+
+    <!-- up button -->
+    <div class="col-6">
+        <a href="{% url 'artifacts_artifact_list' %}" type="button" class="btn btn-light copy-false">
+            <img src="{% static 'dfirtrack_main/icons/arrow-circle-top.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Up to artifacts
+        </a>
+    </div>
+
+    <!-- edit button -->
+    <div class="col-6">
+        <a href="{{ artifact.get_update_url }}" type="button" class="btn btn-light copy-false">
+            <img src="{% static 'dfirtrack_main/icons/pencil.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Edit
+        </a>
+    </div>
+
+<!-- lower buttons row -->
+</div>
+
+<!-- javascript for datatables in maintemplate -->
+{% block datatables %}
+<script src="{% static 'dfirtrack_main/datatables-1.10.16/datatables.min.js' %}"></script>
+{% endblock %}
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

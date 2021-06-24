@@ -1,0 +1,7 @@
+aggregator.funnels.admin
+========================
+
+.. automodule:: aggregator.funnels.admin
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,10 @@
+{
+    "name": "Main Test Suite",
+    "js_files": [
+      "https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js",
+      "src/Player.js",
+      "src/Song.js"
+    ],
+    "media_files": [
+    ]
+}

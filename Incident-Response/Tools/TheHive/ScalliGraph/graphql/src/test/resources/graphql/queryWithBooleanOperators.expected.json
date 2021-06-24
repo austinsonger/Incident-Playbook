@@ -1,0 +1,17 @@
+{
+  "data": {
+    "allPeople": {
+      "peopleFilteredByName": {
+        "peopleFilteredByAge": {
+          "sort": {
+            "age": {
+              "toList": [
+                32
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

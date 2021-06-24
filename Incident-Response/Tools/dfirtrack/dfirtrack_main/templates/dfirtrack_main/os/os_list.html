@@ -1,0 +1,100 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    DFIRTrack - OS
+</title>
+
+{% load static %}
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- headline -->
+<div class="row bottom-distance">
+    <div class="col">
+        <h5>
+            Operating systems
+        </h5>
+    </div>
+</div>
+
+<!-- headlines -->
+<div class="row font-weight-bold">
+
+    <!-- operating system id headline -->
+    <div class="col-1">
+        ID
+    </div>
+
+    <!-- operating system name headline -->
+    <div class="col-2">
+        Operating system
+    </div>
+
+    <!-- system headline -->
+    <div class="col-1">
+        Systems
+    </div>
+
+<!-- headlines -->
+</div>
+
+<!-- operating system list -->
+{% for i in os_list %}
+
+    <!-- operating system row -->
+    <div class="row top-distance">
+
+        <!-- operating system id -->
+        <div class="col-1">
+            {{ i.os_id }}
+        </div>
+
+        <!-- operating system name -->
+        <div class="col-2">
+            <a href="{{ i.get_absolute_url }}">
+                {{ i.os_name }}
+            </a>
+        </div>
+
+        <!-- system -->
+        <div class="col-8">
+            {{ i.system_set.all|length }}
+        </div>
+
+        <!-- edit button -->
+        <div class="col-1">
+            <a href="{{ i.get_update_url }}" type="button" class="btn btn-sm btn-light copy-false">
+                <img src="{% static 'dfirtrack_main/icons/pencil.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                Edit
+            </a>
+        </div>
+
+    <!-- operating system row -->
+    </div>
+
+<!-- operating system list -->
+{% endfor %}
+
+<!-- add button -->
+<div class="row top-distance">
+    <div class="col-1">
+        <a href="{% url 'os_create' %}" type="button" class="btn btn-light copy-false">
+            <img src="{% static 'dfirtrack_main/icons/plus.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Add OS
+        </a>
+    </div>
+</div>
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

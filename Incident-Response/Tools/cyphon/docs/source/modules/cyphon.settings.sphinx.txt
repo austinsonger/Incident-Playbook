@@ -1,0 +1,7 @@
+cyphon.settings.sphinx
+======================
+
+.. automodule:: cyphon.settings.sphinx
+    :members:
+    :undoc-members:
+    :show-inheritance:

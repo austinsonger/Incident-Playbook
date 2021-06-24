@@ -1,0 +1,140 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<title>
+    DNS name '{{ dnsname.dnsname_name }}'{% if dnsname.system_set.all %} (s: {{ dnsname.system_set.all|length }}){% endif %}
+</title>
+
+{% load static %}
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- up button -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <a href="{% url 'dnsname_list' %}" type="button" class="btn btn-light copy-false">
+            <img src="{%static 'dfirtrack_main/icons/arrow-circle-top.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Up to DNS names
+        </a>
+    </div>
+</div>
+
+<!-- javascript for copy button -->
+<script>
+    var clipboard = new ClipboardJS('.btn');
+</script>
+
+<!-- dnsname name row -->
+<div class="row">
+
+    <!-- dnsname name -->
+    <div class="col-3">
+        <h5>
+            DNS name "{{ dnsname.dnsname_name }}"
+        </h5>
+    </div>
+
+    <!-- copy button -->
+    <div class="col-3">
+        {% if dnsname.system_set.all %}
+            {% with systems=dnsname.system_set.all %}
+                {% include "dfirtrack_main/includes/button_copy_hostnames.html" %}
+            {% endwith %}
+        {% endif %}
+    </div>
+
+<!-- dnsname name row -->
+</div>
+
+<!-- dnsname id -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <small class="text-muted">
+            DNS name-ID: {{ dnsname.dnsname_id }}
+        </small>
+    </div>
+</div>
+
+<!-- domain -->
+<div class="row bottom-distance">
+    <div class="col">
+            {% if dnsname.domain %}
+                Associated to domain
+                    <a href="{{ dnsname.domain.get_absolute_url }}">
+                        "{{ dnsname.domain.domain_name }}"
+                    </a>
+            {% endif %}
+    </div>
+</div>
+
+<!-- dnsname note headline -->
+<div class="row">
+    <div class="col-3">
+        <h5>
+            Note
+        </h5>
+    </div>
+</div>
+
+<!-- dnsname note -->
+<div class="row bottom-distance">
+    <div class="col">
+        {% if dnsname.dnsname_note %}
+            {{ dnsname.dnsname_note|linebreaks }}
+        {% else %}
+            ---
+        {% endif %}
+    </div>
+</div>
+
+<!-- system headline -->
+<div class="row">
+    <div class="col-6">
+        <h5>
+            Systems with this DNS name{% if dnsname.system_set.all %} ({{ dnsname.system_set.all|length }}){% endif %}
+        </h5>
+    </div>
+</div>
+
+<!-- systems -->
+{% if dnsname.system_set.all %}
+
+    {% for i in dnsname.system_set.all %}
+        <div class="row top-distance">
+            <div class="col-3">
+                <a href="{{ i.get_absolute_url }}" type="button" class="btn btn-primary btn-sm copy-true">
+                    <img src="{% static 'dfirtrack_main/icons/monitor-light.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                    {{ i.system_name }}
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+
+<!-- no systems -->
+{% else %}
+    <div class="row top-distance">
+        <div class="col-3">
+            ---
+        </div>
+    </div>
+
+<!-- systems -->
+{% endif %}
+
+<!-- edit button -->
+<a href="{{ dnsname.get_update_url }}" type="button" class="btn btn-light top-distance copy-false">
+    <img src="{% static 'dfirtrack_main/icons/pencil.svg' %}" class="icon right-distance copy-false" alt="icon">
+    Edit
+</a>
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

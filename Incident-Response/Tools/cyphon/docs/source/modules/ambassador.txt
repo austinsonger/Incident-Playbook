@@ -1,0 +1,31 @@
+.. _ambassador:
+
+ambassador
+==========
+
+.. image:: ../_static/images/icons/ambassador.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/ambassador.summary.txt
+
+Subpackages
+-----------
+
+.. toctree::
+
+    ambassador.emissaries
+    ambassador.endpoints
+    ambassador.passports
+    ambassador.platforms
+    ambassador.records
+    ambassador.stamps
+    ambassador.visas
+
+Submodules
+----------
+
+.. toctree::
+
+   ambassador.exceptions
+   ambassador.transport

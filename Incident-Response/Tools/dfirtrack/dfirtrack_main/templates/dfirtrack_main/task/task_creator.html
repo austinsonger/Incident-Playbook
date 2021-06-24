@@ -1,0 +1,270 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>Tasks creator</title>
+
+{% load static %}
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- headline -->
+<div class="bottom-distance">
+    <h4>
+        Create tasks
+    </h4>
+</div>
+
+<!-- form -->
+<form method="POST" class="post-form">
+
+    <!-- button row -->
+    <div class="row">
+
+        <!-- save button -->
+        <div class="col-1">
+            {% include "dfirtrack_main/includes/button_save.html" %}
+        </div>
+
+        <!-- cancel button -->
+        <div class="col-1">
+            {% include "dfirtrack_main/includes/button_cancel.html" %}
+        </div>
+
+    <!-- button row -->
+    </div>
+
+    {% csrf_token %}
+
+    <!-- show form related errors -->
+    {% include "dfirtrack_main/includes/form_errors.html" %}
+
+    <!-- taskname block -->
+    <div class="card card-body bg-dark border-light top-distance">
+
+        <!-- taskname headline -->
+        <div class="row">
+            <div class="col">
+                <h5>
+                    Tasknames (*):
+                </h5>
+            </div>
+        </div>
+
+        <!-- tasknames -->
+        <div class="row">
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                <!-- taskname errors -->
+                <div class="text-danger">
+                    {{ form.taskname.errors }}
+                </div>
+                {% for i in form.taskname %}
+                    {{ i }}
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    <!-- taskname block -->
+    </div>
+
+    <!-- ############################################ -->
+
+    <!-- tag block -->
+    <div class="card card-body bg-dark border-light top-distance">
+
+        <!-- tag headline -->
+        <div class="row">
+            <div class="col">
+                <h5>
+                    Tags
+                </h5>
+            </div>
+        </div>
+
+        <!-- tags -->
+        <div class="row">
+            <div class="col-6">
+                <div class="card card-body bg-dark border-light top-distance">
+                <!-- tag errors -->
+                <div class="text-danger">
+                    {{ form.tag.errors }}
+                </div>
+                {% for i in form.tag %}
+                    {{ i }}
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    <!-- tag block -->
+    </div>
+
+    <!-- ############################################ -->
+
+    <!-- status information block -->
+    <div class="card card-body bg-dark border-light top-distance">
+
+        <!-- status information headline -->
+        <div class="row">
+            <div class="col">
+                <h5>
+                    Status information
+                </h5>
+            </div>
+        </div>
+
+        <!-- taskpriority / taskstatus / user  headline -->
+        <div class="row">
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    Priority (*):
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    Status (*):
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="font-weight-bold">
+                    Assigned to user:
+                </div>
+            </div>
+        </div>
+        <!-- taskpriority / taskstatus / user -->
+        <div class="row">
+
+            <!-- taskpriority -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- taskpriority errors -->
+                    <div class="text-danger">
+                        {{ form.taskpriority.errors }}
+                    </div>
+                    {% for i in form.taskpriority %}
+                        {{ i }}
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- taskstatus -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- taskstatus errors -->
+                    <div class="text-danger">
+                        {{ form.taskstatus.errors }}
+                    </div>
+                    {% for i in form.taskstatus %}
+                        {{ i }}
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- user -->
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <div class="text-danger">
+                        {{ form.task_assigned_to_user_id.errors }}
+                    </div>
+                    {% for i in form.task_assigned_to_user_id %}
+                        {{ i }}
+                    {% endfor %}
+                </div>
+            </div>
+
+        <!-- taskpriority / taskstatus / user -->
+        </div>
+
+        <!-- system headline -->
+        <div class="row top-distance">
+            <div class="col-3">
+                <div class="font-weight-bold top-distance bottom-distance">
+                    Corresponding systems:
+                </div>
+            </div>
+        </div>
+
+        <!-- system -->
+        <div class="row">
+
+            <!-- system -->
+            <div class="col-3">
+
+                <!-- system errors -->
+                <div class="text-danger">
+                    {{ form.system.errors }}
+                </div>
+
+                <!-- systemlist selector -->
+                {{ form.system }}
+                {{ form.media}}
+                <script type="text/javascript" src="{% url 'jsi18n' %}"></script>
+
+            </div>
+
+        <!-- system -->
+        </div>
+
+    <!-- status information block -->
+    </div>
+
+    <!-- task note block -->
+    <div class="card card-body bg-dark border-light top-distance bottom-distance">
+
+        <!-- task note headline -->
+        <div class="row">
+            <div class="col">
+                <h5>
+                    Note
+                </h5>
+            </div>
+        </div>
+
+        <!-- task note -->
+        <div class="row">
+            <div class="col">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- task note errors -->
+                    <div class="text-danger">
+                        {{ form.task_note.errors }}
+                    </div>
+                    {{ form.task_note }}
+                </div>
+            </div>
+        </div>
+
+    <!-- task note block -->
+    </div>
+
+    <!-- button row -->
+    <div class="row top-distance">
+
+        <!-- save button -->
+        <div class="col-1">
+            {% include "dfirtrack_main/includes/button_save.html" %}
+        </div>
+
+        <!-- cancel button -->
+        <div class="col-1">
+            {% include "dfirtrack_main/includes/button_cancel.html" %}
+        </div>
+
+    <!-- button row -->
+    </div>
+
+<!-- form -->
+</form>
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

@@ -1,0 +1,156 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    DFIRTrack - Reportitems
+</title>
+
+{% load static %}
+
+<!-- javascript and CSS for datatables -->
+<link rel="stylesheet" type="text/css" href="{% static 'dfirtrack_main/datatables-1.10.16/datatables.min.css' %}"/>
+<script src="{% static 'dfirtrack_main/datatables-1.10.16/datatables.js' %}"></script>
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- headline -->
+<div class="row bottom-distance">
+    <div class="col">
+        <h5>
+            Reportitems
+        </h5>
+    </div>
+</div>
+
+<!-- datatable reportitem -->
+<table id="table_reportitem" class="display" width="100%">
+
+    <!-- table head -->
+    <thead>
+
+        <!-- table row -->
+        <tr>
+
+            <!-- reportitem id headline -->
+            <th>
+                ID
+            </th>
+
+            <!-- system headline -->
+            <th>
+                System
+            </th>
+
+            <!-- reportitem headline and subheadline headline -->
+            <th>
+                Reportitem
+            </th>
+
+            <!-- reportitem create time headline -->
+            <th>
+                Created
+            </th>
+
+            <!-- reportitem create user headline -->
+            <th>
+                Created by
+            </th>
+
+            <!-- reportitem modify time headline -->
+            <th>
+                Modified
+            </th>
+
+            <!-- reportitem modify user headline -->
+            <th>
+                Modified by
+            </th>
+
+        <!-- table row -->
+        </tr>
+
+    <!-- table head -->
+    </thead>
+
+    <!-- table body -->
+    <tbody>
+
+        <!-- iterate over rows -->
+        {% for i in reportitem_list %}
+
+            <!-- table row -->
+            <tr>
+
+                <!-- reportitem id -->
+                <td>
+                    {{ i.reportitem_id }}
+                </td>
+
+                <!-- system -->
+                <td>
+                    <a href="{{ i.system.get_absolute_url }}" type="button" class="btn btn-primary btn-sm top-distance copy-true">
+                        <img src="{% static 'dfirtrack_main/icons/monitor-light.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                        {{ i.system.system_name }}
+                    </a>
+                </td>
+
+                <!-- reportitem headline and subheadline -->
+                <td>
+                    <a href="{{ i.get_absolute_url }}">
+                        {{ i.headline }} - {{ i.reportitem_subheadline }}
+                    </a>
+                </td>
+
+                <!-- reportitem create time -->
+                <td>
+                    {{ i.reportitem_create_time|date:"Y-m-d H:i" }}
+                </td>
+
+                <!-- reportitem create user -->
+                <td>
+                    {{ i.reportitem_created_by_user_id }}
+                </td>
+
+                <!-- reportitem modify time -->
+                <td>
+                    {{ i.reportitem_modify_time|date:"Y-m-d H:i" }}
+                </td>
+
+                <!-- reportitem modify user -->
+                <td>
+                    {{ i.reportitem_modified_by_user_id }}
+                </td>
+
+
+            <!-- table row -->
+            </tr>
+
+        <!-- iterate over rows -->
+        {% endfor %}
+
+    <!-- table body -->
+    </tbody>
+
+<!-- datatable reportitem -->
+</table>
+
+<!-- javascript for datatables -->
+<script src="{% static 'dfirtrack_main/dfirtrack/datatables_dfirtrack.js' %}"></script>
+
+<!-- javascript for datatables -->
+{% block datatables %}
+<script src="{% static 'dfirtrack_main/datatables-1.10.16/datatables.min.js' %}"></script>
+{% endblock %}
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

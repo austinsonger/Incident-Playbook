@@ -1,0 +1,50 @@
+.. _securing-cyphon:
+
+###############
+Securing Cyphon
+###############
+
+.. _disclaimer:
+
+**********
+Disclaimer
+**********
+
+The Cyphon project is provided as open source software, and we encourage you to report any security bugs, configuration issues, or comments related to Cyphon or Cyclops components. We’re extremely thankful for responsible security researchers that report vulnerabilities to us. To make a report, please `email us <cyphondev@controlscan.com>`__ with the full details, including steps to reproduce the issue. 
+
+We recommend that you follow security best practices when running Cyphon. Please consult the official documentation of any open source or commercially available products that are used as a component of (or are integrated with) Cyphon, and follow their recommended security practices. This disclaimer also applies to outside APIs, operating systems, or virtualization technologies.
+
+
+.. _credentials:
+
+***********
+Credentials
+***********
+
+Cyphon configuration file
+=========================
+
+The Cyphon ``conf.py`` settings file contains default usernames and passwords for:
+
+  - PostgreSQL
+  - RabbitMQ
+
+If you're not setting these values through environment variables, you should change the default values in ``conf.py``.
+
+You should also change the Django ``SECRET_KEY`` to something unique. See the instructions on :ref:`configuring Django<django-config>` for details.
+
+Cyphon models
+=============
+
+The following apps store sensitive data:
+
+ - :ref:`AppUsers<appusers>`
+ - `Django Mailbox`_
+ - :ref:`Passports<passports>`
+
+Access to their data should be protected by setting proper permissions for users and groups. See :ref:`provisioning-users` for more details.
+
+RSA keys
+========
+
+The ``KEYS_DIR`` setting in the Cyphon ``conf.py`` settings file specifies the directory in which Django stores RSA keys associated with :ref:`Passports<passports>`. Public access to this directory should be denied.

@@ -1,0 +1,28 @@
+.. _stamps-graph:
+
+Stamps Graph
+============
+
+.. figure:: ../_static/images/graphs/stamps-graph.png
+    :target: ../_static/images/graphs/stamps-graph.png
+    :alt: Stamps model graph
+
+    Graph of models in the :ref:`stamps` app and related apps.
+
+Overview
+--------
+
+.. include:: ../summaries/stamps.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models stamps appusers passports -X AbstractBaseUser,PermissionsMixin -g -o stamps-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`appusers-graph`
+* :ref:`dispatches-graph`
+* :ref:`invoices-graph`
+* :ref:`passports-graph`
+* :ref:`records-graph`

@@ -1,0 +1,25 @@
+.. _aggregator:
+
+aggregator
+==========
+
+.. image:: ../_static/images/icons/aggregator.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/aggregator.summary.txt
+
+Subpackages
+-----------
+
+.. toctree::
+
+    aggregator.filters
+    aggregator.funnels
+    aggregator.invoices
+    aggregator.pipes
+    aggregator.plumbers
+    aggregator.pumproom
+    aggregator.reservoirs
+    aggregator.samples
+    aggregator.streams

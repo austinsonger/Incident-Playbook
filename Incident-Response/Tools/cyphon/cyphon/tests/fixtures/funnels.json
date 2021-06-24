@@ -1,0 +1,38 @@
+[
+  {
+    "model": "funnels.funnel",
+    "fields": {
+      "id": 1,
+      "bottle": ["post"],
+      "condenser": ["twitter__post"],
+      "pipe": ["twitter", "SearchAPI"]
+    }
+  },
+  {
+    "model": "funnels.funnel",
+    "fields": {
+      "id": 2,
+      "bottle": ["post"],
+      "condenser": ["twitter__post"],
+      "pipe": ["twitter", "PublicStreamsAPI"]
+    }
+  },
+  {
+    "model": "funnels.funnel",
+    "fields": {
+      "id": 3,
+      "bottle": ["post"],
+      "condenser": ["twitter__post"],
+      "pipe": ["platforms", "ApiHandler"]
+    }
+  },
+  {
+    "model": "funnels.funnel",
+    "fields": {
+      "id": 4,
+      "bottle": ["test_doc"],
+      "condenser": ["twitter__post"],
+      "pipe": ["platforms", "ApiHandler"]
+    }
+  }
+]

@@ -1,0 +1,1813 @@
+{
+    "attributes": {
+        "analysis_date": 1529117985,
+        "command_executions": [
+            "\"cmd.exe\"",
+            "reg add \"HKCU\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows\" /v Load /t REG_SZ /d \"C:\\DOCUME~1\\ADMINI~1\\LOCALS~1\\Temp\\FolderN\\name.exe.lnk\" /f",
+            "cmd /c \"C:\\Documents and Settings\\Administrator\\AppData\\Local\\Temp\\FolderN\\name.exe.bat\"",
+            "tasklist /nh /fi \"imagename eq svhost.exe\" ",
+            "find /i \"svhost.exe\"  ",
+            "C:\\WINDOWS\\system32\\cmd.exe  /K \"C:\\Documents and Settings\\Administrator\\AppData\\Local\\Temp\\FolderN\\name.exe\""
+        ],
+        "crypto_algorithms_observed": ["RSA", "DES"],
+        "crypto_plain_text": [
+            "\b\b\b\b\b\b\b\b\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+            "{z}\u0001\u0000\f\u0005\u0000╟\b\u0005\u0000\u0000\f\u0005\u0000£╖\u0005T\u001d[│.\n\u0004\b\u0004M\bnA\u0013é\u0004wç$\u0010▄\t\u0016▄é╗╗╗{`ßεε▓X╕╗╗╗╗╝f∩}■│∩yo╝3╞m║Θ┘=┐«¬»¬f╒\\\u0012*\u0011P»ááá`íáá₧ƒíáΩá■>°í■≈├\u0003╕Pë\u001bPí¬\u0010\u0007IΩá┼\u0007IΣ\rì¼?XXÖ\u001bXiÖ~╨╤233╖∙á¡≈┴╩╓∞âæ┘\u0007a)╣\u000fªµ║zt((o╚ æ!²\u0015\nJ\u001c\u001a\u0006j0äT⌡┐Σ«@┴É A#@A!└AA┴ⁿ².ƒ\u0012\u0018\u007fx1\fεoδ^╞0\u007f█\r\u0005⌡▀w(═ ■\u0006\u0006è▀\u0017\n\n²»≤┐∩ ╣²uⁿ\u0002Σ■° #\tΦCå·┐8\u0000√\u0010■⌡ê\u0000<ïⁿδÖ╬F╧┴\u0006╕ù┬ ├δ_\\ %Bô╬J╧─\\\u0007Ωo\u001b° ┴╝ü√?Mäé\u0012ä·┐<┬) û⌡b\u001b\f\u0014\u001c╘╚ç┐\u0006Pê ╠ÅÉ\u0002ÿWpP╥\u001f■Ä≈ vT╣@b\fW√┌hôq3ú»£V╙4▐íz/\u001cè╥£|ëzR8\u0018Γ\u0014ÿ*Æb«H₧b_Qö\u001c>╩≤{vHn┘ê≈τ\u000bΘ├h╠=εìvαO\u0019t╤k⌐\fkA%¥1ªe7QφQQbùìÅσ╒>i└ÑE\u000e,ò»aºtD√\u001d▐ßFUs▓σⁿ=╓\u0012Ct,╔à╜\u0004cT╤[Pεç 4\u0014⌠_╢╝°╠ÄæÄ₧Äà₧ìæφσ\r\u001cö\t≡▀\u0002╕╚▄áá\u0016Ç√╦3Ö£ìòæÖü⌡_~Ç■;ù╚\u0014ΣÇ╝ⁿ;W╚╛+ê\n\u0003w5α9δσY╨─\\√\u001f╛Ç½á_<\b\r²▀>Ç■╫\u0005≤╧¢ ₧■⌠ƒ7░\u001e ≤\u001bΦ\u007f=1\u0000╫4\f▄_c╔┐_;δ▒iΘ1░╨δ╤2Φ│r╨23▓░╤▓│rΦ╨20▒▒r033▓1│Θ╣BqKÿδ┌ÜΦ±Bm·Vnå╞o%äm44l&7o┼╒\u0003ΘdmnkÑúg\rÑo¡k`mσáK'√_»■5∙╫üèY▓mD¼$Φùéa\u0017#hπ\u0006σ\u0001é\u0002╓φï┘1└4ⁿ\u000b7αYVNÇß┼g/µ┐MΦC\u001197ppLΦ!]J■Öëσ\u001dÖ*V¥\u0012M■ε);\u000f╤\u00193⌡°▐o╠▒╪Z\u0011╔\u0019S58£°╗\u0010\\Ecƒ┴ÖHn\u000enï⌠ö¢ó╕f⌐\u0012}2φ╒\u0012█ò+^Ç\n÷\u000e┬'²\n\u0017Θ°\nT\u001d±*σ?Eh¬n\u000e¡▐╦i·ß╠ûì≤Ö4N┐Zl$╨-£╫\u0010╠ÅQ\"Cí╞\u0001Å\r⌡\u001d╖╝x-≥%╛rÄ╓6zª \"∙_#Y=-]=+Ü\u000fª╓:µV&F┌4\u001f\u0014⌡¼¼ì╠═xÿüö\u0001■h>\b┘Ü╪╪ZΘ±ÿΘ┘┌XiÖ╨|É╢╒61╥\u0011╙sö7 ¡g╞ú═╞ª┼ó├┬╩└┴─¼G╧╬A÷ Vfkfcd¬≈_/Σ⌠l`■\t∩╦!- ⁿrj╕ò UÆ\u0006_r╢FU]▓F⌡ï┘{╡G┼ùù\u001fá\u0001FKK╪~A╤Aü%│òΘ*\n\u0015╒h\u0013ôπc\u0013c`_\u0010\u0018\u0002\u0002w\u0002'Σe4\u001eφπ∩\u0017\bα\n\u0000\\vAEu-Çô\u0005p²¡Ä² √A╙5ù╬\u0003╘ìï╞╗δ▄½√ç├√■¬ΦÄ╬╬à9≡Em═YNn±fo±µFH╝GIa:Σ░ºx╢÷\u001fyw)òΘ╗àσ╒║\u001d╫\u0001/z_┤±â╗╥{ â 0_╓x┤╫▀8¢╢Ü⌠∞ @∩┼\b`_\u0014\u0018Γ\u0001@█;A▌ ╪\u0017 _÷╒\u0003╕╝┐φ\u001bÖê·\u0006L\u0001τ\u000bÅI\u0010x≥o\u001eë Γ±qpd<±E»G\u0017D│² âobMz■?| ╦╛ ═/\u007fß\u0000√≥■àK╬≥≈k \u0017.\u0011TVÿ\u0003αH~vC@δ\u0000Ä╖\u001d\u0004ε■?σ∙\u0016TL&µΣñù\u00038╕\f@╩:Çi\u0003Σqd²\u001f╕═éè╦─£▓╓µ┌1p∩ï6o\u0000╫⌡ó7√\u007fΓ« 'ÅWïm\u007f┘7\u000fαéú├\u0003╫╚k╙\u000fk*¬½\u0000\u001cxb\fÆ\u001d\fåê╝k√▀∙■#o▒δ░\u001a\f)╕\r⌡+ì\bî÷╚D.╚J╧\u00061V╒Nîé·&╞z┐\u0002<▓╩\u0016Aαí»Ö└\b\u0014Φπ\u001fé\u0018\u000fΣ▀yqfhxEu≤S┌Φ▌Θ\u0018x8ú\u001cpJ╒\"ñ\u0013Æ╡½3▐\u0019φπ\t∩\u0019\u001d\u0014:█YÖ₧∙╣▒║v$τ|lbBh\u0018\u0004n\u001fƒε\u0004AäçÇQ╨╕Gòƒƒ\u001f`_ßle┘|aEueπ╨°╪╥╠\u000e$g\u0017Ry\u000e\u0001\r\u0000<┌!áÄC?\u007f┐╨ç╕└é±·á∞óäΩ¼ìë±EÇG\u0017\b<▒╘\u0006ΣUß\f\b<\\p\u0013φU∞ùö\u0019\u001cÿ\r≡M/¿╚Ω\u001dÖ\u001cƒj\u001c\u0000(÷\u001eü Gáæïn╨\u0018αù8\u001f °αêî╕é┘·@ n¡═╧ôô7Ç╝⌐ê\u000eH!α\u0017ÇGy√íτxtXhq`,(░~╖\"╜\u0000≡_┘─d\u0007╠Φ\u0018╕;`\u0015\u0002Ω\u001d\n\u0006w\u001câF.╙╟\u0013\u0000?\u0003|\u0013≥N#\u0000 ╒Ñ╓Ä=Å╖oîâ\u0001╧A≥┴¥σφ\"@LûBg\u001b}²²2\u0012╙├=\u0017╦\u000b├\n¬╥▓6ª╟;\u0000╜\u0003\u0000Å╠╤Nì)Ç∞\fÿd*┌'ÑΦàG\u0010└ú⌠à╟┘Σ°î≥$\u0018╥x4\u001c\u0000Σ²Ä≡:└wΘ2┌'4$#:$│~╖,=\u0014░»\t░∩ε\u001cê╟R\u000f\u0004╘╜¬╤9\n\u0001Aj\u0002\u0000\u001e;Ñ@|∩Ωf+sKï\u0016sj'╞o█7&└ÄÇ}EÇ}═â\u0000|│┬╬\u00157\u0017m^╖s$\bS╛ó0\bmY>&4Φ╠qx°╥úΓçdσ\u001f\u000fΘ«┤ò⌡π\u001eòΦàσÆ╥Φá≡ëq└╧ÉΦΩ┌▒åA ╛├5>`HNo\u0003@╣=o]/2e7╦╤╩¿d,?¥▓9╦≈╠╨÷2$⌠|fÜbj\u0013O▀╚7ic▀╝;╠├¬ßpºoí\u0014\u0014\u0018\u001d▓U\r╪7ÜQQ]┤\\8?61╒YP\u0007╚δΘXΩ\u0005≥¬│└\u000b¿/w₧ü╤a╫á┘╩∞LH$á≈ⁿ/\u001e┤\u0000ÅΓ\u0017?╖\u0015\u0004\u0001┴\u001e▌±z╔ùö└é"
+        ],
+        "files_copied": [
+            {
+                "destination": "C:\\DOCUME~1\\ADMINI~1\\LOCALS~1\\Temp\\FolderN\\name.exe ",
+                "source": "C:\\Documents and Settings\\Administrator\\Local Settings\\Temp\\EB93A6\\996E.exe "
+            },
+            {
+                "destination": "C:\\Documents and Settings\\Administrator\\Local Settings\\Temp\\FolderN\\name.exe.jpg ",
+                "source": "C:\\Documents and Settings\\Administrator\\Local Settings\\Temp\\EB93A6\\996E.exe "
+            },
+            {
+                "destination": "C:\\Documents and Settings\\Administrator\\Local Settings\\Temp\\svhost.exe ",
+                "source": "C:\\WINDOWS\\Microsoft.NET\\Framework\\v3.5\\msbuild.exe "
+            }
+        ],
+        "files_opened": [
+            "C:\\WINDOWS\\system32\\winime32.dll",
+            "C:\\WINDOWS\\system32\\ws2_32.dll",
+            "C:\\WINDOWS\\system32\\ws2help.dll",
+            "C:\\WINDOWS\\system32\\psapi.dll",
+            "C:\\WINDOWS\\system32\\mscoree.dll",
+            "C:\\WINDOWS\\system32\\imm32.dll",
+            "C:\\WINDOWS\\system32\\lpk.dll",
+            "C:\\WINDOWS\\system32\\usp10.dll",
+            "C:\\Documents and Settings\\Administrator\\Local Settings\\Temp\\EB93A6\\996E.exe",
+            "C:\\WINDOWS\\Microsoft.NET\\Framework\\v4.0.30319\\mscoreei.dll",
+            "C:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727\\mscorwks.dll",
+            "C:\\WINDOWS\\Microsoft.NET\\Framework\\v4.0.30319\\clr.dll",
+            "C:\\WINDOWS\\WinSxS\\x86_Microsoft.VC80.CRT_1fc8b3b9a1e18e3b_8.0.50727.4053_x-ww_e6967989\\msvcr80.dll",
+            "C:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727\\CONFIG\\machine.config",
+            "C:\\WINDOWS\\system32\\shell32.dll",
+            "C:\\WINDOWS\\WinSxS\\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.5512_x-ww_35d4ce83\\comctl32.dll",
+            "C:\\WINDOWS\\WindowsShell.Manifest",
+            "C:\\WINDOWS\\system32\\comctl32.dll",
+            "C:\\WINDOWS\\assembly\\NativeImages_v2.0.50727_32\\index35.dat",
+            "C:\\WINDOWS\\assembly\\NativeImages_v2.0.50727_32\\mscorlib\\9adb89fa22fd5b4ce433b5aca7fb1b07\\mscorlib.ni.dll",
+            "C:\\WINDOWS\\system32\\rpcss.dll",
+            "C:\\WINDOWS\\system32\\MSCTF.dll",
+            "C:\\WINDOWS\\system32\\rsaenh.dll",
+            "C:\\WINDOWS\\system32\\crypt32.dll",
+            "C:\\WINDOWS\\system32\\l_intl.nls",
+            "C:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727\\mscorjit.dll",
+            "C:\\WINDOWS\\assembly\\pubpol1.dat",
+            "C:\\WINDOWS\\assembly\\GAC_MSIL\\Microsoft.VisualBasic\\8.0.0.0__b03f5f7f11d50a3a\\Microsoft.VisualBasic.dll",
+            "C:\\WINDOWS\\assembly\\NativeImages_v2.0.50727_32\\System\\aa7926460a336408c8041330ad90929d\\System.ni.dll",
+            "C:\\WINDOWS\\assembly\\NativeImages_v2.0.50727_32\\System.Drawing\\6978f2e90f13bc720d57fa6895c911e2\\System.Drawing.ni.dll",
+            "C:\\WINDOWS\\assembly\\NativeImages_v2.0.50727_32\\System.Windows.Forms\\9a254c455892c02355ab0ab0f0727c5b\\System.Windows.Forms.ni.dll",
+            "C:\\WINDOWS\\assembly\\GAC_32\\mscorlib\\2.0.0.0__b77a5c561934e089\\sorttbls.nlp",
+            "C:\\WINDOWS\\assembly\\GAC_32\\mscorlib\\2.0.0.0__b77a5c561934e089\\sortkey.nlp",
+            "C:\\WINDOWS\\assembly\\NativeImages_v2.0.50727_32\\System.Xml\\36f3953f24d4f0b767bf172331ad6f3e\\System.Xml.ni.dll",
+            "C:\\WINDOWS\\assembly\\GAC_32\\mscorlib\\2.0.0.0__b77a5c561934e089\\prcp.nlp",
+            "C:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727\\Culture.dll",
+            "C:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727\\mscorrc.dll",
+            "C:\\Documents and Settings\\Administrator\\AppData\\Local\\Temp\\FolderN",
+            "C:\\WINDOWS\\system32\\cmd.exe",
+            "C:\\WINDOWS\\system32\\apphelp.dll",
+            "C:\\WINDOWS\\AppPatch\\sysmain.sdb",
+            "C:\\WINDOWS\\system32\\ntdll.dll",
+            "C:\\WINDOWS\\system32\\kernel32.dll",
+            "C:\\WINDOWS\\system32\\unicode.nls",
+            "C:\\WINDOWS\\system32\\locale.nls",
+            "C:\\WINDOWS\\system32\\sorttbls.nls",
+            "C:\\WINDOWS\\system32\\msvcrt.dll",
+            "C:\\WINDOWS\\system32\\user32.dll",
+            "C:\\WINDOWS\\system32\\gdi32.dll",
+            "C:\\WINDOWS\\system32\\ctype.nls",
+            "C:\\WINDOWS\\system32\\advapi32.dll",
+            "C:\\WINDOWS\\system32\\rpcrt4.dll",
+            "C:\\WINDOWS\\system32\\secur32.dll",
+            "C:\\WINDOWS\\system32\\shimeng.dll",
+            "C:\\WINDOWS\\AppPatch\\AcGenral.dll",
+            "C:\\WINDOWS\\system32\\winmm.dll",
+            "C:\\WINDOWS\\system32\\ole32.dll",
+            "C:\\WINDOWS\\system32\\oleaut32.dll",
+            "C:\\WINDOWS\\system32\\msacm32.dll",
+            "C:\\WINDOWS\\system32\\version.dll",
+            "C:\\WINDOWS\\system32\\shlwapi.dll",
+            "C:\\WINDOWS\\system32\\userenv.dll",
+            "C:\\WINDOWS\\system32\\uxtheme.dll",
+            "C:\\WINDOWS\\WINDOWSSHELL.MANIFEST",
+            "C:\\WINDOWS\\system32\\conime.exe",
+            "C:\\WINDOWS\\system32\\clbcatq.dll",
+            "C:\\WINDOWS\\system32\\comres.dll",
+            "C:\\WINDOWS\\Registration\\R000000000007.clb",
+            "C:\\WINDOWS\\system32\\sxs.dll",
+            "C:\\WINDOWS\\system32\\reg.exe",
+            "C:\\WINDOWS\\system32\\wshom.ocx",
+            "C:\\WINDOWS\\system32\\scrrun.dll",
+            "C:\\WINDOWS\\system32\\zh-cn\\wshom.ocx.mui",
+            "C:\\WINDOWS\\system32\\winlogon.exe",
+            "C:\\WINDOWS\\system32\\xpsp2res.dll",
+            "C:\\WINDOWS\\system32\\setupapi.dll",
+            "C:\\DiskD",
+            "C:\\Documents and Settings\\Administrator\\「开始」菜单\\desktop.ini",
+            "C:\\Documents and Settings\\All Users\\「开始」菜单\\desktop.ini",
+            "C:\\Documents and Settings\\All Users\\Application Data\\desktop.ini",
+            "C:\\Documents and Settings\\Administrator\\Application Data\\desktop.ini",
+            "C:\\Documents and Settings\\Administrator\\My Documents\\desktop.ini",
+            "C:\\Documents and Settings\\Administrator\\My Documents\\My Pictures\\Desktop.ini",
+            "C:\\Documents and Settings\\All Users\\Documents\\desktop.ini",
+            "C:\\Documents and Settings\\All Users\\Documents\\My Pictures\\Desktop.ini",
+            "C:\\Documents and Settings\\All Users\\Documents\\My Music\\Desktop.ini",
+            "C:\\WINDOWS\\Microsoft.NET\\Framework\\v3.5\\MSBuild.exe",
+            "C:\\Documents and Settings\\Administrator\\Local Settings\\Temp\\svhost.exe",
+            "C:\\Documents and Settings\\Administrator\\AppData\\Local\\Temp\\FolderN\\name.exe.bat",
+            "C:\\WINDOWS\\system32\\tasklist.exe",
+            "C:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727\\diasymreader.dll",
+            "C:\\WINDOWS\\system32\\find.exe",
+            "C:\\WINDOWS\\assembly\\GAC_32\\mscorlib\\2.0.0.0__b77a5c561934e089\\mscorlib.dll",
+            "C:\\WINDOWS\\system32\\wbem\\wbemprox.dll",
+            "C:\\WINDOWS\\system32\\wbem\\wbemcomn.dll",
+            "C:\\WINDOWS\\system32\\winsta.dll",
+            "C:\\WINDOWS\\system32\\wbem\\wbemsvc.dll",
+            "C:\\WINDOWS\\system32\\wbem\\fastprox.dll",
+            "C:\\WINDOWS\\system32\\msvcp60.dll",
+            "C:\\WINDOWS\\system32\\ntdsapi.dll",
+            "C:\\WINDOWS\\system32\\dnsapi.dll"
+        ],
+        "files_written": [
+            "C:\\Documents and Settings\\Administrator\\AppData\\Local\\Temp\\FolderN\\name.exe.lnk",
+            "C:\\Documents and Settings\\Administrator\\Local Settings\\Temp\\svhost.exe"
+        ],
+        "has_html_report": true,
+        "modules_loaded": [
+            "ADVAPI32.dll",
+            "C:\\WINDOWS\\Microsoft.NET\\Framework\\v4.0.30319\\mscoreei.dll",
+            "SHLWAPI.dll",
+            "C:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727\\mscorwks.dll",
+            "mscoree.dll",
+            "ntdll",
+            "advapi32.dll",
+            "comctl32.dll",
+            "imm32.dll",
+            "shell32.dll",
+            "C:\\WINDOWS\\assembly\\NativeImages_v2.0.50727_32\\mscorlib\\9adb89fa22fd5b4ce433b5aca7fb1b07\\mscorlib.ni.dll",
+            "HookSwitchHookEnabledEvent",
+            "C:\\WINDOWS\\system32\\MSCTF.dll",
+            "AdvApi32.dll",
+            "crypt32.dll",
+            "C:\\WINDOWS\\system32\\rsaenh.dll",
+            "kernel32.dll",
+            "C:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727\\mscorjit.dll",
+            "C:\\WINDOWS\\assembly\\GAC_MSIL\\Microsoft.VisualBasic\\8.0.0.0__b03f5f7f11d50a3a\\Microsoft.VisualBasic.dll",
+            "NTDLL.DLL",
+            "C:\\WINDOWS\\assembly\\NativeImages_v2.0.50727_32\\System\\aa7926460a336408c8041330ad90929d\\System.ni.dll",
+            "C:\\WINDOWS\\assembly\\NativeImages_v2.0.50727_32\\System.Drawing\\6978f2e90f13bc720d57fa6895c911e2\\System.Drawing.ni.dll",
+            "C:\\WINDOWS\\assembly\\NativeImages_v2.0.50727_32\\System.Windows.Forms\\9a254c455892c02355ab0ab0f0727c5b\\System.Windows.Forms.ni.dll",
+            "C:\\WINDOWS\\assembly\\NativeImages_v2.0.50727_32\\System.Xml\\36f3953f24d4f0b767bf172331ad6f3e\\System.Xml.ni.dll",
+            "C:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727\\culture.dll",
+            "C:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727\\mscorrc.dll",
+            "rpcrt4.dll",
+            "ntdll.dll",
+            "C:\\WINDOWS\\system32\\cmd.exe",
+            "KERNEL32.DLL",
+            "sxs.dll",
+            "C:\\WINDOWS\\system32\\reg.exe",
+            "C:\\WINDOWS\\system32\\wshom.ocx",
+            "SXS.DLL",
+            "USER32.dll",
+            "ole32.dll",
+            "xpsp2res.dll",
+            "OLE32",
+            "OLE32.DLL",
+            "C:\\WINDOWS\\system32\\SHELL32.dll",
+            "RPCRT4.dll",
+            "psapi.dll",
+            "kernel32",
+            "user32",
+            "C:\\WINDOWS\\system32\\tasklist.exe",
+            "user32.dll",
+            "C:\\WINDOWS\\system32\\find.exe",
+            "C:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727\\diasymreader.dll",
+            "C:\\WINDOWS\\system32\\wbem\\wbemprox.dll",
+            "Winsta.dll",
+            "oleaut32.dll",
+            "C:\\WINDOWS\\system32\\wbem\\wbemsvc.dll",
+            "C:\\WINDOWS\\system32\\wbem\\fastprox.dll"
+        ],
+        "mutexes_created": [
+            "CTF.LBES.MutexDefaultS-1-5-21-1482476501-1645522239-1417001333-500",
+            "CTF.Compart.MutexDefaultS-1-5-21-1482476501-1645522239-1417001333-500",
+            "CTF.Asm.MutexDefaultS-1-5-21-1482476501-1645522239-1417001333-500",
+            "CTF.Layouts.MutexDefaultS-1-5-21-1482476501-1645522239-1417001333-500",
+            "CTF.TMD.MutexDefaultS-1-5-21-1482476501-1645522239-1417001333-500",
+            "CTF.TimListCache.FMPDefaultS-1-5-21-1482476501-1645522239-1417001333-500MUTEX.DefaultS-1-5-21-1482476501-1645522239-1417001333-500"
+        ],
+        "mutexes_opened": ["ShimCacheMutex", "Global\\CLR_CASOFF_MUTEX"],
+        "permissions_requested": ["SE_DEBUG_PRIVILEGE", "SE_LOAD_DRIVER_PRIVILEGE"],
+        "processes_created": [
+            "C:\\WINDOWS\\system32\\cmd.exe",
+            "C:\\WINDOWS\\system32\\reg.exe",
+            "C:\\WINDOWS\\system32\\tasklist.exe",
+            "C:\\WINDOWS\\system32\\find.exe"
+        ],
+        "processes_injected": ["C:\\DOCUME~1\\ADMINI~1\\LOCALS~1\\Temp\\svhost.exe"],
+        "processes_terminated": [
+            "C:\\WINDOWS\\system32\\reg.exe",
+            "C:\\WINDOWS\\system32\\cmd.exe",
+            "C:\\Documents and Settings\\Administrator\\Local Settings\\Temp\\EB93A6\\996E.exe",
+            "C:\\DOCUME~1\\ADMINI~1\\LOCALS~1\\Temp\\svhost.exe",
+            "C:\\WINDOWS\\system32\\tasklist.exe",
+            "C:\\WINDOWS\\system32\\find.exe"
+        ],
+        "processes_tree": [
+            {
+                "children": [
+                    {
+                        "name": "svhost.exe",
+                        "process_id": "356"
+                    },
+                    {
+                        "children": [
+                            {
+                                "name": "reg.exe",
+                                "process_id": "1684"
+                            }
+                        ],
+                        "name": "cmd.exe",
+                        "process_id": "276"
+                    },
+                    {
+                        "children": [
+                            {
+                                "name": "tasklist.exe",
+                                "process_id": "2064"
+                            },
+                            {
+                                "name": "find.exe",
+                                "process_id": "2088"
+                            },
+                            {
+                                "children": [
+                                    {
+                                        "name": "tasklist.exe",
+                                        "process_id": "2160"
+                                    },
+                                    {
+                                        "name": "find.exe",
+                                        "process_id": "2168"
+                                    },
+                                    {
+                                        "children": [
+                                            {
+                                                "name": "tasklist.exe",
+                                                "process_id": "2196"
+                                            },
+                                            {
+                                                "name": "find.exe",
+                                                "process_id": "2216"
+                                            },
+                                            {
+                                                "children": [
+                                                    {
+                                                        "name": "tasklist.exe",
+                                                        "process_id": "2256"
+                                                    },
+                                                    {
+                                                        "name": "find.exe",
+                                                        "process_id": "2264"
+                                                    },
+                                                    {
+                                                        "children": [
+                                                            {
+                                                                "name": "tasklist.exe",
+                                                                "process_id": "2292"
+                                                            },
+                                                            {
+                                                                "name": "find.exe",
+                                                                "process_id": "2300"
+                                                            },
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "name": "tasklist.exe",
+                                                                        "process_id": "2364"
+                                                                    },
+                                                                    {
+                                                                        "name": "find.exe",
+                                                                        "process_id": "2372"
+                                                                    },
+                                                                    {
+                                                                        "children": [
+                                                                            {
+                                                                                "name": "tasklist.exe",
+                                                                                "process_id": "2440"
+                                                                            },
+                                                                            {
+                                                                                "name": "find.exe",
+                                                                                "process_id": "2448"
+                                                                            },
+                                                                            {
+                                                                                "children": [
+                                                                                    {
+                                                                                        "name": "tasklist.exe",
+                                                                                        "process_id": "2500"
+                                                                                    },
+                                                                                    {
+                                                                                        "name": "find.exe",
+                                                                                        "process_id": "2508"
+                                                                                    },
+                                                                                    {
+                                                                                        "children": [
+                                                                                            {
+                                                                                                "name": "tasklist.exe",
+                                                                                                "process_id": "2536"
+                                                                                            },
+                                                                                            {
+                                                                                                "name": "find.exe",
+                                                                                                "process_id": "2544"
+                                                                                            },
+                                                                                            {
+                                                                                                "children": [
+                                                                                                    {
+                                                                                                        "name": "tasklist.exe",
+                                                                                                        "process_id": "2572"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "name": "find.exe",
+                                                                                                        "process_id": "2592"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "children": [
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "2636"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "2644"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "2680"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "2696"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "2716"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "2724"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "2772"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "2780"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "2824"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "2832"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "2856"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "2864"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "2916"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "2924"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "2968"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "2976"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "2996"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "3004"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "3052"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "3060"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "3104"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "3112"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "3136"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "3144"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "3192"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "3200"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "3244"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "3252"
+                                                                                                            }
+                                                                                                        ],
+                                                                                                        "name": "cmd.exe /K name.exe\"",
+                                                                                                        "process_id": "2628"
+                                                                                                    }
+                                                                                                ],
+                                                                                                "name": "cmd.exe /K name.exe\"",
+                                                                                                "process_id": "2564"
+                                                                                            }
+                                                                                        ],
+                                                                                        "name": "cmd.exe /K name.exe\"",
+                                                                                        "process_id": "2528"
+                                                                                    }
+                                                                                ],
+                                                                                "name": "cmd.exe /K name.exe\"",
+                                                                                "process_id": "2492"
+                                                                            }
+                                                                        ],
+                                                                        "name": "cmd.exe /K name.exe\"",
+                                                                        "process_id": "2408"
+                                                                    }
+                                                                ],
+                                                                "name": "cmd.exe /K name.exe\"",
+                                                                "process_id": "2320"
+                                                            }
+                                                        ],
+                                                        "name": "cmd.exe /K name.exe\"",
+                                                        "process_id": "2284"
+                                                    }
+                                                ],
+                                                "name": "cmd.exe /K name.exe\"",
+                                                "process_id": "2248"
+                                            }
+                                        ],
+                                        "name": "cmd.exe /K name.exe\"",
+                                        "process_id": "2188"
+                                    }
+                                ],
+                                "name": "cmd.exe /K name.exe\"",
+                                "process_id": "2152"
+                            }
+                        ],
+                        "name": "cmd.exe cmd /c name.exe.bat\"",
+                        "process_id": "1644"
+                    }
+                ],
+                "name": "****.exe",
+                "process_id": "716"
+            },
+            {
+                "children": [
+                    {
+                        "name": "svhost.exe",
+                        "process_id": "1820"
+                    },
+                    {
+                        "children": [
+                            {
+                                "name": "reg.exe",
+                                "process_id": "1840"
+                            }
+                        ],
+                        "name": "cmd.exe",
+                        "process_id": "1576"
+                    },
+                    {
+                        "children": [
+                            {
+                                "name": "tasklist.exe",
+                                "process_id": "1744"
+                            },
+                            {
+                                "name": "find.exe",
+                                "process_id": "2056"
+                            },
+                            {
+                                "children": [
+                                    {
+                                        "name": "tasklist.exe",
+                                        "process_id": "2160"
+                                    },
+                                    {
+                                        "name": "find.exe",
+                                        "process_id": "2168"
+                                    },
+                                    {
+                                        "children": [
+                                            {
+                                                "name": "tasklist.exe",
+                                                "process_id": "2196"
+                                            },
+                                            {
+                                                "name": "find.exe",
+                                                "process_id": "2204"
+                                            },
+                                            {
+                                                "children": [
+                                                    {
+                                                        "name": "tasklist.exe",
+                                                        "process_id": "2268"
+                                                    },
+                                                    {
+                                                        "name": "find.exe",
+                                                        "process_id": "2276"
+                                                    },
+                                                    {
+                                                        "children": [
+                                                            {
+                                                                "name": "tasklist.exe",
+                                                                "process_id": "2360"
+                                                            },
+                                                            {
+                                                                "name": "find.exe",
+                                                                "process_id": "2380"
+                                                            },
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "name": "tasklist.exe",
+                                                                        "process_id": "2412"
+                                                                    },
+                                                                    {
+                                                                        "name": "find.exe",
+                                                                        "process_id": "2420"
+                                                                    },
+                                                                    {
+                                                                        "children": [
+                                                                            {
+                                                                                "name": "tasklist.exe",
+                                                                                "process_id": "2452"
+                                                                            },
+                                                                            {
+                                                                                "name": "find.exe",
+                                                                                "process_id": "2460"
+                                                                            },
+                                                                            {
+                                                                                "children": [
+                                                                                    {
+                                                                                        "name": "tasklist.exe",
+                                                                                        "process_id": "2512"
+                                                                                    },
+                                                                                    {
+                                                                                        "name": "find.exe",
+                                                                                        "process_id": "2520"
+                                                                                    },
+                                                                                    {
+                                                                                        "children": [
+                                                                                            {
+                                                                                                "name": "tasklist.exe",
+                                                                                                "process_id": "2548"
+                                                                                            },
+                                                                                            {
+                                                                                                "name": "find.exe",
+                                                                                                "process_id": "2556"
+                                                                                            },
+                                                                                            {
+                                                                                                "children": [
+                                                                                                    {
+                                                                                                        "name": "tasklist.exe",
+                                                                                                        "process_id": "2608"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "name": "find.exe",
+                                                                                                        "process_id": "2616"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "children": [
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "2644"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "2652"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "2700"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "2708"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "2728"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "2748"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "2784"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "2792"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "2844"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "2852"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "2896"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "2904"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "2924"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "2932"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "2980"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "2988"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "3032"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "3044"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "3076"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "3096"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "3124"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "3132"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "3176"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "3184"
+                                                                                                            }
+                                                                                                        ],
+                                                                                                        "name": "cmd.exe /K name.exe\"",
+                                                                                                        "process_id": "2636"
+                                                                                                    }
+                                                                                                ],
+                                                                                                "name": "cmd.exe /K name.exe\"",
+                                                                                                "process_id": "2600"
+                                                                                            }
+                                                                                        ],
+                                                                                        "name": "cmd.exe /K name.exe\"",
+                                                                                        "process_id": "2540"
+                                                                                    }
+                                                                                ],
+                                                                                "name": "cmd.exe /K name.exe\"",
+                                                                                "process_id": "2504"
+                                                                            }
+                                                                        ],
+                                                                        "name": "cmd.exe /K name.exe\"",
+                                                                        "process_id": "2440"
+                                                                    }
+                                                                ],
+                                                                "name": "cmd.exe /K name.exe\"",
+                                                                "process_id": "2404"
+                                                            }
+                                                        ],
+                                                        "name": "cmd.exe /K name.exe\"",
+                                                        "process_id": "2324"
+                                                    }
+                                                ],
+                                                "name": "cmd.exe /K name.exe\"",
+                                                "process_id": "2244"
+                                            }
+                                        ],
+                                        "name": "cmd.exe /K name.exe\"",
+                                        "process_id": "2188"
+                                    }
+                                ],
+                                "name": "cmd.exe /K name.exe\"",
+                                "process_id": "2152"
+                            }
+                        ],
+                        "name": "cmd.exe cmd /c name.exe.bat\"",
+                        "process_id": "168"
+                    }
+                ],
+                "name": "****.exe",
+                "process_id": "480"
+            },
+            {
+                "children": [
+                    {
+                        "name": "svhost.exe",
+                        "process_id": "1884"
+                    },
+                    {
+                        "children": [
+                            {
+                                "name": "reg.exe",
+                                "process_id": "1024"
+                            }
+                        ],
+                        "name": "cmd.exe",
+                        "process_id": "480"
+                    },
+                    {
+                        "children": [
+                            {
+                                "name": "tasklist.exe",
+                                "process_id": "1764"
+                            },
+                            {
+                                "name": "find.exe",
+                                "process_id": "2060"
+                            },
+                            {
+                                "children": [
+                                    {
+                                        "name": "tasklist.exe",
+                                        "process_id": "2148"
+                                    },
+                                    {
+                                        "name": "find.exe",
+                                        "process_id": "2156"
+                                    },
+                                    {
+                                        "children": [
+                                            {
+                                                "name": "tasklist.exe",
+                                                "process_id": "2184"
+                                            },
+                                            {
+                                                "name": "find.exe",
+                                                "process_id": "2192"
+                                            },
+                                            {
+                                                "children": [
+                                                    {
+                                                        "name": "tasklist.exe",
+                                                        "process_id": "2256"
+                                                    },
+                                                    {
+                                                        "name": "find.exe",
+                                                        "process_id": "2264"
+                                                    },
+                                                    {
+                                                        "children": [
+                                                            {
+                                                                "name": "tasklist.exe",
+                                                                "process_id": "2356"
+                                                            },
+                                                            {
+                                                                "name": "find.exe",
+                                                                "process_id": "2364"
+                                                            },
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "name": "tasklist.exe",
+                                                                        "process_id": "2392"
+                                                                    },
+                                                                    {
+                                                                        "name": "find.exe",
+                                                                        "process_id": "2400"
+                                                                    },
+                                                                    {
+                                                                        "children": [
+                                                                            {
+                                                                                "name": "tasklist.exe",
+                                                                                "process_id": "2432"
+                                                                            },
+                                                                            {
+                                                                                "name": "find.exe",
+                                                                                "process_id": "2452"
+                                                                            },
+                                                                            {
+                                                                                "children": [
+                                                                                    {
+                                                                                        "name": "tasklist.exe",
+                                                                                        "process_id": "2492"
+                                                                                    },
+                                                                                    {
+                                                                                        "name": "find.exe",
+                                                                                        "process_id": "2500"
+                                                                                    },
+                                                                                    {
+                                                                                        "children": [
+                                                                                            {
+                                                                                                "name": "tasklist.exe",
+                                                                                                "process_id": "2528"
+                                                                                            },
+                                                                                            {
+                                                                                                "name": "find.exe",
+                                                                                                "process_id": "2536"
+                                                                                            },
+                                                                                            {
+                                                                                                "children": [
+                                                                                                    {
+                                                                                                        "name": "tasklist.exe",
+                                                                                                        "process_id": "2588"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "name": "find.exe",
+                                                                                                        "process_id": "2596"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "children": [
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "2624"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "2632"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "2680"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "2688"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "2720"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "2732"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "2764"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "2772"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "2824"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "2832"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "2876"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "2884"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "2904"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "2912"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "2960"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "2968"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "3012"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "3024"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "3056"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "3076"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "3100"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "3108"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe",
+                                                                                                                "process_id": "3156"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe",
+                                                                                                                "process_id": "3164"
+                                                                                                            }
+                                                                                                        ],
+                                                                                                        "name": "cmd.exe /K name.exe\"",
+                                                                                                        "process_id": "2616"
+                                                                                                    }
+                                                                                                ],
+                                                                                                "name": "cmd.exe /K name.exe\"",
+                                                                                                "process_id": "2580"
+                                                                                            }
+                                                                                        ],
+                                                                                        "name": "cmd.exe /K name.exe\"",
+                                                                                        "process_id": "2520"
+                                                                                    }
+                                                                                ],
+                                                                                "name": "cmd.exe /K name.exe\"",
+                                                                                "process_id": "2484"
+                                                                            }
+                                                                        ],
+                                                                        "name": "cmd.exe /K name.exe\"",
+                                                                        "process_id": "2420"
+                                                                    }
+                                                                ],
+                                                                "name": "cmd.exe /K name.exe\"",
+                                                                "process_id": "2384"
+                                                            }
+                                                        ],
+                                                        "name": "cmd.exe /K name.exe\"",
+                                                        "process_id": "2308"
+                                                    }
+                                                ],
+                                                "name": "cmd.exe /K name.exe\"",
+                                                "process_id": "2228"
+                                            }
+                                        ],
+                                        "name": "cmd.exe /K name.exe\"",
+                                        "process_id": "2176"
+                                    }
+                                ],
+                                "name": "cmd.exe /K name.exe\"",
+                                "process_id": "2116"
+                            }
+                        ],
+                        "name": "cmd.exe cmd /c name.exe.bat\"",
+                        "process_id": "1864"
+                    }
+                ],
+                "name": "****.exe",
+                "process_id": "1340"
+            },
+            {
+                "children": [
+                    {
+                        "name": "svhost.exe",
+                        "process_id": "1820"
+                    },
+                    {
+                        "children": [
+                            {
+                                "name": "reg.exe reg add \"HKCU\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows\" /v Load /t REG_SZ /d name.exe.lnk\" /f",
+                                "process_id": "1864"
+                            }
+                        ],
+                        "name": "cmd.exe",
+                        "process_id": "1124"
+                    },
+                    {
+                        "children": [
+                            {
+                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                "process_id": "2076"
+                            },
+                            {
+                                "name": "find.exe find /i \"svhost.exe\"",
+                                "process_id": "2084"
+                            },
+                            {
+                                "children": [
+                                    {
+                                        "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                        "process_id": "2148"
+                                    },
+                                    {
+                                        "name": "find.exe find /i \"svhost.exe\"",
+                                        "process_id": "2156"
+                                    },
+                                    {
+                                        "children": [
+                                            {
+                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                "process_id": "2208"
+                                            },
+                                            {
+                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                "process_id": "2216"
+                                            },
+                                            {
+                                                "children": [
+                                                    {
+                                                        "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                        "process_id": "2244"
+                                                    },
+                                                    {
+                                                        "name": "find.exe find /i \"svhost.exe\"",
+                                                        "process_id": "2252"
+                                                    },
+                                                    {
+                                                        "children": [
+                                                            {
+                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                "process_id": "2308"
+                                                            },
+                                                            {
+                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                "process_id": "2316"
+                                                            },
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                        "process_id": "2344"
+                                                                    },
+                                                                    {
+                                                                        "name": "find.exe find /i \"svhost.exe\"",
+                                                                        "process_id": "2352"
+                                                                    },
+                                                                    {
+                                                                        "children": [
+                                                                            {
+                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                "process_id": "2404"
+                                                                            },
+                                                                            {
+                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                "process_id": "2412"
+                                                                            },
+                                                                            {
+                                                                                "children": [
+                                                                                    {
+                                                                                        "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                        "process_id": "2440"
+                                                                                    },
+                                                                                    {
+                                                                                        "name": "find.exe find /i \"svhost.exe\"",
+                                                                                        "process_id": "2448"
+                                                                                    },
+                                                                                    {
+                                                                                        "children": [
+                                                                                            {
+                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                "process_id": "2480"
+                                                                                            },
+                                                                                            {
+                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                "process_id": "2488"
+                                                                                            },
+                                                                                            {
+                                                                                                "children": [
+                                                                                                    {
+                                                                                                        "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                        "process_id": "2540"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                        "process_id": "2548"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "children": [
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "2576"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "2584"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "2628"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "2636"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "2656"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "2664"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "2712"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "2720"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "2740"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "2748"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "2796"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "2804"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "2824"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "2832"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "2884"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "2892"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "2912"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "2920"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "2964"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "2972"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "2992"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "3000"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "3048"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "3056"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "3080"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "3088"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "3136"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "3144"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "3180"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "3200"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "3220"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "3228"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "3272"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "3280"
+                                                                                                            }
+                                                                                                        ],
+                                                                                                        "name": "cmd.exe /K name.exe\"",
+                                                                                                        "process_id": "2568"
+                                                                                                    }
+                                                                                                ],
+                                                                                                "name": "cmd.exe /K name.exe\"",
+                                                                                                "process_id": "2532"
+                                                                                            }
+                                                                                        ],
+                                                                                        "name": "cmd.exe /K name.exe\"",
+                                                                                        "process_id": "2468"
+                                                                                    }
+                                                                                ],
+                                                                                "name": "cmd.exe /K name.exe\"",
+                                                                                "process_id": "2432"
+                                                                            }
+                                                                        ],
+                                                                        "name": "cmd.exe /K name.exe\"",
+                                                                        "process_id": "2372"
+                                                                    }
+                                                                ],
+                                                                "name": "cmd.exe /K name.exe\"",
+                                                                "process_id": "2336"
+                                                            }
+                                                        ],
+                                                        "name": "cmd.exe /K name.exe\"",
+                                                        "process_id": "2288"
+                                                    }
+                                                ],
+                                                "name": "cmd.exe /K name.exe\"",
+                                                "process_id": "2236"
+                                            }
+                                        ],
+                                        "name": "cmd.exe /K name.exe\"",
+                                        "process_id": "2200"
+                                    }
+                                ],
+                                "name": "cmd.exe /K name.exe\"",
+                                "process_id": "2140"
+                            }
+                        ],
+                        "name": "cmd.exe cmd /c name.exe.bat\"",
+                        "process_id": "1996"
+                    }
+                ],
+                "name": "****.exe",
+                "process_id": "628"
+            },
+            {
+                "children": [
+                    {
+                        "name": "svhost.exe",
+                        "process_id": "1756"
+                    },
+                    {
+                        "children": [
+                            {
+                                "name": "reg.exe reg add \"HKCU\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows\" /v Load /t REG_SZ /d name.exe.lnk\" /f",
+                                "process_id": "396"
+                            }
+                        ],
+                        "name": "cmd.exe",
+                        "process_id": "1960"
+                    },
+                    {
+                        "children": [
+                            {
+                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                "process_id": "2064"
+                            },
+                            {
+                                "name": "find.exe find /i \"svhost.exe\"",
+                                "process_id": "2092"
+                            },
+                            {
+                                "children": [
+                                    {
+                                        "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                        "process_id": "2168"
+                                    },
+                                    {
+                                        "name": "find.exe find /i \"svhost.exe\"",
+                                        "process_id": "2176"
+                                    },
+                                    {
+                                        "children": [
+                                            {
+                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                "process_id": "2204"
+                                            },
+                                            {
+                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                "process_id": "2212"
+                                            },
+                                            {
+                                                "children": [
+                                                    {
+                                                        "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                        "process_id": "2272"
+                                                    },
+                                                    {
+                                                        "name": "find.exe find /i \"svhost.exe\"",
+                                                        "process_id": "2280"
+                                                    },
+                                                    {
+                                                        "children": [
+                                                            {
+                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                "process_id": "2308"
+                                                            },
+                                                            {
+                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                "process_id": "2316"
+                                                            },
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                        "process_id": "2368"
+                                                                    },
+                                                                    {
+                                                                        "name": "find.exe find /i \"svhost.exe\"",
+                                                                        "process_id": "2376"
+                                                                    },
+                                                                    {
+                                                                        "children": [
+                                                                            {
+                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                "process_id": "2404"
+                                                                            },
+                                                                            {
+                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                "process_id": "2412"
+                                                                            },
+                                                                            {
+                                                                                "children": [
+                                                                                    {
+                                                                                        "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                        "process_id": "2444"
+                                                                                    },
+                                                                                    {
+                                                                                        "name": "find.exe find /i \"svhost.exe\"",
+                                                                                        "process_id": "2452"
+                                                                                    },
+                                                                                    {
+                                                                                        "children": [
+                                                                                            {
+                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                "process_id": "2504"
+                                                                                            },
+                                                                                            {
+                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                "process_id": "2512"
+                                                                                            },
+                                                                                            {
+                                                                                                "children": [
+                                                                                                    {
+                                                                                                        "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                        "process_id": "2540"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                        "process_id": "2548"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "children": [
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "2600"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "2608"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "2628"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "2636"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "2684"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "2692"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "2712"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "2720"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "2772"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "2780"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "2804"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "2812"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "2856"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "2864"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "2884"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "2892"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "2936"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "2944"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "2968"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "2976"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "3020"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "3028"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "3064"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "3076"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "3104"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "3112"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "3136"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "3144"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "3188"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "3196"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "tasklist.exe tasklist /nh /fi \"imagename eq svhost.exe\"",
+                                                                                                                "process_id": "3216"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "name": "find.exe find /i \"svhost.exe\"",
+                                                                                                                "process_id": "3224"
+                                                                                                            }
+                                                                                                        ],
+                                                                                                        "name": "cmd.exe /K name.exe\"",
+                                                                                                        "process_id": "2568"
+                                                                                                    }
+                                                                                                ],
+                                                                                                "name": "cmd.exe /K name.exe\"",
+                                                                                                "process_id": "2532"
+                                                                                            }
+                                                                                        ],
+                                                                                        "name": "cmd.exe /K name.exe\"",
+                                                                                        "process_id": "2496"
+                                                                                    }
+                                                                                ],
+                                                                                "name": "cmd.exe /K name.exe\"",
+                                                                                "process_id": "2436"
+                                                                            }
+                                                                        ],
+                                                                        "name": "cmd.exe /K name.exe\"",
+                                                                        "process_id": "2396"
+                                                                    }
+                                                                ],
+                                                                "name": "cmd.exe /K name.exe\"",
+                                                                "process_id": "2336"
+                                                            }
+                                                        ],
+                                                        "name": "cmd.exe /K name.exe\"",
+                                                        "process_id": "2300"
+                                                    }
+                                                ],
+                                                "name": "cmd.exe /K name.exe\"",
+                                                "process_id": "2248"
+                                            }
+                                        ],
+                                        "name": "cmd.exe /K name.exe\"",
+                                        "process_id": "2196"
+                                    }
+                                ],
+                                "name": "cmd.exe /K name.exe\"",
+                                "process_id": "2160"
+                            }
+                        ],
+                        "name": "cmd.exe cmd /c name.exe.bat\"",
+                        "process_id": "1712"
+                    }
+                ],
+                "name": "****.exe",
+                "process_id": "480"
+            }
+        ],
+        "registry_keys_opened": [
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\996E.exe",
+            "\\Registry\\MACHINE\\System\\CurrentControlSet\\Control\\SafeBoot\\Option",
+            "\\Registry\\Machine\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\TransparentEnabled",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\mscoreei.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\ntdll.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\KERNEL32.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\GDI32.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\USER32.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\Secur32.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\RPCRT4.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\ADVAPI32.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\msvcrt.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\WS2HELP.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\WS2_32.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\SHLWAPI.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\PSAPI.DLL",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\winime32.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\mscoree.dll",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\mscoree.dll\\CheckAppHelp",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\IMM32.DLL",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\USP10.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\LPK.DLL",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\MSVCR80.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\mscorwks.dll",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\mscorwks.dll\\CheckAppHelp",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\shell32.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\comctl32.dll",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders\\AppData",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\ole32.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\mscorlib.ni.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\MSCTF.dll",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders\\Cache",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\rsaenh.dll",
+            "\\REGISTRY\\MACHINE\\Software\\Policies\\Microsoft\\Cryptography",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\mscorjit.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\VERSION.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\Microsoft.VisualBasic.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\culture.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\System.ni.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\System.Drawing.ni.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\System.Windows.Forms.ni.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\System.Xml.ni.dll",
+            "\\REGISTRY\\MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\996E.exe\\RpcThreadPoolThrottle",
+            "\\REGISTRY\\MACHINE\\Software\\Policies\\Microsoft\\Windows NT\\Rpc",
+            "\\Registry\\MACHINE\\System\\CurrentControlSet\\Control\\Session Manager\\AppCertDlls",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\Apphelp.dll",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\AuthenticodeEnabled",
+            "\\Registry\\Machine\\Software\\Policies\\Microsoft\\Windows\\Safer\\LevelObjects",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\Levels",
+            "\\Registry\\Machine\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Paths",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Paths\\{dda3f824-d8cb-441b-834d-be2efd2c1a33}",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Paths\\{dda3f824-d8cb-441b-834d-be2efd2c1a33}\\ItemData",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Paths\\{dda3f824-d8cb-441b-834d-be2efd2c1a33}\\SaferFlags",
+            "\\Registry\\Machine\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes\\{349d35ab-37b5-462f-9b89-edd5fbde1328}",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes\\{349d35ab-37b5-462f-9b89-edd5fbde1328}\\ItemData",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes\\{349d35ab-37b5-462f-9b89-edd5fbde1328}\\HashAlg",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes\\{349d35ab-37b5-462f-9b89-edd5fbde1328}\\ItemSize",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes\\{349d35ab-37b5-462f-9b89-edd5fbde1328}\\SaferFlags",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes\\{7fb9cd2e-3076-4df9-a57b-b813f72dbb91}",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes\\{7fb9cd2e-3076-4df9-a57b-b813f72dbb91}\\ItemData",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes\\{7fb9cd2e-3076-4df9-a57b-b813f72dbb91}\\HashAlg",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes\\{7fb9cd2e-3076-4df9-a57b-b813f72dbb91}\\ItemSize",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes\\{7fb9cd2e-3076-4df9-a57b-b813f72dbb91}\\SaferFlags",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes\\{81d1fe15-dd9d-4762-b16d-7c29ddecae3f}",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes\\{81d1fe15-dd9d-4762-b16d-7c29ddecae3f}\\ItemData",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes\\{81d1fe15-dd9d-4762-b16d-7c29ddecae3f}\\HashAlg",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes\\{81d1fe15-dd9d-4762-b16d-7c29ddecae3f}\\ItemSize",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes\\{81d1fe15-dd9d-4762-b16d-7c29ddecae3f}\\SaferFlags",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes\\{94e3e076-8f53-42a5-8411-085bcc18a68d}",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes\\{94e3e076-8f53-42a5-8411-085bcc18a68d}\\ItemData",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes\\{94e3e076-8f53-42a5-8411-085bcc18a68d}\\HashAlg",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes\\{94e3e076-8f53-42a5-8411-085bcc18a68d}\\ItemSize",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes\\{94e3e076-8f53-42a5-8411-085bcc18a68d}\\SaferFlags",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes\\{dc971ee5-44eb-4fe4-ae2e-b91490411bfc}",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes\\{dc971ee5-44eb-4fe4-ae2e-b91490411bfc}\\ItemData",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes\\{dc971ee5-44eb-4fe4-ae2e-b91490411bfc}\\HashAlg",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes\\{dc971ee5-44eb-4fe4-ae2e-b91490411bfc}\\ItemSize",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes\\{dc971ee5-44eb-4fe4-ae2e-b91490411bfc}\\SaferFlags",
+            "\\Registry\\Machine\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\UrlZones",
+            "\\Registry\\Machine\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\4096\\Paths",
+            "\\Registry\\Machine\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\4096\\Hashes",
+            "\\Registry\\Machine\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\4096\\UrlZones",
+            "\\Registry\\Machine\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\65536\\Paths",
+            "\\Registry\\Machine\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\65536\\Hashes",
+            "\\Registry\\Machine\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\65536\\UrlZones",
+            "\\Registry\\Machine\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\131072\\Paths",
+            "\\Registry\\Machine\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\131072\\Hashes",
+            "\\Registry\\Machine\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\131072\\UrlZones",
+            "\\Registry\\Machine\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\262144\\Paths",
+            "\\Registry\\Machine\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\262144\\Hashes",
+            "\\Registry\\Machine\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\262144\\UrlZones",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Paths",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\UrlZones",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\4096\\Paths",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\4096\\Hashes",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\4096\\UrlZones",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\65536\\Paths",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\65536\\Hashes",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\65536\\UrlZones",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\131072\\Paths",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\131072\\Hashes",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\131072\\UrlZones",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\262144\\Paths",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\262144\\Hashes",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\262144\\UrlZones",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\DefaultLevel",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\PolicyScope",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders\\Cache",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\LogFileName",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\cmd.exe",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\COMRes.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\OLEAUT32.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\CLBCATQ.DLL",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\sxs.dll",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Policies\\Microsoft\\Windows\\System",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Command Processor\\AutoRun",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\reg.exe",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\MPR.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\ScrRun.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\wshom.ocx",
+            "\\REGISTRY\\MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\reg.exe\\RpcThreadPoolThrottle",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\policies\\Explorer\\NoInternetIcon",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\NoInternetIcon",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\policies\\Explorer\\NoControlPanel",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\NoControlPanel",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\policies\\Explorer\\NoSetFolders",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\NoSetFolders",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\SETUPAPI.dll",
+            "\\Registry\\Machine\\Software\\Policies\\Microsoft\\System\\DNSclient",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\xpsp2res.dll",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\\Hidden",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\\HideFileExt",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\\ShowSuperHidden",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500_CLASSES\\.exe",
+            "\\Registry\\Machine\\Software\\Classes\\.exe",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500_Classes\\.exe",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders\\Desktop",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders\\Start Menu",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders\\Common Start Menu",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders\\Common Desktop",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders\\Common AppData",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders\\My Pictures",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders\\Personal",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders\\CommonPictures",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\USERENV.dll",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders\\Local Settings",
+            "\\REGISTRY\\MACHINE\\Software\\Policies\\Microsoft\\Windows\\System",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders\\Common Documents",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\netapi32.dll",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders\\CommonMusic",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders\\CommonVideo",
+            "\\REGISTRY\\MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\cmd.exe\\RpcThreadPoolThrottle",
+            "\\REGISTRY\\MACHINE\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\svhost.exe",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\tasklist.exe",
+            "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\SOFTWARE\\Policies\\Microsoft\\PCHealth\\ErrorReporting",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\PCHealth\\ErrorReporting",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\PCHealth\\ErrorReporting\\ShowUI",
+            "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\PCHealth\\ErrorReporting\\DoReport",
+            "\\REGISTRY\\MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\tasklist.exe\\RpcThreadPoolThrottle",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\diasymreader.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\find.exe",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\wbemcomn.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\wbemprox.dll",
+            "\\REGISTRY\\MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\svhost.exe\\RpcThreadPoolThrottle",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\Winsta.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\wbemsvc.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\MSVCP60.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\DNSAPI.dll",
+            "\\REGISTRY\\MACHINE\\Software\\Policies\\Microsoft\\Windows NT\\DnsClient",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\WLDAP32.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\NTDSAPI.dll",
+            "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\fastprox.dll",
+            "\\REGISTRY\\MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\find.exe\\RpcThreadPoolThrottle"
+        ],
+        "registry_keys_set": [
+            {
+                "key": "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows\\Load",
+                "value": "C:\\DOCUME~1\\ADMINI~1\\LOCALS~1\\Temp\\FolderN\\name.exe.lnk\u0000"
+            }
+        ],
+        "sandbox_name": "Tencent HABO",
+        "tags": ["DETECT_DEBUG_ENVIRONMENT"]
+    },
+    "id": "d72f74208c8960ae70469af3968324c6d5f90a305931763c0f5e23cd7922bcea_Tencent HABO",
+    "links": {
+        "self": "https://www.virustotal.com/api/v3/file_behaviours/d72f74208c8960ae70469af3968324c6d5f90a305931763c0f5e23cd7922bcea_Tencent HABO"
+    },
+    "type": "file_behaviour"
+}

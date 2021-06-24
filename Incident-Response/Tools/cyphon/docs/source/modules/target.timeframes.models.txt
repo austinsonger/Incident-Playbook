@@ -1,0 +1,13 @@
+target.timeframes.models
+========================
+
+.. figure:: ../_static/images/graphs/timeframes-graph.png
+    :target: ../_static/images/graphs/timeframes-graph.png
+    :alt: TimeFrames model graph
+
+    Graph of models in the :ref:`timeframes` app and related apps.
+
+.. automodule:: target.timeframes.models
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,17 @@
+{% extends "cyphon/base.html" %}
+{% load staticfiles %}
+
+{% block appcss %}
+<link rel="stylesheet" type="text/css" href="{% static "appuser/css/appusers.css" %}">
+{% endblock appcss %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+        <h1>{{ user.first_name }} {{ user.last_name }} <small>{{ user.email }}</small></h1>
+        <a href="{% url "password_change" %}" class="btn btn-default">Change Password</a>
+        </div>
+    </div><!-- /row -->
+</div>
+{% endblock %}

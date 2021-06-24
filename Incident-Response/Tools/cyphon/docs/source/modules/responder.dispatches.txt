@@ -1,0 +1,20 @@
+.. _dispatches:
+
+responder.dispatches
+====================
+
+.. image:: ../_static/images/icons/dispatch.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/dispatches.summary.txt
+
+:ref:`dispatches-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   responder.dispatches.admin
+   responder.dispatches.models

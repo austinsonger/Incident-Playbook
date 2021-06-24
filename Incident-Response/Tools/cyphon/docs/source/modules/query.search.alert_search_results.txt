@@ -1,0 +1,7 @@
+query.search.alert_search_results
+=================================
+
+.. automodule:: query.search.alert_search_results
+    :members:
+    :undoc-members:
+    :show-inheritance:

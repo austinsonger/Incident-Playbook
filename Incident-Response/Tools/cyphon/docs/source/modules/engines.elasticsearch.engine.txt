@@ -1,0 +1,8 @@
+engines.elasticsearch.engine
+============================
+
+.. automodule:: engines.elasticsearch.engine
+    :members:
+    :undoc-members:
+    :show-inheritance:
+    :inherited-members:

@@ -1,0 +1,1 @@
+|Funnels| channel data from :ref:`Pipes<pipes>` through :ref:`DataCondensers<datacondensers>` and into :ref:`Bottles<bottles>`.

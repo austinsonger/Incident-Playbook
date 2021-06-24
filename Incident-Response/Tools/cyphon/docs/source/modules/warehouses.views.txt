@@ -1,0 +1,7 @@
+warehouses.views
+================
+
+.. automodule:: warehouses.views
+    :members:
+    :undoc-members:
+    :show-inheritance:

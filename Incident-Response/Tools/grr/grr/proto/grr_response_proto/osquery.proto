@@ -1,0 +1,63 @@
+syntax = "proto2";
+
+import "grr_response_proto/jobs.proto";
+
+package grr;
+
+// https://github.com/facebook/osquery/blob/5188ce5288abe0e323b8e8bd364f452134a62d00/include/osquery/tables.h#L134
+enum OsqueryType {
+  UNKNOWN = 0;
+  TEXT = 1;
+  INTEGER = 2;
+  BIGINT = 3;
+  UNSIGNED_BIGINT = 4;
+  DOUBLE = 5;
+  BLOB = 6;
+}
+
+message OsqueryFlowArgs {
+  optional string query = 1;
+  optional uint64 timeout_millis = 2;
+  optional bool ignore_stderr_errors = 3;
+  repeated string file_collection_columns = 4;
+}
+
+message OsqueryArgs {
+  optional string query = 1;
+  optional uint64 timeout_millis = 2;
+  reserved 3;
+}
+
+message OsqueryColumn {
+  optional string name = 1;
+  optional OsqueryType type = 2;
+}
+
+message OsqueryHeader {
+  repeated OsqueryColumn columns = 1;
+}
+
+message OsqueryRow {
+  repeated string values = 1;
+}
+
+message OsqueryTable {
+  optional string query = 1;
+  optional OsqueryHeader header = 2;
+  repeated OsqueryRow rows = 3;
+}
+
+message OsqueryResult {
+  optional OsqueryTable table = 1;
+  reserved 2;
+}
+
+message OsqueryProgress {
+  optional OsqueryTable partial_table = 1;
+  optional uint64 total_row_count = 2;
+  optional string error_message = 3;
+}
+
+message OsqueryCollectedFile {
+  optional StatEntry stat_entry = 1;
+}

@@ -1,0 +1,15 @@
+[Unit]
+Description=qcluster daemon
+After=network.target
+
+[Service]
+User={{ ansible_user }}
+Group={{ ansible_user }}
+WorkingDirectory={{ dfirtrack_dir }}
+ExecStart={{ venv_dir }}/bin/python3 manage.py qcluster
+Restart=always
+TimeoutStartSec=10
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

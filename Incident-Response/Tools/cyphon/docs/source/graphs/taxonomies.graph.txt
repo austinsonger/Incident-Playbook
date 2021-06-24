@@ -1,0 +1,25 @@
+.. _taxonomies-graph:
+
+Taxonomies Graph
+================
+
+.. figure:: ../_static/images/graphs/taxonomies-graph.png
+    :target: ../_static/images/graphs/taxonomies-graph.png
+    :alt: Taxonomies model graph
+
+    Model graph for the |Taxonomies| base class and its subclasses.
+
+Overview
+--------
+
+.. include:: ../summaries/taxonomies.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models categories tags -I Category,Topic,Taxonomy -o taxonomies-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`categories-graph`
+* :ref:`tags-graph`

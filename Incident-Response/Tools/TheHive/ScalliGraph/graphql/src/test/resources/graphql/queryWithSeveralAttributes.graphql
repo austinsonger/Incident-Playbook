@@ -1,0 +1,13 @@
+query AllPerson {
+  allPeople {
+    sort(
+      sort:{
+        name: incr
+      }) {
+      toList {
+        name
+        age
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    Artifacttype '{{ artifacttype.artifacttype_name }}'{% if artifacttype.artifact_set.all %} (a: {{ artifacttype.artifact_set.all|length }}){% endif %}
+</title>
+
+<!-- javascript and CSS for datatables -->
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'dfirtrack_main/datatables-1.10.16/datatables.min.css' %}"/>
+<script src="{% static 'dfirtrack_main/datatables-1.10.16/datatables.js' %}"></script>
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- up button -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <a href="{% url 'artifacts_artifacttype_list' %}" type="button" class="btn btn-light copy-false">
+            <img src="{% static 'dfirtrack_main/icons/arrow-circle-top.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Up to artifacttype
+        </a>
+    </div>
+</div>
+
+<!-- javascript for copy button -->
+<script>
+    var clipboard = new ClipboardJS('.btn');
+</script>
+
+<!-- artifacttype name row -->
+<div class="row">
+
+    <!-- artifacttype name -->
+    <div class="col-3">
+        <h5>
+            Artifacttype "{{ artifacttype.artifacttype_name }}"
+        </h5>
+    </div>
+
+<!-- artifacttype name row -->
+</div>
+
+<!-- artifacttype id -->
+<div class="row bottom-distance">
+    <div class="col-3">
+        <small class="text-muted">
+            Artifacttype-ID: {{ artifacttype.artifacttype_id }}
+        </small>
+    </div>
+</div>
+
+<!-- artifacttype note headline -->
+<div class="row">
+    <div class="col-3">
+        <h5>
+            Note
+        </h5>
+    </div>
+</div>
+
+<!-- artifacttype note -->
+<div class="row bottom-distance">
+    <div class="col">
+        {% if artifacttype.artifacttype_note %}
+            {{ artifacttype.artifacttype_note|linebreaks }}
+        {% else %}
+            ---
+        {% endif %}
+    </div>
+</div>
+
+<!-- artifact headline -->
+<div class="row">
+    <div class="col-6">
+        <h5>
+            Artifacts of this type{% if artifacttype.artifact_set.all %} ({{ artifacttype.artifact_set.all|length }}){% endif %}
+        </h5>
+    </div>
+</div>
+
+<!-- artifacts -->
+{% if artifacttype.artifact_set.all %}
+
+    <!-- datatable artifact -->
+    <table id="table_artifact" class="display" width="100%">
+
+        <!-- table head -->
+        <thead>
+            {% include "dfirtrack_artifacts/includes/datatable_thead_table_artifact.html" %}
+        </thead>
+
+        <!-- table body -->
+        <tbody>
+            {% for i in artifacttype.artifact_set.all %}
+                {% include "dfirtrack_artifacts/includes/datatable_tbody_table_artifact.html" %}
+            {% endfor %}
+        </tbody>
+
+    </table>
+
+    <!-- javascript for datatables -->
+    <script src="{% static 'dfirtrack_artifacts/datatables_artifacts.js' %}"></script>
+
+<!-- no artifacts -->
+{% else %}
+<div class="row top-distance">
+    <div class="col-3">
+        ---
+    </div>
+</div>
+
+<!-- artifacts -->
+{% endif %}
+
+<!-- edit button -->
+<a href="{{ artifacttype.get_update_url }}" type="button" class="btn btn-light top-distance copy-false">
+    <img src="{% static 'dfirtrack_main/icons/pencil.svg' %}" class="icon right-distance copy-false" alt="icon">
+    Edit
+</a>
+
+<!-- javascript for datatables -->
+{% block datatables %}
+<script src="{% static 'dfirtrack_main/datatables-1.10.16/datatables.min.js' %}"></script>
+{% endblock %}
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

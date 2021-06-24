@@ -1,0 +1,19 @@
+.. _timeframes-graph:
+
+TimeFrames Graph
+=================
+
+.. figure:: ../_static/images/graphs/timeframes-graph.png
+    :target: ../_static/images/graphs/timeframes-graph.png
+    :alt: TimeFrames model graph
+
+    Graph of models in the :ref:`timeframes` app and related apps.
+
+Overview
+--------
+
+.. include:: ../summaries/timeframes.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models timeframes -g -o timeframes-graph.png

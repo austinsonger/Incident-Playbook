@@ -1,0 +1,65 @@
+<!-- table body for datatable artifact -->
+
+{% load static %}
+
+<!-- table row -->
+<!-- (just one row, iterating over rows is done outside of this include file) -->
+<tr>
+
+    <!-- artifact id -->
+    <td>
+        {{ i.artifact_id }}
+    </td>
+
+    <!-- artifact name -->
+    <td>
+        <a href="{{ i.get_absolute_url }}" type="button" class="btn btn-primary btn-sm top-right top-distance copy-true">
+            <img src="{% static 'dfirtrack_main/icons/bug-light.svg' %}" class="icon right-distance copy-false" alt="icon">
+            {{ i.artifact_name }}
+        </a>
+    </td>
+
+    <!-- artifactstatus -->
+    <td>
+        <a href="{{ i.artifactstatus.get_absolute_url }}">
+            {{ i.artifactstatus.artifactstatus_name }}
+        </a>
+    </td>
+
+    <!-- artifactpriority -->
+    <td>
+        <a href="{{ i.artifactpriority.get_absolute_url }}">
+            {% with artifactpriority=i.artifactpriority %}
+                {% include "dfirtrack_artifacts/includes/button_artifactpriority.html" %}
+            {% endwith %}
+            {{ i.artifactpriority.artifactpriority_name }}
+        </a>
+    </td>
+
+    <!-- artifacttype -->
+    <td>
+        <a href="{{ i.artifacttype.get_absolute_url }}">
+            {{ i.artifacttype.artifacttype_name }}
+        </a>
+    </td>
+
+    <!-- artifact requested time -->
+    <td class="text-muted">
+        {% if i.artifact_requested_time %}
+            {{ i.artifact_requested_time|date:"Y-m-d H:i" }}
+        {% else %}
+            ---
+        {% endif %}
+    </td>
+
+    <!-- artifact acquisition time -->
+    <td class="text-muted">
+        {% if i.artifact_acquisition_time %}
+            {{ i.artifact_acquisition_time|date:"Y-m-d H:i" }}
+        {% else %}
+            ---
+        {% endif %}
+    </td>
+
+<!-- table row -->
+</tr>

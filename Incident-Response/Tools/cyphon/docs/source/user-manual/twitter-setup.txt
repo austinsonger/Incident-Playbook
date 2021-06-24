@@ -1,0 +1,193 @@
+.. _twitter-setup:
+
+#############
+Twitter Setup
+#############
+
+You can collect tweets by creating a Twitter stream based on keywords, locations, and/or Twitter users.
+
+
+****************
+Get Access Token
+****************
+
+To create a Twitter stream, you'll first need to obtain an access token from Twitter.
+
+Login to the Twitter account you want to use to authorize your Cyphon instance. Then visit Twitter's `Application Management <https://apps.twitter.com/>`_ to set up a new app for Cyphon.
+
+To create the app, you'll need to:
+
+    1. Create a name for your app.
+    2. Give it a brief description.
+    3. Provide the URL of your website.
+    4. Leave the Callback URL blank.
+
+The access level for the app should be "Read-only."
+
+Now that you've created your Twitter app, you can generate an access token and secret. You can find instructions for this in `Twitter's Developer Documentation <https://dev.twitter.com/oauth/overview/application-owner-access-tokens>`_.
+
+Once you've set up you app, you should have the following:
+
+    - Consumer key
+    - Consumer secret
+    - Access token
+    - Access token secret
+
+You'll need this information to create a Passport for Twitter.
+
+
+*****************
+Create a Passport
+*****************
+
+.. image:: ../_static/images/icons/passport.png
+    :width: 80px
+    :align: left
+    :alt: Passport
+
+Passports provide authentication credentials for REST API requests. You can restrict their use to particular Users, or make them available to all Users.
+
+To create a Passport for Twitter, open the "App Configurations" panel on Cyphon's main admin page.
+
+.. image:: ../_static/images/admin/app-configurations.png
+    :alt: App Configurations
+
+Click the "+" sign by "Passports" to go the form for adding a Passport.
+
+Follow these step to create the Passport:
+
+    1. Enter a name for the Passport.
+    2. Enter your consumer key.
+    3. Leave the `File` field blank.
+    4. Enter your consumer secret.
+    5. Enter your access token.
+    6. Enter your access token secret.
+    7. If you'd like to make the Passport available to all Users, check `Public`. Otherwise, select the Users who are allowed to use this Passport.
+
+Click "Save" to save the Passport.
+
+.. figure:: ../_static/images/admin/twitter-passport.png
+    :align: center
+    :alt: Passport admin page
+
+    **Adding a Passport for Twitter.**
+
+
+*************
+Create a Pipe
+*************
+
+.. image:: ../_static/images/icons/pipe.png
+    :width: 100px
+    :align: left
+    :alt: Pipe
+
+Pipes are used to cyphon data from REST API endpoints. Each Pipe has a SpecSheet that specifies how the API handles Filters such as search terms and locations.
+
+To collect tweets, you can set up a Pipe for Twitter's `Public Streams API <https://dev.twitter.com/streaming/public>`_.
+
+To create a Pipe for a Twitter stream, open the "App Configurations" panel on Cyphon's main admin page. Click the "+" sign by "Pipes" to go the form for adding a Pipe.
+
+Fill in the first part of the form with the following values:
+
+    =============  ===================
+    Field          Value
+    =============  ===================
+    Platform       twitter
+    API module     handlers
+    API class      PublicStreamsAPI
+    Visa required  False
+    =============  ===================
+
+This tells Cyphon where to find the code for constructing the data pipeline.
+
+.. note::
+
+    If "twitter" is not available as a Platform option, click the "+" sign. This will open a popup window where you can add Twitter as a new Destination.
+
+    .. figure:: ../_static/images/admin/twitter-reservoir.png
+        :align: center
+        :alt: Reservoir popup
+
+        **Popup window to add a Reservoir.**
+
+Next, you need to provide some specs for the Pipe. Fill in the next part of the form with the following values:
+
+    ==========================  ===================
+    Field                       Value
+    ==========================  ===================
+    Streaming                   True
+    Search-term limit           400           
+    Followee limit              5000
+    Location limit              25
+    Location format             Bounding Box
+    Radius limit in km          <leave blank>
+    Time frames count..         False   
+    Followees count...          False
+    Locations count...          False
+    Logical operators count...  False 
+    Accepts phrases             True
+    Term-Term logic             OR
+    Term-Followee logic         OR
+    Term-Location logic         OR
+    OR operator                 <leave blank>
+    NOT operator                <leave blank>
+    ==========================  ===================
+
+These specs reflect Twitter's parameters for filtering statuses ("tweets") using their `POST statuses/filter <https://dev.twitter.com/streaming/reference/post/statuses/filter>`_ endpoint.
+
+.. figure:: ../_static/images/admin/twitter-pipe.png
+    :align: center
+    :alt: Pipe admin page
+
+    **Adding a Pipe for Twitter.**
+
+Click "Save" to save the new Pipe.
+
+
+****************
+Create a Plumber
+****************
+
+.. image:: ../_static/images/icons/plumber.png
+    :width: 60px
+    :align: left
+    :alt: Plumber
+
+A Plumber helps to connect a Pipe by supplying authentication credentials to the REST API. The Plumber has a Passport (and optionally a Visa) that allows it to work with one or more Pipes.
+
+To create a Plumber for Twitter's Public Streams API, open the "App Configurations" panel on Cyphon's main admin page. Click the "+" sign by "Plumbers" to go to the form for adding a Plumber.
+
+Follow these steps to create the Plumber:
+
+    1. Enter a name for the Plumber.
+    2. Select the "Twitter" Passport.
+    3. Leave the `Visa` field blank.
+    4. Select the "Twitter PublicStreamsAPI" Pipe.
+
+Click "Save" to save the Plumber.
+
+.. figure:: ../_static/images/admin/twitter-plumber.png
+    :align: center
+    :alt: Plumber admin page
+
+    **Adding a Plumber for Twitter.**
+
+
+***********
+Add Filters
+***********
+
+To filter your Twitter stream, first create search parameters for the locations, keywords, and user accounts you wish to follow. These are located in the "Filtering Data" panel of Cyphon's main admin page. You can then use these search parameters to create your Filters.
+
+
+***********
+Final Steps
+***********
+
+Now that authentication and filters are set up, make sure the "twitter" Reservoir is enabled, and Cyphon will automatically start receiving tweets.
+
+Refer to the :ref:`twitter-tutorial` for an example of how to generate Alerts from tweets.
+
+.. image:: ../_static/images/admin/filtering-data-admin.png
+    :alt: App Configurations

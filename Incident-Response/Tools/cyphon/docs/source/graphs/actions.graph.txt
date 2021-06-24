@@ -1,0 +1,26 @@
+.. _actions-graph:
+
+Actions Graph
+=============
+
+.. figure:: ../_static/images/graphs/actions-graph.png
+    :target: ../_static/images/graphs/actions-graph.png
+    :alt: Actions model graph
+
+    Graph of models in the :ref:`actions` app and related apps.
+
+Overview
+--------
+
+.. include:: ../summaries/actions.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models actions couriers destinations -X Endpoint,Platform -g -o actions-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`couriers-graph`
+* :ref:`destinations-graph`
+* :ref:`endpoints-graph`

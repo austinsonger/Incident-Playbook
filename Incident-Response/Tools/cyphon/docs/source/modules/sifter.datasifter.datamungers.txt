@@ -1,0 +1,20 @@
+.. _datamungers:
+
+sifter.datasifter.datamungers
+=============================
+
+.. image:: ../_static/images/icons/munger.png
+    :width: 120px
+    :align: left
+
+.. include:: ../summaries/datamungers.summary.txt
+
+:ref:`datamungers-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   sifter.datasifter.datamungers.admin
+   sifter.datasifter.datamungers.models

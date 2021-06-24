@@ -1,0 +1,104 @@
+[
+  {
+    "model": "mailcondensers.mailparser",
+    "fields": {
+      "id": 1,
+      "name": "from__COPY",
+      "source_field": "From",
+      "method": "COPY"
+    }
+  },
+  {
+    "model": "mailcondensers.mailparser",
+    "fields": {
+      "id": 2,
+      "name": "date__COPY",
+      "source_field": "Date",
+      "method": "COPY"
+    }
+  },
+  {
+    "model": "mailcondensers.mailparser",
+    "fields": {
+      "id": 3,
+      "name": "subject__COPY",
+      "source_field": "Subject",
+      "method": "COPY"
+    }
+  },
+  {
+    "model": "mailcondensers.mailparser",
+    "fields": {
+      "id": 4,
+      "name": "content__COPY",
+      "source_field": "Content",
+      "method": "COPY"
+    }
+  },
+  {
+    "model": "mailcondensers.mailcondenser",
+    "fields": {
+      "id": 1,
+      "name": "mail",
+      "bottle": ["mail"]
+    }
+  },
+  {
+    "model": "mailcondensers.mailcondenser",
+    "fields": {
+      "id": 2,
+      "name": "post",
+      "bottle": ["post"]
+    }
+  },
+  {
+    "model": "mailcondensers.mailfitting",
+    "fields": {
+      "id": 1,
+      "condenser": ["mail"],
+      "target_field": ["from"],
+      "object_id": 1,
+      "content_type": ["mailcondensers", "mailparser"]
+    }
+  },
+  {
+    "model": "mailcondensers.mailfitting",
+    "fields": {
+      "id": 2,
+      "condenser": ["mail"],
+      "target_field": ["date"],
+      "object_id": 2,
+      "content_type": ["mailcondensers", "mailparser"]
+    }
+  },
+  {
+    "model": "mailcondensers.mailfitting",
+    "fields": {
+      "id": 3,
+      "condenser": ["mail"],
+      "target_field": ["subject"],
+      "object_id": 3,
+      "content_type": ["mailcondensers", "mailparser"]
+    }
+  },
+  {
+    "model": "mailcondensers.mailfitting",
+    "fields": {
+      "id": 4,
+      "condenser": ["mail"],
+      "target_field": ["body"],
+      "object_id": 4,
+      "content_type": ["mailcondensers", "mailparser"]
+    }
+  },
+  {
+    "model": "mailcondensers.mailfitting",
+    "fields": {
+      "id": 5,
+      "condenser": ["post"],
+      "target_field": ["content"],
+      "object_id": 1,
+      "content_type": ["mailcondensers", "mailcondenser"]
+    }
+  }
+]

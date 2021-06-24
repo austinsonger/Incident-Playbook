@@ -1,0 +1,11 @@
+[
+  {"from": "ro-cert", "to":  "read-only"},
+  {"from": "user-cert", "to":  "analyst"},
+  {"from": "admin-cert", "to":  "org-admin"},
+  {"from": "ro-soc", "to":  "read-only"},
+  {"from": "user-soc", "to":  "analyst"},
+  {"from": "admin-soc", "to":  "org-admin"},
+  {"from": "ro-pug", "to":  "read-only"},
+  {"from": "user-pug", "to":  "analyst"},
+  {"from": "admin-pug", "to":  "org-admin"}
+]

@@ -1,0 +1,70 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    Delete tag '{{ tag.tag_name }}'
+</title>
+
+{% load static %}
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+        
+<!-- headline -->
+<div class="bottom-distance">
+    <h4>
+        Delete tag
+    </h4>
+</div>
+
+<!-- form -->
+<form method="post">
+
+    {% csrf_token %}
+
+    <!-- question -->
+    <div class="bottom-distance">
+        Delete tag 
+        <div class="btn btn-{{ tag.tagcolor }} btn-sm round left-distance right-distance copy-true">
+            <!-- black tag icon for white tag (black color of font is defined in corresponding CSS for button) -->
+            {% if tag.tagcolor.tagcolor_name == 'white' %}
+                <img src="{% static 'dfirtrack_main/icons/tag.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+            <!-- white tag icon for other tags (white color of font is defined in corresponding CSS for button) -->
+            {% else %}
+                <img src="{% static 'dfirtrack_main/icons/tag-light.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+            {% endif %}
+            {{ tag.tag_name }}
+        </div>
+        ?
+    </div>
+
+    <!-- button row -->
+    <div class="row top-distance">
+
+        <!-- save button -->
+        <div class="col-1">
+            {% include "dfirtrack_main/includes/button_save.html" %}
+        </div>
+
+        <!-- cancel button -->
+        <div class="col-1">
+            {% include "dfirtrack_main/includes/button_cancel.html" %}
+        </div>
+
+    <!-- button row -->
+    </div>
+
+<!-- form -->
+</form>
+    
+<!-- HTML body in maintemplate -->
+{% endblock %}

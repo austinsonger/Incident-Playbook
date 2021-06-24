@@ -1,0 +1,117 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    DFIRTrack - Domainusers
+</title>
+
+{% load static %}
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- headline -->
+<div class="row bottom-distance">
+    <div class="col">
+        <h5>
+            Domainusers
+        </h5>
+    </div>
+</div>
+
+<!-- headlines -->
+<div class="row font-weight-bold">
+
+    <!-- domainuser id headline -->
+    <div class="col-1">
+        ID
+    </div>
+
+    <!-- domainuser name headline -->
+    <div class="col-2">
+        Domainuser
+    </div>
+
+    <!-- domainuser admin headline -->
+    <div class="col-1">
+        Admin
+    </div>
+
+    <!-- domain headline -->
+    <div class="col-1">
+        Domain
+    </div>
+
+<!-- headlines -->
+</div>
+
+<!-- domainuser list -->
+{% for i in domainuser_list %}
+
+    <!-- domainuser row -->
+    <div class="row top-distance">
+
+        <!-- domainuser id -->
+        <div class="col-1">
+            {{ i.domainuser_id }}
+        </div>
+
+        <!-- domainuser name -->
+        <div class="col-2">
+            <a href="{{ i.get_absolute_url }}">
+                {{ i.domainuser_name }} | {{ i.domain }}
+            </a>
+        </div>
+
+        <!-- domainuser admin -->
+        <div class="col-1">
+            {% if i.domainuser_is_domainadmin %}
+                X
+            {% endif %}
+        </div>
+
+        <!-- domain -->
+        <div class="col-1">
+            <a href="{{ i.domain.get_absolute_url }}">
+                {{ i.domain.domain_name }}
+            </a>
+        </div>
+
+        <!-- placeholder -->
+        <div class="col-6"></div>
+
+        <!-- edit button -->
+        <div class="col-1">
+            <a href="{{ i.get_update_url }}" type="button" class="btn btn-sm btn-light copy-false">
+                <img src="{% static 'dfirtrack_main/icons/pencil.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                Edit
+            </a>
+        </div>
+
+    <!-- domainuser row -->
+    </div>
+
+<!-- domainuser list -->
+{% endfor %}
+
+<!-- add button -->
+<div class="row top-distance">
+    <div class="col-1">
+        <a href="{% url 'domainuser_create' %}" type="button" class="btn btn-light copy-false">
+            <img src="{% static 'dfirtrack_main/icons/plus.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Add domainuser
+        </a>
+    </div>
+</div>
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

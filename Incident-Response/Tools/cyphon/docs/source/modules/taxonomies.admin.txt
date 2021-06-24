@@ -1,0 +1,7 @@
+taxonomies.admin
+================
+
+.. automodule:: taxonomies.admin
+    :members:
+    :undoc-members:
+    :show-inheritance:

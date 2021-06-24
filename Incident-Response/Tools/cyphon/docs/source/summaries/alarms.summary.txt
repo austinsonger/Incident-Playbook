@@ -1,0 +1,1 @@
+|Alarms| define conditions for generating :ref:`Alerts<alerts>`. They take two forms: :ref:`Watchdogs<watchdogs>` and :ref:`Monitors<monitors>`.

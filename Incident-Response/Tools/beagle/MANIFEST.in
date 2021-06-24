@@ -1,0 +1,2 @@
+include README.md
+include beagle/config_templates/beagle_default.cfg

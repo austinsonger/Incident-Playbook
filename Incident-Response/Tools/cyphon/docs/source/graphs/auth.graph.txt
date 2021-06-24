@@ -1,0 +1,20 @@
+.. _auth-graph:
+
+Auth Graph
+==========
+
+.. figure:: ../_static/images/graphs/auth-graph.png
+    :target: ../_static/images/graphs/auth-graph.png
+    :alt: Groups model graph
+
+    Graph of models in the :mod:`~django:django.contrib.auth` app and related apps.
+
+To graph these models::
+
+    $ python manage.py graph_models auth appusers watchdogs -X AbstractBaseUser,Alarm,PermissionsMixin --no-inheritance -g -o auth-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`appusers-graph`
+* :ref:`watchdogs-graph`

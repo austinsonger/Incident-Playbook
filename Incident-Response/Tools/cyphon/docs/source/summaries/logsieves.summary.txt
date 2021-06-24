@@ -1,0 +1,3 @@
+|LogSieves| test whether log messages meet a certain set of criteria. When used by :ref:`LogChutes<logchutes>`, they determine whether logs should proceed to :ref:`LogMungers<logmungers>` for processing.
+
+|LogSieves| are rulesets that are composed of one of more |LogSieveNodes|. A |LogSieveNode| can point to either a |LogRule| or another |LogSieve|. This permits the construction of complex, nested rulesets.

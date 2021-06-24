@@ -1,0 +1,20 @@
+.. _procedures:
+
+lab.procedures
+==============
+
+.. image:: ../_static/images/icons/procedure.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/procedures.summary.txt
+
+:ref:`procedures-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   lab.procedures.admin
+   lab.procedures.models

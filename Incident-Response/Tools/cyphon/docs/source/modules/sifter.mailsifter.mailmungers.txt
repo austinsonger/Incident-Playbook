@@ -1,0 +1,20 @@
+.. _mailmungers:
+
+sifter.mailsifter.mailmungers
+=============================
+
+.. image:: ../_static/images/icons/munger.png
+    :width: 150px
+    :align: left
+
+.. include:: ../summaries/logmungers.summary.txt
+
+:ref:`mailmungers-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   sifter.mailsifter.mailmungers.admin
+   sifter.mailsifter.mailmungers.models

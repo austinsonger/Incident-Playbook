@@ -1,0 +1,20 @@
+.. _actions:
+
+responder.actions
+=================
+
+.. image:: ../_static/images/icons/action.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/actions.summary.txt
+
+:ref:`actions-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   responder.actions.admin
+   responder.actions.models

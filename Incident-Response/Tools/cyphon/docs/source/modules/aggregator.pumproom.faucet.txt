@@ -1,0 +1,7 @@
+aggregator.pumproom.faucet
+==========================
+
+.. automodule:: aggregator.pumproom.faucet
+    :members:
+    :undoc-members:
+    :show-inheritance:

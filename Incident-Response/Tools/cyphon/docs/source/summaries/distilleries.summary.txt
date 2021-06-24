@@ -1,0 +1,5 @@
+|Distilleries| are used by :ref:`Mungers<mungers>` to store data after it has been parsed. Each |Distillery| has its own |Collection|, where it stores and retrieves data within :ref:`Warehouses<warehouses>`. |Distilleries| use :ref:`Containers<containers>` to hold the data. They construct teasers for the documents they manage, using the :ref:`Tastes<tastes>` associated with those Containers.
+
+When |Distilleries| save data, they send `Signals`_ to :ref:`Watchdogs<watchdogs>`, which inspect the data and generate :ref:`Alerts<alerts>` when appropriate. Data flow to |Distilleries| can be monitored by :ref:`Monitors<monitors>`, which can also generate Alerts if data is not being saved at an expected rate.
+
+|Distilleries| can be associated with :ref:`Companies<companies>` and :ref:`Categories<categories>`, which can be used to filter Alerts related to the |Distilleries|. Data relevant to those Alerts can be retrieved from related |Distilleries| using :ref:`Contexts<contexts>`.

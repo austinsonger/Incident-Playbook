@@ -1,0 +1,19 @@
+.. _default-mail-handler:
+
+####################
+Default Mail Handler
+####################
+
+To define a default pipeline for incoming mail, you can create a MailMunger for this purpose. The Munger will send data to a default Distillery. This Munger will be used for mail that is not captured by any MailChutes.
+
+First, create a MailMunger by following the instructions `here <http://cyphon.readthedocs.io/en/latest/user-manual/data-processing.html#step-3-configure-a-munger>`__. You can name the munger "default". Then, in your ``conf.py`` Cyphon settings file,  make sure the ``MAILSIFTER['DEFAULT_MUNGER']`` setting matches the name of your default munger::
+
+    MAILSIFTER = {
+        'DEFAULT_MUNGER': 'default',
+        'DEFAULT_MUNGER_ENABLED': True,
+        'MAIL_COLLECTION': 'postgresql.django_cyphon.django_mailbox_message',
+        'EMAIL_CONTENT_PREFERENCES': ('text/plain', 'text/html'),
+        'ALLOWED_EMAIL_ATTACHMENTS': ('text/plain', 'application/pdf', 'image/jpeg', 'image/png'),
+        'ALLOWED_FILE_EXTENSIONS': ('.txt', '.pdf', '.jpeg', '.jpg', '.png'),
+        'ATTACHMENTS_FOLDER': 'attachments/%Y/%m/%d/',
+    }

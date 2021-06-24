@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Aurora Incident Response 0.6.6</title>
+
+
+    <!-- BEGIN External Libs Imports-->
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <script src="js/vis.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/w2ui-1.5.rc1.min.js"></script>
+
+    <!-- "FontAwesome" | Required for the LM visualization since 5.x has problems to render icons in Visjs -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- "'Font Awesome 5 Free'" | Required for the left menu icons
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">  -->
+
+    <!-- "Ionicons"
+    <link
+      rel="stylesheet"
+      href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+    />-->
+    <link rel="stylesheet" href="css/vis.css">
+    <link rel="stylesheet" href="css/w2ui-1.5.rc1.min.css">
+    <!--<link rel="stylesheet" href="css/w2ui-dark.css">-->
+    <script src="js/chart.js"></script>
+    <!-- END External Libs Imports-->
+
+
+    <!-- BEGIN Aurora Code Imports-->
+    <script src="data_template.js"></script>
+    <script src="misp.js"></script>
+    <script src="js/webdav_lib.js"></script>
+    <script src="virustotal.js"></script>
+    <script src="controller.js"></script>
+    <script src="data.js"></script>
+    <script src="gui_definitions.js"></script>
+    <script src="gui_functions.js"></script>
+    <script src="settings.js"></script>
+    <script src="import.js"></script>
+    <script src="export.js"></script>
+    <script src="helper_functions.js"></script>
+    <link rel="stylesheet" href="css/aurora.css">
+    <!-- END Aurora Code Imports-->
+
+    <script>if (window.module) module = window.module;</script>
+
+</head>
+<body >
+
+
+<div id="main"></div>
+
+
+<script type="text/javascript">
+
+
+    ///////////////////////////
+    ///// Program Startup /////
+    ///////////////////////////
+
+
+    $(function () {
+        // initialization
+        $('#main').w2layout(config.main_layout);
+        w2ui.main_layout.content('top', $().w2toolbar(config.toolbar));
+        w2ui.main_layout.content('left', $().w2sidebar(config.sidebar));
+        w2ui.main_layout.content('main', $().w2grid(config.grd_timeline));
+        // in memory initialization
+        $().w2grid(config.grd_investigated_systems);
+        $().w2grid(config.grd_investigators);
+        $().w2grid(config.grd_evidence);
+        $().w2grid(config.grd_malware);
+        $().w2grid(config.grd_accounts);
+        $().w2grid(config.grd_network);
+        $().w2grid(config.grd_exfiltration);
+        $().w2grid(config.grd_osint);
+        $().w2grid(config.grd_systems);
+        $().w2grid(config.grd_actions);
+        $().w2grid(config.grd_casenotes);
+        $().w2grid(config.grd_add_misp);
+        $().w2grid(config.grd_import_mapping);
+        $().w2layout(config.popup_layout);
+        $().w2layout(config.webdav_popup_layout);
+        $().w2form(config.case_form);
+        $().w2form(config.webdav_form);
+        deactivateReadOnly()
+        registerComponents()
+        startAutoSave()
+
+        w2ui['toolbar'].disable('file:open_webdav'); // Temporary disabled until I code the webdav functionality
+
+    });
+
+   </script>
+
+</body>
+</html>

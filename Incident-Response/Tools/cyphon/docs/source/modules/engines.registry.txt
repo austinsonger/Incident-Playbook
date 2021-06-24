@@ -1,0 +1,7 @@
+engines.registry
+================
+
+.. automodule:: engines.registry
+    :members:
+    :undoc-members:
+    :show-inheritance:

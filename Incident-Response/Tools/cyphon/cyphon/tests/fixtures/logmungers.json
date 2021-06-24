@@ -1,0 +1,20 @@
+[  
+  {
+    "model": "logmungers.logmunger",
+    "fields": {
+      "id": 1,
+      "name": "log",
+      "condenser": ["simple_log"],
+      "distillery": ["mongodb.test_database.test_docs"]
+    }
+  },
+  {
+    "model": "logmungers.logmunger",
+    "fields": {
+      "id": 2,
+      "name": "default_log",
+      "condenser": ["simple_log"],
+      "distillery": ["elasticsearch.test_index.test_logs"]
+    }
+  }
+]

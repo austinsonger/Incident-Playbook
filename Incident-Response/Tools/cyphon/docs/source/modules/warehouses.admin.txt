@@ -1,0 +1,7 @@
+warehouses.admin
+================
+
+.. automodule:: warehouses.admin
+    :members:
+    :undoc-members:
+    :show-inheritance:

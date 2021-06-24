@@ -1,0 +1,7 @@
+distilleries.apps
+=================
+
+.. automodule:: distilleries.apps
+    :members:
+    :undoc-members:
+    :show-inheritance:

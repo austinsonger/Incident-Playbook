@@ -1,0 +1,27 @@
+.. _condensers-graph:
+
+Condensers Graph
+================
+
+.. figure:: ../_static/images/graphs/condensers-graph.png
+    :target: ../_static/images/graphs/condensers-graph.png
+    :alt: Condensers model graph
+
+    Model graph for the |Condensers| base class and its subclasses.
+
+Overview
+--------
+
+.. include:: ../summaries/condensers.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models datacondensers logcondensers mailcondensers -I DataCondenser,LogCondenser,MailCondenser,Condenser -o condensers-graph.png
+    $ python manage.py graph_models datacondensers logcondensers mailcondensers -I DataFitting,LogFitting,MailFitting,Fitting  -o fittings-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`datacondensers-graph`
+* :ref:`logcondensers-graph`
+* :ref:`mailcondensers-graph`

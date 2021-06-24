@@ -1,0 +1,19 @@
+.. _alarms:
+
+alarms
+======
+
+.. image:: ../_static/images/icons/alarm.png
+    :width: 120px
+    :align: left
+
+.. include:: ../summaries/alarms.summary.txt
+
+:ref:`alarms-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   alarms.models

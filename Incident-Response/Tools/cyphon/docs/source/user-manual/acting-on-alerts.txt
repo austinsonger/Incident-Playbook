@@ -1,0 +1,51 @@
+.. _acting-on-alerts:
+
+################
+Acting on Alerts
+################
+
+After you've investigated an Alert, you may wish to act on it in some way. Cyphon lets you respond to Alerts using `Actions`.
+
+
+.. _actions-overview:
+
+*******
+Actions
+*******
+
+.. image:: ../_static/images/icons/action.png
+    :width: 100px
+    :align: left
+    :alt: Action
+
+An Action takes an Alert and asks a REST API to perform an operation based on some part of it. The type of operation depends on the REST API that is called.
+
+|
+|
+
+.. note::
+
+    Currently, Cyphon is only set up to allow an Action for creating a JIRA Issue. We plan to support other Actions in the future. If you'd like to help out or have some ideas, please let us know! See our section on :ref:`contributing` for more details.
+
+
+**********
+Dispatches
+**********
+
+.. image:: ../_static/images/icons/dispatch.png
+    :width: 80px
+    :align: left
+    :alt: Dispatch
+
+When an Action is taken, the response from the REST API is saved as a Dispatch. A Dispatch contains a reference to the Alert for which the Action was taken, as well as the data that was returned from the API. It also retains a Stamp of the API call. The Stamp records which User performed the API call, the start and end times of the call, and the Passport that was used to authenticate the call.
+
+.. seealso::
+
+    To learn more about Stamps and Passports, see the section on :ref:`external-APIs`.
+
+
+******************
+Setup Instructions
+******************
+
+    * :ref:`jira-setup`

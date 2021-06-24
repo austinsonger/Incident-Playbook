@@ -1,0 +1,1 @@
+The Receiver package processes messages from a queue. It can create queue consumers for |LogChutes|, |Watchdogs|, or |Monitors|.

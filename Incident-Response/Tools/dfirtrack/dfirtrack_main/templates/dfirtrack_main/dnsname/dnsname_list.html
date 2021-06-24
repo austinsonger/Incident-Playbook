@@ -1,0 +1,130 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    DFIRTrack - DNS names
+</title>
+
+{% load static %}
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+
+<!-- headline -->
+<div class="row bottom-distance">
+    <div class="col">
+        <h5>
+            DNS names
+        </h5>
+    </div>
+</div>
+
+<!-- headlines -->
+<div class="row font-weight-bold">
+
+    <!-- dnsname id headline -->
+    <div class="col-1">
+        ID
+    </div>
+
+    <!-- dnsname name headline -->
+    <div class="col-2">
+        DNS name
+    </div>
+
+    <!-- domain headline -->
+    <div class="col-2">
+        Domain
+    </div>
+
+    <!-- system headline -->
+    <div class="col-1">
+        Systems
+    </div>
+
+    <!-- dnsname note headline -->
+    <div class="col-6">
+        Note
+    </div>
+
+<!-- headlines -->
+</div>
+
+<!-- dnsname list -->
+{% for i in dnsname_list %}
+
+    <!-- dnsname row -->
+    <div class="row top-distance">
+
+        <!-- dnsname id -->
+        <div class="col-1">
+            {{ i.dnsname_id }}
+        </div>
+
+        <!-- dnsname name -->
+        <div class="col-2">
+            <a href="{{ i.get_absolute_url }}">
+                {{ i.dnsname_name }}
+            </a>
+        </div>
+
+        <!-- domain -->
+        <div class="col-2">
+            {% if i.domain %}
+                <a href="{{ i.domain.get_absolute_url }}">
+                    {{ i.domain.domain_name }}
+                </a>
+            {% else %}
+                ---
+            {% endif %}
+        </div>
+
+        <!-- system -->
+        <div class="col-1">
+            {{ i.system_set.all|length }}
+        </div>
+
+        <!-- dnsname note -->
+        <div class="col-5">
+            {% if i.dnsname_note %}
+                {{ i.dnsname_note|linebreaks }}
+            {% else %}
+                ---
+            {% endif %}
+        </div>
+
+        <!-- edit button -->
+        <div class="col-1">
+            <a href="{{ i.get_update_url }}" type="button" class="btn btn-sm btn-light copy-false">
+                <img src="{% static 'dfirtrack_main/icons/pencil.svg' %}" class="icon-sm right-distance copy-false" alt="icon">
+                Edit
+            </a>
+        </div>
+
+    <!-- dnsname row -->
+    </div>
+
+<!-- dnsname list -->
+{% endfor %}
+
+<!-- add button -->
+<div class="row top-distance">
+    <div class="col-1">
+        <a href="{% url 'dnsname_create' %}" type="button" class="btn btn-light copy-false">
+            <img src="{% static 'dfirtrack_main/icons/plus.svg' %}" class="icon right-distance copy-false" alt="icon">
+            Add DNS name
+        </a>
+    </div>
+</div>
+
+<!-- HTML body in maintemplate -->
+{% endblock %}

@@ -1,0 +1,24 @@
+.. _bottles-graph:
+
+Bottles Graph
+=============
+
+.. figure:: ../_static/images/graphs/bottles-graph.png
+    :target: ../_static/images/graphs/bottles-graph.png
+    :alt: Bottles model graph
+
+    Graph of models in the :ref:`bottles` app and related apps.
+
+Overview
+--------
+
+.. include:: ../summaries/bottles.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models bottles containers --no-inheritance -X DataField -g -o bottles-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`containers-graph`

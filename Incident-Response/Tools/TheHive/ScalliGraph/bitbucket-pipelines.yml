@@ -1,0 +1,11 @@
+image: bitbucketpipelines/scala-sbt:scala-2.12
+
+pipelines:
+  custom:
+    build_on_demand:
+      - step:
+          caches:
+            - sbt
+            - ivy2
+          script:
+            - sbt test

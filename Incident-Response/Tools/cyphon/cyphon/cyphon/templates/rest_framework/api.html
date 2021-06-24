@@ -1,0 +1,15 @@
+{% extends "rest_framework/base.html" %}
+{% load static from staticfiles %}
+{% load admin_urls %}
+
+
+{% block head %}
+    {{ block.super }}
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
+{% endblock %}
+
+{% block branding %}
+  <a class="navbar-brand" rel="nofollow" href="{% url 'admin:index' %}">
+      Cyphon REST API
+  </a>
+{% endblock %}

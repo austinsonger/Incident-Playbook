@@ -1,0 +1,13 @@
+responder.couriers.models
+=========================
+
+.. figure:: ../_static/images/graphs/couriers-graph.png
+    :target: ../graphs/couriers.graph.html
+    :alt: Couriers model graph
+
+    Graph of models in the :ref:`couriers` app and related apps.
+
+.. automodule:: responder.couriers.models
+    :members:
+    :undoc-members:
+    :show-inheritance:

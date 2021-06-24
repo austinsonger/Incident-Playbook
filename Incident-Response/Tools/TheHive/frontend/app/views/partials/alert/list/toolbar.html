@@ -1,0 +1,113 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="btn-toolbar" role="toolbar">
+
+            <div class="btn-group" uib-dropdown if-permission="manageAlert">
+                <button type="button" class="btn btn-sm btn-default" uib-dropdown-toggle ng-disabled="$vm.selection.length === 0">
+                    <ng-pluralize count="$vm.selection.length" when="{'0': 'No event selected', 'one': '{} selected event', 'other': '{} selected events'}"></ng-pluralize>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" uib-dropdown-menu>
+                    <!--
+                        <li>
+                            <a ng-click="$vm.bulkImport()">Import</a>
+                        </li>
+                        -->
+                    <li ng-show="$vm.menu.follow">
+                        <a href ng-click="$vm.bulkFollow(true)"><i class="fa fa-eye"></i> Track new updates</a>
+                    </li>
+                    <li ng-show="$vm.menu.unfollow">
+                        <a href ng-click="$vm.bulkFollow(false)"><i class="fa fa-eye-slash"></i> Ignore new updates</a>
+                    </li>
+                    <li ng-show="$vm.menu.markAsRead">
+                        <a href ng-click="$vm.bulkMarkAsRead(true)"><i class="fa fa-envelope-open-o"></i> Mark as read</a>
+                    </li>
+                    <li ng-show="$vm.menu.markAsUnread">
+                        <a href ng-click="$vm.bulkMarkAsRead(false)"><i class="fa fa-envelope"></i> Mark as unread</a>
+                    </li>
+                    <li ng-show="$vm.menu.delete">
+                        <a href ng-click="$vm.bulkDelete()" class="text-danger">
+                            <i class="fa fa-trash-o"></i> Delete
+                        </a>
+                    </li>
+                    <li class="divider" ng-show="$vm.menu.createNewCase"></li>
+                    <li ng-show="$vm.menu.createNewCase">
+                        <a href ng-click="$vm.createNewCase()"><i class="fa fa-file-o"></i> New case from selection</a>
+                    </li>
+                    <li ng-show="$vm.menu.mergeInCase">
+                        <a href ng-click="$vm.mergeInCase()"><i class="fa fa-compress"></i> Merge selection into case</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="btn-group" uib-dropdown>
+                <button class="btn btn-sm btn-primary dropdown-toggle" uib-dropdown-toggle type="button">
+                    <i class="fa fa-filter"></i>
+                    Quick Filters
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" uib-dropdown-menu>
+                    <li>
+                        <a class="clickable" ng-click="$vm.filterBy('read', true)"><i class="fa fa-envelope-open-o"></i> Read events</a>
+                    </li>
+                    <li>
+                        <a class="clickable" ng-click="$vm.filterBy('read', false)"><i class="fa fa-envelope"></i> Unread events</a>
+                    </li>
+                    <li>
+                        <a class="clickable" ng-click="$vm.filterByStatus(true)"><i class="fa fa-download"></i> Imported events</a>
+                    </li>
+                    <li>
+                        <a class="clickable" ng-click="$vm.filterBy('follow', true)"><i class="fa fa-eye"></i> Followed events</a>
+                    </li>
+                    <li>
+                        <a class="clickable" ng-click="$vm.filterBy('follow', false)"><i class="fa fa-eye-slash"></i> Ignored events</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="btn-group" uib-dropdown>
+                <button class="btn btn-sm btn-primary dropdown-toggle" uib-dropdown-toggle type="button">
+                    <i class="fa fa-sort"></i>
+                    Sort by
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" uib-dropdown-menu>
+                    <li>
+                        <a ng-click="$vm.sortBy(['-date'])">Newest first</a>
+                    </li>
+                    <li>
+                        <a ng-click="$vm.sortBy(['+date'])">Oldest first</a>
+                    </li>
+                    <li>
+                        <a ng-click="$vm.sortBy(['-severity'])">High Severity first</a>
+                    </li>
+                    <li>
+                        <a ng-click="$vm.sortBy(['+severity'])">Low Severity first</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="btn-group pull-right" role="group">
+                <page-sizer collection="$vm.list" sizes="[10, 15, 30, 100]"></page-sizer>
+            </div>
+
+            <div class="btn-group pull-right" role="group">
+                <button class="btn btn-sm" ng-class="{true: 'btn-primary', false:'btn-default'}[$vm.filtering.context.showFilters]" type="button" ng-click="$vm.toggleFilters()">
+                    <i class="fa fa-search"></i> Filters
+                </button>
+            </div>
+
+            <div class="btn-group pull-right" role="group">
+                <button class="btn btn-sm" ng-class="{true: 'btn-primary', false:'btn-default'}[$vm.filtering.context.showStats]" type="button" ng-click="$vm.toggleStats()">
+                    <i class="fa fa-bar-chart"></i> Stats
+                </button>
+            </div>
+
+            <div class="btn-group pull-right" role="group">
+                <button class="btn btn-sm" ng-class="{true: 'btn-primary', false:'btn-default'}[!!$vm.filtering.context.showAdvanced]" type="button" ng-click="$vm.toggleAdvanced()">
+                    <i class="fa fa-code"></i> Custom Fields
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

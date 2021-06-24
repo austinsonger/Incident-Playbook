@@ -1,0 +1,3 @@
+{% load i18n %}{% autoescape off %}
+{{ comment.user.first_name }} {{ comment.user.last_name }} commented on Alert #{{ comment.alert.id }}
+{% endautoescape %}

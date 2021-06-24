@@ -1,0 +1,19 @@
+.. _records:
+
+ambassador.records
+==================
+
+.. image:: ../_static/images/icons/record.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/records.summary.txt
+
+:ref:`records-graph`
+
+Subpackages
+-----------
+
+.. toctree::
+
+    ambassador.records.models

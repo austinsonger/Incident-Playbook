@@ -1,0 +1,21 @@
+.. _followees:
+
+target.followees
+================
+
+.. image:: ../_static/images/icons/followee.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/followees.summary.txt
+
+:ref:`followees-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   target.followees.admin
+   target.followees.models
+   target.followees.serializers

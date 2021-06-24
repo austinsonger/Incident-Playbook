@@ -1,0 +1,22 @@
+.. _contexts:
+
+contexts
+========
+
+.. image:: ../_static/images/icons/context.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/contexts.summary.txt
+
+:ref:`contexts-graph`
+
+Subpackages
+-----------
+
+.. toctree::
+
+    contexts.admin
+    contexts.autocomplete_light_registry
+    contexts.models
+    contexts.serializers

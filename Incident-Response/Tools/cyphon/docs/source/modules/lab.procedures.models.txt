@@ -1,0 +1,13 @@
+lab.procedures.models
+=====================
+
+.. figure:: ../_static/images/graphs/procedures-graph.png
+    :target: ../graphs/procedures.graph.html
+    :alt: Procedures model graph
+
+    Graph of models in the :ref:`procedures` app and related apps.
+
+.. automodule:: lab.procedures.models
+    :members:
+    :undoc-members:
+    :show-inheritance:

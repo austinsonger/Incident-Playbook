@@ -1,0 +1,13 @@
+aggregator.samples.models
+=========================
+
+.. figure:: ../_static/images/graphs/samples-graph.png
+    :target: ../graphs/samples.graph.html
+    :alt: Samples model graph
+
+    Graph of models in the :ref:`samples` app and related apps.
+
+.. automodule:: aggregator.samples.models
+    :members:
+    :undoc-members:
+    :show-inheritance:

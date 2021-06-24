@@ -1,0 +1,100 @@
+[
+  {
+    "model": "monitors.monitor",
+    "fields": {
+      "id": 1,
+      "name": "health_alerts",
+      "enabled": true,
+      "distilleries": [1, 2],
+      "time_interval": 5,
+      "time_unit": "m",
+      "alerts_enabled": true,
+      "repeating_alerts": false,
+      "alert_level": "HIGH",
+      "status": "GREEN",
+      "created_date": "2016-01-01 08:59:00.000000+00:00",
+      "last_updated": "2016-01-01 09:01:00.000000+00:00",
+      "last_healthy": "2016-01-01 09:00:00.000000+00:00",
+      "last_active_distillery": 1,
+      "last_saved_doc": "10"
+    }
+  },
+  {
+    "model": "monitors.monitor",
+    "fields": {
+      "id": 2,
+      "name": "healthy_no_alerts",
+      "enabled": true,
+      "distilleries": [1, 2],
+      "time_interval": 5,
+      "time_unit": "m",
+      "alerts_enabled": false,
+      "repeating_alerts": false,
+      "alert_level": "HIGH",
+      "status": "GREEN",
+      "created_date": "2016-01-01 08:59:00.000000+00:00",
+      "last_updated": "2016-01-01 09:01:00.000000+00:00",
+      "last_healthy": "2016-01-01 09:00:00.000000+00:00",
+      "last_active_distillery": 1,
+      "last_saved_doc": "10"
+    }
+  },
+  {
+    "model": "monitors.monitor",
+    "fields": {
+      "id": 3,
+      "name": "unhealthy_alerts",
+      "enabled": true,
+      "distilleries": [1, 2],
+      "time_interval": 5,
+      "time_unit": "m",
+      "alerts_enabled": true,
+      "repeating_alerts": false,
+      "alert_level": "MEDIUM",
+      "status": "RED",
+      "created_date": "2016-01-01 08:59:00.000000+00:00",
+      "last_updated": "2016-01-01 09:01:00.000000+00:00",
+      "last_healthy": "2016-01-01 09:00:00.000000+00:00",
+      "last_active_distillery": 2,
+      "last_saved_doc": "10"
+    }
+  },
+  {
+    "model": "monitors.monitor",
+    "fields": {
+      "id": 4,
+      "name": "unhealthy_alerts_disabled",
+      "enabled": false,
+      "distilleries": [1, 3],
+      "time_interval": 5,
+      "time_unit": "m",
+      "alerts_enabled": false,
+      "repeating_alerts": true,
+      "alert_level": "HIGH",
+      "status": "RED",
+      "created_date": "2016-01-01 08:59:00.000000+00:00",
+      "last_updated": "2016-01-01 09:01:00.000000+00:00",
+      "last_healthy": "2016-01-01 09:00:00.000000+00:00",
+      "last_active_distillery": 1,
+      "last_saved_doc": "10"
+    }
+  },
+  {
+    "model": "monitors.monitor",
+    "fields": {
+      "id": 5,
+      "name": "unhealthy_repeating_alerts",
+      "enabled": true,
+      "distilleries": [2],
+      "time_interval": 5,
+      "time_unit": "m",
+      "alerts_enabled": true,
+      "repeating_alerts": true,
+      "last_alert_date": "2016-01-01 09:00:00.000000+00:00",
+      "alert_level": "LOW",
+      "status": "RED",
+      "created_date": "2016-01-01 09:00:00.000000+00:00",
+      "last_updated": "2016-01-01 09:01:00.000000+00:00"
+    }
+  }
+]

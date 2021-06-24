@@ -1,0 +1,1166 @@
+{
+    "attributes": {
+        "analysis_date": 1541937206,
+        "files_attribute_changed": [
+            "<CURRENT_DIR>\\b.wnry",
+            "<CURRENT_DIR>\\c.wnry",
+            "<CURRENT_DIR>\\msg\\m_bulgarian.wnry",
+            "<CURRENT_DIR>\\msg\\m_chinese (simplified).wnry",
+            "<CURRENT_DIR>\\msg\\m_chinese (traditional).wnry",
+            "<CURRENT_DIR>\\msg\\m_croatian.wnry",
+            "<CURRENT_DIR>\\msg\\m_czech.wnry",
+            "<CURRENT_DIR>\\msg\\m_danish.wnry",
+            "<CURRENT_DIR>\\msg\\m_dutch.wnry",
+            "<CURRENT_DIR>\\msg\\m_english.wnry",
+            "<CURRENT_DIR>\\msg\\m_filipino.wnry",
+            "<CURRENT_DIR>\\msg\\m_finnish.wnry",
+            "<CURRENT_DIR>\\msg\\m_french.wnry",
+            "<CURRENT_DIR>\\msg\\m_german.wnry",
+            "<CURRENT_DIR>\\msg\\m_greek.wnry",
+            "<CURRENT_DIR>\\msg\\m_indonesian.wnry",
+            "<CURRENT_DIR>\\msg\\m_italian.wnry",
+            "<CURRENT_DIR>\\msg\\m_japanese.wnry",
+            "<CURRENT_DIR>\\msg\\m_korean.wnry",
+            "<CURRENT_DIR>\\msg\\m_latvian.wnry",
+            "<CURRENT_DIR>\\msg\\m_norwegian.wnry",
+            "<CURRENT_DIR>\\msg\\m_polish.wnry",
+            "<CURRENT_DIR>\\msg\\m_portuguese.wnry",
+            "<CURRENT_DIR>\\msg\\m_romanian.wnry",
+            "<CURRENT_DIR>\\msg\\m_russian.wnry",
+            "<CURRENT_DIR>\\msg\\m_slovak.wnry",
+            "<CURRENT_DIR>\\msg\\m_spanish.wnry",
+            "<CURRENT_DIR>\\msg\\m_swedish.wnry",
+            "<CURRENT_DIR>\\msg\\m_turkish.wnry",
+            "<CURRENT_DIR>\\msg\\m_vietnamese.wnry",
+            "<CURRENT_DIR>\\r.wnry",
+            "<CURRENT_DIR>\\s.wnry",
+            "<CURRENT_DIR>\\t.wnry",
+            "<CURRENT_DIR>\\taskdl.exe",
+            "<CURRENT_DIR>\\taskse.exe",
+            "<CURRENT_DIR>\\u.wnry",
+            "<CURRENT_DIR>\\@wanadecryptor@.exe",
+            "%HOMEPATH%\\desktop\\508softwareandos.doc.wncryt",
+            "%HOMEPATH%\\desktop\\508softwareandos.doc.wncry",
+            "%HOMEPATH%\\desktop\\adhd_and_obesity.docx.wncryt",
+            "%HOMEPATH%\\desktop\\adhd_and_obesity.docx.wncry",
+            "%HOMEPATH%\\desktop\\file_p_00000000_1371597592.docx.wncryt",
+            "%HOMEPATH%\\desktop\\file_p_00000000_1371597592.docx.wncry",
+            "%HOMEPATH%\\desktop\\issi2013_template_for_posters.docx.wncryt",
+            "%HOMEPATH%\\desktop\\issi2013_template_for_posters.docx.wncry",
+            "%HOMEPATH%\\desktop\\thlps_keeper_mayer_1965.docx.wncryt",
+            "%HOMEPATH%\\desktop\\thlps_keeper_mayer_1965.docx.wncry",
+            "%HOMEPATH%\\desktop\\uep_form_786_bulletin_1726i602.doc.wncryt",
+            "%HOMEPATH%\\desktop\\uep_form_786_bulletin_1726i602.doc.wncry",
+            "%HOMEPATH%\\desktop\\@please_read_me@.txt",
+            "%HOMEPATH%\\desktop\\@wanadecryptor@.exe",
+            "%HOMEPATH%\\desktop\\000814251_video_01.avi.wncryt",
+            "%HOMEPATH%\\desktop\\000814251_video_01.avi.wncry",
+            "%HOMEPATH%\\desktop\\archer.avi.wncryt",
+            "%HOMEPATH%\\desktop\\archer.avi.wncry",
+            "%HOMEPATH%\\desktop\\correct.avi.wncryt",
+            "%HOMEPATH%\\desktop\\correct.avi.wncry",
+            "%HOMEPATH%\\desktop\\dashborder_192.bmp.wncryt",
+            "%HOMEPATH%\\desktop\\dashborder_192.bmp.wncry",
+            "<REM_DRIVE>:\\applicantform_en.doc.wncryt",
+            "<REM_DRIVE>:\\applicantform_en.doc.wncry",
+            "%HOMEPATH%\\desktop\\13.jpeg.wncryt",
+            "%HOMEPATH%\\desktop\\13.jpeg.wncry",
+            "%HOMEPATH%\\desktop\\168.jpeg.wncryt",
+            "%HOMEPATH%\\desktop\\168.jpeg.wncry",
+            "%HOMEPATH%\\desktop\\2.jpeg.wncryt",
+            "%HOMEPATH%\\desktop\\2.jpeg.wncry",
+            "%HOMEPATH%\\desktop\\february_catalogue__2015.doc.wncryt",
+            "%HOMEPATH%\\desktop\\february_catalogue__2015.doc.wncry",
+            "%HOMEPATH%\\desktop\\hadac_newsletter_july_2010_final.docx.wncryt",
+            "%HOMEPATH%\\desktop\\hadac_newsletter_july_2010_final.docx.wncry",
+            "%HOMEPATH%\\desktop\\pushkin.jpeg.wncryt",
+            "%HOMEPATH%\\desktop\\pushkin.jpeg.wncry",
+            "%HOMEPATH%\\desktop\\dashborder_96.bmp.wncryt",
+            "%HOMEPATH%\\desktop\\dashborder_96.bmp.wncry",
+            "%HOMEPATH%\\desktop\\default.bmp.wncryt",
+            "%HOMEPATH%\\desktop\\default.bmp.wncry",
+            "%HOMEPATH%\\desktop\\join.avi.wncryt",
+            "%HOMEPATH%\\desktop\\join.avi.wncry",
+            "%HOMEPATH%\\desktop\\split.avi.wncryt",
+            "%HOMEPATH%\\desktop\\split.avi.wncry"
+        ],
+        "files_copied": [
+            {
+                "destination": "%HOMEPATH%\\desktop\\508softwareandos.doc.wncry",
+                "source": "%HOMEPATH%\\desktop\\508softwareandos.doc.wncryt"
+            },
+            {
+                "destination": "%HOMEPATH%\\desktop\\adhd_and_obesity.docx.wncry",
+                "source": "%HOMEPATH%\\desktop\\adhd_and_obesity.docx.wncryt"
+            },
+            {
+                "destination": "%HOMEPATH%\\desktop\\file_p_00000000_1371597592.docx.wncry",
+                "source": "%HOMEPATH%\\desktop\\file_p_00000000_1371597592.docx.wncryt"
+            },
+            {
+                "destination": "%HOMEPATH%\\desktop\\issi2013_template_for_posters.docx.wncry",
+                "source": "%HOMEPATH%\\desktop\\issi2013_template_for_posters.docx.wncryt"
+            },
+            {
+                "destination": "%HOMEPATH%\\desktop\\thlps_keeper_mayer_1965.docx.wncry",
+                "source": "%HOMEPATH%\\desktop\\thlps_keeper_mayer_1965.docx.wncryt"
+            },
+            {
+                "destination": "%HOMEPATH%\\desktop\\uep_form_786_bulletin_1726i602.doc.wncry",
+                "source": "%HOMEPATH%\\desktop\\uep_form_786_bulletin_1726i602.doc.wncryt"
+            },
+            {
+                "destination": "%HOMEPATH%\\desktop\\000814251_video_01.avi.wncry",
+                "source": "%HOMEPATH%\\desktop\\000814251_video_01.avi.wncryt"
+            },
+            {
+                "destination": "%HOMEPATH%\\desktop\\archer.avi.wncry",
+                "source": "%HOMEPATH%\\desktop\\archer.avi.wncryt"
+            },
+            {
+                "destination": "%HOMEPATH%\\desktop\\correct.avi.wncry",
+                "source": "%HOMEPATH%\\desktop\\correct.avi.wncryt"
+            },
+            {
+                "destination": "%HOMEPATH%\\desktop\\dashborder_192.bmp.wncry",
+                "source": "%HOMEPATH%\\desktop\\dashborder_192.bmp.wncryt"
+            },
+            {
+                "destination": "<REM_DRIVE>:\\applicantform_en.doc.wncry",
+                "source": "<REM_DRIVE>:\\applicantform_en.doc.wncryt"
+            },
+            {
+                "destination": "%HOMEPATH%\\desktop\\13.jpeg.wncry",
+                "source": "%HOMEPATH%\\desktop\\13.jpeg.wncryt"
+            },
+            {
+                "destination": "%HOMEPATH%\\desktop\\168.jpeg.wncry",
+                "source": "%HOMEPATH%\\desktop\\168.jpeg.wncryt"
+            },
+            {
+                "destination": "%HOMEPATH%\\desktop\\2.jpeg.wncry",
+                "source": "%HOMEPATH%\\desktop\\2.jpeg.wncryt"
+            },
+            {
+                "destination": "%HOMEPATH%\\desktop\\february_catalogue__2015.doc.wncry",
+                "source": "%HOMEPATH%\\desktop\\february_catalogue__2015.doc.wncryt"
+            },
+            {
+                "destination": "%HOMEPATH%\\desktop\\hadac_newsletter_july_2010_final.docx.wncry",
+                "source": "%HOMEPATH%\\desktop\\hadac_newsletter_july_2010_final.docx.wncryt"
+            },
+            {
+                "destination": "%HOMEPATH%\\desktop\\pushkin.jpeg.wncry",
+                "source": "%HOMEPATH%\\desktop\\pushkin.jpeg.wncryt"
+            },
+            {
+                "destination": "%HOMEPATH%\\desktop\\dashborder_96.bmp.wncry",
+                "source": "%HOMEPATH%\\desktop\\dashborder_96.bmp.wncryt"
+            },
+            {
+                "destination": "%HOMEPATH%\\desktop\\default.bmp.wncry",
+                "source": "%HOMEPATH%\\desktop\\default.bmp.wncryt"
+            },
+            {
+                "destination": "%HOMEPATH%\\desktop\\join.avi.wncry",
+                "source": "%HOMEPATH%\\desktop\\join.avi.wncryt"
+            },
+            {
+                "destination": "%HOMEPATH%\\desktop\\split.avi.wncry",
+                "source": "%HOMEPATH%\\desktop\\split.avi.wncryt"
+            }
+        ],
+        "files_deleted": [
+            "%HOMEPATH%\\desktop\\508softwareandos.doc.wncryt",
+            "%HOMEPATH%\\desktop\\adhd_and_obesity.docx.wncryt",
+            "%HOMEPATH%\\desktop\\file_p_00000000_1371597592.docx.wncryt",
+            "%HOMEPATH%\\desktop\\issi2013_template_for_posters.docx.wncryt",
+            "%HOMEPATH%\\desktop\\thlps_keeper_mayer_1965.docx.wncryt",
+            "%HOMEPATH%\\desktop\\uep_form_786_bulletin_1726i602.doc.wncryt",
+            "%HOMEPATH%\\desktop\\000814251_video_01.avi.wncryt",
+            "%HOMEPATH%\\desktop\\archer.avi.wncryt",
+            "%HOMEPATH%\\desktop\\correct.avi.wncryt",
+            "%HOMEPATH%\\desktop\\dashborder_192.bmp.wncryt",
+            "<REM_DRIVE>:\\applicantform_en.doc.wncryt",
+            "<CURRENT_DIR>\\m.vbs",
+            "<CURRENT_DIR>\\121951541981555.bat",
+            "%HOMEPATH%\\desktop\\13.jpeg.wncryt",
+            "%HOMEPATH%\\desktop\\168.jpeg.wncryt",
+            "%HOMEPATH%\\desktop\\2.jpeg.wncryt",
+            "%HOMEPATH%\\desktop\\february_catalogue__2015.doc.wncryt",
+            "%HOMEPATH%\\desktop\\hadac_newsletter_july_2010_final.docx.wncryt",
+            "%HOMEPATH%\\desktop\\pushkin.jpeg.wncryt",
+            "%HOMEPATH%\\desktop\\dashborder_96.bmp.wncryt",
+            "%HOMEPATH%\\desktop\\default.bmp.wncryt",
+            "%HOMEPATH%\\desktop\\join.avi.wncryt",
+            "%HOMEPATH%\\desktop\\split.avi.wncryt",
+            "%HOMEPATH%\\Desktop\\13.jpeg",
+            "%HOMEPATH%\\Desktop\\168.jpeg",
+            "%HOMEPATH%\\Desktop\\2.jpeg",
+            "%HOMEPATH%\\Desktop\\february_catalogue__2015.doc",
+            "%HOMEPATH%\\Desktop\\hadac_newsletter_july_2010_final.docx",
+            "%HOMEPATH%\\Desktop\\issi2013_template_for_posters.docx",
+            "%HOMEPATH%\\Desktop\\pushkin.jpeg",
+            "%HOMEPATH%\\Desktop\\archer.avi",
+            "%HOMEPATH%\\Desktop\\correct.avi",
+            "%HOMEPATH%\\Desktop\\dashBorder_96.bmp",
+            "%HOMEPATH%\\Desktop\\default.bmp",
+            "%HOMEPATH%\\Desktop\\join.avi",
+            "%HOMEPATH%\\Desktop\\split.avi",
+            "<REM_DRIVE>:\\applicantform_en.doc",
+            "<CURRENT_DIR>\\101751541982599.bat"
+        ],
+        "files_dropped": [
+            {
+                "path": "<CURRENT_DIR>\\00000000.eky",
+                "sha256": "3e8fd37727e877d4933021789a5f8e45e9b85eb8f1dc31615a5bf59b694b5aea"
+            },
+            {
+                "path": "<CURRENT_DIR>\\00000000.pky",
+                "sha256": "f10deff620f72e53dc1dce50310c38435d4e82ff8c8877f6ec3f9b0f3d5b5f04"
+            },
+            {
+                "path": "<CURRENT_DIR>\\00000000.res",
+                "sha256": "73d4e30a6f6d5ba069381f783dcd961cc2885d38b59a7e32765b401daf208483"
+            },
+            {
+                "path": "<CURRENT_DIR>\\121951541981555.bat",
+                "sha256": "01f2b2af550cd61fde7b4b3a637de8b688619315614969a17496c724187482de",
+                "type": "SCRIPT"
+            },
+            {
+                "path": "<CURRENT_DIR>\\@please_read_me@.txt",
+                "sha256": "840ab19c411c918ea3e7526d0df4b9cb002de5ea15e854389285df0d1ea9a8e5",
+                "type": "SCRIPT"
+            },
+            {
+                "path": "<CURRENT_DIR>\\@wanadecryptor@.exe",
+                "sha256": "b9c5d4339809e0ad9a00d4d3dd26fdf44a32819a54abf846bb9b560d81391c25",
+                "type": "PE_EXE"
+            },
+            {
+                "path": "<CURRENT_DIR>\\@wanadecryptor@.exe.lnk",
+                "sha256": "b7a26b85a07201e6896cdc74c61c38b3bad645ef38093f2dda646fc214aa8125",
+                "type": "LNK"
+            },
+            {
+                "path": "<CURRENT_DIR>\\b.wnry",
+                "sha256": "d5e0e8694ddc0548d8e6b87c83d50f4ab85c1debadb106d6a6a794c3e746f4fa"
+            },
+            {
+                "path": "<CURRENT_DIR>\\c.wnry",
+                "sha256": "0ceb451c1dbefaa8231eeb462e8ce639863eb5b8ae4fa63a353eb6e86173119e"
+            },
+            {
+                "path": "<CURRENT_DIR>\\m.vbs",
+                "sha256": "d174b57ff01ff54a361050cf27e6c7c3b6c6d7af00b41f8fc34769ee974b1d22",
+                "type": "SCRIPT"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_bulgarian.wnry",
+                "sha256": "40b37e7b80cf678d7dd302aaf41b88135ade6ddf44d89bdba19cf171564444bd",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_chinese (simplified).wnry",
+                "sha256": "845d0e178aeebd6c7e2a2e9697b2bf6cf02028c50c288b3ba88fe2918ea2834a",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_chinese (traditional).wnry",
+                "sha256": "5c7f6ad1ec4bc2c8e2c9c126633215daba7de731ac8b12be10ca157417c97f3a",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_croatian.wnry",
+                "sha256": "3f33734b2d34cce83936ce99c3494cd845f1d2c02d7f6da31d42dfc1ca15a171",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_czech.wnry",
+                "sha256": "5afa4753afa048c6d6c39327ce674f27f5f6e5d3f2a060b7a8aed61725481150",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_danish.wnry",
+                "sha256": "a75bb44284b9db8d702692f84909a7e23f21141866adf3db888042e9109a1cb6",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_dutch.wnry",
+                "sha256": "2c95bef914da6c50d7bdedec601e589fbb4fda24c4863a7260f4f72bd025799c",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_english.wnry",
+                "sha256": "26fd072fda6e12f8c2d3292086ef0390785efa2c556e2a88bd4673102af703e5",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_filipino.wnry",
+                "sha256": "d8489f8c16318e524b45de8b35d7e2c3cd8ed4821c136f12f5ef3c9fc3321324",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_finnish.wnry",
+                "sha256": "1adfee058b98206cb4fbe1a46d3ed62a11e1dee2c7ff521c1eef7c706e6a700e",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_french.wnry",
+                "sha256": "9bd38110e6523547aed50617ddc77d0920d408faeed2b7a21ab163fda22177bc",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_german.wnry",
+                "sha256": "2adc900fafa9938d85ce53cb793271f37af40cf499bcc454f44975db533f0b61",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_greek.wnry",
+                "sha256": "e13cc9b13aa5074dc45d50379eceb17ee39a0c2531ab617d93800fe236758ca9",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_indonesian.wnry",
+                "sha256": "23e5e738aad10fb8ef89aa0285269aff728070080158fd3e7792fe9ed47c51f4",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_italian.wnry",
+                "sha256": "49f2c739e7d9745c0834dc817a71bf6676ccc24a4c28dcddf8844093aab3df07",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_japanese.wnry",
+                "sha256": "7e491e7b48d6e34f916624c1cda9f024e86fcbec56acda35e27fa99d530d017e",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_korean.wnry",
+                "sha256": "552aa0f82f37c9601114974228d4fc54f7434fe3ae7a276ef1ae98a0f608f1d0",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_latvian.wnry",
+                "sha256": "a0356696877f2d94d645ae2df6ce6b370bd5c0d6db3d36def44e714525de0536",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_norwegian.wnry",
+                "sha256": "cb5da96b3dfcf4394713623dbf3831b2a0b8be63987f563e1c32edeb74cb6c3a",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_polish.wnry",
+                "sha256": "519ad66009a6c127400c6c09e079903223bd82ecc18ad71b8e5cd79f5f9c053e",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_portuguese.wnry",
+                "sha256": "bd9f4b3aedf4f81f37ec0a028aabcb0e9a900e6b4de04e9271c8db81432e2a66",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_romanian.wnry",
+                "sha256": "70c0f32ed379ae899e5ac975e20bbbacd295cf7cd50c36174d2602420c770ac1",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_russian.wnry",
+                "sha256": "02932052fafe97e6acaaf9f391738a3a826f5434b1a013abbfa7a6c1ade1e078",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_slovak.wnry",
+                "sha256": "e64178e339c8e10eac17a236a67b892d0447eb67b1dcd149763dad6fd9f72729",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_spanish.wnry",
+                "sha256": "72f20024b2f69b45a1391f0a6474e9f6349625ce329f5444aec7401fe31f8de1",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_swedish.wnry",
+                "sha256": "146f61db72297c9c0facffd560487f8d6a2846ecec92ecc7db19c8d618dbc3a4",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_turkish.wnry",
+                "sha256": "6db650836d64350bbde2ab324407b8e474fc041098c41ecac6fd77d632a36415",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\msg\\m_vietnamese.wnry",
+                "sha256": "1f21838b244c80f8bed6f6977aa8a557b419cf22ba35b1fd4bf0f98989c5bdf8",
+                "type": "RTF"
+            },
+            {
+                "path": "<CURRENT_DIR>\\r.wnry",
+                "sha256": "402751fa49e0cb68fe052cb3db87b05e71c1d950984d339940cf6b29409f2a7c",
+                "type": "SCRIPT"
+            },
+            {
+                "path": "<CURRENT_DIR>\\s.wnry",
+                "sha256": "e18fdd912dfe5b45776e68d578c3af3547886cf1353d7086c8bee037436dff4b",
+                "type": "ZIP"
+            },
+            {
+                "path": "<CURRENT_DIR>\\t.wnry",
+                "sha256": "97ebce49b14c46bebc9ec2448d00e1e397123b256e2be9eba5140688e7bc0ae6"
+            },
+            {
+                "path": "<CURRENT_DIR>\\taskdl.exe",
+                "sha256": "4a468603fdcb7a2eb5770705898cf9ef37aade532a7964642ecd705a74794b79",
+                "type": "PE_EXE"
+            },
+            {
+                "path": "<CURRENT_DIR>\\taskse.exe",
+                "sha256": "2ca2d550e603d74dedda03156023135b38da3630cb014e3d00b1263358c5f00d",
+                "type": "PE_EXE"
+            },
+            {
+                "path": "<CURRENT_DIR>\\u.wnry",
+                "sha256": "b9c5d4339809e0ad9a00d4d3dd26fdf44a32819a54abf846bb9b560d81391c25",
+                "type": "PE_EXE"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\000814251_video_01.avi.wncry",
+                "sha256": "c1fea7fef2ae71d2631b095fa71e96ae3a136be49c9c2de9be55cdbab8afaf4a"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\000814251_video_01.avi.wncryt",
+                "sha256": "c1fea7fef2ae71d2631b095fa71e96ae3a136be49c9c2de9be55cdbab8afaf4a"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\508softwareandos.doc.wncry",
+                "sha256": "f5614f613ecf72bac745b9d19324fc8a4605e632522302d11d27f727bbd3fd8a"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\508softwareandos.doc.wncryt",
+                "sha256": "f5614f613ecf72bac745b9d19324fc8a4605e632522302d11d27f727bbd3fd8a"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\@please_read_me@.txt",
+                "sha256": "840ab19c411c918ea3e7526d0df4b9cb002de5ea15e854389285df0d1ea9a8e5",
+                "type": "SCRIPT"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\@wanadecryptor@.exe",
+                "sha256": "b9c5d4339809e0ad9a00d4d3dd26fdf44a32819a54abf846bb9b560d81391c25",
+                "type": "PE_EXE"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\adhd_and_obesity.docx.wncry",
+                "sha256": "835dabe87d7c34e80ee408aec4a5282bc33a34bbe2561fdd3a51eb0d30a430ff"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\adhd_and_obesity.docx.wncryt",
+                "sha256": "835dabe87d7c34e80ee408aec4a5282bc33a34bbe2561fdd3a51eb0d30a430ff"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\archer.avi.wncry",
+                "sha256": "0430cb3ed5eb53a5aec8f173236fd03ac03311d48290c21b762abc27ca1e9702"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\archer.avi.wncryt",
+                "sha256": "0430cb3ed5eb53a5aec8f173236fd03ac03311d48290c21b762abc27ca1e9702"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\correct.avi.wncry",
+                "sha256": "de0d999da147083cd076401e0357ed3f0a3ccb4d985824e11edd430a150b4139"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\correct.avi.wncryt",
+                "sha256": "de0d999da147083cd076401e0357ed3f0a3ccb4d985824e11edd430a150b4139"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\dashborder_192.bmp.wncry",
+                "sha256": "aaaf7881757cf1929cf2c7e2fcabbd86afe032edf7f29ac1884011dccb8e7504"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\dashborder_192.bmp.wncryt",
+                "sha256": "aaaf7881757cf1929cf2c7e2fcabbd86afe032edf7f29ac1884011dccb8e7504"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\file_p_00000000_1371597592.docx.wncry",
+                "sha256": "44e6f1d44f54331447f1b0af9ac2858b782b7c0bb11ea20e051ee91a551919b8"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\file_p_00000000_1371597592.docx.wncryt",
+                "sha256": "44e6f1d44f54331447f1b0af9ac2858b782b7c0bb11ea20e051ee91a551919b8"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\issi2013_template_for_posters.docx.wncry",
+                "sha256": "021df069db4f4a904052ef0c4efe40bc1c53c95ab63fc5d129fee1aeb8909bf7"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\issi2013_template_for_posters.docx.wncryt",
+                "sha256": "021df069db4f4a904052ef0c4efe40bc1c53c95ab63fc5d129fee1aeb8909bf7"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\thlps_keeper_mayer_1965.docx.wncry",
+                "sha256": "79166d75a65b981b53c47a3396d8cb448a81cc39656eeb1130fcb17f34028f0e"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\thlps_keeper_mayer_1965.docx.wncryt",
+                "sha256": "79166d75a65b981b53c47a3396d8cb448a81cc39656eeb1130fcb17f34028f0e"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\uep_form_786_bulletin_1726i602.doc.wncry",
+                "sha256": "262166ac89add4ce7c181b429449b2001413dd1c60911aad0011be12461dfbbf"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\uep_form_786_bulletin_1726i602.doc.wncryt",
+                "sha256": "262166ac89add4ce7c181b429449b2001413dd1c60911aad0011be12461dfbbf"
+            },
+            {
+                "path": "<REM_DRIVE>:\\applicantform_en.doc.wncry",
+                "sha256": "3159cc03d150e6b26bf8391d107f30bf0aafc1967fcdd6ce99344a7a9656beb3"
+            },
+            {
+                "path": "<REM_DRIVE>:\\applicantform_en.doc.wncryt",
+                "sha256": "3159cc03d150e6b26bf8391d107f30bf0aafc1967fcdd6ce99344a7a9656beb3"
+            },
+            {
+                "path": "<REM_DRIVE>:\\cveuropeo.doc.wncryt",
+                "sha256": "c71c0837ac185f413509626611c920b63e44e6a2c8f2d8057460310519e10da3"
+            },
+            {
+                "path": "<CURRENT_DIR>\\00000000.eky",
+                "sha256": "0d6c59936d14731501b4850817d8b5a057f6a347161367391f90c11507db6463"
+            },
+            {
+                "path": "<CURRENT_DIR>\\00000000.pky",
+                "sha256": "5891837706e74c657a2ca2b2d321363ecb16b5134a9432ff3fcb076923e6315e"
+            },
+            {
+                "path": "<CURRENT_DIR>\\00000000.res",
+                "sha256": "69def2c14d63105048db3860141f9c70a6de0b416365bfa792a4a7dd56770336"
+            },
+            {
+                "path": "<CURRENT_DIR>\\101751541982599.bat",
+                "sha256": "ad43c29ac0fe24708055576aed68195265b0b8e9cf54a77d8f28c33bd9afb61b",
+                "type": "SCRIPT"
+            },
+            {
+                "path": "<CURRENT_DIR>\\@please_read_me@.txt",
+                "sha256": "4a25d98c121bb3bd5b54e0b6a5348f7b09966bffeec30776e5a731813f05d49e",
+                "type": "SCRIPT"
+            },
+            {
+                "path": "<CURRENT_DIR>\\@wanadecryptor@.exe.lnk",
+                "sha256": "69e8dcb8653e60ed405dbb7a2c484e64f4378c2acbbd17072ded89a2654481d5",
+                "type": "LNK"
+            },
+            {
+                "path": "<CURRENT_DIR>\\c.wnry",
+                "sha256": "ef0ed0b717d1b956eb6c42ba1f4fd2283cf7c8416bed0afd1e8805ee0502f2b4"
+            },
+            {
+                "path": "<CURRENT_DIR>\\m.vbs",
+                "sha256": "2f709d740d87754ca21eaaf4042c69e393cb4ca3eaecef9908efcc81a334c7bf",
+                "type": "SCRIPT"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\13.jpeg.wncry",
+                "sha256": "066fc1c82dc365001e87d9a7e6f873621cb4662e9752903baf92ee62b6c05032"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\13.jpeg.wncryt",
+                "sha256": "066fc1c82dc365001e87d9a7e6f873621cb4662e9752903baf92ee62b6c05032"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\168.jpeg.wncry",
+                "sha256": "6070b0ca4239b088277ff806335e7572cfe36b383f2f8702647e546ba4f20aec"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\168.jpeg.wncryt",
+                "sha256": "6070b0ca4239b088277ff806335e7572cfe36b383f2f8702647e546ba4f20aec"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\2.jpeg.wncry",
+                "sha256": "30a01761f66f67bd0aa02bd3c1297c17c73228b4f1034ec1159f5b9dfd8a19d1"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\2.jpeg.wncryt",
+                "sha256": "30a01761f66f67bd0aa02bd3c1297c17c73228b4f1034ec1159f5b9dfd8a19d1"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\@please_read_me@.txt",
+                "sha256": "4a25d98c121bb3bd5b54e0b6a5348f7b09966bffeec30776e5a731813f05d49e",
+                "type": "SCRIPT"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\archer.avi.wncry",
+                "sha256": "1d289edac03e272206b84e3f6fee9f1a0ec9001ea4ee0d6a2e460c77035ba191"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\archer.avi.wncryt",
+                "sha256": "1d289edac03e272206b84e3f6fee9f1a0ec9001ea4ee0d6a2e460c77035ba191"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\correct.avi.wncry",
+                "sha256": "d1ca9ff5a075eeb996469bbed843a966823b02429429fb4c9c9ee086e1a199b9"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\correct.avi.wncryt",
+                "sha256": "d1ca9ff5a075eeb996469bbed843a966823b02429429fb4c9c9ee086e1a199b9"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\dashborder_96.bmp.wncry",
+                "sha256": "799bb2b39940231224e11f9e7b961547556288a5ceb031657727b0f972d9df80"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\dashborder_96.bmp.wncryt",
+                "sha256": "799bb2b39940231224e11f9e7b961547556288a5ceb031657727b0f972d9df80"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\default.bmp.wncry",
+                "sha256": "5b4b71903c92739953afa834d5741194dfc31c072ceeec4a0c06a9812c5951b0"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\default.bmp.wncryt",
+                "sha256": "5b4b71903c92739953afa834d5741194dfc31c072ceeec4a0c06a9812c5951b0"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\february_catalogue__2015.doc.wncry",
+                "sha256": "f005331c0049326238c7677ff382fc66fdb9606f24d9100c1f13abc24f35cce1"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\february_catalogue__2015.doc.wncryt",
+                "sha256": "f005331c0049326238c7677ff382fc66fdb9606f24d9100c1f13abc24f35cce1"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\hadac_newsletter_july_2010_final.docx.wncry",
+                "sha256": "2936fb6d9cbe0190232a7e9c71492c0bb013fa2e397d4a43c76071bfb911a69f"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\hadac_newsletter_july_2010_final.docx.wncryt",
+                "sha256": "2936fb6d9cbe0190232a7e9c71492c0bb013fa2e397d4a43c76071bfb911a69f"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\issi2013_template_for_posters.docx.wncry",
+                "sha256": "83b3182bcacd5c5662e0a1b7cb2f809e2998a85042c600aad0f43438dfae905f"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\issi2013_template_for_posters.docx.wncryt",
+                "sha256": "83b3182bcacd5c5662e0a1b7cb2f809e2998a85042c600aad0f43438dfae905f"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\join.avi.wncry",
+                "sha256": "4489be6d77e1bcc800606b545205fdcc76c480421e73978105fbf106d9068573"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\join.avi.wncryt",
+                "sha256": "4489be6d77e1bcc800606b545205fdcc76c480421e73978105fbf106d9068573"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\pushkin.jpeg.wncry",
+                "sha256": "af1d2a9e883bdaf03b61bf3b00abfa29cbfebe229ea802d186dd393453f87bd1"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\pushkin.jpeg.wncryt",
+                "sha256": "af1d2a9e883bdaf03b61bf3b00abfa29cbfebe229ea802d186dd393453f87bd1"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\split.avi.wncry",
+                "sha256": "be642b0805d943d2908f0c28e3d0f78bdd2a4565ca37946daced7bcce5606984"
+            },
+            {
+                "path": "%HOMEPATH%\\desktop\\split.avi.wncryt",
+                "sha256": "be642b0805d943d2908f0c28e3d0f78bdd2a4565ca37946daced7bcce5606984"
+            },
+            {
+                "path": "<REM_DRIVE>:\\applicantform_en.doc.wncry",
+                "sha256": "da2dc2dee8a35e8bea83bcf0a0dcea67fcda3d411c98caf81d7f3fe0630eca43"
+            },
+            {
+                "path": "<REM_DRIVE>:\\applicantform_en.doc.wncryt",
+                "sha256": "da2dc2dee8a35e8bea83bcf0a0dcea67fcda3d411c98caf81d7f3fe0630eca43"
+            },
+            {
+                "path": "<REM_DRIVE>:\\cveuropeo.doc.wncryt",
+                "sha256": "7eafa14400da83416c99fea6b2e52153fcba6d2467d7ee2bcadab9f7760e0c24"
+            }
+        ],
+        "files_opened": [
+            "<SYSTEM32>\\attrib.exe",
+            "<SYSTEM32>\\ntdll.dll",
+            "<SYSTEM32>\\icacls.exe",
+            "<SYSTEM32>\\cmd.exe",
+            "%HOMEPATH%\\desktop\\508softwareandos.doc",
+            "%HOMEPATH%\\desktop\\adhd_and_obesity.docx",
+            "%HOMEPATH%\\desktop\\file_p_00000000_1371597592.docx",
+            "%HOMEPATH%\\desktop\\issi2013_template_for_posters.docx",
+            "%HOMEPATH%\\desktop\\thlps_keeper_mayer_1965.docx",
+            "%HOMEPATH%\\desktop\\uep_form_786_bulletin_1726i602.doc",
+            "%HOMEPATH%\\desktop\\000814251_video_01.avi",
+            "%HOMEPATH%\\desktop\\archer.avi",
+            "%HOMEPATH%\\desktop\\correct.avi",
+            "%HOMEPATH%\\desktop\\dashborder_192.bmp",
+            "<REM_DRIVE>:\\applicantform_en.doc",
+            "<REM_DRIVE>:\\cveuropeo.doc",
+            "<SYSTEM32>\\conhost.exe",
+            "%WINDIR%\\prefetch\\cmd.exe-4a81b364.pf",
+            "<SYSTEM32>\\cscript.exe",
+            "<CURRENT_DIR>\\m.vbs",
+            "%HOMEPATH%\\desktop\\desktop.ini",
+            "%WINDIR%\\prefetch\\conhost.exe-1f3e9d7e.pf",
+            "%WINDIR%\\prefetch\\dllhost.exe-5e46fa0d.pf",
+            "%WINDIR%\\syswow64\\attrib.exe",
+            "%WINDIR%\\syswow64\\ntdll.dll",
+            "%WINDIR%\\syswow64\\icacls.exe",
+            "%WINDIR%\\syswow64\\cmd.exe",
+            "%HOMEPATH%\\desktop\\13.jpeg",
+            "%HOMEPATH%\\desktop\\168.jpeg",
+            "%HOMEPATH%\\desktop\\2.jpeg",
+            "%HOMEPATH%\\desktop\\february_catalogue__2015.doc",
+            "%HOMEPATH%\\desktop\\hadac_newsletter_july_2010_final.docx",
+            "%HOMEPATH%\\desktop\\pushkin.jpeg",
+            "%HOMEPATH%\\desktop\\dashborder_96.bmp",
+            "%HOMEPATH%\\desktop\\default.bmp",
+            "%HOMEPATH%\\desktop\\join.avi",
+            "%HOMEPATH%\\desktop\\split.avi",
+            "%WINDIR%\\syswow64\\cscript.exe",
+            "%WINDIR%\\syswow64\\wshom.ocx"
+        ],
+        "files_written": [
+            "<CURRENT_DIR>\\b.wnry",
+            "<CURRENT_DIR>\\c.wnry",
+            "<CURRENT_DIR>\\msg\\m_bulgarian.wnry",
+            "<CURRENT_DIR>\\msg\\m_chinese (simplified).wnry",
+            "<CURRENT_DIR>\\msg\\m_chinese (traditional).wnry",
+            "<CURRENT_DIR>\\msg\\m_croatian.wnry",
+            "<CURRENT_DIR>\\msg\\m_czech.wnry",
+            "<CURRENT_DIR>\\msg\\m_danish.wnry",
+            "<CURRENT_DIR>\\msg\\m_dutch.wnry",
+            "<CURRENT_DIR>\\msg\\m_english.wnry",
+            "<CURRENT_DIR>\\msg\\m_filipino.wnry",
+            "<CURRENT_DIR>\\msg\\m_finnish.wnry",
+            "<CURRENT_DIR>\\msg\\m_french.wnry",
+            "<CURRENT_DIR>\\msg\\m_german.wnry",
+            "<CURRENT_DIR>\\msg\\m_greek.wnry",
+            "<CURRENT_DIR>\\msg\\m_indonesian.wnry",
+            "<CURRENT_DIR>\\msg\\m_italian.wnry",
+            "<CURRENT_DIR>\\msg\\m_japanese.wnry",
+            "<CURRENT_DIR>\\msg\\m_korean.wnry",
+            "<CURRENT_DIR>\\msg\\m_latvian.wnry",
+            "<CURRENT_DIR>\\msg\\m_norwegian.wnry",
+            "<CURRENT_DIR>\\msg\\m_polish.wnry",
+            "<CURRENT_DIR>\\msg\\m_portuguese.wnry",
+            "<CURRENT_DIR>\\msg\\m_romanian.wnry",
+            "<CURRENT_DIR>\\msg\\m_russian.wnry",
+            "<CURRENT_DIR>\\msg\\m_slovak.wnry",
+            "<CURRENT_DIR>\\msg\\m_spanish.wnry",
+            "<CURRENT_DIR>\\msg\\m_swedish.wnry",
+            "<CURRENT_DIR>\\msg\\m_turkish.wnry",
+            "<CURRENT_DIR>\\msg\\m_vietnamese.wnry",
+            "<CURRENT_DIR>\\r.wnry",
+            "<CURRENT_DIR>\\s.wnry",
+            "<CURRENT_DIR>\\t.wnry",
+            "<CURRENT_DIR>\\taskdl.exe",
+            "<CURRENT_DIR>\\taskse.exe",
+            "<CURRENT_DIR>\\u.wnry",
+            "<CURRENT_DIR>\\00000000.pky",
+            "<CURRENT_DIR>\\00000000.eky",
+            "<CURRENT_DIR>\\00000000.res",
+            "<CURRENT_DIR>\\@wanadecryptor@.exe",
+            "<CURRENT_DIR>\\121951541981555.bat",
+            "<CURRENT_DIR>\\@please_read_me@.txt",
+            "%HOMEPATH%\\desktop\\508softwareandos.doc.wncryt",
+            "%HOMEPATH%\\Desktop\\508softwareandos.doc",
+            "%HOMEPATH%\\desktop\\adhd_and_obesity.docx.wncryt",
+            "%HOMEPATH%\\Desktop\\adhd_and_obesity.docx",
+            "%HOMEPATH%\\desktop\\file_p_00000000_1371597592.docx.wncryt",
+            "%HOMEPATH%\\Desktop\\file_p_00000000_1371597592.docx",
+            "%HOMEPATH%\\desktop\\issi2013_template_for_posters.docx.wncryt",
+            "%HOMEPATH%\\Desktop\\issi2013_template_for_posters.docx",
+            "%HOMEPATH%\\desktop\\thlps_keeper_mayer_1965.docx.wncryt",
+            "%HOMEPATH%\\Desktop\\thlps_keeper_mayer_1965.docx",
+            "%HOMEPATH%\\desktop\\uep_form_786_bulletin_1726i602.doc.wncryt",
+            "%HOMEPATH%\\Desktop\\uep_form_786_bulletin_1726i602.doc",
+            "%HOMEPATH%\\desktop\\@please_read_me@.txt",
+            "%HOMEPATH%\\desktop\\@wanadecryptor@.exe",
+            "%HOMEPATH%\\desktop\\000814251_video_01.avi.wncryt",
+            "%HOMEPATH%\\Desktop\\000814251_video_01.avi",
+            "%HOMEPATH%\\desktop\\archer.avi.wncryt",
+            "%HOMEPATH%\\Desktop\\archer.avi",
+            "%HOMEPATH%\\desktop\\correct.avi.wncryt",
+            "%HOMEPATH%\\Desktop\\correct.avi",
+            "%HOMEPATH%\\desktop\\dashborder_192.bmp.wncryt",
+            "%HOMEPATH%\\Desktop\\dashBorder_192.bmp",
+            "<REM_DRIVE>:\\applicantform_en.doc.wncryt",
+            "<REM_DRIVE>:\\applicantform_en.doc",
+            "<REM_DRIVE>:\\cveuropeo.doc.wncryt",
+            "<CURRENT_DIR>\\m.vbs",
+            "<CURRENT_DIR>\\@wanadecryptor@.exe.lnk",
+            "<CURRENT_DIR>\\101751541982599.bat",
+            "%HOMEPATH%\\desktop\\13.jpeg.wncryt",
+            "%HOMEPATH%\\Desktop\\13.jpeg",
+            "%HOMEPATH%\\desktop\\168.jpeg.wncryt",
+            "%HOMEPATH%\\Desktop\\168.jpeg",
+            "%HOMEPATH%\\desktop\\2.jpeg.wncryt",
+            "%HOMEPATH%\\Desktop\\2.jpeg",
+            "%HOMEPATH%\\desktop\\february_catalogue__2015.doc.wncryt",
+            "%HOMEPATH%\\Desktop\\february_catalogue__2015.doc",
+            "%HOMEPATH%\\desktop\\hadac_newsletter_july_2010_final.docx.wncryt",
+            "%HOMEPATH%\\Desktop\\hadac_newsletter_july_2010_final.docx",
+            "%HOMEPATH%\\desktop\\pushkin.jpeg.wncryt",
+            "%HOMEPATH%\\Desktop\\pushkin.jpeg",
+            "%HOMEPATH%\\desktop\\dashborder_96.bmp.wncryt",
+            "%HOMEPATH%\\Desktop\\dashBorder_96.bmp",
+            "%HOMEPATH%\\desktop\\default.bmp.wncryt",
+            "%HOMEPATH%\\Desktop\\default.bmp",
+            "%HOMEPATH%\\desktop\\join.avi.wncryt",
+            "%HOMEPATH%\\Desktop\\join.avi",
+            "%HOMEPATH%\\desktop\\split.avi.wncryt",
+            "%HOMEPATH%\\Desktop\\split.avi"
+        ],
+        "has_html_report": true,
+        "modules_loaded": ["<CURRENT_DIR>\\taskdl.exe"],
+        "processes_created": [
+            "<PATH_SAMPLE.EXE>",
+            "<SYSTEM32>\\attrib.exe",
+            "<SYSTEM32>\\icacls.exe",
+            "<SYSTEM32>\\conhost.exe",
+            "<CURRENT_DIR>\\taskdl.exe",
+            "<SYSTEM32>\\cmd.exe",
+            "<SYSTEM32>\\cscript.exe",
+            "<SYSTEM32>\\dllhost.exe",
+            "%WINDIR%\\syswow64\\attrib.exe",
+            "%WINDIR%\\syswow64\\icacls.exe",
+            "%WINDIR%\\syswow64\\cmd.exe",
+            "%WINDIR%\\syswow64\\cscript.exe"
+        ],
+        "processes_terminated": [
+            "<SYSTEM32>\\attrib.exe",
+            "<SYSTEM32>\\icacls.exe",
+            "<SYSTEM32>\\cscript.exe",
+            "<SYSTEM32>\\cmd.exe",
+            "%WINDIR%\\syswow64\\attrib.exe",
+            "%WINDIR%\\syswow64\\icacls.exe",
+            "%WINDIR%\\syswow64\\cscript.exe",
+            "%WINDIR%\\syswow64\\cmd.exe"
+        ],
+        "processes_tree": [
+            {
+                "children": [
+                    {
+                        "name": "<SYSTEM32>\\attrib.exe",
+                        "process_id": "3104",
+                        "time_offset": 1
+                    },
+                    {
+                        "name": "<SYSTEM32>\\icacls.exe",
+                        "process_id": "3492",
+                        "time_offset": 1
+                    },
+                    {
+                        "name": "<CURRENT_DIR>\\taskdl.exe",
+                        "process_id": "3684",
+                        "time_offset": 5
+                    },
+                    {
+                        "name": "<SYSTEM32>\\cmd.exe",
+                        "process_id": "3712",
+                        "time_offset": 5
+                    }
+                ],
+                "name": "<PATH_SAMPLE.EXE>",
+                "process_id": "3420"
+            },
+            {
+                "children": [
+                    {
+                        "name": "<SYSTEM32>\\conhost.exe",
+                        "process_id": "3592"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\conhost.exe",
+                        "process_id": "3564",
+                        "time_offset": 1
+                    },
+                    {
+                        "name": "<SYSTEM32>\\conhost.exe",
+                        "process_id": "3548",
+                        "time_offset": 1
+                    },
+                    {
+                        "name": "<SYSTEM32>\\conhost.exe",
+                        "process_id": "3704",
+                        "time_offset": 5
+                    }
+                ],
+                "name": "<SYSTEM32>\\csrss.exe",
+                "process_id": "344"
+            },
+            {
+                "children": [
+                    {
+                        "name": "<SYSTEM32>\\cscript.exe",
+                        "process_id": "3688",
+                        "time_offset": 6
+                    }
+                ],
+                "name": "<SYSTEM32>\\cmd.exe",
+                "process_id": "3712",
+                "time_offset": 5
+            },
+            {
+                "name": "<SYSTEM32>\\cscript.exe",
+                "process_id": "3688",
+                "time_offset": 6
+            },
+            {
+                "name": "<SYSTEM32>\\attrib.exe",
+                "process_id": "3104",
+                "time_offset": 1
+            },
+            {
+                "name": "<SYSTEM32>\\icacls.exe",
+                "process_id": "3492",
+                "time_offset": 1
+            },
+            {
+                "name": "<CURRENT_DIR>\\taskdl.exe",
+                "process_id": "3684",
+                "time_offset": 5
+            },
+            {
+                "name": "<SYSTEM32>\\conhost.exe",
+                "process_id": "3564",
+                "time_offset": 1
+            },
+            {
+                "name": "<SYSTEM32>\\conhost.exe",
+                "process_id": "3548",
+                "time_offset": 1
+            },
+            {
+                "name": "<SYSTEM32>\\conhost.exe",
+                "process_id": "3704",
+                "time_offset": 5
+            },
+            {
+                "name": "<SYSTEM32>\\dllhost.exe",
+                "process_id": "2024",
+                "time_offset": 8
+            },
+            {
+                "name": "<SYSTEM32>\\conhost.exe",
+                "process_id": "3592"
+            },
+            {
+                "children": [
+                    {
+                        "name": "%WINDIR%\\syswow64\\attrib.exe",
+                        "process_id": "536"
+                    },
+                    {
+                        "name": "%WINDIR%\\syswow64\\icacls.exe",
+                        "process_id": "3048"
+                    },
+                    {
+                        "name": "<CURRENT_DIR>\\taskdl.exe",
+                        "process_id": "2480",
+                        "time_offset": 2
+                    },
+                    {
+                        "name": "%WINDIR%\\syswow64\\cmd.exe",
+                        "process_id": "2764",
+                        "time_offset": 3
+                    }
+                ],
+                "name": "<PATH_SAMPLE.EXE>",
+                "process_id": "1320"
+            },
+            {
+                "children": [
+                    {
+                        "name": "<SYSTEM32>\\conhost.exe",
+                        "process_id": "1492"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\conhost.exe",
+                        "process_id": "3044"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\conhost.exe",
+                        "process_id": "3024"
+                    },
+                    {
+                        "name": "<SYSTEM32>\\conhost.exe",
+                        "process_id": "884",
+                        "time_offset": 3
+                    }
+                ],
+                "name": "<SYSTEM32>\\csrss.exe",
+                "process_id": "344"
+            },
+            {
+                "children": [
+                    {
+                        "name": "%WINDIR%\\syswow64\\cscript.exe",
+                        "process_id": "2268",
+                        "time_offset": 3
+                    }
+                ],
+                "name": "%WINDIR%\\syswow64\\cmd.exe",
+                "process_id": "2764",
+                "time_offset": 3
+            },
+            {
+                "name": "%WINDIR%\\syswow64\\cscript.exe",
+                "process_id": "2268",
+                "time_offset": 3
+            },
+            {
+                "name": "%WINDIR%\\syswow64\\attrib.exe",
+                "process_id": "536"
+            },
+            {
+                "name": "%WINDIR%\\syswow64\\icacls.exe",
+                "process_id": "3048"
+            },
+            {
+                "name": "<CURRENT_DIR>\\taskdl.exe",
+                "process_id": "2480",
+                "time_offset": 2
+            },
+            {
+                "name": "<SYSTEM32>\\conhost.exe",
+                "process_id": "3044"
+            },
+            {
+                "name": "<SYSTEM32>\\conhost.exe",
+                "process_id": "3024"
+            },
+            {
+                "name": "<SYSTEM32>\\conhost.exe",
+                "process_id": "884",
+                "time_offset": 3
+            },
+            {
+                "name": "<SYSTEM32>\\dllhost.exe",
+                "process_id": "2648",
+                "time_offset": 5
+            },
+            {
+                "name": "<SYSTEM32>\\conhost.exe",
+                "process_id": "1492"
+            }
+        ],
+        "registry_keys_opened": [
+            "<HKLM>\\System\\CurrentControlSet\\Control\\Session Manager",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\Terminal Server",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\SafeBoot\\Option",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\Srp\\GP\\DLL",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\Error Message Instrument\\",
+            "<HKLM>\\Software\\Microsoft\\Windows NT\\CurrentVersion\\GRE_Initialize",
+            "<HKLM>\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Compatibility32",
+            "<HKLM>\\Software\\Microsoft\\Windows NT\\CurrentVersion\\IME Compatibility",
+            "<HKLM>\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows",
+            "<HKLM>\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Diagnostics",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\ComputerName",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\ComputerName\\ActiveComputerName",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\Session Manager\\AppCertDlls",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\Session Manager\\AppCompatibility",
+            "<HKCU>\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\Lsa\\FipsAlgorithmPolicy",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\Lsa",
+            "<HKLM>\\SYSTEM\\CurrentControlSet\\Policies\\Microsoft\\Cryptography\\Configuration",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\CMF\\Config",
+            "<HKLM>\\Software\\Microsoft\\Windows\\Windows Error Reporting\\WMR",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\LSA\\AccessProviders",
+            "<HKLM>\\System\\CurrentControlSet\\Services\\LDAP",
+            "<HKLM>\\Software\\Microsoft\\Rpc",
+            "<HKLM>\\Software\\Microsoft\\SQMClient\\Windows",
+            "<HKLM>\\SOFTWARE\\Microsoft\\OLE",
+            "<HKLM>\\Software\\Microsoft\\OLE\\Tracing",
+            "<HKCU>\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer",
+            "<HKCU>\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\SessionInfo\\1",
+            "<HKCU>\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\SessionInfo\\1\\KnownFolders",
+            "<HKCU>\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders",
+            "<HKLM>\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\KnownFolderSettings",
+            "<HKLM>\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders",
+            "<HKLM>\\Software\\WanaCrypt0r",
+            "<HKLM>\\Software\\Microsoft\\Command Processor",
+            "<HKCU>\\Software\\Microsoft\\Command Processor",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\Srp\\GP\\",
+            "<HKLM>\\SOFTWARE\\Microsoft\\OLEAUT",
+            "<HKCU>\\Software\\Microsoft\\Windows Script Host\\Settings",
+            "<HKLM>\\Software\\Microsoft\\Windows Script Host\\Settings",
+            "<HKLM>\\Software\\Microsoft\\COM3",
+            "<HKLM>\\Software\\Microsoft\\SQMClient\\Windows\\DisabledProcesses\\",
+            "<HKLM>\\Software\\Microsoft\\SQMClient\\Windows\\DisabledSessions\\",
+            "<HKLM>\\SYSTEM\\CurrentControlSet\\Services\\crypt32",
+            "<HKLM>\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\msasn1",
+            "\\REGISTRY\\USER",
+            "<HKLM>\\system\\CurrentControlSet\\control\\NetworkProvider\\HwOrder",
+            "<HKLM>\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\ShellCompatibility\\Applications\\cscript.exe",
+            "<HKCU>\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\",
+            "<HKCU>\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced",
+            "<HKLM>\\Software\\Microsoft\\Windows\\Shell\\RegisteredApplications\\UrlAssociations\\Directory\\OpenWithProgids",
+            "<HKCU>\\Software\\Microsoft\\Windows\\Shell\\Associations\\UrlAssociations\\Directory",
+            "<HKLM>\\Software\\Microsoft\\Windows\\CurrentVersion\\Setup",
+            "<HKLM>\\Software\\Microsoft\\Windows\\CurrentVersion",
+            "<HKLM>\\Software\\Microsoft\\Windows NT\\CurrentVersion\\ProfileList\\S-1-5-21-2922372159-162323534-3872807762-1001",
+            "<HKLM>\\System\\CurrentControlSet\\Services\\LanmanWorkstation\\Parameters",
+            "<HKLM>\\Software\\Microsoft\\Windows NT\\CurrentVersion\\ProfileList",
+            "<HKCU>\\Software\\Microsoft\\Windows\\CurrentVersion\\App Paths\\cscript.exe",
+            "<HKLM>\\Software\\Microsoft\\Windows\\CurrentVersion\\App Paths\\cscript.exe",
+            "<HKLM>\\Software\\Microsoft\\Rpc\\Extensions",
+            "<HKCU>\\Software",
+            "<HKCU>\\Software\\Microsoft",
+            "<HKCU>\\Software\\Microsoft\\Windows Script Host",
+            "<HKCU>\\Software\\Microsoft\\Windows\\CurrentVersion\\WinTrust\\Trust Providers\\Software Publishing",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows NT\\CurrentVersion\\Diagnostics",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows NT\\CurrentVersion\\GRE_Initialize",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows NT\\CurrentVersion\\Compatibility32",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows NT\\CurrentVersion\\IME Compatibility",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\MUI\\UILanguages",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\MUI\\UILanguages\\en-US",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\MUI\\UILanguages\\PendingDelete",
+            "<HKLM>\\System\\CurrentControlSet\\Control\\MUI\\Settings\\LanguageConfiguration",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows NT\\CurrentVersion\\Windows",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows\\Windows Error Reporting\\WMR",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Rpc",
+            "<HKLM>\\SOFTWARE\\Wow6432Node\\Microsoft\\OLE",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\OLE\\Tracing",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Explorer\\KnownFolderSettings",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders",
+            "<HKLM>\\Software\\Wow6432Node\\WanaCrypt0r",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Command Processor",
+            "<HKLM>\\SOFTWARE\\Wow6432Node\\Microsoft\\OLEAUT",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows Script Host\\Settings",
+            "<HKLM>\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows NT\\CurrentVersion\\msasn1",
+            "<HKLM>\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\ShellCompatibility\\Applications\\cscript.exe",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows\\Shell\\RegisteredApplications\\UrlAssociations\\Directory\\OpenWithProgids",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Setup",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows NT\\CurrentVersion\\ProfileList\\S-1-5-21-1960123792-2022915161-3775307078-1001",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows NT\\CurrentVersion\\ProfileList",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\App Paths\\cscript.exe",
+            "<HKLM>\\Software\\Wow6432Node\\Microsoft\\Rpc\\Extensions"
+        ],
+        "registry_keys_set": [
+            {
+                "key": "<HKLM>\\Software\\WanaCrypt0r\\wd",
+                "value": "<CURRENT_DIR>"
+            },
+            {
+                "key": "<HKLM>\\Software\\Wow6432Node\\WanaCrypt0r\\wd",
+                "value": "<CURRENT_DIR>"
+            }
+        ],
+        "sandbox_name": "Dr.Web vxCube",
+        "tags": ["SELF_DELETE"]
+    },
+    "id": "ed01ebfbc9eb5bbea545af4d01bf5f1071661840480439c6e5babe8e080e41aa_Dr.Web vxCube",
+    "links": {
+        "self": "https://www.virustotal.com/api/v3/file_behaviours/ed01ebfbc9eb5bbea545af4d01bf5f1071661840480439c6e5babe8e080e41aa_Dr.Web vxCube"
+    },
+    "type": "file_behaviour"
+}

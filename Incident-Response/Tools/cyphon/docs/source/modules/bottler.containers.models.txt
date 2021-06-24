@@ -1,0 +1,13 @@
+bottler.containers.models
+=========================
+
+.. figure:: ../_static/images/graphs/containers-graph.png
+   :target: ../graphs/containers.graph.html
+   :alt: Containers model graph
+
+   Graph of models in the :ref:`containers` app and related apps.
+
+.. automodule:: bottler.containers.models
+    :members:
+    :undoc-members:
+    :show-inheritance:

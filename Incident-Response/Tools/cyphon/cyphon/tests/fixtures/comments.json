@@ -1,0 +1,32 @@
+[
+  {
+    "model": "alerts.comment",
+    "fields": {
+      "id": 1,
+      "alert": 3,
+      "user": 1,
+      "created_date": "2015-03-01 02:41:24.468404+00:00",
+      "content": "I have something to say"
+    }
+  },
+  {
+    "model": "alerts.comment",
+    "fields": {
+      "id": 2,
+      "alert": 3,
+      "user": 2,
+      "created_date": "2015-03-01 02:42:24.468404+00:00",
+      "content": "I have something to say about what you have to say"
+    }
+  },
+  {
+    "model": "alerts.comment",
+    "fields": {
+      "id": 3,
+      "alert": 2,
+      "user": 1,
+      "created_date": "2015-03-01 02:43:24.468404+00:00",
+      "content": "This alert isn't this important"
+    }
+  }
+]

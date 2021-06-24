@@ -1,0 +1,11 @@
+[
+  {"from": "ro-cert", "to":  "cert"},
+  {"from": "user-cert", "to":  "cert"},
+  {"from": "admin-cert", "to":  "cert"},
+  {"from": "ro-soc", "to":  "soc"},
+  {"from": "user-soc", "to":  "soc"},
+  {"from": "admin-soc", "to":  "soc"},
+  {"from": "ro-pug", "to":  "pug"},
+  {"from": "user-pug", "to":  "pug"},
+  {"from": "admin-pug", "to":  "pug"}
+]

@@ -1,0 +1,7 @@
+alerts.views
+============
+
+.. automodule:: alerts.views
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,18 @@
+query filterPerson {
+    allPeople {
+        filter(
+            filter: {
+                name_contains: "o"
+            }
+        ) {
+            sort(
+                sort:{
+                    age: incr
+                }) {
+                age {
+                    toList
+                }
+            }
+        }
+    }
+}

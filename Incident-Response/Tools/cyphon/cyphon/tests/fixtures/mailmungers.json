@@ -1,0 +1,20 @@
+[  
+  {
+    "model": "mailmungers.mailmunger",
+    "fields": {
+      "id": 1,
+      "name": "mail",
+      "condenser": ["mail"],
+      "distillery": ["mongodb.test_database.test_docs"]
+    }
+  },
+  {
+    "model": "mailmungers.mailmunger",
+    "fields": {
+      "id": 2,
+      "name": "default_mail",
+      "condenser": ["mail"],
+      "distillery": ["elasticsearch.test_index.test_mail"]
+    }
+  }
+]

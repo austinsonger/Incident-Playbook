@@ -1,0 +1,26 @@
+.. _visas-graph:
+
+Visas Graph
+===========
+
+.. figure:: ../_static/images/graphs/visas-graph.png
+    :target: ../_static/images/graphs/visas-graph.png
+    :alt: Visas model graph
+
+    Graph of models in the :ref:`visas` app and related apps.
+
+Overview
+--------
+
+.. include:: ../summaries/visas.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models visas couriers plumbers -g -o visas-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`couriers-graph`
+* :ref:`emissaries-graph`
+* :ref:`plumbers-graph`

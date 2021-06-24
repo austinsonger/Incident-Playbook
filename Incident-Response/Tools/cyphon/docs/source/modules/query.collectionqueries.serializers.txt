@@ -1,0 +1,7 @@
+query.collectionqueries.serializers
+===================================
+
+.. automodule:: query.collectionqueries.serializers
+    :members:
+    :undoc-members:
+    :show-inheritance:

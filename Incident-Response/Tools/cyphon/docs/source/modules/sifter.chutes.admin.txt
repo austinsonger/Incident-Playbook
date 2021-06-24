@@ -1,0 +1,7 @@
+sifter.chutes.admin
+===================
+
+.. automodule:: sifter.chutes.admin
+    :members:
+    :undoc-members:
+    :show-inheritance:

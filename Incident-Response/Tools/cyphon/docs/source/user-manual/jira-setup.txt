@@ -1,0 +1,137 @@
+.. _jira-setup:
+
+################
+JIRA Integration
+################
+
+If you have a JIRA account, you can set up an Action to create a JIRA Issue from an Alert. 
+
+
+****************
+Get Access Token
+****************
+
+Before you can integrate JIRA with Cyphon, you'll need to set up OAuth access to your JIRA account. This task is outside the scope of Cyphon's documentation. However, you can find instructions in JIRA's documentation for `OAuth for REST APIs <https://developer.atlassian.com/cloud/jira/platform/jira-rest-api-oauth-authentication/>`_. You can find code examples `here <https://bitbucket.org/atlassian_tutorial/atlassian-oauth-examples/>`__. We used the Python command-line example with some modifications for Python 3. You can find it in our :ref:`jira-example`.
+
+Once you've set up Oauth access, you should have the following:
+
+    - Consumer key
+    - RSA key pair
+    - Access token
+    - Access token secret
+
+You'll need this information to create a Passport for JIRA.
+
+
+*****************
+Create a Passport
+*****************
+
+.. image:: ../_static/images/icons/passport.png
+    :width: 80px
+    :align: left
+    :alt: Passport
+
+Passports provide authentication credentials for REST API requests. You can restrict their use to particular Users, or make them available to all Users.
+
+
+To create a Passport for JIRA, open the "App Configurations" panel on Cyphon's main admin page.
+
+.. image:: ../_static/images/admin/app-configurations.png
+    :alt: App Configurations
+
+Click the "+" sign by "Passports" to go the form for adding a Passport.
+
+Follow these steps to create the Passport:
+
+    1. Enter a name for the Passport.
+    2. Enter your Consumer Key.
+    3. Select the file that contains your RSA private key.
+    4. Leave the `Secret` field blank.
+    5. Enter your access token.
+    6. Enter your access token secret.
+    7. If you'd like to make the Passport available to all Users, check `Public`. Otherwise, select the Users who are allowed to use this Passport.
+
+Click "Save" to save the Passport.
+
+.. figure:: ../_static/images/admin/jira-passport.png
+    :align: center
+    :alt: Passport admin page
+
+    **Adding a Passport for JIRA.**
+
+
+****************
+Create an Action
+****************
+
+.. image:: ../_static/images/icons/action.png
+    :width: 100px
+    :align: left
+    :alt: Action
+
+To create a JIRA Action, open the "App Configurations" panel on Cyphon's main admin page. Click the "+" sign by "Actions" to go the form for adding an Action.
+
+Fill in the form with the following values:
+
+    =============  ===================
+    Field          Value
+    =============  ===================
+    Title          JIRA Issue
+    Description    Create a JIRA Issue
+    Platform       jira
+    API module     handlers
+    API class      IssueAPI
+    Visa required  False
+    =============  ===================
+
+This tells Cyphon where to find the code for interacting with JIRA.
+
+.. figure:: ../_static/images/admin/jira-action.png
+    :align: center
+    :alt: Action admin page
+
+    **Adding an Action for JIRA.**
+
+Click "Save" to save the new Action.
+
+.. note::
+
+    If "jira" is not avaiable as a Platform option, click the "+" sign. This will open a popup window where you can add JIRA as a new Destination.
+
+    .. figure:: ../_static/images/admin/jira-destination.png
+        :align: center
+        :alt: Destination popup
+
+        **Popup window to add a Destination.**
+
+
+****************
+Create a Courier
+****************
+
+.. image:: ../_static/images/icons/courier.png
+    :width: 100px
+    :align: left
+    :alt: Courier
+
+Couriers help to carry out Actions by delivering authentication credentials for REST API requests. Each Courier carries a Passport (and optionally a Visa) for authenticating API calls for one or more Actions.
+
+To create a Courier for the JIRA Action, open the "App Configurations" panel on Cyphon's main admin page. Click the "+" sign by "Couriers" to go to the form for adding a Courier.
+
+Follow these steps to create the Courier:
+
+    1. Enter a name for the Courier.
+    2. Select the "JIRA" Passport.
+    3. Leave the `Visa` field blank.
+    4. Select the "Jira IssueAPI" Action.
+
+Click "Save" to save the Courier.
+
+.. figure:: ../_static/images/admin/jira-courier.png
+    :align: center
+    :alt: Courier admin page
+
+    **Adding a Courier for JIRA.**
+
+You should now be able to create JIRA Issues from Alerts. This will appear as an option in the Actions list in Cyphon's Cyclops UI.

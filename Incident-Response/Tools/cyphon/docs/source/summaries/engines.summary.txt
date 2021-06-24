@@ -1,0 +1,3 @@
+|Engines| provide interfaces with data stores, such as Elasticsearch
+and MongoDB. |Engines| shuttle documents to and from these
+storage locations, which are represented as :ref:`Warehouses<warehouses>`.

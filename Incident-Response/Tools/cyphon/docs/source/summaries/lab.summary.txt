@@ -1,0 +1,1 @@
+The Lab package provides analytic packages to enrich data. :ref:`Procedures<procedures>` reference particular analyses within the Lab package and describe how the results should be attached to data.

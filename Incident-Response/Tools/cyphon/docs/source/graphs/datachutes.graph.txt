@@ -1,0 +1,27 @@
+.. _datachutes-graph:
+
+DataChutes Graph
+================
+
+.. figure:: ../_static/images/graphs/datachutes-graph.png
+    :target: ../_static/images/graphs/datachutes-graph.png
+    :alt: DataChutes model graph
+
+    Graph of models in the :ref:`datachutes` app and related apps.
+
+Overview
+--------
+
+.. include:: ../summaries/datachutes.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models datachutes datamungers datasieves pipes -I DataChute,DataCondenser,DataMunger,DataSieve,Pipe,Reservoir -g -o datachutes-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`chutes-graph`
+* :ref:`datamungers-graph`
+* :ref:`datasieves-graph`
+* :ref:`pipes-graph`

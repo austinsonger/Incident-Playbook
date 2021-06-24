@@ -1,0 +1,19 @@
+.. _companies:
+
+companies
+=========
+
+.. image:: ../_static/images/icons/company.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/companies.summary.txt
+
+:ref:`companies-graph`
+
+Submodules
+----------
+
+.. toctree::
+
+   companies.models

@@ -1,0 +1,12 @@
+[run]
+omit =
+    manage.py
+    */__init__.py
+    */apps.py
+    */tests/*
+    venv/*
+
+[report]
+exclude_lines =
+    coverage: ignore branch
+    coverage: ignore line

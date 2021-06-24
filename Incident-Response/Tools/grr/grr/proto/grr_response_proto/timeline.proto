@@ -1,0 +1,84 @@
+syntax = "proto2";
+
+package grr;
+
+// A message describing input arguments for the timeline action.
+message TimelineArgs {
+  // A path to the root folder in which the recursive timeline extraction should
+  // start. It is specified as `bytes` rather than `string` to support paths
+  // that contain non-unicode characters (which is allowed in most filesystems).
+  optional bytes root = 1;
+
+  // TODO(hanuszczak): Add support for limits (e.g. max depth).
+}
+
+// A message describing a single result of the timeline action.
+message TimelineResult {
+  // A list of blob ids that refer to batches of serialized and gzipped timeline
+  // entries. Because the entire timeline can have millions of entries, it could
+  // easily exceed the maximum allowed size for a message. This is why entries
+  // are batched, gzipped and then send as blobs to the blobstore and relevant
+  // ids are returned here for reference.
+  //
+  // Note that newer agents will only send a single blob references in multiple
+  // responses rather than sending a single responses with multiple references.
+  // This allows for more granular updates of the flow.
+  repeated bytes entry_batch_blob_ids = 1;
+
+  // The total number of entries in the uploaded batches.
+  //
+  // This number includes only entries uploaded in batches referenced by this
+  // result, not the total number of entries the action execution accumulated so
+  // far.
+  optional uint64 entry_count = 2;
+}
+
+// A message describing single entry of the timeline for particular file. It
+// corresponds to the result of stating the file. It is based on the POSIX
+// definition of stat [1], typed according to the POSIX standard [2].
+//
+// [1]: http://pubs.opengroup.org/onlinepubs/009695399/basedefs/sys/stat.h.html
+// [2]: http://pubs.opengroup.org/onlinepubs/009695399/basedefs/sys/types.h.html
+message TimelineEntry {
+  // An absolute path to the file this entry corresponds to.
+  optional bytes path = 1;
+
+  // A mode of the file defined as standard POSIX bitmask.
+  optional int64 mode = 2;
+
+  // A size of the file in bytes.
+  optional uint64 size = 3;
+
+  // An identifier of the device containing the file.
+  optional int64 dev = 4;
+
+  // A serial number of the file.
+  optional uint64 ino = 5;
+
+  // A user identifier of the file.
+  optional int64 uid = 6;
+
+  // A group identifier of the file.
+  optional int64 gid = 7;
+
+  // A time of the last access of the file in nanoseconds since epoch.
+  optional int64 atime_ns = 8;
+
+  // A time of the last data change of the file in nanoseconds since epoch.
+  optional int64 mtime_ns = 9;
+
+  // A time of the last status change of the file in nanoseconds since epoch.
+  optional int64 ctime_ns = 10;
+
+  // A time of the file creation in nanoseconds since epoch.
+  optional int64 btime_ns = 11;
+
+  // Extra file attributes.
+  optional uint64 attributes = 12;
+}
+
+// A message describing progress of the timeline flow.
+message TimelineProgress {
+  // Total number of entries that the timeline action processed so far.
+  optional uint64 total_entry_count = 1;
+}

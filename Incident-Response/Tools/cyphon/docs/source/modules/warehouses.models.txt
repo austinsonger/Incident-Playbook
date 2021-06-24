@@ -1,0 +1,13 @@
+warehouses.models
+=================
+
+.. figure:: ../_static/images/graphs/warehouses-graph.png
+    :target: ../graphs/warehouses.graph.html
+    :alt: Warehouses model graph
+
+    Graph of models in the :ref:`warehouses` app and related apps.
+
+.. automodule:: warehouses.models
+    :members:
+    :undoc-members:
+    :show-inheritance:

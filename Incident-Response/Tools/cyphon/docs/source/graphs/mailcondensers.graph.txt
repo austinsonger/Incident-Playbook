@@ -1,0 +1,26 @@
+.. _mailcondensers-graph:
+
+MailCondensers Graph
+====================
+
+.. figure:: ../_static/images/graphs/mailcondensers-graph.png
+    :target: ../_static/images/graphs/mailcondensers-graph.png
+    :alt: MailCondensers model graph
+
+    Graph of models in the :ref:`mailcondensers` app and related apps.
+
+Overview
+--------
+
+.. include:: ../summaries/mailcondensers.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models mailcondensers bottles mailmungers -X DataField,MailParser,StringParser,Munger -g -o mailcondensers-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`condensers-graph`
+* :ref:`mailmungers-graph`
+* :ref:`bottles-graph`

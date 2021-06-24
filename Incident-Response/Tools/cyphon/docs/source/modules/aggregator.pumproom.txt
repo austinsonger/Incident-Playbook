@@ -1,0 +1,22 @@
+.. _pumproom:
+
+aggregator.pumproom
+===================
+
+.. image:: ../_static/images/icons/pump.png
+    :width: 100px
+    :align: left
+
+.. include:: ../summaries/pumproom.summary.txt
+
+Submodules
+----------
+
+.. toctree::
+
+   aggregator.pumproom.engineer
+   aggregator.pumproom.exceptions
+   aggregator.pumproom.faucet
+   aggregator.pumproom.pump
+   aggregator.pumproom.pumproom
+   aggregator.pumproom.streamcontroller

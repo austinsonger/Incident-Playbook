@@ -1,0 +1,152 @@
+.. _configure-project:
+
+#####################
+Project Configuration
+#####################
+
+.. _django-config:
+
+******
+Django
+******
+
+Cyphon's backend is based on the `Django`_ web framework. Settings for the
+Cyphon Django project are found in the ``cyphon/settings`` directory.
+
+The ``conf.py`` file contains the primary settings for your Cyphon instance, including credentials for connecting to PostgreSQL, RabbitMQ, Elasticsearch, and MongoDB.
+
+The ``base.py``, ``dev.py``, and ``prod.py`` files contain more general settings for Django and other third-party apps used by Cyphon. The ``prod.py`` file contains settings specific to the production environment, while the ``dev.py`` file contains settings for use in development. You can read more about Django's settings in
+`Django's documentation <https://docs.djangoproject.com/en/1.11/topics/settings/>`__.
+
+.. _secret-key:
+
+Secret Key
+----------
+
+The ``SECRET_KEY`` setting is used by Django to provide cryptographic signing. Change the  ``SECRET_KEY`` in the ``conf.py`` file to something unique. You can generate one `here <http://www.miniwebtool.com/django-secret-key-generator/>`__. See the section on :ref:`secrets_management` for info on storing secrets such as this securely.
+
+.. _host-settings:
+
+Host Settings
+-------------
+
+In the ``conf.py`` file, configure the ``HOST_SETTINGS['ALLOWED_HOSTS']`` setting with the IP address and/or domain name for your host machine::
+
+    HOST_SETTINGS = {
+       'ALLOWED_HOSTS': ['example.com', '127.0.0.1'],
+    }
+
+.. _localization:
+
+Localization
+------------
+
+You can specify a default language and time zone for your instance by changing the ``LOCALIZATION`` settings in the ``conf.py`` file. Further localization settings can be found in the ``base.py`` file. See `Django's documentation <https://docs.djangoproject.com/en/1.11/topics/i18n/>`__ for more information on localization.
+
+.. _data-stores:
+
+Data Stores
+-----------
+
+Configure settings for PostgreSQL, RabbitMQ, Elasticsearch and/or MongoDB in the ``conf.py`` file. (If you're deploying with `Cyphondock`_, you can use the default settings.) See the section on :ref:`secrets_management` for info on securely storing these settings.
+
+.. _base-url:
+
+Base URL
+--------
+
+Configure the ``BASE_URL`` setting in the ``dev.py`` and ``prod.py`` files to match the URL for your Cyphon instance in your development and production environments.
+
+.. _secrets_management:
+
+Managing Secrets
+----------------
+
+In a development environment, hardcoding secrets such as the ``SECRET_KEY`` and
+database credentials in the configuration files is typical and usually poses no
+security risk, but in a production environment, it is generally a best practice
+to use a secrets management tool, such as `Vault <https://www.vaultproject.io/>`__,
+or at the very least, encrypt and store secrets separately and inject them into
+the server at runtime.
+
+If you are rolling your own secrets management, a reasonable way to configure
+Cyphon would be to use ``os.getenv`` for sensitive settings, and pass them into
+the Docker container as environment variables.
+
+If you are deploying Cyphon on Amazon Web Services (AWS), you can leverage
+the Simple Systems Manager (SSM)
+`Parameter Store <https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-paramstore.html>`__
+for secrets management, and use :func:`utils.settings.get_param`.
+
+First, import the following additional packages in your ``cyphon/settings/conf.py`` file::
+
+    # third party
+    from ec2_metadata import ec2_metadata
+
+    # local
+    from utils.settings import get_param, ON_EC2
+
+Then, below ``HOST_SETTINGS``, add the following code::
+
+    if ON_EC2:
+        HOST_SETTINGS['ALLOWED_HOSTS'].append(ec2_metadata.private_ipv4)
+
+Finally, use :func:`~utils.settings.get_param` to import individual settings::
+
+    ELASTICSEARCH = {
+        'HOSTS': [
+            {
+                'host': get_param('elasticsearch_host', 'elasticsearch'),
+                'port': int(get_param('elasticsearch_port', '9200')),
+                'http_auth': get_param('elasticsearch_http_auth'),
+                'use_ssl': bool(int(get_param('elasticsearch_use_ssl', False))),
+            },
+        ],
+    }
+
+The :func:`~utils.settings.get_param` function will first check SSM for
+existing parameters, and fall back to environment variables. Defaults can also
+be provided, and will be used if no SSM parameters or environment variables
+exist. Note that parameters in SSM are expected to be prefixed by namespace,
+which is usually a good idea as you can restrict resource access in your
+security groups to only specific parameter namespaces. For instance, the
+parameters above would be stored in SSM as ``cyphon.elasticsearch_*``.
+Of course, the prefix can be changed or disabled if desired.
+
+To store secrets as parameters in SSM, please see the AWS documentation on the
+parameter store. Typically, you would use the AWS console or CLI, and ensure
+that the parameter type is always set to ``SecureString``, which results in
+your secrets being encrypted with your KMS master key.
+
+.. _cyclops-config:
+
+*******
+Cyclops
+*******
+
+Cyclops is an optional frontend that helps to manage alerts and data from
+Cyphon in real time. This product is under a different license than Cyphon,
+found `here <https://raw.githubusercontent.com/dunbarcyber/cyclops/master/LICENSE.txt>`__.
+Take a quick look over it to make sure your use case doesn't violate the license.
+
+Cyclops is configured with the ``conf.py`` file in the Cyphon settings::
+
+    CYCLOPS = {
+        'ENABLED': True,
+        'API_TIMEOUT': 30000,
+        'MAPBOX_ACCESS_TOKEN': '',
+        'DEVELOPMENT_ENABLED': False,
+        'DEVELOPMENT_URL': 'http://localhost:8080/',
+    }
+
+In order to show maps with locations and get geolocation data, you can
+sign up for a mapbox access token `here <https://www.mapbox.com/studio/signup/>`__
+and place it as ``MAPBOX_ACCESS_TOKEN``.
+
+The development configurations are for using different versions of Cyclops
+static assets that are hosted on a different server. We use this internally to
+test release candidates on our development server before marking them as
+publicly available.
+
+The next optional step would be to set up push notifications for Cyclops,
+which is explained in :ref:`push-notifications`.

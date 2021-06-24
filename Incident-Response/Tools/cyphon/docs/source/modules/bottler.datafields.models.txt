@@ -1,0 +1,13 @@
+bottler.datafields.models
+=========================
+
+.. figure:: ../_static/images/graphs/datafields-graph.png
+    :target: ../graphs/datafields.graph.html
+    :alt: DataFields model graph
+
+    Model graph for the |DataField| base class and its subclasses.
+
+.. automodule:: bottler.datafields.models
+    :members:
+    :undoc-members:
+    :show-inheritance:

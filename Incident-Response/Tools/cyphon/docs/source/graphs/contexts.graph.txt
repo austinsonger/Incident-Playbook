@@ -1,0 +1,24 @@
+.. _contexts-graph:
+
+Contexts Graph
+==============
+
+.. figure:: ../_static/images/graphs/contexts-graph.png
+    :target: ../_static/images/graphs/contexts-graph.png
+    :alt: Contexts model graph
+
+    Graph of models in the :ref:`contexts` app and related apps.
+
+Overview
+--------
+
+.. include:: ../summaries/contexts.summary.txt
+
+To graph these models::
+
+    $ python manage.py graph_models contexts distilleries -g -o contexts-graph.png
+
+Related Graphs
+--------------
+
+* :ref:`distilleries-graph`

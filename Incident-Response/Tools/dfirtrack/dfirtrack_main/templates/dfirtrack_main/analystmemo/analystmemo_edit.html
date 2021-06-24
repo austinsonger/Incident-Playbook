@@ -1,0 +1,112 @@
+<!-- extending maintemplate -->
+{% extends "dfirtrack_main/maintemplate.html" %}
+
+<!-- HTML head in maintemplate -->
+{% block head %}
+
+<!-- page title -->
+<title>
+    Edit analystmemo
+</title>
+
+{% load static %}
+
+<!-- HTML head in maintemplate -->
+{% endblock %}
+
+<!-- ############################################ -->
+
+<!-- HTML body in maintemplate -->
+{% block content %}
+        
+<!-- headline -->
+<div class="bottom-distance">
+    <h4>
+        Edit analystmemo
+    </h4>
+</div>
+
+<!-- form -->
+<form method="POST" class="post-form">
+    {% csrf_token %}
+
+    <!-- show form related errors -->
+    {% include "dfirtrack_main/includes/form_errors.html" %}
+
+    <!-- block system -->
+    <div class="card card-body bg-dark border-light top-distance">
+
+        <!-- system label -->
+        <div class="row">
+            <div class="col-3">
+                <h5>
+                    System name (*):
+                </h5>
+            </div>
+        </div>
+
+        <!-- system field -->
+        <div class="row">
+            <div class="col-3">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- system field errors -->
+                    <div class="text-danger">
+                        {{ form.system.errors }}
+                    </div>
+                    {{ form.system }}
+                </div>
+            </div>
+        </div>
+
+    <!-- block system -->
+    </div>
+
+    <!-- block analystmemo note -->
+    <div class="card card-body bg-dark border-light bottom-distance top-distance">
+
+        <!-- analystmemo note label -->
+        <div class="row">
+            <div class="col">
+                <h5>
+                    Note (*):
+                </h5>
+            </div>
+        </div>
+
+        <!-- analystmemo note field -->
+        <div class="row">
+            <div class="col">
+                <div class="card card-body bg-dark border-light top-distance">
+                    <!-- analystmemo note field errors -->
+                    <div class="text-danger">
+                        {{ form.analystmemo_note.errors }}
+                    </div>
+                    {{ form.analystmemo_note }}
+                </div>
+            </div>
+        </div>
+
+    <!-- block analystmemo note -->
+    </div>
+
+    <!-- button row -->
+    <div class="row top-distance">
+
+        <!-- save button -->
+        <div class="col-1">
+            {% include "dfirtrack_main/includes/button_save.html" %}
+        </div>
+
+        <!-- cancel button -->
+        <div class="col-1">
+            {% include "dfirtrack_main/includes/button_cancel.html" %}
+        </div>
+
+    <!-- button row -->
+    </div>
+
+<!-- form -->
+</form>
+    
+<!-- HTML body in maintemplate -->
+{% endblock %}
