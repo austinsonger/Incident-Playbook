@@ -1,6 +1,20 @@
 # Incident Response Exercises
 
 
+## AWS  ☁️
+> cloud infrastructure.
+
+## IT Management Scenarios 📠
+> "bad employee".
+
+## Endpoint 💻
+> desktops / laptops.
+
+## Application Security  �🌐
+> Risks application being developed by an organization.
+
+
+
 <!--
 
 ## 1. Top level Risks
@@ -60,26 +74,7 @@ The publicity involved with a scenario may be the goal of reduction efforts.
 
 A time based scope is always included. Using consistent scopes or calendar based scopes improves everyone's ability to forecast comparable scenarios. "_Next Month_", "_Next Year_", "_Next Quarter_" are all typical.
 
-### IT Management Scenarios 📠
-Scenarios that are typically of concern to an IT organization.
 
-- An employee's email has been accessed by an outsider.
-- We have opened an incident to deal with a vendor compromise.
-- Employee communications were compromised.
-- Internal documentation has been exposed to, and indexed by, a search engine.
-- Removable storage containing sensitive data has been lost.
-- An employee laptop has been stolen and was not encrypted.
-- A social engineer has received sensitive documents / data.
-- An employee was not off-boarded correctly.
-
-### Employee Scenarios 🧟
-Scenarios that involve a "bad employee".
-
-- An employee has decided to abuse their authorization.
-- An employee is violating the social media policy.
-- An employee is harming another employee.
-- An employee has decided to violate security policy.
-- An employee has harmed the organization with access retained after termination.
 
 ### AWS Risks ☁️
 Scenarios typically involving cloud infrastructure.
