@@ -57,6 +57,22 @@ This project will use a modified Incident Response Process of mixing SANS Incide
   - [ ] Exabeam
 - [ ] Endpoint Security Examples
   - [ ] SentinelOne
+- [ ] Event Codes and API Actions
+  - [ ] Cloud
+    - [ ] AWS
+    - [ ] Microsoft 365 and Azure
+    - [ ] Google Cloud
+  - [ ] Cisco 
+    - [ ] ASA
+    - [ ] Meraki
+  - [ ] Linux
+  - [ ] Okta
+  - [ ] Web Servers
+    - [ ] Apache
+    - [ ] Nginx
+  - [ ] Windows
+
+
 
 
 
