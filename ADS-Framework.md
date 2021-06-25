@@ -1,3 +1,4 @@
+
 # Goal
 The goal is the intended purpose of the alert. It is a simple, plaintext description of the type of behavior you're attempting to detect in your ADS.
 
