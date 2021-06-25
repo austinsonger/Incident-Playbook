@@ -16,7 +16,7 @@ That this project will be created by the SOC/Incident Response Community
 - Develop a Catalog of Incident Response Automations. 
 - Develop a Catalog of Checklists (For Before, During, After Incidents). 
 - Develop a Catalog of Roles that a organization can use, to build their own program.
-- Develop a Catalog of Event Code and API Actions that you can/will see in a SIEM Detections.
+- Develop a Catalog of Event Codes and API Actions that you can/will see in a SIEM Detections.
 
 
 ---------------------
