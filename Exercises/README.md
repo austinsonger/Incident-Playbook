@@ -10,7 +10,7 @@
 ## Endpoint 💻
 > desktops / laptops.
 
-## Application Security  �🌐
+## Application Security 🌐
 > Risks application being developed by an organization.
 
 
