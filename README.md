@@ -5,8 +5,6 @@
 
 ### PURPOSE OF PROJECT
 
-
-
 That this project will be created by the SOC/Incident Response Community
 
 - Develop a Catalog of Incident Response Playbook for every MITRE Technique (that possible, to make one for).
@@ -21,8 +19,9 @@ That this project will be created by the SOC/Incident Response Community
 
 ---------------------
 **For every pull request submitted a issue must also be created.** 
-- Please Read [Creating a New Playbook](https://github.com/austinsonger/Cyber-Incident-Response-Playbooks/wiki/Creating-a-New-Playbook)
-- [MITRE Techniques](https://github.com/austinsonger/Cyber-Incident-Response-Playbooks/wiki/MITRE-Techniques)
+- Please Read [Creating a New Playbook](https://github.com/austinsonger/Cyber-Incident-Response-Playbooks/wiki/Creating-a-New-Playbook);
+- Check the list of [MITRE Techniques](https://github.com/austinsonger/Cyber-Incident-Response-Playbooks/wiki/MITRE-Techniques) to choose from and create a new issue;
+- Or you can just look at the list of issues that are ready to be worked on.
 
 
 ---------------------
