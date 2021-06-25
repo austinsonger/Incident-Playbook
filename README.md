@@ -9,7 +9,7 @@ If you have an idea for the project please start a [discusssion.](https://github
 
 That this project will be created by the SOC/Incident Response Community
 
-- Develop a Catalog of Incident Response Playbook for every MITRE Technique (that possible, to make one for).
+- Develop a Catalog of Incident Response Playbook for every MITRE Technique (Keep in mind it won't work for some tactics).
 - Develop a Catalog of Incident Response Playbook for uncommon incidents.
 - Develop a Catalog of Exercise Scenarios that can be used for training purposes.
 - Develop a Catalog of tools used for Incident Response `[Plus Reviews for the different tools]`.
