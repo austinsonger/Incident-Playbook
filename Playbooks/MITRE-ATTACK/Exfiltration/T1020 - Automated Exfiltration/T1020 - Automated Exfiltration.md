@@ -96,3 +96,21 @@ In addition to the general steps and guidance in the incident response plan:
 
 1. <a name="identity-and-access-playbook-ref-1"></a>["Title"](#TODO-url), Author Last Name (Date)
 
+
+## Linux
+
+## Network
+
+## Windows
+
+## macOS
+
+
+
+
+
+
+
+
+
+
