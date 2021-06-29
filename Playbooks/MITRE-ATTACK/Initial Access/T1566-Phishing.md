@@ -1,5 +1,12 @@
 ## Playbook: Phishing
 
+### MITRE
+
+| Tactic | Technique ID | Technique Name | Sub-Technique Name | Platforms | Permissions Required |
+| ------ | ------------ | -------------- | ------------------ |---------- |--------------------- |
+|Initial Access|T1566|Phishing|                    |Google Workspace, Linux, Office 365, SaaS, Windows, macOS||
+
+
 **Investigate, remediate (contain, eradicate), and communicate in parallel!**
 
 Assign steps to individuals or teams to work concurrently, when possible; this playbook is not purely sequential. Use your best judgment.
