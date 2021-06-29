@@ -4,6 +4,9 @@
 ## AWS  ☁️
 > cloud infrastructure.
 
+## Incident Response 🚒
+
+
 ## IT Management Scenarios 📠
 > "bad employee".
 
@@ -12,6 +15,8 @@
 
 ## Application Security 🌐
 > Risks application being developed by an organization.
+
+## Physical Security 🔫
 
 
 
@@ -75,30 +80,6 @@ The publicity involved with a scenario may be the goal of reduction efforts.
 A time based scope is always included. Using consistent scopes or calendar based scopes improves everyone's ability to forecast comparable scenarios. "_Next Month_", "_Next Year_", "_Next Quarter_" are all typical.
 
 
-
-### AWS Risks ☁️
-Scenarios typically involving cloud infrastructure.
-
-- An IAM secret key has exposed to the internet.
-- An S3 bucket has exposed to the internet.
-- Security groups and ACL's have exposed a high risk server.
-- An adversary has gained access to our AWS account.
-- CloudTrail logs have been deleted or modified.
-
-### Endpoint Risks 💻
-Typical risks to desktops / laptops.
-
-- An adversary has implanted malware on an endpoint.
-- Endpoint malware is remotely beaconing to a C2.
-- An adversary has moved laterally in the environment.
-- An adversary has exploited unpatched software on an endpoint.
-- An adversary has elevated privilege on an endpoint.
-
-### Application Security Scenarios 📱🌐
-Risks involving a product or application being developed by an organization.
-
-- An adversary has remotely executed code through our application.
-- An adversary has bypassed our rate limiting capability.
 - An adversary has queried our database directly through our application.
 - An adversary has exploited an indirect object reference vulnerability.
 - An XSS vulnerability has been used against another user on our application.
@@ -109,7 +90,7 @@ Risks involving a product or application being developed by an organization.
 ### Incident Response Scenarios 🚒
 Meta-Incidents created by poor incident handling.
 
-- An incident has sustained for more than two days.
+
 - We are unable to discover root cause in an incident.
 - We have not been able to comment publicly within our communications SLA.
 
@@ -118,7 +99,6 @@ Physical harm and physical loss.
 
 - A celebrity employee is harassed in person
 - An employee is involved in violence on company space (real estate or event)
-- Company property over $X has been lost.
 - An unauthorized individual has accessed our facility.
 - An executive is threatened while traveling.
 - An incident was not captured our cameras.
