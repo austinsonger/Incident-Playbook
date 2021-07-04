@@ -1,4 +1,4 @@
-## Playbook: <Type of Incident>
+## Playbook: Account Access Removal
 
 ### MITRE
 

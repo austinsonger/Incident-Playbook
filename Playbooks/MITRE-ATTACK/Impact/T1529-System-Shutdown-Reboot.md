@@ -1,4 +1,4 @@
-## Playbook: <Type of Incident>
+## Playbook: System Shutdown Reboot
 
 ### MITRE
 
