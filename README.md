@@ -28,6 +28,11 @@ That this project will be created by the SOC/Incident Response Community
 [Incident Response Phases](https://github.com/austinsonger/Incident-Playbook/wiki/Incident-Response-Phases)
 
 
+## Note
+
+- If you think multiple techniques in the Playbook would make sense to add to the higher level tactic playbook, then you can do that.
+
+
 ## Contributors
 > Going to list all users contribute here.
 
