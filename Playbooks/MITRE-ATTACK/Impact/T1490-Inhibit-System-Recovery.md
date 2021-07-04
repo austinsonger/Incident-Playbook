@@ -37,9 +37,11 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 
 `TODO: Specify tools and procedures for each step, below.`
 
-
-
 `TODO: Consider automating containment measures using orchestration tools.`
+
+* Inventory (enumerate & assess)
+* Detect | Deny | Disrupt | Degrade | Deceive | Destroy
+* Observe -> Orient -> Decide -> Act
 
 #### Eradicate
 
