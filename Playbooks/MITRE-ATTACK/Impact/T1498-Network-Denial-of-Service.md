@@ -1,4 +1,4 @@
-## Playbook: <Type of Incident>
+## Playbook: Network Denial of Service
 
 ### MITRE
 

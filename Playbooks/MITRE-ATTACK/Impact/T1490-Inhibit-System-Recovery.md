@@ -1,4 +1,4 @@
-## Playbook: <Type of Incident>
+## Playbook: Inhibit System Recovery
 
 ### MITRE
 
