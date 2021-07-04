@@ -24,14 +24,16 @@ That this project will be created by the SOC/Incident Response Community
 - Check the list of [MITRE Techniques](https://github.com/austinsonger/Cyber-Incident-Response-Playbooks/wiki/MITRE-Techniques) to choose from and create a new issue;
 - Or you can just look at the list of issues that are ready to be worked on.
 
+## Immediate Goals/Projects
+-  Figure out how to Integrate [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team/)
+-  Figure out how to Integrate [RE&CT Framework](https://github.com/atc-project/atc-react)
 
-[Incident Response Phases](https://github.com/austinsonger/Incident-Playbook/wiki/Incident-Response-Phases)
+## Wiki
+- [Creating a Playbook](https://github.com/austinsonger/Incident-Playbook/wiki/Creating-a-New-Playbook)
+- [Incident Response Phases](https://github.com/austinsonger/Incident-Playbook/wiki/Incident-Response-Phases)
 
-
-## Note
-
+## Notes
 - If you think multiple techniques in the Playbook would make sense to add to the higher level tactic playbook, then you can do that.
-
 
 ## Contributors
 > Going to list all users contribute here.
