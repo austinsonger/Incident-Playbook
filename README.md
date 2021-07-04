@@ -36,9 +36,8 @@ That this project will be created by the SOC/Incident Response Community
 - If you think multiple techniques in the Playbook would make sense to add to the higher level tactic playbook, then you can do that.
 
 ## Contributors
-> Going to list all users contribute here.
-
-
+> Planning on Adding Photos later
+- [Dominik Sigl](https://github.com/sn0b4ll)
 
 
 
