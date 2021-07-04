@@ -101,7 +101,7 @@ Quarantines (logical, physical, or both) prevent spread _from_ infected systems 
 
 * Inventory (enumerate & assess)
 * Detect | Deny | Disrupt | Degrade | Deceive | Destroy
-* bserve -> Orient -> Decide -> Act
+* Observe -> Orient -> Decide -> Act
 * Quarantine infected systems
 * Quarantine affected users and groups.
 * Quarantine file shares (not just known-infected shares; protect uninfected shares too)
