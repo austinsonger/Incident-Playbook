@@ -26,7 +26,6 @@ That this project will be created by the SOC/Incident Response Community
 
 ## Immediate Goals/Projects
 -  Figure out how to Integrate [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team/)
--  Figure out how to Integrate [RE&CT Framework](https://github.com/atc-project/atc-react)
 
 ## Wiki
 - [Creating a Playbook](https://github.com/austinsonger/Incident-Playbook/wiki/Creating-a-New-Playbook)
