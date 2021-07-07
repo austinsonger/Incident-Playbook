@@ -13,7 +13,26 @@ Pre-Event (PE)
 - Make sure your toolset for analysis and management is updated and fully operational. Make sure that all the required permissions have been granted as well
 - Access vulnerability management system logs. It will help to identify the vulnerabilities a specific host had at a specific time in the past
 - Connect with trusted communities for information exchange
-
+- Access to external Network Flow logs.md
+- Access to internal Network Flow logs.md
+- Access to internal HTTP logs.md
+- Access to external HTTP logs.md
+- Access to internal DNS logs.md
+- Access to external DNS logs.md
+- Access to VPN logs.md
+- Access to DHCP logs.md
+- Access to internal Packet Capture data.md
+- Access to internal Packet Capture data.md
+- Ability to block an external IP address from being accessed by corporate assets.md
+- Ability to block an internal IP address from being accessed by corporate assets.md
+- Ability to block an external domain name from being accessed by corporate assets.md
+- Ability to block an internal domain name from being accessed by corporate assets.md
+- Ability to block an external URL from being accessed by corporate assets.md
+- Ability to block an internal URL from being accessed by corporate assets.md
+- Ability to block a network port for external communications.md
+- Ability to block a network port for internal communications.md
+- Ability to block a user for external communications.md
+- Ability to block a user for internal communications.md
 
 
 -->
