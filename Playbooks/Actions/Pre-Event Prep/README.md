@@ -59,5 +59,18 @@ Pre-Event (PE)
 - Ability to find a file by its hash
 - Ability to find a file by its format
 - Ability to find a file by its content pattern (i.e. specific string, keyword, binary pattern etc)
-
+PE58 - Ability to quarantine file by path
+PE59 - Ability to quarantine file by hash
+PE60 - Ability to quarantine file by format
+PE61 - Ability to quarantine file by content pattern
+PE62 - Ability to remove file
+PE63 - Ability to to analyse file hash
+PE64 - Ability to analyse Windows PE
+PE65 - Ability to analyse macOS Mach-O file
+PE66 - Ability to analyse Unix Elf
+PE67 - Ability to Analyse MS Office File
+PE68 - Ability to Analyse PDF File
+PE69 - Ability to Analyse Script
+PE70 - Ability to Analyse Jar
+PE71 - Ability to Analyse Filename
 -->
