@@ -33,6 +33,31 @@ Pre-Event (PE)
 - Ability to block a network port for internal communications.md
 - Ability to block a user for external communications.md
 - Ability to block a user for internal communications.md
-
+- Ability to find data transferred at a particular time in the past by its content pattern (i.e. specific string, keyword, binary pattern etc)
+- Ability to block data transferring by its content pattern (i.e. specific string, keyword, binary pattern etc)
+- Ability to list the data that is being transferred at the moment or at a particular time in the past
+- Ability to collect the data that is being transferred at the moment or at a particular time in the past
+- Ability to identify the data that is being transferred at the moment or at a particular time in the past (i.e. its content, value)
+- Ability to find the data that is being transferred at the moment or at a particular time in the past by its content pattern
+- Ability to analyse an User-Agent request header
+- Ability to list firewall rules
+- Ability to list users who opened a particular email message
+- Ability to list receivers of a particular email message
+- Ability to block an email domain
+- Ability to block an email sender
+- Ability to delete an email message
+- Ability to quarantine an email message
+- Ability to collect an email message
+- Ability to analyse an email address
+- Ability to analyse an email address
+- Ability to list files that have been modified at a particular time in the past
+- Ability to list files that have been deleted at a particular time in the past
+- Ability to list files that have been downloaded from the internet at a particular time in the past
+- Ability to list files with a tampered timestamp
+- Ability to find a file by its path (including its name)
+- Ability to find file by its metadata (i.e. signature, permissions, MAC times)
+- Ability to find a file by its hash
+- Ability to find a file by its format
+- Ability to find a file by its content pattern (i.e. specific string, keyword, binary pattern etc)
 
 -->
