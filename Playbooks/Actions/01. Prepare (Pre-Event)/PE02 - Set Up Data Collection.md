@@ -1,1 +1,13 @@
-> Set Up Data Collection, data collection is managed by Log Management/Security Monitoring/Threat Detection teams. You need to provide them with a list of data that is critically important for IR process. Most of the time, data like DNS and DHCP logs are not being collected, as their value for detection is relatively low. You can refer to the existing Response Actions (Preparation stage) to develop the list
+| Action            | Set Up Data Collection                                                                               |
+|:-----------------:|:-----------------------------------------------------------------------------------------------------|
+|**ID**          |            |
+|**Description**   |Data collection is managed by Log Management/Security Monitoring/Threat Detection. |
+|**Author(s)**     |Austin Songer|
+|**Creation Date** | 2021/07/11 |
+|**Modified Date** | YYYY/MM/DD |
+|**Severity**      | Low, Medium, High  |
+|**Related Atomics** (Atomic Red Team) |      |
+
+
+
+
