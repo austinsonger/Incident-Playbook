@@ -29,6 +29,7 @@ That this project will be created by the SOC/Incident Response Community
 
 ## Wiki
 - [Creating a Playbook](https://github.com/austinsonger/Incident-Playbook/wiki/Creating-a-New-Playbook)
+- [Combining Techniques Into One Playbook](https://github.com/austinsonger/Incident-Playbook/wiki/What-do-if-you-think-combining-techniques-into-one-playbook)
 - [Incident Response Phases](https://github.com/austinsonger/Incident-Playbook/wiki/Incident-Response-Phases)
 
 ## Notes
