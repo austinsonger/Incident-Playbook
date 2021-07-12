@@ -5,9 +5,9 @@
   
 ### MITRE
 
-| Tactic | Technique ID | Technique Name | Sub-Technique Name | Platforms | Permissions Required |
-| ------ | ------------ | -------------- | ------------------ |---------- |--------------------- |
-|        |              |                |                    |           |                      |
+| Tactic | Technique ID | Technique Name | Sub-Technique Name | Platforms | Permissions Required |Atomic Red Team Mapping  |
+| ------ | ------------ | -------------- | ------------------ |---------- |--------------------- |------------------------ |
+|        |              |                |                    |           |                      |                         |
 
 
 ```
