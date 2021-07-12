@@ -34,8 +34,6 @@ That this project will be created by the SOC/Incident Response Community
 - [Combining Techniques Into One Playbook](https://github.com/austinsonger/Incident-Playbook/wiki/What-do-if-you-think-combining-techniques-into-one-playbook)
 - [Incident Response Phases](https://github.com/austinsonger/Incident-Playbook/wiki/Incident-Response-Phases)
 
-## Notes
-- If you think multiple techniques in the Playbook would make sense to add to the higher level tactic playbook, then you can do that.
 
 ## Contributors
 > Planning on Adding Photos later
