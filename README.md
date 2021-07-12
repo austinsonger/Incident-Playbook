@@ -18,6 +18,7 @@ That this project will be created by the SOC/Incident Response Community
 - Develop a Catalog of Roles that a organization can use, to build their own program.
 - Develop a Catalog of Event Codes and API Actions that you can/will see in a SIEM Detections.
 - Develop a Card Game based on MITRE Attack and the IR phases that help resolve it.
+- Develop a Battle Card Book, that can be reference for immediate help during a incident. 
 
 ---------------------
 **For every pull request submitted a issue must also be created.** 
