@@ -1,5 +1,8 @@
 ## Playbook: <Type of Incident>
 
+**Mitigation-Category:** 
+  
+  
 ### MITRE
 
 | Tactic | Technique ID | Technique Name | Sub-Technique Name | Platforms | Permissions Required |
