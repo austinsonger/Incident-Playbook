@@ -82,11 +82,36 @@ In addition to the general steps and guidance in the incident response plan:
   
 ### Lessons Learned
 
+The goal of the phase is to discover how to improve the incident response process.  
+You need to answer some basic questions, using developed incident report:  
+
+- What happened?  
+- What did we do well?  
+- What could we have done better?  
+- What will we do differently next time?  
+
+The incident report is the key to improvements.  
+
 `TODO: Add items that will occur post recover.`
   
 1.    Perform routine cyber hygiene due diligence
 2.    Engage external cybersecurity-as-a-service providers and response professionals
  
+
+##### Develop the incident report
+
+Develop the Incident Report using your corporate template.  
+
+It should include:  
+
+1. Executive Summary with a short description of damage, actions taken, root cause, and key metrics (Time To Detect, Time To Respond, Time To Recover etc)  
+2. Detailed timeline of adversary actions mapped to [ATT&CK tactics](https://attack.mitre.org/tactics/enterprise/), but most probably most of the actions will be in Actions On Objective stage, which is not very representative and useful)  
+3. Detailed timeline of actions taken by Incident Response Team  
+4. Root Cause Analysis and Recommendations for improvements based on its conclusion  
+5. List of specialists involved in Incident Response with their roles  
+
+
+
 
 --------------
 
