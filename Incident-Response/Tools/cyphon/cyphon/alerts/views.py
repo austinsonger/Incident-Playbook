@@ -124,7 +124,7 @@ class AlertViewSet(CustomModelViewSet):
 
         use_redaction = self.request.user.use_redaction
 
-        if self.action is 'list':
+        if self.action == 'list':
             if use_redaction:
                 return RedactedAlertListSerializer
             else:

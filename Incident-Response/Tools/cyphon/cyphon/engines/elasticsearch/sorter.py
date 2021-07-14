@@ -61,7 +61,7 @@ class ElasticsearchSorter(Sorter):
             data_type = get_data_type(sort.field_type)
 
             # don't sort fields that are analyzed/tokenized
-            if data_type is not 'text':
+            if data_type != 'text':
                 params.append({
                     sort.field_name: {
                         'order': self._SORT_ORDERS[sort.order],
