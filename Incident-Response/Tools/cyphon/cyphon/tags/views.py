@@ -67,7 +67,7 @@ class TagViewSet(viewsets.ModelViewSet):
                    % type(self).__name__)
             raise RuntimeError(msg)
 
-        if self.action is 'list':
+        if self.action == 'list':
             return TagListSerializer
         else:
             return self.serializer_class

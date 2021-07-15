@@ -136,13 +136,13 @@ class Location(models.Model):
         returns the smallest rectangle that encompasses the Location's
         geometry. Otherwise returns None.
         """
-        if self.shape is 'Circle':
+        if self.shape == 'Circle':
             return shapes.convert_circle_to_rectangle(self.geom, self.buffer_m)
 
-        elif self.shape is'Rectangle':
+        elif self.shape == 'Rectangle':
             return self.geom
 
-        elif self.shape is 'Polygon' or self.shape is 'MultiPolygon':
+        elif self.shape in ('Polygon', 'MultiPolygon'):
             return self.geom.envelope
 
         else:
@@ -156,13 +156,13 @@ class Location(models.Model):
         the point on the geometry farthest from the centroid. Otherwise returns
         None.
         """
-        if self.shape is 'Circle':
+        if self.shape == 'Circle':
             return units.meters_to_km(self.buffer_m)
 
-        elif self.shape is'Rectangle' or self.shape is 'Polygon':
+        elif self.shape in ('Rectangle', 'Polygon'):
             return shapes.calculate_polygon_radius_km(self.geom)
 
-        elif self.shape is 'MultiPolygon':
+        elif self.shape == 'MultiPolygon':
             return shapes.calculate_multipoly_radius_km(self.geom)
 
         else:

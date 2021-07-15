@@ -63,7 +63,7 @@ class ArticleViewSet(viewsets.ModelViewSet):
                    % type(self).__name__)
             raise RuntimeError(msg)
 
-        if self.action is 'list':
+        if self.action == 'list':
             return ArticleListSerializer
         else:
             return self.serializer_class
