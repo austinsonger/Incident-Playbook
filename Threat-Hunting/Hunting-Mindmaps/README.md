@@ -1,0 +1,1 @@
+Thank you [Samir](https://github.com/sbousseaden) for giving me permission to use these.
