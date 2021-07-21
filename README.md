@@ -39,5 +39,13 @@ That this project will be created by the SOC/Incident Response Community
 > Planning on Adding Photos later
 - [Dominik Sigl](https://github.com/sn0b4ll)
 
+## Sponsors
+
+|SPONSORS|
+|---|
+|<img src="https://www.dtonomy.com/wp-content/uploads/2020/04/Dark.png" width="387px;" height="90px;"/>|
+|   |
+|   |
+
 
 
