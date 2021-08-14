@@ -1,5 +1,0 @@
-include version.ini
-recursive-include * *
-
-recursive-exclude build *
-recursive-exclude dist *
