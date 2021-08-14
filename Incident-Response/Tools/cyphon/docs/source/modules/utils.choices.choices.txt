@@ -1,7 +1,0 @@
-utils.choices.choices
-=====================
-
-.. automodule:: utils.choices.choices
-    :members:
-    :undoc-members:
-    :show-inheritance:

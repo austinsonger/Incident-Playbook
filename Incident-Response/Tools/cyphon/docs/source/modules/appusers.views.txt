@@ -1,7 +1,0 @@
-appusers.views
-==============
-
-.. automodule:: appusers.views
-    :members:
-    :undoc-members:
-    :show-inheritance:

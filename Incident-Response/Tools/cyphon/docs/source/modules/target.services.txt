@@ -1,7 +1,0 @@
-target.services
-===============
-
-.. automodule:: target.services
-    :members:
-    :undoc-members:
-    :show-inheritance:

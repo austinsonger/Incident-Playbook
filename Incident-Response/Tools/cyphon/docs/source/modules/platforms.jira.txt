@@ -1,9 +1,0 @@
-platforms.jira
-==============
-
-Submodules
-----------
-
-.. toctree::
-
-   platforms.jira.handlers

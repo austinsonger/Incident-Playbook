@@ -1,7 +1,0 @@
-sifter.mailsifter.accessors
-===========================
-
-.. automodule:: sifter.mailsifter.accessors
-    :members:
-    :undoc-members:
-    :show-inheritance:

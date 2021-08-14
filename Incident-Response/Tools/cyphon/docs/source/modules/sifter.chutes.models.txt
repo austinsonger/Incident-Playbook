@@ -1,7 +1,0 @@
-sifter.chutes.models
-====================
-
-.. automodule:: sifter.chutes.models
-    :members:
-    :undoc-members:
-    :show-inheritance:

@@ -1,7 +1,0 @@
-sifter.condensers.models
-========================
-
-.. automodule:: sifter.condensers.models
-    :members:
-    :undoc-members:
-    :show-inheritance:

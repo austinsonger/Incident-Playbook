@@ -1,1 +1,0 @@
-An |AppUser| is a modified version of Django's default |User|.

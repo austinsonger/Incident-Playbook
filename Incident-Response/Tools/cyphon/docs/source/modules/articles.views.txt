@@ -1,7 +1,0 @@
-articles.views
-==============
-
-.. automodule:: articles.views
-    :members:
-    :undoc-members:
-    :show-inheritance:

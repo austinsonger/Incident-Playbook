@@ -1,7 +1,0 @@
-articles.serializers
-====================
-
-.. automodule:: articles.serializers
-    :members:
-    :undoc-members:
-    :show-inheritance:

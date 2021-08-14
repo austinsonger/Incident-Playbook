@@ -1,7 +1,0 @@
-watchdogs.signals
-=================
-
-.. automodule:: watchdogs.signals
-    :members:
-    :undoc-members:
-    :show-inheritance:

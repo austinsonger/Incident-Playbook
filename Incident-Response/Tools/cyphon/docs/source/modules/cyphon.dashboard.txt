@@ -1,7 +1,0 @@
-cyphon.dashboard
-================
-
-.. automodule:: cyphon.dashboard
-    :members:
-    :undoc-members:
-    :show-inheritance:

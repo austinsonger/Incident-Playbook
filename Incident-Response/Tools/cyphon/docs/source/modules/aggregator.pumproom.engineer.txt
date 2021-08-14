@@ -1,7 +1,0 @@
-aggregator.pumproom.engineer
-============================
-
-.. automodule:: aggregator.pumproom.engineer
-    :members:
-    :undoc-members:
-    :show-inheritance:

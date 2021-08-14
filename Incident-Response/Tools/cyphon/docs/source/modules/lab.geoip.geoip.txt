@@ -1,7 +1,0 @@
-lab.geoip.geoip
-===============
-
-.. automodule:: lab.geoip.geoip
-    :members:
-    :undoc-members:
-    :show-inheritance:

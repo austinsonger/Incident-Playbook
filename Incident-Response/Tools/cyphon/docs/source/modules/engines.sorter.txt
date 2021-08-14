@@ -1,7 +1,0 @@
-engines.sorter
-==============
-
-.. automodule:: engines.sorter
-    :members:
-    :undoc-members:
-    :show-inheritance:

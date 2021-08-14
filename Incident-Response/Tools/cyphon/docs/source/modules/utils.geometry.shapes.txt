@@ -1,7 +1,0 @@
-utils.geometry.shapes
-=====================
-
-.. automodule:: utils.geometry.shapes
-    :members:
-    :undoc-members:
-    :show-inheritance:

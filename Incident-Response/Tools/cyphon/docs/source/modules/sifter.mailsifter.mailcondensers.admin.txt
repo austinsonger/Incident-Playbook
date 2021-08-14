@@ -1,7 +1,0 @@
-sifter.mailsifter.mailcondensers.admin
-======================================
-
-.. automodule:: sifter.mailsifter.mailcondensers.admin
-    :members:
-    :undoc-members:
-    :show-inheritance:

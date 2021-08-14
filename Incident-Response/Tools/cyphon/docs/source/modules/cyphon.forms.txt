@@ -1,7 +1,0 @@
-cyphon.forms
-============
-
-.. automodule:: cyphon.forms
-    :members:
-    :undoc-members:
-    :show-inheritance:

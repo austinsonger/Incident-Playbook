@@ -1,7 +1,0 @@
-cyphon.filters
-==============
-
-.. automodule:: cyphon.filters
-    :members:
-    :undoc-members:
-    :show-inheritance:

@@ -1,1 +1,0 @@
-The PumpRoom package constructs API calls to pull data from :ref:`Reservoirs<reservoirs>`. An |Engineer| formats a query to conform to the specs of a :ref:`Pipe<pipes>`. A |Pump| takes the query and returns matching data through a |Faucet|. A |PumpRoom| sends queries to multiple |Pumps| and aggregates the results.

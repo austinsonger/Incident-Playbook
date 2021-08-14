@@ -1,1 +1,0 @@
-|Invoices| are :ref:`Records<records>` of REST API requests sent through :ref:`Pipes<pipes>`. |Invoices| save the queries that were sent in the requests, as well as the :ref:`Stamps<stamps>` of the API calls.

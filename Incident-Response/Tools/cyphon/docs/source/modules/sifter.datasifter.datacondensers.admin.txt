@@ -1,7 +1,0 @@
-sifter.datasifter.datacondensers.admin
-======================================
-
-.. automodule:: sifter.datasifter.datacondensers.admin
-    :members:
-    :undoc-members:
-    :show-inheritance:

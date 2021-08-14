@@ -1,7 +1,0 @@
-query.reservoirqueries.forms
-============================
-
-.. automodule:: query.reservoirqueries.forms
-    :members:
-    :undoc-members:
-    :show-inheritance:

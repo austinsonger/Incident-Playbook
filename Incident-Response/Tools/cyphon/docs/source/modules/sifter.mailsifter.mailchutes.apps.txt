@@ -1,7 +1,0 @@
-sifter.mailsifter.mailchutes.apps
-=================================
-
-.. automodule:: sifter.mailsifter.mailchutes.apps
-    :members:
-    :undoc-members:
-    :show-inheritance:

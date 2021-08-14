@@ -1,7 +1,0 @@
-cyphon.choices
-==============
-
-.. automodule:: cyphon.choices
-    :members:
-    :undoc-members:
-    :show-inheritance:

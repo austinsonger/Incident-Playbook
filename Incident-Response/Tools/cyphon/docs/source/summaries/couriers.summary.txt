@@ -1,1 +1,0 @@
-|Couriers| help to execute :ref:`Actions<actions>` on :ref:`Alerts<alerts>` by providing :ref:`Passports<passports>` for authenticating REST API requests to third parties, such as JIRA. The use of |Couriers| can be constrained by :ref:`Visas<visas>`, which limit the number of API requests made by a particular |Courier| in a given time interval.

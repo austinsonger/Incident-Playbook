@@ -1,7 +1,0 @@
-appusers.admin
-==============
-
-.. automodule:: appusers.admin
-    :members:
-    :undoc-members:
-    :show-inheritance:

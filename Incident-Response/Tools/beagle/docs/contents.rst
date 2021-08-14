@@ -1,1 +1,0 @@
-.. include:: beagle.rst

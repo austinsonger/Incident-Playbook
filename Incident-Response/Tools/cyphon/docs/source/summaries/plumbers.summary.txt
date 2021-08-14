@@ -1,1 +1,0 @@
-|Plumbers| help to connect :ref:`Pipes<pipes>` with :ref:`Reservoirs<reservoirs>`. |Plumbers| provide :ref:`Passports<passports>` to authenticate REST API calls. |Plumbers| can be constrained by :ref:`Visas<visas>`, which limit the number of calls they can make in a given time interval.

@@ -1,7 +1,0 @@
-query.collectionqueries.views
-=============================
-
-.. automodule:: query.collectionqueries.views
-    :members:
-    :undoc-members:
-    :show-inheritance:

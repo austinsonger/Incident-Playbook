@@ -1,7 +1,0 @@
-lab.procedures.admin
-====================
-
-.. automodule:: lab.procedures.admin
-    :members:
-    :undoc-members:
-    :show-inheritance:

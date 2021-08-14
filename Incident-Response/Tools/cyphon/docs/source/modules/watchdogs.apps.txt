@@ -1,7 +1,0 @@
-watchdogs.apps
-==============
-
-.. automodule:: watchdogs.apps
-    :members:
-    :undoc-members:
-    :show-inheritance:

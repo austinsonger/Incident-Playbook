@@ -1,3 +1,0 @@
-|Followees| are users of social media platforms. A |Followee| may have multiple |Accounts| with multiple :ref:`Reservoirs<reservoirs>`. A |Followee| may also be associated with other |Followees|.
-
-Data related to |Followees| can be gathered from Reservoirs by creating :ref:`Filters<filters>`.

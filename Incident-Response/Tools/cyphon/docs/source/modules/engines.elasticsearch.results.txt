@@ -1,7 +1,0 @@
-engines.elasticsearch.results
-=============================
-
-.. automodule:: engines.elasticsearch.results
-    :members:
-    :undoc-members:
-    :show-inheritance:

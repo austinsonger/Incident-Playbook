@@ -1,1 +1,0 @@
-|Platforms| are third-party platforms with REST APIs. |Platforms| can take the form of :ref:`Reservoirs<reservoirs>`, which are accessed through :ref:`Pipes<pipes>`, or :ref:`Destinations<destinations>`. which are accessed through :ref:`Actions<actions>`.

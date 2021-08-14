@@ -1,7 +1,0 @@
-watchdogs.admin
-===============
-
-.. automodule:: watchdogs.admin
-    :members:
-    :undoc-members:
-    :show-inheritance:

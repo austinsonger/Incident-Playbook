@@ -1,7 +1,0 @@
-sifter.logsifter.logmungers.admin
-=================================
-
-.. automodule:: sifter.logsifter.logmungers.admin
-    :members:
-    :undoc-members:
-    :show-inheritance:

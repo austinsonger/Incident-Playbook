@@ -1,7 +1,0 @@
-query.search.distillery_filter_parameter
-========================================
-
-.. automodule:: query.search.distillery_filter_parameter
-    :members:
-    :undoc-members:
-    :show-inheritance:

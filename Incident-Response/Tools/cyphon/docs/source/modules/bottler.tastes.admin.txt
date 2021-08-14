@@ -1,7 +1,0 @@
-bottler.tastes.admin
-====================
-
-.. automodule:: bottler.tastes.admin
-    :members:
-    :undoc-members:
-    :show-inheritance:

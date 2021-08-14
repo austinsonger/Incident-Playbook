@@ -1,1 +1,0 @@
-|Destinations| are third-party platforms (such as JIRA) with REST APIs that are associated with :ref:`Actions<actions>`.

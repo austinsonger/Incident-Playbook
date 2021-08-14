@@ -1,1 +1,0 @@
-|Articles| provide reference documents to help analyze and remediate :ref:`Alerts<alerts>`. |Articles| can be associated with one or more :ref:`Tags<tags>`.

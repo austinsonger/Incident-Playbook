@@ -1,7 +1,0 @@
-responder.actions.admin
-=======================
-
-.. automodule:: responder.actions.admin
-    :members:
-    :undoc-members:
-    :show-inheritance:

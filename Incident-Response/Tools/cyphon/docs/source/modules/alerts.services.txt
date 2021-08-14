@@ -1,7 +1,0 @@
-alerts.services
-===============
-
-.. automodule:: alerts.services
-    :members:
-    :undoc-members:
-    :show-inheritance:

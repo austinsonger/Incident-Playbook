@@ -1,1 +1,0 @@
-|Visas| are used to limit the number of times :ref:`Emissaries<emissaries>` access REST API :ref:`Endpoints<endpoints>` in a given time interval.

@@ -1,7 +1,0 @@
-warehouses.signals
-==================
-
-.. automodule:: warehouses.signals
-    :members:
-    :undoc-members:
-    :show-inheritance:

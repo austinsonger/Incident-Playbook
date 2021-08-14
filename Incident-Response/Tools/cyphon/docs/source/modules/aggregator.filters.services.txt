@@ -1,7 +1,0 @@
-aggregator.filters.services
-===========================
-
-.. automodule:: aggregator.filters.services
-    :members:
-    :undoc-members:
-    :show-inheritance:

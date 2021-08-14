@@ -1,6 +1,0 @@
-"system_csv_35_001","TAG_35_1","existing system - gets status 2 (because of tag)"
-"system_csv_35_002",,"existing system - gets status 3 (because tagfree)"
-"system_csv_35_003","TAG_35_1","existing system - keeps status 1 (because lock tag)"
-"system_csv_35_004",,"existing system - keeps status 1 (because lock tag)"
-"system_csv_35_005","TAG_35_1","new system - gets status 2 (because of tag)"
-"system_csv_35_006",,"new system - gets status 3 (because tagfree)"

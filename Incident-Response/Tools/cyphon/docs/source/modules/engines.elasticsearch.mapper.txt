@@ -1,7 +1,0 @@
-engines.elasticsearch.mapper
-============================
-
-.. automodule:: engines.elasticsearch.mapper
-    :members:
-    :undoc-members:
-    :show-inheritance:

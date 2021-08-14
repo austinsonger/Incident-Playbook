@@ -1,7 +1,0 @@
-utils.emailutils.emailutils
-===========================
-
-.. automodule:: utils.emailutils.emailutils
-    :members:
-    :undoc-members:
-    :show-inheritance:

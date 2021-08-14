@@ -1,1 +1,0 @@
-|MailCondensers| allow email messages to be stored in custom formats defined by :ref:`Bottles<bottles>`. A |MailCondenser| is composed of |MailFittings| that map the |BottleFields| in a |Bottle| to |MailParsers|, which are used to process mail from :ref:`MailChutes<mailchutes>`.

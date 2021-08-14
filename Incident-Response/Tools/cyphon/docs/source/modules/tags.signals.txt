@@ -1,7 +1,0 @@
-tags.signals
-============
-
-.. automodule:: tags.signals
-    :members:
-    :undoc-members:
-    :show-inheritance:

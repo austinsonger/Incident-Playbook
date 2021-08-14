@@ -1,1 +1,0 @@
-|CollectionQueries| are queries created by :ref:`AppUsers<appusers>` to search one or more |Collections| within :ref:`Warehouses<warehouses>`. A |CollectionQuery| is composed on one or more |Fieldsets|.

@@ -1,7 +1,0 @@
-sifter.datasifter.datachutes.admin
-==================================
-
-.. automodule:: sifter.datasifter.datachutes.admin
-    :members:
-    :undoc-members:
-    :show-inheritance:

@@ -1,7 +1,0 @@
-tags.apps
-=========
-
-.. automodule:: tags.apps
-    :members:
-    :undoc-members:
-    :show-inheritance:

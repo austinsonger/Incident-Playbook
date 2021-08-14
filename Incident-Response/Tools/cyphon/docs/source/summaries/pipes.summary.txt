@@ -1,3 +1,0 @@
-|Pipes| collect data from :ref:`Reservoirs<reservoirs>`, such as Twitter. |Pipes| send requests to REST APIs with the help of :ref:`Plumbers<plumbers>`, which authenticate the calls to the APIs.
-
-Data from |Pipes| is directed to appropriate parsers and storage locations by :ref:`DataChutes<datachutes>`. :ref:`Streams<streams>` record the status of |Pipes| that service streaming APIs.

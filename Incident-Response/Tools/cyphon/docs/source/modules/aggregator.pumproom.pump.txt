@@ -1,7 +1,0 @@
-aggregator.pumproom.pump
-========================
-
-.. automodule:: aggregator.pumproom.pump
-    :members:
-    :undoc-members:
-    :show-inheritance:

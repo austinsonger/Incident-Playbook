@@ -1,1 +1,0 @@
-|MailMungers| use :ref:`MailCondensers<mailcondensers>` to parse email messages and :ref:`Distilleries<distilleries>` to enrich and save that data. |MailMungers| create loose couplings between MailCondensers and Distilleries, so different kinds of data can be sent to the same Distillery, and the same kind of data can be sent to different Distilleries.

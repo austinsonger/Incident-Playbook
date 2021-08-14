@@ -1,3 +1,0 @@
-"system_csv_07_001","127.1.0.1;127.1.0.2;127.1.0.3","tag_1 tag_2","example.com","DOM1","Berlin","Linux","reason_1","recommendation_1","serviceprovider_1","Fileserver","case_1","company_1"
-"system_csv_07_002","10.2.0.1;10.2.0.2;10.2.0.3",,,"system_csv_01_002","Munich","Windows Server 2008 R2",,,,"Domaincontroller","case_1","company_1"
-"system_csv_07_003",,"tag_2 tag_3 tag_4","dfirtrack.org","DOM3","Hamburg","Windows 10",,,,"Client","case_1","company_1"

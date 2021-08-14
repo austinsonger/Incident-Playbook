@@ -1,7 +1,0 @@
-target.locations.admin
-======================
-
-.. automodule:: target.locations.admin
-    :members:
-    :undoc-members:
-    :show-inheritance:

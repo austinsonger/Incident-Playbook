@@ -1,7 +1,0 @@
-aggregator.samples.admin
-========================
-
-.. automodule:: aggregator.samples.admin
-    :members:
-    :undoc-members:
-    :show-inheritance:

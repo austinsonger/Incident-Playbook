@@ -1,7 +1,0 @@
-target.locations.views
-======================
-
-.. automodule:: target.locations.views
-    :members:
-    :undoc-members:
-    :show-inheritance:

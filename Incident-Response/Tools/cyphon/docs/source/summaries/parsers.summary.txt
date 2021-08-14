@@ -1,1 +1,0 @@
-The Parsers package provides base classes for parsing values from objects, such as a strings or dictionaries.

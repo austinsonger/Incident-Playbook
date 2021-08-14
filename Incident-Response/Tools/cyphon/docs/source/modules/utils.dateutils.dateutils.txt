@@ -1,7 +1,0 @@
-utils.dateutils.dateutils
-=========================
-
-.. automodule:: utils.dateutils.dateutils
-    :members:
-    :undoc-members:
-    :show-inheritance:

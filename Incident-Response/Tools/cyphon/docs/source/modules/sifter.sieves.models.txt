@@ -1,7 +1,0 @@
-sifter.sieves.models
-====================
-
-.. automodule:: sifter.sieves.models
-    :members:
-    :undoc-members:
-    :show-inheritance:

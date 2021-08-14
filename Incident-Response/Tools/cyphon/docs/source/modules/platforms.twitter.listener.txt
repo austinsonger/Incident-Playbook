@@ -1,7 +1,0 @@
-platforms.twitter.listener
-==========================
-
-.. automodule:: platforms.twitter.listener
-    :members:
-    :undoc-members:
-    :show-inheritance:

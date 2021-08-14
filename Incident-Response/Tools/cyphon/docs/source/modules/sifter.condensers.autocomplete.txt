@@ -1,7 +1,0 @@
-sifter.condensers.autocomplete
-==============================
-
-.. automodule:: sifter.condensers.autocomplete
-    :members:
-    :undoc-members:
-    :show-inheritance:

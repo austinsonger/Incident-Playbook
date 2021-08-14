@@ -1,1 +1,0 @@
-|Watchdogs| analyze data when it is saved and generate :ref:`Alerts<alerts>` for data that meet certain conditions. These conditions are defined by |Triggers|. The rate at which |Watchdogs| generate Alerts can be throttled using |Muzzles|.

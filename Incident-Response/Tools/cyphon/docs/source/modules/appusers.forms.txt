@@ -1,7 +1,0 @@
-appusers.forms
-==============
-
-.. automodule:: appusers.forms
-    :members:
-    :undoc-members:
-    :show-inheritance:

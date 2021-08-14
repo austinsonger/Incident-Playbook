@@ -1,8 +1,0 @@
-engines.mongodb.sorter
-======================
-
-.. automodule:: engines.mongodb.sorter
-    :members:
-    :undoc-members:
-    :show-inheritance:
-    :inherited-members:

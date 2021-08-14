@@ -1,7 +1,0 @@
-sifter.condensers.admin
-=======================
-
-.. automodule:: sifter.condensers.admin
-    :members:
-    :undoc-members:
-    :show-inheritance:

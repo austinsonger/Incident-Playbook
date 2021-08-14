@@ -1,1 +1,0 @@
-|Warehouses| define storage locations for data. Currently, Cyphon supports both Elasticsearch_ and MongoDB_ as data stores. |Warehouses| can therefore represent either Elasticsearch indexes or MongoDB databases. |Collections| within a |Warehouse| can represent Elasticsearch document types or MongoDB collections.

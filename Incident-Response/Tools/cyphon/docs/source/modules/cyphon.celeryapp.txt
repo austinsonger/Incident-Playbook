@@ -1,7 +1,0 @@
-cyphon.celeryapp
-================
-
-.. automodule:: cyphon.celeryapp
-    :members:
-    :undoc-members:
-    :show-inheritance:

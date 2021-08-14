@@ -1,7 +1,0 @@
-aggregator.filters.admin
-========================
-
-.. automodule:: aggregator.filters.admin
-    :members:
-    :undoc-members:
-    :show-inheritance:

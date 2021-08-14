@@ -1,7 +1,0 @@
-alerts.serializers
-==================
-
-.. automodule:: alerts.serializers
-    :members:
-    :undoc-members:
-    :show-inheritance:

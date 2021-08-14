@@ -1,7 +1,0 @@
-query.search.distillery_search_results
-======================================
-
-.. automodule:: query.search.distillery_search_results
-    :members:
-    :undoc-members:
-    :show-inheritance:

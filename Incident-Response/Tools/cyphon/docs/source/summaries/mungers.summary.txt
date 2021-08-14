@@ -1,1 +1,0 @@
-|Mungers| use :ref:`Condensers<condensers>` to parse data and :ref:`Distilleries<distilleries>` to enrich and save that data. |Mungers| create loose couplings between Condensers and Distilleries, so different kinds of data can be sent to the same Distillery, and the same kind of data can be sent to different Distilleries.

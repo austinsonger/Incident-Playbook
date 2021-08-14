@@ -1,1 +1,0 @@
-The GeoIP package provides geocoordinates for IP addresses.

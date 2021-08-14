@@ -1,7 +1,0 @@
-aggregator.pipes.admin
-======================
-
-.. automodule:: aggregator.pipes.admin
-    :members:
-    :undoc-members:
-    :show-inheritance:

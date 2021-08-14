@@ -1,7 +1,0 @@
-ambassador.transport
-====================
-
-.. automodule:: ambassador.transport
-    :members:
-    :undoc-members:
-    :show-inheritance:

@@ -1,7 +1,0 @@
-engines.elasticsearch.client
-============================
-
-.. automodule:: engines.elasticsearch.client
-    :members:
-    :undoc-members:
-    :show-inheritance:

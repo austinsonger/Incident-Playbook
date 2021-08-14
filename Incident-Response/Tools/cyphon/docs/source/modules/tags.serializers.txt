@@ -1,7 +1,0 @@
-tags.serializers
-================
-
-.. automodule:: tags.serializers
-    :members:
-    :undoc-members:
-    :show-inheritance:

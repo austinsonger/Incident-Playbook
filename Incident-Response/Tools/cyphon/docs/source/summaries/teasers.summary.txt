@@ -1,1 +1,0 @@
-|Teasers| provide basic information about data, such as author, title, date, and location (Who, What, When, and Where).

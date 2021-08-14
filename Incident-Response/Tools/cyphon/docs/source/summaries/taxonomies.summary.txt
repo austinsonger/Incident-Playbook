@@ -1,1 +1,0 @@
-|Taxonomies| are used to classify, filter, and associate objects.

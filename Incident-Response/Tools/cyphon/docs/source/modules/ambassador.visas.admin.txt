@@ -1,7 +1,0 @@
-ambassador.visas.admin
-======================
-
-.. automodule:: ambassador.visas.admin
-    :members:
-    :undoc-members:
-    :show-inheritance:

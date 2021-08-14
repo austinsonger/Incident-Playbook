@@ -1,7 +1,0 @@
-monitors.serializers
-====================
-
-.. automodule:: monitors.serializers
-    :members:
-    :undoc-members:
-    :show-inheritance:

@@ -1,7 +1,0 @@
-aggregator.invoices.admin
-=========================
-
-.. automodule:: aggregator.invoices.admin
-    :members:
-    :undoc-members:
-    :show-inheritance:

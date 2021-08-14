@@ -1,1 +1,0 @@
-|Stamps| record the use of :ref:`Passports<passports>` by :ref:`AppUsers<appusers>`. They also keep track of which API :ref:`Endpoints<endpoints>` were accessed and whether the API calls were successful.

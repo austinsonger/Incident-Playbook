@@ -1,7 +1,0 @@
-monitors.apps
-=============
-
-.. automodule:: monitors.apps
-    :members:
-    :undoc-members:
-    :show-inheritance:

@@ -1,7 +1,0 @@
-query.search.search_results
-===========================
-
-.. automodule:: query.search.search_results
-    :members:
-    :undoc-members:
-    :show-inheritance:

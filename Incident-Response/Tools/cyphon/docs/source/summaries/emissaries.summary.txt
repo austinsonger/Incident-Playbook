@@ -1,1 +1,0 @@
-|Emissaries| provide access to one or more REST API :ref:`Endpoints<endpoints>` by supplying :ref:`Passports<passports>` for authenticating the API calls. They can be constrained by :ref:`Visas<visas>`, which limit the number of API requests they can make in a given time interval. |Emissaries| can serve as :ref:`Couriers<couriers>` or :ref:`Plumbers<plumbers>`.

@@ -1,1 +1,0 @@
-|SearchTerms| are keywords or phrases used to create :ref:`Filters<filters>`.

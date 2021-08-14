@@ -1,1 +1,0 @@
-|DataMungers| use :ref:`DataCondensers<datacondensers>` to parse structured data and :ref:`Distilleries<distilleries>` to enrich and save that data. |DataMungers| create loose couplings between DataCondensers and Distilleries, so different kinds of data can be sent to the same Distillery, and the same kind of data can be sent to different Distilleries.

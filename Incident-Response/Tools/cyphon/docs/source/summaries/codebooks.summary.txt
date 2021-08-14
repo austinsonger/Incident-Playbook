@@ -1,1 +1,0 @@
-|CodeBooks| are used to redact keywords associated with :ref:`Companies<companies>`. A |CodeBook| contains one or more |CodeNames| used to replace |RealNames| in document teasers produced by :ref:`Distilleries<distilleries>`.

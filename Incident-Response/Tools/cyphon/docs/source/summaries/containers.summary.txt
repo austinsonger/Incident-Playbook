@@ -1,1 +1,0 @@
-|Containers| are used by :ref:`Distilleries<distilleries>` to store data in a custom format. |Containers| are composed of :ref:`Bottles<bottles>`, which model the data itself, and :ref:`Labels<labels>`, which store the results of analyses. Data in |Containers| can be sampled using :ref:`Tastes<tastes>`.

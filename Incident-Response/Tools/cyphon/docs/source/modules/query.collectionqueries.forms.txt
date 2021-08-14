@@ -1,7 +1,0 @@
-query.collectionqueries.forms
-=============================
-
-.. automodule:: query.collectionqueries.forms
-    :members:
-    :undoc-members:
-    :show-inheritance:

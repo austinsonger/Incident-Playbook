@@ -1,7 +1,0 @@
-monitors.admin
-==============
-
-.. automodule:: monitors.admin
-    :members:
-    :undoc-members:
-    :show-inheritance:

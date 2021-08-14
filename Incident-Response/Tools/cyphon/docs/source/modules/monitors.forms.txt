@@ -1,7 +1,0 @@
-monitors.forms
-==============
-
-.. automodule:: monitors.forms
-    :members:
-    :undoc-members:
-    :show-inheritance:

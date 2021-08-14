@@ -1,1 +1,0 @@
-|Labels| enhance data with the results of :ref:`Inspections<inspections>` and :ref:`Procedures<procedures>` that are performed on the contents of :ref:`Containers<containers>`.

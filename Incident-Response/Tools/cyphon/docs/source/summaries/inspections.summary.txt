@@ -1,1 +1,0 @@
-|Inspections| are used to enrich data by performing simple tests on the data using :ref:`DataSieves<datasieves>`. The results can then be attached to the data using :ref:`Labels<labels>`.

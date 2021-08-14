@@ -1,7 +1,0 @@
-ambassador.exceptions
-=====================
-
-.. automodule:: ambassador.exceptions
-    :members:
-    :undoc-members:
-    :show-inheritance:

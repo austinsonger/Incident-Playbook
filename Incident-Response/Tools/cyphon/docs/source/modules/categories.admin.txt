@@ -1,7 +1,0 @@
-categories.admin
-================
-
-.. automodule:: categories.admin
-    :members:
-    :undoc-members:
-    :show-inheritance:

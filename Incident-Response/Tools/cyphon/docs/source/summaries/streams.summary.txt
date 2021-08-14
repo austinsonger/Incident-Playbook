@@ -1,1 +1,0 @@
-|Streams| save the status of streaming API connections to :ref:`Pipes<pipes>`. They include the :ref:`Invoice<invoices>` for the API call that created the connection, as well as the :ref:`Passport<passports>` used to authenticate the call.

@@ -1,7 +1,0 @@
-sifter.mungers.admin
-====================
-
-.. automodule:: sifter.mungers.admin
-    :members:
-    :undoc-members:
-    :show-inheritance:

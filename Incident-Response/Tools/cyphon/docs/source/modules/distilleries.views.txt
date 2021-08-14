@@ -1,7 +1,0 @@
-distilleries.views
-==================
-
-.. automodule:: distilleries.views
-    :members:
-    :undoc-members:
-    :show-inheritance:

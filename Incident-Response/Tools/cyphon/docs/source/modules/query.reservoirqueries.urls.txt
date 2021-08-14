@@ -1,7 +1,0 @@
-query.reservoirqueries.urls
-===========================
-
-.. automodule:: query.reservoirqueries.urls
-    :members:
-    :undoc-members:
-    :show-inheritance:

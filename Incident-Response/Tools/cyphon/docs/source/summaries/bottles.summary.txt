@@ -1,1 +1,0 @@
-|Bottles| define custom data models. They are composed of |BottleFields| and, along with :ref:`Labels<labels>`, are part of :ref:`Containers<containers>`.

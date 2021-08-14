@@ -1,7 +1,0 @@
-query.search.urls
-=================
-
-.. automodule:: query.search.urls
-    :members:
-    :undoc-members:
-    :show-inheritance:

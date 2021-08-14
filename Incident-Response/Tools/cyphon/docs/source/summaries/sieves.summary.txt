@@ -1,3 +1,0 @@
-|Sieves| test whether data meets a certain set of criteria. When used by :ref:`Chutes<chutes>`, they determine whether data should proceed to :ref:`Mungers<mungers>` for processing. 
-
-|Sieves| are rulesets that are composed of one of more |SieveNodes|. A |SieveNode| can point to either a |Rule| or another |Sieve|. This permits the construction of complex, nested rulesets.

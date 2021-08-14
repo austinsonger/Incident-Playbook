@@ -1,1 +1,0 @@
-A |Context| uses data from an :ref:`Alert<alerts>` to find related documents from a particular :ref:`Distillery<distilleries>`. A |Context| can perform a search based on a relative time frame and/or specific data fields from an alert-related event.

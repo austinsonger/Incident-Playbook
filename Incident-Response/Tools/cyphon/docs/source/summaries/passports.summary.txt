@@ -1,1 +1,0 @@
-|Passports| are used by :ref:`Emissaries<emissaries>`, such as :ref:`Couriers<couriers>` and :ref:`Plumbers<plumbers>`, to authenticate calls to third party REST APIs. A |Passport| may be used by one or more :ref:`AppUsers<appusers>`. Use of |Passports| is tracked by :ref:`Stamps<stamps>`.

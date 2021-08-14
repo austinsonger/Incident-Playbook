@@ -1,7 +1,0 @@
-sifter.mailsifter.mailchutes.signals
-====================================
-
-.. automodule:: sifter.mailsifter.mailchutes.signals
-    :members:
-    :undoc-members:
-    :show-inheritance:

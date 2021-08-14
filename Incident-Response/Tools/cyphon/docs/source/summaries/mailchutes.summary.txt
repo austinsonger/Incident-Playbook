@@ -1,1 +1,0 @@
-|MailChutes| sift, parse, and save email messages to appropriate storage locations. |MailChutes| use :ref:`MailSieves<mailsieves>` to sift mail and :ref:`MailMungers<mailmungers>` to parse and save the data.

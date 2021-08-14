@@ -1,7 +1,0 @@
-cyphon.fieldsets
-================
-
-.. automodule:: cyphon.fieldsets
-    :members:
-    :undoc-members:
-    :show-inheritance:

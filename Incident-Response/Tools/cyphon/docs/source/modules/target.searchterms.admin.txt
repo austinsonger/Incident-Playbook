@@ -1,7 +1,0 @@
-target.searchterms.admin
-========================
-
-.. automodule:: target.searchterms.admin
-    :members:
-    :undoc-members:
-    :show-inheritance:

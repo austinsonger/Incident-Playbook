@@ -1,7 +1,0 @@
-sifter.sieves.admin
-===================
-
-.. automodule:: sifter.sieves.admin
-    :members:
-    :undoc-members:
-    :show-inheritance:

@@ -1,5 +1,0 @@
-netaddr
-psutil
-yara-python
-rfc5424-logging-handler
-colorama

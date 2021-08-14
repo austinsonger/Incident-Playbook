@@ -1,7 +1,0 @@
-aggregator.pumproom.exceptions
-==============================
-
-.. automodule:: aggregator.pumproom.exceptions
-    :members:
-    :undoc-members:
-    :show-inheritance:

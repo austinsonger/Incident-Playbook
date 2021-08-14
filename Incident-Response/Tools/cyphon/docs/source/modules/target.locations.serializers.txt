@@ -1,7 +1,0 @@
-target.locations.serializers
-============================
-
-.. automodule:: target.locations.serializers
-    :members:
-    :undoc-members:
-    :show-inheritance:

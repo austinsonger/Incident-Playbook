@@ -1,1 +1,0 @@
-|LogChutes| sift, parse, and save log messages to appropriate storage locations. |LogChutes| use :ref:`LogSieves<logsieves>` to sift logs and :ref:`LogMungers<logmungers>` to parse and save the data.

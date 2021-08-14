@@ -1,1 +1,0 @@
-|Chutes| sift, parse, and save incoming data to appropriate storage locations. |Chutes| use :ref:`Sieves<sieves>` to sift data and :ref:`Mungers<mungers>` to parse and save data.

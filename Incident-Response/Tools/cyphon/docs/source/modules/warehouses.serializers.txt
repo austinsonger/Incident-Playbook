@@ -1,7 +1,0 @@
-warehouses.serializers
-======================
-
-.. automodule:: warehouses.serializers
-    :members:
-    :undoc-members:
-    :show-inheritance:

@@ -1,7 +1,0 @@
-receiver.receiver
-=================
-
-.. automodule:: receiver.receiver
-    :members:
-    :undoc-members:
-    :show-inheritance:

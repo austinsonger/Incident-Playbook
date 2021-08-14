@@ -1,7 +1,0 @@
-utils.geometry.bounds
-=====================
-
-.. automodule:: utils.geometry.bounds
-    :members:
-    :undoc-members:
-    :show-inheritance:

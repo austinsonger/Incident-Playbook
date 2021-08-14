@@ -1,7 +1,0 @@
-tags.admin
-==========
-
-.. automodule:: tags.admin
-    :members:
-    :undoc-members:
-    :show-inheritance:

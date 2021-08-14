@@ -1,9 +1,0 @@
-.. _rest-api:
-
-########
-REST API
-########
-
-Cyphon's REST API is documented using `Django REST Framework Docs <http://drfdocs.com/>`_ (DRF Docs). DRF Docs generates documentation for API endpoints that inherit from `Django REST Framework`_, which Cyphon uses for its REST API. 
-
-You can examine and live test Cyphon's REST API by visiting `http://yourhostname.com/docs/` on your Cyphon server.

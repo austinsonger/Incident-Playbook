@@ -1,5 +1,0 @@
-[
-  {"from": "admin", "to": "taxonomy1"},
-  {"from": "cert", "to": "taxonomy1"},
-  {"from": "soc", "to": "taxonomy1"}
-]

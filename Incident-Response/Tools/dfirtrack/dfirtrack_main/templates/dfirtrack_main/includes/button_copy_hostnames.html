@@ -1,9 +1,0 @@
-{% load static %}
-
-<!-- copy hostnames button -->
-<div class="col-3">
-    <button class="btn btn-outline-primary btn-sm" data-clipboard-text="{% for system in systems %}{{ system.system_name }}
-{% endfor %}">
-        Copy hostnames
-    </button>
-</div>

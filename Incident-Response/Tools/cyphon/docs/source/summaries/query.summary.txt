@@ -1,1 +1,0 @@
-The Query package formats queries for :ref:`Warehouses<warehouses>` and :ref:`Reservoirs<reservoirs>`. Warehouses are searched using :ref:`CollectionQueries<collectionqueries>`, and Reservoirs are searched using :ref:`ReservoirQueries<reservoirqueries>`.

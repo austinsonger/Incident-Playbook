@@ -1,7 +1,0 @@
-aggregator.plumbers.admin
-=========================
-
-.. automodule:: aggregator.plumbers.admin
-    :members:
-    :undoc-members:
-    :show-inheritance:

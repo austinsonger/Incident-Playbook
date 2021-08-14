@@ -1,7 +1,0 @@
-bottler.containers.views
-========================
-
-.. automodule:: bottler.containers.views
-    :members:
-    :undoc-members:
-    :show-inheritance:
