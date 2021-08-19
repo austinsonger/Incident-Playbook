@@ -149,7 +149,7 @@ Right now you’re the only one who got anything from these interviews. You’ll
 The following are useful areas to organize your findings.
 
 #### 🔭 Scenarios
-A scenario is a concrete way to articulate a risk. Scenarios are undesireable future events. The deliverable has a list. The following examples may help you author them.
+A scenario is a concrete way to articulate a risk. Scenarios are undesirable future events. The deliverable has a list. The following examples may help you author them.
 
 This scenario includes an *impact* 💥:
 
@@ -157,7 +157,7 @@ This scenario includes an *impact* 💥:
 
 This scenario includes a *vulnerability* 💔:
 
-> The RCE in our mobile app API is used to gain persistance on a server.
+> The RCE in our mobile app API is used to gain persistence on a server.
 
 This scenario includes a *threat* 👻:
 

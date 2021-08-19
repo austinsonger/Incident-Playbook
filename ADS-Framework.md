@@ -56,6 +56,6 @@ These are the general response steps in the event that this alert fired. These s
 # Additional Resources
 Additional Resources are any other internal, external, or technical references that may be useful for understanding the ADS.
 
-The title for this alerting strategy should be informative but succint, and should be targeting a singular event i.e "Non-SA Bastion Logon" rather than reference all events of this type ("Bastion Logons").
+The title for this alerting strategy should be informative but succinct, and should be targeting a singular event i.e "Non-SA Bastion Logon" rather than reference all events of this type ("Bastion Logons").
 
 The strategy should be stored under the Draft Alerting and Detection Strategies page while you're working on it, peer-reviewed, and a Like attached to the page when approved by a peer to move into production. 
