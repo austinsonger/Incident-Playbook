@@ -161,8 +161,8 @@ supdup                   95/tcp  # SUPDUP<BR><br> Somewhat similar to telnet, de
 supdup/supdup            95/udp  # SUPDUP<BR><br> Somewhat similar to telnet, designed for remote job entry. Is rarely used anymore, but remains a popular intruder target. Consider any connection attempts to it as an attack signature. <BR> , supdup<br><br>supdup<br>
 dixie                    96/tcp  # DIXIE Protocol Specification<BR>
 dixie                    96/udp  # DIXIE Protocol Specification<BR>
-swift-rvf                97/tcp  # Swift Remote Virtural File Protocol<BR>
-swift-rvf                97/udp  # Swift Remote Virtural File Protocol<BR>
+swift-rvf                97/tcp  # Swift Remote Virtual File Protocol<BR>
+swift-rvf                97/udp  # Swift Remote Virtual File Protocol<BR>
 tacnews/linux-conf       98/tcp  # TAC News<BR>, Linux Console Manager<BR>
 tacnews/tacnews          98/udp  # TAC News<BR>, tacnews<br><br>tac news<br>
 metagram                 99/tcp  # Metagram Relay<BR>
@@ -290,7 +290,7 @@ nss-routing              159/udp  # NSS-Routing<BR>
 sgmp-traps               160/tcp  # SGMP-Traps<BR>
 sgmp-traps               160/udp  # SGMP-Traps<BR>
                          /tcp  # 
-snmp                     161/udp  # SNMP Agent<BR><br> Used to connect with and configure or request data from a running snmp agent on a network host. <BR> Security Concerns: Many! <BR> - Default community strings: "public" <BR> - Cleartext data exchanges (inluding auth with string) <BR> - Not hard to trick agent into revealing its string &amp; manager IP <BR> - To access agent's data or reconfig it, only need string and source IP of snmp manager (then spoof manager) <BR> <br> Snmp v2 has better security, but is not incorporated into many products. <BR> <br> Snmp v3 is being fielded, thus will slowly take over. <BR> 
+snmp                     161/udp  # SNMP Agent<BR><br> Used to connect with and configure or request data from a running snmp agent on a network host. <BR> Security Concerns: Many! <BR> - Default community strings: "public" <BR> - Cleartext data exchanges (including auth with string) <BR> - Not hard to trick agent into revealing its string &amp; manager IP <BR> - To access agent's data or reconfig it, only need string and source IP of snmp manager (then spoof manager) <BR> <br> Snmp v2 has better security, but is not incorporated into many products. <BR> <br> Snmp v3 is being fielded, thus will slowly take over. <BR> 
                          /tcp  # 
 snmptrap                 162/udp  # SNMPTrap<BR><br> Used for agent alerts to snmp manager. Data is cleartext and sniffable. Manager is susceptible to forged alert floods. <BR> 
 cmip-man                 163/tcp  # CMIP/TCP Manager<BR>
@@ -2894,7 +2894,7 @@ redstorm_find            2347/udp  # Game Announcement and Location<BR>
 redstorm_info            2348/tcp  # Info to query for game status<BR>
 redstorm_info            2348/udp  # Info to query for game status<BR>
 redstorm_diag            2349/tcp  # Diagnostics Port<BR>
-redstorm_diag/redstorm_diag     2349/udp  # Diagnostics Port<BR>, redstorm_diag<br><br>disgnostics port<br>
+redstorm_diag/redstorm_diag     2349/udp  # Diagnostics Port<BR>, redstorm_diag<br><br>diagnostics port<br>
 psbserver                2350/tcp  # psbserver<BR>
 psbserver                2350/udp  # psbserver<BR>
 psrserver                2351/tcp  # psrserver<BR>
@@ -3627,8 +3627,8 @@ tcim-control             2729/tcp  # TCIM Control<BR>
 tcim-control             2729/udp  # TCIM Control<BR>
 nec-raidplus             2730/tcp  # NEC RaidPlus<BR>
 nec-raidplus             2730/udp  # NEC RaidPlus<BR>
-netdragon-msngr          2731/tcp  # NetDragon Messanger<BR>
-netdragon-msngr          2731/udp  # NetDragon Messanger<BR>
+netdragon-msngr          2731/tcp  # NetDragon Messenger<BR>
+netdragon-msngr          2731/udp  # NetDragon Messenger<BR>
 g5m                      2732/tcp  # G5M<BR>
 g5m                      2732/udp  # G5M<BR>
 signet-ctf               2733/tcp  # Signet CTF<BR>
@@ -4841,8 +4841,8 @@ rfa                      4672/tcp  # remote file access server
 EMule, rfa               4672/udp  # P2P, remote file access server
                          /tcp  # 
 pgpfone                  4747/udp  # PGP Secure Phone Data Stream<BR>
-iims                     4800/tcp  # Icona Instant Messenging System<BR>
-iims                     4800/udp  # Icona Instant Messenging System<BR>
+iims                     4800/tcp  # Icona Instant Messaging System<BR>
+iims                     4800/udp  # Icona Instant Messaging System<BR>
 iwec                     4801/tcp  # Icona Web Embedded Chat<BR>
 iwec                     4801/udp  # Icona Web Embedded Chat<BR>
 ilss                     4802/tcp  # Icona License System Server<BR>
@@ -5242,7 +5242,7 @@ swispol                  6966/udp  # SWIS Poll<BR>
 acmsoda                  6969/tcp  # acmsoda<BR>
 acmsoda                  6969/udp  # acmsoda<BR>
                          /tcp  # 
-real-audio-data          6970/udp  # RealAudio Data Streaming Ports<BR><br> RealAudio data streaming port range. RealAudio server dynamically selects udp port in this range to send client it's audio request. Server contol port is tcp 7070. <BR> 
+real-audio-data          6970/udp  # RealAudio Data Streaming Ports<BR><br> RealAudio data streaming port range. RealAudio server dynamically selects udp port in this range to send client it's audio request. Server control port is tcp 7070. <BR> 
 iatp-highpri             6998/tcp  # IATP-highPri<BR>
 iatp-highpri             6998/udp  # IATP-highPri<BR>
 iatp-normalpri           6999/tcp  # IATP-normalPri<BR>
@@ -5256,9 +5256,9 @@ afs3-prserver/afs3-prserver     7002/udp  # users &amp; groups database<BR>, afs
 afs3-vlserver            7003/tcp  # volume location database<BR>
 afs3-vlserver/afs3-vlserver     7003/udp  # volume location database<BR>, afs3-vlserver<br><br>afs volumelocation server, volume location database<br>
 afs3-kaserver            7004/tcp  # AFS/Kerberos authentication service<BR>
-afs3-kaserver/afs3-kaserver     7004/udp  # AFS/Kerberos authentication service<BR>, afs3-kaserver<br><br>afs kerberos authenication server, afs/kerberos authentication service<br>
-afs3-volser              7005/tcp  # volume managment server<BR>
-afs3-volser/afs3-volser     7005/udp  # volume managment server<BR>, afs3-volser<br><br>afs volume server, volume managment server<br>
+afs3-kaserver/afs3-kaserver     7004/udp  # AFS/Kerberos authentication service<BR>, afs3-kaserver<br><br>afs kerberos authentication server, afs/kerberos authentication service<br>
+afs3-volser              7005/tcp  # volume management server<BR>
+afs3-volser/afs3-volser     7005/udp  # volume management server<BR>, afs3-volser<br><br>afs volume server, volume management server<br>
 afs3-errors              7006/tcp  # error interpretation service<BR>
 afs3-errors/afs3-errors     7006/udp  # error interpretation service<BR>, afs3-errors<br><br>afs error server ?, error interpretation service<br>
 afs3-bos                 7007/tcp  # basic overseer process<BR>
@@ -5267,8 +5267,8 @@ afs3-update              7008/tcp  # server-to-server updater<BR>
 afs3-update/afs3-update     7008/udp  # server-to-server updater<BR>, afs3-update<br><br>server-to-server updater, ?<br>
 afs3-rmtsys              7009/tcp  # Remote Cache Manager Service<BR>
 afs3-rmtsys/afs3-rmtsys     7009/udp  # Remote Cache Manager Service<BR>, afs3-rmtsys<br><br>remote cache manager service, ?<br>
-ups-onlinet              7010/tcp  # Onlinet Uninterruptable Power Supplies<BR>
-ups-onlinet              7010/udp  # Onlinet Uninterruptable Power Supplies<BR>
+ups-onlinet              7010/tcp  # Onlinet Uninterruptible Power Supplies<BR>
+ups-onlinet              7010/udp  # Onlinet Uninterruptible Power Supplies<BR>
 talon-disc               7011/tcp  # Talon Discovery Port<BR>
 talon-disc               7011/udp  # Talon Discovery Port<BR>
 talon-engine             7012/tcp  # Talon Engine<BR>
@@ -5277,12 +5277,12 @@ dpserve                  7020/tcp  # DP Serve<BR>
 dpserve                  7020/udp  # DP Serve<BR>
 dpserveadmin             7021/tcp  # DP Serve Admin<BR>
 dpserveadmin             7021/udp  # DP Serve Admin<BR>
-arcp/real-audio-control     7070/tcp  # ARCP<BR>, RealAudio Contol Port<BR><br> Server control port for RealAudio. Client rqsts are answered with audio data stream on dynamic UDP ports in 6970-7170 range. <BR> 
+arcp/real-audio-control     7070/tcp  # ARCP<BR>, RealAudio Control Port<BR><br> Server control port for RealAudio. Client rqsts are answered with audio data stream on dynamic UDP ports in 6970-7170 range. <BR> 
 arcp                     7070/udp  # ARCP<BR>
 lazy-ptop                7099/tcp  # lazy-ptop<BR>
 lazy-ptop                7099/udp  # lazy-ptop<BR>
-fs                       7100/tcp  # X Font Service<BR><br> Required if host provids X-windows sessions to remote clients. May also be needed to support localhost GUI (depends on OS version). <BR> 
-fs/font-service          7100/udp  # X Font Service<BR><br> Required if host provids X-windows sessions to remote clients. May also be needed to support localhost GUI (depends on OS version). <BR> , font-service<br><br>x font service<br>
+fs                       7100/tcp  # X Font Service<BR><br> Required if host provides X-windows sessions to remote clients. May also be needed to support localhost GUI (depends on OS version). <BR> 
+fs/font-service          7100/udp  # X Font Service<BR><br> Required if host provides X-windows sessions to remote clients. May also be needed to support localhost GUI (depends on OS version). <BR> , font-service<br><br>x font service<br>
 virprot-lm               7121/tcp  # Virtual Prototypes License Manager<BR>
 virprot-lm               7121/udp  # Virtual Prototypes License Manager<BR>
 clutild                  7174/tcp  # Clutild<BR>
@@ -6691,7 +6691,7 @@ DMRC                     6129/tcp  # DMRC Client Agent Service, http://www.damew
                          /udp  # 
 MikroTik Router OS Winbox Configuration Interface     8291/tcp  # 
                          /udp  # 
-MikroTik Router OS API Custom Management Inferface     8278/tcp  # 
+MikroTik Router OS API Custom Management Interface     8278/tcp  # 
                          /udp  # 
 VxWorks-debug            17185/tcp  # 
                          /udp  # 
