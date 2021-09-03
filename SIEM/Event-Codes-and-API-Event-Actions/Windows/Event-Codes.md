@@ -390,7 +390,7 @@
 | 5889       | An object was deleted from the COM+ Catalog                  |
 | 5890       | An object was added to the COM+ Catalog                      |
 | 6144       | Security policy in the group policy objects has been applied successfully |
-| 6145       | One or more errors occured while processing security policy in the group policy objects |
+| 6145       | One or more errors occurred while processing security policy in the group policy objects |
 | 6272       | Network Policy Server granted access to a user               |
 | 6273       | Network Policy Server denied access to a user                |
 | 6274       | Network Policy Server discarded the request for a user       |

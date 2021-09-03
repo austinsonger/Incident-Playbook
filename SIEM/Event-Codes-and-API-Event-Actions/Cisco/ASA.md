@@ -362,10 +362,10 @@
 | ASA-3-318112  | 3        | Error        | SPI %u is already in use by a process other than ospf process %d. |
 | ASA-3-318113  | 3        | Error        | %s %s is already configured with SPI %u.                     |
 | ASA-3-318114  | 3        | Error        | The key length used with SPI %u is not valid                 |
-| ASA-3-318115  | 3        | Error        | %s error occured when attempting to create an IPsec policy for SPI %u |
+| ASA-3-318115  | 3        | Error        | %s error occurred when attempting to create an IPsec policy for SPI %u |
 | ASA-3-318116  | 3        | Error        | SPI %u is not being used by ospf process %d.                 |
 | ASA-3-318117  | 3        | Error        | The policy for SPI %u could not be removed because it is in use. |
-| ASA-3-318118  | 3        | Error        | %s error occured when attemtping to remove the IPsec policy with SPI %u |
+| ASA-3-318118  | 3        | Error        | %s error occurred when attempting to remove the IPsec policy with SPI %u |
 | ASA-3-318119  | 3        | Error        | Unable to close secure socket with SPI %u on interface %s    |
 | ASA-3-318120  | 3        | Error        | OSPFv3 was unable to register with IPsec                     |
 | ASA-3-318121  | 3        | Error        | IPsec reported a GENERAL ERROR: message %s                   |
@@ -388,7 +388,7 @@
 | ASA-3-323003  | 3        | Error        | Module module_id is not able to reload                       |
 | ASA-3-323004  | 3        | Error        | Module module_id failed to write software vnewver (currently vver) |
 | ASA-3-323005  | 3        | Error        | Module module_id can not be started completely               |
-| ASA-3-323007  | 3        | Error        | Module in slot slot experienced a firware failure and the recovery is in progress. |
+| ASA-3-323007  | 3        | Error        | Module in slot slot experienced a firmware failure and the recovery is in progress. |
 | ASA-3-324000  | 3        | Error        | Drop GTPv version message msg_type from source_interface:source_address/source_port to dest_interface:dest_address/dest_port Reason: reason |
 | ASA-3-324001  | 3        | Error        | GTPv0 packet parsing error from source_interface:source_address/source_port to dest_interface:dest_address/dest_port |
 | ASA-3-324002  | 3        | Error        | No PDP[MCB] exists to process GTPv0 msg_type from source_interface:source_address/source_port to dest_interface:dest_address/dest_port |
@@ -577,7 +577,7 @@
 | ASA-3-713109  | 3        | Error        | Unable to process the received peer certificate              |
 | ASA-3-713112  | 3        | Error        | Failed to process CONNECTED notify (SPI SPI_value)!          |
 | ASA-3-713118  | 3        | Error        | Detected invalid Diffie-Helmann group_descriptor group_number |
-| ASA-3-713122  | 3        | Error        | Keep-alives configured keepalive_type but peer IP_address support keep-alives (type = keepalive_type) |
+| ASA-3-713122  | 3        | Error        | Keep-alive configured keepalive_type but peer IP_address support keep-alive (type = keepalive_type) |
 | ASA-3-713123  | 3        | Error        | IKE lost contact with remote peer                            |
 | ASA-3-713124  | 3        | Error        | Received DPD sequence number rcv_sequence_# in DPD Action    |
 | ASA-3-713127  | 3        | Error        | Xauth required but selected Proposal does not support xauth  |
@@ -643,9 +643,9 @@
 | ASA-3-716057  | 3        | Error        | Group group User user IP ip Session terminated               |
 | ASA-3-716061  | 3        | Error        | Group DfltGrpPolicy User user IP ip addr IPv6 User Filter tempipv6 configured for AnyConnect. This setting has been deprecated |
 | ASA-3-716600  | 3        | Error        | Rejected size-recv KB Hostscan data from IP src-ip. Hostscan results exceed default \| configured limit of size-conf KB. |
-| ASA-3-716601  | 3        | Error        | Rejected size-recv KB Hostscan data from IP src-ip. System-wide limit onthe amount of Hostscan data stored on ASA exceeds the limit of data-max KB. |
+| ASA-3-716601  | 3        | Error        | Rejected size-recv KB Hostscan data from IP src-ip. System-wide limit on the amount of Hostscan data stored on ASA exceeds the limit of data-max KB. |
 | ASA-3-716602  | 3        | Error        | Memory allocation error. Rejected size-recv KB Hostscan data from IP src-ip. |
-| ASA-3-717001  | 3        | Error        | Querying keypair failed.                                     |
+| ASA-3-717001  | 3        | Error        | Querying key pair failed.                                     |
 | ASA-3-717002  | 3        | Error        | Certificate enrollment failed for trustpoint trustpoint_name. Reason: reason_string. |
 | ASA-3-717009  | 3        | Error        | Certificate validation failed. Reason: reason_string.        |
 | ASA-3-717010  | 3        | Error        | CRL polling failed for trustpoint trustpoint_name.           |
@@ -1328,7 +1328,7 @@
 | ASA-5-717053  | 5        | Notification | Group group name User user name IP IP Address Periodic certificate authentication succeeded. Subject Name id subject name Issuer Name id issuer name Serial Number id serial number |
 | ASA-5-717061  | 5        | Notification | Starting protocol certificate enrollment for the trustpoint tpname with the CA ca_name. Request Type type Mode mode |
 | ASA-5-717062  | 5        | Notification | protocol Certificate enrollment succeeded for the trustpoint tpname with the CA ca. Received a new certificate with Subject Name subject Issuer Name issuer Serial Number serial |
-| ASA-5-717064  | 5        | Notification | Keypair keyname in the trustpoint tpname is regenerated for mode protocol certificate renewal |
+| ASA-5-717064  | 5        | Notification | Key pair keyname in the trustpoint tpname is regenerated for mode protocol certificate renewal |
 | ASA-5-718002  | 5        | Notification | Create peer IP_address failure                               |
 | ASA-5-718005  | 5        | Notification | Fail to send to IP_address                                   |
 | ASA-5-718006  | 5        | Notification | Invalid load balancing state transition [cur=state_number][event=event_number] |

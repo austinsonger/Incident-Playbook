@@ -188,7 +188,7 @@
 | AUDIT_DEV_ALLOC                | 2307  | USER   | IND                        | Device was allocated                                                                                      |
 | AUDIT_DEV_DEALLOC              | 2308  | USER   | IND                        | Device was deallocated                                                                                    |
 | AUDIT_FS_RELABEL               | 2309  | USER   | IND                        | Filesystem relabeled                                                                                      |
-| AUDIT_USER_MAC_POLICY_LOAD     | 2310  | USER   | IND                        | Usersapce daemon loaded SELinux policy                                                                    |
+| AUDIT_USER_MAC_POLICY_LOAD     | 2310  | USER   | IND                        | Userspace daemon loaded SELinux policy                                                                    |
 | AUDIT_ROLE_MODIFY              | 2311  | USER   | IND                        | Administrator modified an SELinux role                                                                    |
 | AUDIT_USER_MAC_CONFIG_CHANGE   | 2312  | USER   | IND                        | Change made to MAC (Mandatory Access Control) policy                                                      |
 | AUDIT_USER_MAC_STATUS          | 2313  | USER   | IND                        | Userspc daemon enforcing change                                                                           |
