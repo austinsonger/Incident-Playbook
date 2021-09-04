@@ -7,4 +7,4 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
       - run: pip install codespell
-      - run: codespell --ignore-words-list=aci,bre,composit,conetion,fo,instal,nd,paradym,pass-thru,sais,ser,wan || true
+      - run: codespell --ignore-words-list=aci,bre,composit,conetion,fo,hda,instal,keep-alives,keypair,nd,paradym,pass-thru,sais,ser,te,wan
