@@ -577,7 +577,7 @@
 | ASA-3-713109  | 3        | Error        | Unable to process the received peer certificate              |
 | ASA-3-713112  | 3        | Error        | Failed to process CONNECTED notify (SPI SPI_value)!          |
 | ASA-3-713118  | 3        | Error        | Detected invalid Diffie-Helmann group_descriptor group_number |
-| ASA-3-713122  | 3        | Error        | Keep-alive configured keepalive_type but peer IP_address support keep-alive (type = keepalive_type) |
+| ASA-3-713122  | 3        | Error        | Keep-alives configured keepalive_type but peer IP_address support keep-alives (type = keepalive_type) |
 | ASA-3-713123  | 3        | Error        | IKE lost contact with remote peer                            |
 | ASA-3-713124  | 3        | Error        | Received DPD sequence number rcv_sequence_# in DPD Action    |
 | ASA-3-713127  | 3        | Error        | Xauth required but selected Proposal does not support xauth  |
@@ -645,7 +645,7 @@
 | ASA-3-716600  | 3        | Error        | Rejected size-recv KB Hostscan data from IP src-ip. Hostscan results exceed default \| configured limit of size-conf KB. |
 | ASA-3-716601  | 3        | Error        | Rejected size-recv KB Hostscan data from IP src-ip. System-wide limit on the amount of Hostscan data stored on ASA exceeds the limit of data-max KB. |
 | ASA-3-716602  | 3        | Error        | Memory allocation error. Rejected size-recv KB Hostscan data from IP src-ip. |
-| ASA-3-717001  | 3        | Error        | Querying key pair failed.                                     |
+| ASA-3-717001  | 3        | Error        | Querying keypair failed.                                     |
 | ASA-3-717002  | 3        | Error        | Certificate enrollment failed for trustpoint trustpoint_name. Reason: reason_string. |
 | ASA-3-717009  | 3        | Error        | Certificate validation failed. Reason: reason_string.        |
 | ASA-3-717010  | 3        | Error        | CRL polling failed for trustpoint trustpoint_name.           |
@@ -1328,7 +1328,7 @@
 | ASA-5-717053  | 5        | Notification | Group group name User user name IP IP Address Periodic certificate authentication succeeded. Subject Name id subject name Issuer Name id issuer name Serial Number id serial number |
 | ASA-5-717061  | 5        | Notification | Starting protocol certificate enrollment for the trustpoint tpname with the CA ca_name. Request Type type Mode mode |
 | ASA-5-717062  | 5        | Notification | protocol Certificate enrollment succeeded for the trustpoint tpname with the CA ca. Received a new certificate with Subject Name subject Issuer Name issuer Serial Number serial |
-| ASA-5-717064  | 5        | Notification | Key pair keyname in the trustpoint tpname is regenerated for mode protocol certificate renewal |
+| ASA-5-717064  | 5        | Notification | Keypair keyname in the trustpoint tpname is regenerated for mode protocol certificate renewal |
 | ASA-5-718002  | 5        | Notification | Create peer IP_address failure                               |
 | ASA-5-718005  | 5        | Notification | Fail to send to IP_address                                   |
 | ASA-5-718006  | 5        | Notification | Invalid load balancing state transition [cur=state_number][event=event_number] |
