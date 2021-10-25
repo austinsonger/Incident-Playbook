@@ -1,6 +1,7 @@
 
 [![Join the chat at https://gitter.im/Incident-Playbook/community](https://badges.gitter.im/Incident-Playbook/community.svg)](https://gitter.im/Incident-Playbook/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+
 If you have an idea for the project please start a [discusssion.](https://github.com/austinsonger/Incident-Playbook/discussions/new)
 
 ![](https://i.imgur.com/DLj8Enw.png)
