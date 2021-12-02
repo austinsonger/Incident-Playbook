@@ -29,15 +29,23 @@ That this project will be created by the SOC/Incident Response Community
 #### Tactic
 
 
+#### Defense Evasion
+
+- [X] [Playbook: T1055 - Process Injection](/Playbooks/MITRE-ATTACK/Defense%20Evasion/T1055-Process-Injection.md)
+
+
 #### Persistence
 
-- [Playbook: T1053 - Scheduled Task/Job](/Playbooks/MITRE-ATTACK/Persistence/T1053-Scheduled-Task-Job.md)
+- [X] [Playbook: T1053 - Scheduled Task/Job](/Playbooks/MITRE-ATTACK/Persistence/T1053-Scheduled-Task-Job.md)
 
 #### Exfiltration
 
-- [Playbook: T1052.001 - Exfiltration over USB](/Playbooks/MITRE-ATTACK/Exfiltration/T1052.001%20-%20Exfiltration%20over%20USB.md)
+- [X] [Playbook: T1052.001 - Exfiltration over USB](/Playbooks/MITRE-ATTACK/Exfiltration/T1052.001%20-%20Exfiltration%20over%20USB.md)
 
+#### Impact
 
+- [X] [Playbook: T1486 - Data Encrypted for Impact Ransomware](/Playbooks/MITRE-ATTACK/Impact/T1486-Data-Encrypted-for-Impact-Ransomware.md)
+- [X] [Playbook: T1491.002 - External Defacement](/Playbooks/MITRE-ATTACK/Impact/T1491-Defacement-(T1491.001%2CT1491.002).md#playbook-external-defacement)
 
 
 
