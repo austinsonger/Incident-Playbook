@@ -28,6 +28,11 @@ That this project will be created by the SOC/Incident Response Community
 
 #### Tactic
 
+
+#### Persistence
+
+- [Playbook: T1053 - Scheduled Task/Job](/Playbooks/MITRE-ATTACK/Persistence/T1053-Scheduled-Task-Job.md)
+
 #### Exfiltration
 
 - [Playbook: T1052.001 - Exfiltration over USB](/Playbooks/MITRE-ATTACK/Exfiltration/T1052.001%20-%20Exfiltration%20over%20USB.md)
