@@ -50,7 +50,9 @@ That this project will be created by the SOC/Incident Response Community
 
 #### Impact
 
+- [ ] [Playbook: T1485 - Data Destruction](/Playbooks/MITRE-ATTACK/Impact/T1485-Data-Destruction.md)
 - [X] [Playbook: T1486 - Data Encrypted for Impact Ransomware](/Playbooks/MITRE-ATTACK/Impact/T1486-Data-Encrypted-for-Impact-Ransomware.md)
+- [ ] [Playbook: T1489 - Service Stop](/Playbooks/MITRE-ATTACK/Impact/T1489-Service-Stop.md)
 - [X] [Playbook: T1491.002 - External Defacement](/Playbooks/MITRE-ATTACK/Impact/T1491-Defacement-(T1491.001%2CT1491.002).md#playbook-external-defacement)
 
 
