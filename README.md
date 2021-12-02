@@ -22,6 +22,20 @@ That this project will be created by the SOC/Incident Response Community
 - Develop a Card Game based on MITRE Attack and the IR phases that help resolve it.
 - Develop a Battle Card Book, that can be reference for immediate help during a incident. 
 
+### Completed MITRE ATTACK
+
+
+
+#### Tactic
+
+#### Exfiltration
+
+- [Playbook: T1052.001 - Exfiltration over USB](/Playbooks/MITRE-ATTACK/Exfiltration/T1052.001%20-%20Exfiltration%20over%20USB.md)
+
+
+
+
+
 ---------------------
 **For every pull request submitted a issue must also be created.** 
 - Please Read [Creating a New Playbook](https://github.com/austinsonger/Cyber-Incident-Response-Playbooks/wiki/Creating-a-New-Playbook);
