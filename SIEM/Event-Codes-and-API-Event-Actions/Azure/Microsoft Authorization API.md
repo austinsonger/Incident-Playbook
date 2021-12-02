@@ -8,12 +8,12 @@
 
 | METHOD                                                       | SHORT DESCRIPTION                                         | ACCESS LEVEL | DESCRIPTION                                                  | ORIGINS |
 | ------------------------------------------------------------ | --------------------------------------------------------- | ------------ | ------------------------------------------------------------ | ------- |
-| Microsoft.Authorization/elevateAccess/action                 | Assigns the caller to User Access Administrator role      | Write        | Grants the caller User Access Administrator access at the tenant scope. |         |
-| Microsoft.Authorization/classicAdministrators/read           | Get administrator                                         | Read         | Reads the administrators for the subscription.               |         |
-| Microsoft.Authorization/classicAdministrators/write          | Set administrator                                         | Write        | Add or modify administrator to a subscription.               |         |
-| Microsoft.Authorization/classicAdministrators/delete         | Delete administrator                                      | Write        | Removes the administrator from the subscription.             |         |
-| Microsoft.Authorization/roleAssignments/read                 | Get role assignment                                       | Read         | Get information about a role assignment.                     |         |
-| Microsoft.Authorization/roleAssignments/write                | Create role assignment                                    | Write        | Create a role assignment at the specified scope.             |         |
+| `Microsoft.Authorization/elevateAccess/action`                 | Assigns the caller to User Access Administrator role      | Write        | Grants the caller User Access Administrator access at the tenant scope. |         |
+| `Microsoft.Authorization/classicAdministrators/read`           | Get administrator                                         | Read         | Reads the administrators for the subscription.               |         |
+| `Microsoft.Authorization/classicAdministrators/write`          | Set administrator                                         | Write        | Add or modify administrator to a subscription.               |         |
+| `Microsoft.Authorization/classicAdministrators/delete`         | Delete administrator                                      | Write        | Removes the administrator from the subscription.             |         |
+| `Microsoft.Authorization/roleAssignments/read`                 | Get role assignment                                       | Read         | Get information about a role assignment.                     |         |
+| `Microsoft.Authorization/roleAssignments/write`                | Create role assignment                                    | Write        | Create a role assignment at the specified scope.             |         |
 | Microsoft.Authorization/roleAssignments/delete               | Delete role assignment                                    | Write        | Delete a role assignment at the specified scope.             |         |
 | Microsoft.Authorization/permissions/read                     | List permissions                                          | Read         | Lists all the permissions the caller has at a given scope.   |         |
 | Microsoft.Authorization/locks/read                           | Get management locks                                      | Read         | Gets locks at the specified scope.                           |         |
