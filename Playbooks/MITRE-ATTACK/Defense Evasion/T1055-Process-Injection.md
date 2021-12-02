@@ -26,17 +26,17 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 
 ### Investigate
 
-`TODO: Expand investigation steps, including key questions and strategies, for Process Injection.`
+
 
 1. Monitor for the following Windows API calls:
-    * CreateRemoteThread
-    * SuspendThread
-    * SetThreadContext
-    * ResumeThread
-    * QueueUserAPC
-    * NtQueueApcThread
-    * VirtualAllocEx
-    * WriteProcessMemory
+    * `CreateRemoteThread`
+    * `SuspendThread`
+    * `SetThreadContext`
+    * `ResumeThread`
+    * `QueueUserAPC`
+    * `NtQueueApcThread`
+    * `VirtualAllocEx`
+    * `WriteProcessMemory`
 2. On Linux systems, monitor the ptrace system call
 3. Detect named pipe creation and connection events
 4. Collect DLL/PE file events
@@ -53,9 +53,10 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 
 #### Contain
 
+<!--
 `TODO: Customize containment steps, tactical and strategic, for Process Injection.`
-
 `TODO: Specify tools and procedures for each step, below.`
+-->
 
 1.    Inventory (enumerate & assess)
 2.    Detect | Deny | Disrupt | Degrade | Deceive | Destroy
@@ -65,13 +66,17 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 6.    Determine the source and pathway of the attack
 7.    Issue a perimeter enforcement for known threat actor locations
 
+<!--
 `TODO: Consider automating containment measures using orchestration tools.`
+-->
+
 
 #### Eradicate
 
+<!--
 `TODO: Customize eradication steps, tactical and strategic, for Process Injection.`
-
 `TODO: Specify tools and procedures for each step, below.`
+-->
 
 1.    Close the attack vector
 2.    Create forensic backups of affected systems
@@ -82,15 +87,19 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 
 #### Reference: Remediation Resources
 
+<!--
 `TODO: Specify financial, personnel, and logistical resources to accomplish remediation.`
+-->
+
 
 --------------
 
 ### Communicate
 
+<!--
 `TODO: Customize communication steps for Process Injection`
-
 `TODO: Specify tools and procedures (including who must be involved) for each step, below, or refer to overall plan.`
+-->
 
 In addition to the general steps and guidance in the incident response plan:
 
@@ -100,9 +109,10 @@ In addition to the general steps and guidance in the incident response plan:
 
 ### Recover
 
+<!--
 `TODO: Customize recovery steps for Process Injection.`
-
 `TODO: Specify tools and procedures for each step, below.`
+-->
 
 In addition to the general steps and guidance in the incident response plan:
 
