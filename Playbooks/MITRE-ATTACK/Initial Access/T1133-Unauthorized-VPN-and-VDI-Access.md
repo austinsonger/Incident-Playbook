@@ -28,8 +28,9 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 
 ### Investigate
 
+<!--
 `TODO: Expand investigation steps, including key questions and strategies, for Unauthorized VPN and VDI Access.`
-
+-->
 
 1. Monitor for:
     * Remote access during unusual hours/days
@@ -49,9 +50,12 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 
 #### Contain
 
+<!--
 `TODO: Customize containment steps, tactical and strategic, for Unauthorized VPN and VDI Access.`
 
 `TODO: Specify tools and procedures for each step, below.`
+
+-->
 
 1.    Inventory (enumerate & assess)
 2.    Detect | Deny | Disrupt | Degrade | Deceive | Destroy
@@ -61,13 +65,20 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 6.    Lock accounts associated with the compromised user
 7.    Inspect all potentially compromised systems for IOCs
 
+
+<!--
 `TODO: Consider automating containment measures using orchestration tools.`
+-->
 
 #### Eradicate
 
+
+<!--
 `TODO: Customize eradication steps, tactical and strategic, for Unauthorized VPN and VDI Access.`
 
 `TODO: Specify tools and procedures for each step, below.`
+-->
+
 
 1.    Close the attack vector
 2.    Patch asset vulnerabilities
@@ -90,15 +101,16 @@ In addition to the general steps and guidance in the incident response plan:
 
 
 
-
-
 --------------
 
 ### Recover
 
+<!--
 `TODO: Customize recovery steps for Unauthorized VPN and VDI Access.`
 
 `TODO: Specify tools and procedures for each step, below.`
+-->
+
 
 In addition to the general steps and guidance in the incident response plan:
 
