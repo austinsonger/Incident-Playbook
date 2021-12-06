@@ -13,8 +13,6 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 
 ### Investigate
 
-`TODO: Expand investigation steps, including key questions and strategies, for phishing.`
-
 1. **Scope the attack** Usually you will be notified that a potential phishing attack is underway, either by a user, customer, or partner.
     * Determine **total number of impacted users**
     * Understand **user actions** in response to the phishing email (_e.g._, did they download the attachment, visit the spoofed site, or give out any personal or business information such as credentials)
@@ -51,7 +49,6 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
     * whether services are affected
     * whether you are able to control/record critical systems
 
-`TODO: Expand investigation steps, including key questions and strategies, for phishing.`
 
 ### Remediate
 
@@ -60,9 +57,6 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 
 #### Contain
 
-`TODO: Customize containment steps, tactical and strategic, for phishing.`
-
-`TODO: Specify tools and procedures for each step, below.`
 
 * Contain affected accounts
     * change login credentials
@@ -85,9 +79,6 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 
 ### Communicate
 
-`TODO: Customize communication steps for phishing`
-
-`TODO: Specify tools and procedures (including who must be involved) for each step, below, or refer to overall plan`
 
 1. Escalate incident and communicate with leadership per procedure
 1. Document incident per procedure (and [report](https://us-cert.cisa.gov/report-phishing))
@@ -112,9 +103,6 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 
 ### Recover
 
-`TODO: Customize recovery steps for phishing`
-
-`TODO: Specify tools and procedures for each step, below`
 
 1. Launch business continuity/disaster recovery plan(s) if compromise involved business outages: _e.g._, consider migration to alternate operating locations, fail-over sites, backup systems.
 1. Reinforce training programs regarding suspected phishing attacks. Key suspicious indicators may include: 
@@ -131,8 +119,6 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 ### Resources
 
 #### Reference: User Actions for Suspected Phishing Attack
-
-`TODO: Customize steps for users dealing with suspected phishing`
 
 1. Stay calm, take a deep breath.
 1. Take pictures of your screen using your smartphone showing the things you noticed: the phishing message, the link if you opened it, the sender information.
@@ -151,7 +137,6 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 
 #### Reference: Help Desk Actions for Suspected Phishing Attack
 
-`TODO: Customize steps for help desk personnel dealing with suspected phishing`
 
 1. Stay calm, take a deep breath.
 1. Open a ticket to document the incident, per procedure. `TODO: Customize template with key questions (see below) and follow-on workflow`
