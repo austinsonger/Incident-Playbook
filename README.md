@@ -28,31 +28,33 @@ That this project will be created by the SOC/Incident Response Community
 
 #### Tactic
 
-#### Intial Access
+##### Intial Access
 
 - [X] [Playbook: T1133 - Unauthorized VPN and VDI Access](/Playbooks/MITRE-ATTACK/Initial%20Access/T1133-Unauthorized-VPN-and-VDI-Access.md)
 - [X] [Playbook: T1189 - Drive By Compromise](/Playbooks/MITRE-ATTACK/Initial%20Access/T1189-Drive-By-Compromise.md)
 - [X] [Playbook: T1566 - Phishing](/Playbooks/MITRE-ATTACK/Initial%20Access/T1566-Phishing-(T1566.001-T1566.002-T1566.003).md)
 
-#### Collection
+##### Collection
 
 - [X] [Playbook: T1114 - Cloud Email Compromise](/Playbooks/MITRE-ATTACK/Collection/T1114-Cloud-Email-Compromise.md)
 
+##### Credential Access
 
-#### Defense Evasion
+- [ ] [Playbook: T1110.003 - Password Spraying](/Playbooks/MITRE-ATTACK/Credential%20Access/T1110.003-Password%20Spraying.md)
+
+##### Defense Evasion
 
 - [X] [Playbook: T1055 - Process Injection](/Playbooks/MITRE-ATTACK/Defense%20Evasion/T1055-Process-Injection.md)
 
-
-#### Persistence
+##### Persistence
 
 - [X] [Playbook: T1053 - Scheduled Task/Job](/Playbooks/MITRE-ATTACK/Persistence/T1053-Scheduled-Task-Job.md)
 
-#### Exfiltration
+##### Exfiltration
 
 - [X] [Playbook: T1052.001 - Exfiltration over USB](/Playbooks/MITRE-ATTACK/Exfiltration/T1052.001%20-%20Exfiltration%20over%20USB.md)
 
-#### Impact
+##### Impact
 
 - [ ] [Playbook: T1485 - Data Destruction](/Playbooks/MITRE-ATTACK/Impact/T1485-Data-Destruction.md)
 - [X] [Playbook: T1486 - Data Encrypted for Impact Ransomware](/Playbooks/MITRE-ATTACK/Impact/T1486-Data-Encrypted-for-Impact-Ransomware.md)
