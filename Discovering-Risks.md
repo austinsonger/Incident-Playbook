@@ -42,7 +42,6 @@ Everyone is interesting. Warm up the interviewee. Ask about their place in the o
 - How would you describe your role?
 - What are you hoping to work on this week?
 - What is a typical task you’re assigned?
-- What’s the last SEV you worked on?
 - What are your regularly occurring meetings?
 - What projects are you cheering on that make your life easier?
 - Who are you frequently collaborating with?
