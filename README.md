@@ -22,7 +22,7 @@ That this project will be created by the SOC/Incident Response Community
 <!-- - Develop a Card Game based on MITRE Attack and the IR phases that help resolve it. -->
 - Develop a Battle Card Book, that can be reference for immediate help during a incident. 
 
-### Completed MITRE ATTACK
+###  MITRE ATTACK
 
 
 
