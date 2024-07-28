@@ -1,0 +1,31 @@
+title: some_name_here
+id: RESPONSE0000
+description: >
+  Some text description here. It will be merged into one line
+author: your name/nickname
+creation_date: YYYY/MM/DD
+severity: M                  # L M H
+tlp: AMBER                   # WHITE GREEN AMBER RED
+tags:
+    - attack.initial_access     # use the next tag scheeme for ATT&CK tags: https://github.com/Neo23x0/sigma/wiki/Tags
+    - attack.t1193              # use the next tag scheeme for ATT&CK tags: https://github.com/Neo23x0/sigma/wiki/Tags
+    - phishinng                 # could be custom tags as well
+references: 
+  - https://example.com
+preparation:
+  - 
+identification:
+  - 
+containment:
+  - # Response Actions could be aggregated 
+  - # 
+eradication:
+  - 
+recovery:
+  - 
+lessons_learned:
+  - 
+workflow: |
+    Description of the workflow in the [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) format. 
+    You can put here anything you want, i.e. specific conditions/requirements or details on the order of Response Actions execution. 
+    Here newlines will be saved.
